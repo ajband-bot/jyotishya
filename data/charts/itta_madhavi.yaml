@@ -1,0 +1,18 @@
+chart_id: itta_madhavi
+name: Itta Madhavi
+dob: 1976-05-09
+time_local: "01:00:00"
+timezone: IST
+utc_offset: 5.5
+location:
+  place: Penukonda, Andhra Pradesh
+  latitude: 14.0829
+  longitude: 77.5947
+settings:
+  ayanamsha: lahiri
+  node_type: mean
+  house_system: whole_sign
+notes:
+- "Birth data provided directly: 9-May-1976, 01:00 AM IST, Penukonda (14.0829N / 14 deg 4' 58\" N, 77.5947E / 77 deg 35' 41\" E)."
+- "Interpreted '1 AM' as 01:00:00 local clock time on the stated date (9-May-1976), not 'previous midnight'. Flagged for native confirmation since 1 AM sits close to a date boundary -- if the true intended time is actually 9-May 1976 00:xx-01:xx there is no ambiguity, but if the family customarily counts night hours against the previous evening this should be corrected before final sign-off."
+- "Birth seconds assumed as 00."

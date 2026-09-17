@@ -1,0 +1,17 @@
+chart_id: itta_sai_nikita
+name: Itta Sai Nikita
+dob: 1997-12-20
+time_local: "12:15:00"
+timezone: IST
+utc_offset: 5.5
+location:
+  place: Kadiri, Andhra Pradesh
+  latitude: 14.12
+  longitude: 78.16
+settings:
+  ayanamsha: lahiri
+  node_type: mean
+  house_system: whole_sign
+notes:
+- "Birth data provided directly and unambiguously: 20-Dec-1997, 12:15 PM IST, Kadiri (14.12N, 78.16E)."
+- "Birth seconds assumed as 00."

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}జ్యోతిష — జన్మ కుండలి{% endblock %}
+{% block content %}
+<div class="max-w-2xl mx-auto">
+  <!-- Hero -->
+  <div class="text-center mb-10 pt-4">
+    <div class="text-6xl mb-3">🌟</div>
+    <h1 class="text-4xl font-black text-yellow-300 tel mb-2">జ్యోతిష జన్మ కుండలి</h1>
+    <p class="text-gray-400 text-sm">Vedic Horoscope Calculator — South Indian Style</p>
+    <div class="flex flex-wrap justify-center gap-2 mt-3">
+      <span class="badge badge-gold">సారావళి (Saravali)</span>
+      <span class="badge badge-blue">BPHS (పరాశర)</span>
+      <span class="badge badge-purple">ఫలదీపిక</span>
+      <span class="badge badge-green">బృహత్ జాతక</span>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="card p-8">
+    <form method="POST" action="/chart" id="chartForm">
+      <div class="grid md:grid-cols-2 gap-5 mb-5">
+        <div>
+          <label>📅 జన్మ తేదీ (Birth Date)</label>
+          <input type="date" name="birth_date" required value="1990-01-01">
+        </div>
+        <div>
+          <label>⏰ జన్మ సమయం (Birth Time - Local)</label>
+          <input type="time" name="birth_time" required value="06:00">
+        </div>
+      </div>
+      <div class="mb-5">
+        <label>📍 జన్మ స్థలం (Birth Place)</label>
+        <input type="text" name="birth_place" placeholder="e.g. Hyderabad, Vijayawada, Delhi, Mumbai..." required>
+        <p class="text-xs text-gray-600 mt-1">40+ Indian cities supported. Or enter lat/lon below.</p>
+      </div>
+
+      <!-- Advanced (collapsed) -->
+      <div class="mb-5">
+        <button type="button" class="acc-btn text-sm" onclick="toggleAcc('adv')">⚙️ Advanced: Manual Lat/Lon & Timezone</button>
+        <div class="acc-body" id="adv">
+          <div class="grid md:grid-cols-3 gap-4 mt-3">
+            <div>
+              <label>Latitude (°N)</label>
+              <input type="number" name="lat" placeholder="17.3850" step="0.0001">
+            </div>
+            <div>
+              <label>Longitude (°E)</label>
+              <input type="number" name="lon" placeholder="78.4867" step="0.0001">
+            </div>
+            <div>
+              <label>UTC Offset (IST = 5.5)</label>
+              <input type="number" name="utc_offset" value="5.5" step="0.5">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary" id="submitBtn">
+        ✨ కుండలి లెక్కించు — Calculate Horoscope
+      </button>
+    </form>
+  </div>
+
+  <!-- Feature cards -->
+  <div class="grid md:grid-cols-2 gap-4 mt-8">
+    <div class="card-gold p-4">
+      <div class="text-2xl mb-2">🏠</div>
+      <h3 class="font-bold text-yellow-300 tel">దక్షిణ భారత శైలి</h3>
+      <p class="text-xs text-gray-400 mt-1">Authentic South Indian fixed-sign chart. Planets placed in sign boxes, Lagna highlighted in gold.</p>
+    </div>
+    <div class="card-blue p-4">
+      <div class="text-2xl mb-2">⏳</div>
+      <h3 class="font-bold text-blue-300 tel">వింశోత్తరి దశ</h3>
+      <p class="text-xs text-gray-400 mt-1">Complete Vimshottari Mahadasha + Antardasha timeline. Current running period highlighted.</p>
+    </div>
+    <div class="card-green p-4">
+      <div class="text-2xl mb-2">🧘</div>
+      <h3 class="font-bold text-green-300 tel">యోగ విశ్లేషణ</h3>
+      <p class="text-xs text-gray-400 mt-1">Auto-detects Gajakesari, Budha-Aditya, Pancha Mahapurusha, Neechabhanga & more yogas.</p>
+    </div>
+    <div class="card-red p-4">
+      <div class="text-2xl mb-2">📖</div>
+      <h3 class="font-bold text-red-300 tel">జ్ఞాన గ్రాఫ్</h3>
+      <p class="text-xs text-gray-400 mt-1">Interactive knowledge graph connecting your planets to classical text explanations.</p>
+    </div>
+  </div>
+
+  <p class="text-center text-gray-600 text-xs mt-6">
+    Calculations: Jean Meeus algorithms + Lahiri Ayanamsa | Whole-sign houses (South Indian)
+  </p>
+</div>
+
+<script>
+document.getElementById('chartForm').addEventListener('submit', function() {
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = '⏳ Calculating...';
+  btn.disabled = true;
+});
+</script>
+{% endblock %}

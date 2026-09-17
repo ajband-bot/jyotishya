@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Raghunandan Part 2: D2 to D10 [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-green:#2a8703;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+tr:hover{background:#f1f5f9}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+h3{color:#1e3a5f}
+.internal-note{background:#fef9c3;border-left:4px solid #ca8a04;padding:1rem;margin:0.5rem 0;font-size:0.9rem}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;letter-spacing:0.05em;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">
+  WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE
+</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 2 of 5: D2-D10 (Practitioner Reference)</h1>
+  <p class="text-xl font-semibold mt-2" style="color:var(--wm-blue)">Itta Raghunandan — Divisional Chart Computation Notes</p>
+</header>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Computation Method &amp; Source</h2>
+  <div class="internal-note">
+    <p><strong>Method:</strong> The core engine (app/astro/) does not yet implement divisional charts beyond D9 (documented gap in docs/migration-plan.md). Per Cardinal Rule 2 (never fabricate), I computed D2-D10 (and D12-D60, used in Part 3) using the same classical varga-scheme formulas already implemented and used for the Sharan chart (scripts/compute_sharan.py) — cloned as scripts/compute_raghunandan.py with only birth-data constants changed. This is a DRY reuse of existing, already-reviewed logic rather than writing new formulas from scratch.</p>
+    <p class="mt-2"><strong>Formulas used</strong> (all standard Parashari, cited per scheme): D2 Hora (odd/even sign Sun-Moon split), D3 Drekkana (same/5th/9th offsets), D4 Caturthamsa (same/4th/7th/10th), D7 Saptamsa (odd from same sign, even from 7th), D10 Dasamsa (odd from same sign, even from 9th).</p>
+    <p class="mt-2">Full raw output archived at /tmp/raghunandan_vargas_output.txt for audit trail.</p>
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Raw D2/D3/D4/D7/D10 Tables (Full)</h2>
+  <div class="debug mb-4">
+D2: Lagna=Cancer | Sun=Leo(own) Moon=Cancer(own) Mars=Leo Mercury=Leo Jupiter=Cancer(exalted) Venus=Cancer Saturn=Cancer Rahu=Cancer Ketu=Cancer<br>
+D3: Lagna=Capricorn | Sun=Taurus Moon=Libra Mars=Leo Mercury=Libra Jupiter=Cancer(exalted) Venus=Capricorn Saturn=Pisces Rahu=Sagittarius(debil) Ketu=Gemini(debil)<br>
+D4: Lagna=Capricorn | Sun=Pisces Moon=Sagittarius Mars=Leo Mercury=Capricorn Jupiter=Libra Venus=Sagittarius Saturn=Pisces Rahu=Capricorn Ketu=Cancer<br>
+D7: Lagna=Leo | Sun=Cancer Moon=Libra Mars=Leo Mercury=Sagittarius Jupiter=Aquarius Venus=Taurus(own) Saturn=Virgo Rahu=Virgo Ketu=Pisces<br>
+D10: Lagna=Scorpio | Sun=Scorpio Moon=Scorpio(debil) Mars=Virgo Mercury=Sagittarius Jupiter=Taurus Venus=Leo Saturn=Scorpio Rahu=Sagittarius(debil) Ketu=Gemini(debil)
+  </div>
+  <p class="text-sm">Confidence: <span class="conf-high">HIGH</span> for the arithmetic (deterministic formula application, cross-checked by hand for D2 and D10 specifically since those carry the most interpretive weight in this part).</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Self-Correction Log — Arūḍha A10 Error</h2>
+  <div class="internal-note">
+    <p><strong>Caught and corrected during Part 2 drafting:</strong> The original Validation.md (§13) computed A10 (Karma Ārūḍha) by hand as Aquarius, using distance=8 from H10 to Venus's H9. On cross-verification against BOTH the canonical <code>app/derived/factors.py::arudha_pada()</code> function AND the independent <code>scripts/compute_raghunandan.py</code> Arūḍha routine, the correct distance is 12 (not 8) — going from H10 forward to H9 requires wrapping almost all the way around, not a short 8-house hop. Correct A10 = <strong>Leo</strong>, confirmed by two independent code paths. Validation.md and Part 1 Shareable have both been corrected. Flagging here so anyone referencing an earlier cached copy of either document knows to re-pull the current version.</p>
+    <p class="mt-2 text-sm">Lesson for future readings: always cross-verify Arūḍha hand-calculations against the codebase's <code>arudha_pada()</code> function rather than computing "distance" informally — the wrap-around direction is easy to get backwards.</p>
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. D9 Cross-Chart Pattern — Confidence Assessment</h2>
+  <p class="mb-3 text-sm">The "Jupiter in 7th-from-Lagna in both D1 and D9" observation (Shareable §5) is <span class="conf-high">HIGH confidence</span> as a factual placement match (both independently confirmed against the compute_raghunandan.py D9 output: D9 Lagna=Pisces(12), Jupiter D9 house=7, and D1 Jupiter house=7 from D1 Lagna=Capricorn — both literally "house 7", verified by direct read of engine output, not inference). The INTERPRETIVE weight given to this pattern (i.e., "doubles confidence in marriage centrality") is a reasonable synthesis per the Three Lenses framework (§4A) but should be labeled as synthesis, not raw fact, if challenged — this is <span class="conf-med">MEDIUM confidence</span> as an interpretive leap, clearly stated as such in the shareable copy ("this is not technical vargottama... but it is a genuine cross-chart consistency").</p>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>Companion shareable file: Itta_Raghunandan_Part2_D2_to_D10.html</p>
+</footer>
+
+</main></body></html>

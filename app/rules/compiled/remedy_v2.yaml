@@ -1,0 +1,480 @@
+- id: REM-GEM-SUN
+  title: Gemstone remedy appropriate for Sun
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rules 2/6/7
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Sun.gemstone_appropriate
+    op: eq
+    value: true
+    description: Sun's gemstone gate is satisfied
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      effect: Sun passes the full gemstone safety gate (functional benefic + weak/afflicted
+        + not combust, with Saturn/Rahu's stricter Rule 6/7 gates applied where relevant).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.remedies verbatim -- this generator adds no new safety logic,
+    only v2 schema exposure.
+- id: REM-GEM-MOO
+  title: Gemstone remedy appropriate for Moon
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rules 2/6/7
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Moon.gemstone_appropriate
+    op: eq
+    value: true
+    description: Moon's gemstone gate is satisfied
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      effect: Moon passes the full gemstone safety gate (functional benefic + weak/afflicted
+        + not combust, with Saturn/Rahu's stricter Rule 6/7 gates applied where relevant).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.remedies verbatim -- this generator adds no new safety logic,
+    only v2 schema exposure.
+- id: REM-GEM-MAR
+  title: Gemstone remedy appropriate for Mars
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rules 2/6/7
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Mars.gemstone_appropriate
+    op: eq
+    value: true
+    description: Mars's gemstone gate is satisfied
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      effect: Mars passes the full gemstone safety gate (functional benefic + weak/afflicted
+        + not combust, with Saturn/Rahu's stricter Rule 6/7 gates applied where relevant).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.remedies verbatim -- this generator adds no new safety logic,
+    only v2 schema exposure.
+- id: REM-GEM-MER
+  title: Gemstone remedy appropriate for Mercury
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rules 2/6/7
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Mercury.gemstone_appropriate
+    op: eq
+    value: true
+    description: Mercury's gemstone gate is satisfied
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      effect: Mercury passes the full gemstone safety gate (functional benefic + weak/afflicted
+        + not combust, with Saturn/Rahu's stricter Rule 6/7 gates applied where relevant).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.remedies verbatim -- this generator adds no new safety logic,
+    only v2 schema exposure.
+- id: REM-GEM-JUP
+  title: Gemstone remedy appropriate for Jupiter
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rules 2/6/7
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Jupiter.gemstone_appropriate
+    op: eq
+    value: true
+    description: Jupiter's gemstone gate is satisfied
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      effect: Jupiter passes the full gemstone safety gate (functional benefic + weak/afflicted
+        + not combust, with Saturn/Rahu's stricter Rule 6/7 gates applied where relevant).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.remedies verbatim -- this generator adds no new safety logic,
+    only v2 schema exposure.
+- id: REM-GEM-VEN
+  title: Gemstone remedy appropriate for Venus
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rules 2/6/7
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Venus.gemstone_appropriate
+    op: eq
+    value: true
+    description: Venus's gemstone gate is satisfied
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      effect: Venus passes the full gemstone safety gate (functional benefic + weak/afflicted
+        + not combust, with Saturn/Rahu's stricter Rule 6/7 gates applied where relevant).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.remedies verbatim -- this generator adds no new safety logic,
+    only v2 schema exposure.
+- id: REM-GEM-SAT
+  title: Gemstone remedy appropriate for Saturn
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rules 2/6/7
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Saturn.gemstone_appropriate
+    op: eq
+    value: true
+    description: Saturn's gemstone gate is satisfied
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      effect: Saturn passes the full gemstone safety gate (functional benefic + weak/afflicted
+        + not combust, with Saturn/Rahu's stricter Rule 6/7 gates applied where relevant).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.remedies verbatim -- this generator adds no new safety logic,
+    only v2 schema exposure.
+- id: REM-GEM-RAH
+  title: Gemstone remedy appropriate for Rahu
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rules 2/6/7
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Rahu.gemstone_appropriate
+    op: eq
+    value: true
+    description: Rahu's gemstone gate is satisfied
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      effect: Rahu passes the full gemstone safety gate (functional benefic + weak/afflicted
+        + not combust, with Saturn/Rahu's stricter Rule 6/7 gates applied where relevant).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.remedies verbatim -- this generator adds no new safety logic,
+    only v2 schema exposure.
+- id: REM-GEM-KET
+  title: Gemstone remedy appropriate for Ketu
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rules 2/6/7
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Ketu.gemstone_appropriate
+    op: eq
+    value: true
+    description: Ketu's gemstone gate is satisfied
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      effect: Ketu passes the full gemstone safety gate (functional benefic + weak/afflicted
+        + not combust, with Saturn/Rahu's stricter Rule 6/7 gates applied where relevant).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.remedies verbatim -- this generator adds no new safety logic,
+    only v2 schema exposure.
+- id: REM-NOGEM-SUN
+  title: Gemstone remedy CONTRAINDICATED for Sun
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 1 (NEVER prescribe a gemstone
+    for a functional malefic)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Sun.gemstone_contraindicated
+    op: eq
+    value: true
+    description: Sun's gemstone is contraindicated
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      effect: Sun is functionally malefic (or, for Rahu/Ketu, lacks its documented
+        narrow exception) -- gemstone amplification is unsafe. Dana of Sun's significations
+        is the preferred remedy (Rule 5).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Safety-critical rule family -- directly implements Remedy Safety Rule 1, the single
+    most important gate in this pack.
+- id: REM-NOGEM-MOO
+  title: Gemstone remedy CONTRAINDICATED for Moon
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 1 (NEVER prescribe a gemstone
+    for a functional malefic)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Moon.gemstone_contraindicated
+    op: eq
+    value: true
+    description: Moon's gemstone is contraindicated
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      effect: Moon is functionally malefic (or, for Rahu/Ketu, lacks its documented
+        narrow exception) -- gemstone amplification is unsafe. Dana of Moon's significations
+        is the preferred remedy (Rule 5).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Safety-critical rule family -- directly implements Remedy Safety Rule 1, the single
+    most important gate in this pack.
+- id: REM-NOGEM-MAR
+  title: Gemstone remedy CONTRAINDICATED for Mars
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 1 (NEVER prescribe a gemstone
+    for a functional malefic)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Mars.gemstone_contraindicated
+    op: eq
+    value: true
+    description: Mars's gemstone is contraindicated
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      effect: Mars is functionally malefic (or, for Rahu/Ketu, lacks its documented
+        narrow exception) -- gemstone amplification is unsafe. Dana of Mars's significations
+        is the preferred remedy (Rule 5).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Safety-critical rule family -- directly implements Remedy Safety Rule 1, the single
+    most important gate in this pack.
+- id: REM-NOGEM-MER
+  title: Gemstone remedy CONTRAINDICATED for Mercury
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 1 (NEVER prescribe a gemstone
+    for a functional malefic)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Mercury.gemstone_contraindicated
+    op: eq
+    value: true
+    description: Mercury's gemstone is contraindicated
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      effect: Mercury is functionally malefic (or, for Rahu/Ketu, lacks its documented
+        narrow exception) -- gemstone amplification is unsafe. Dana of Mercury's significations
+        is the preferred remedy (Rule 5).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Safety-critical rule family -- directly implements Remedy Safety Rule 1, the single
+    most important gate in this pack.
+- id: REM-NOGEM-JUP
+  title: Gemstone remedy CONTRAINDICATED for Jupiter
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 1 (NEVER prescribe a gemstone
+    for a functional malefic)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Jupiter.gemstone_contraindicated
+    op: eq
+    value: true
+    description: Jupiter's gemstone is contraindicated
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      effect: Jupiter is functionally malefic (or, for Rahu/Ketu, lacks its documented
+        narrow exception) -- gemstone amplification is unsafe. Dana of Jupiter's significations
+        is the preferred remedy (Rule 5).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Safety-critical rule family -- directly implements Remedy Safety Rule 1, the single
+    most important gate in this pack.
+- id: REM-NOGEM-VEN
+  title: Gemstone remedy CONTRAINDICATED for Venus
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 1 (NEVER prescribe a gemstone
+    for a functional malefic)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Venus.gemstone_contraindicated
+    op: eq
+    value: true
+    description: Venus's gemstone is contraindicated
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      effect: Venus is functionally malefic (or, for Rahu/Ketu, lacks its documented
+        narrow exception) -- gemstone amplification is unsafe. Dana of Venus's significations
+        is the preferred remedy (Rule 5).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Safety-critical rule family -- directly implements Remedy Safety Rule 1, the single
+    most important gate in this pack.
+- id: REM-NOGEM-SAT
+  title: Gemstone remedy CONTRAINDICATED for Saturn
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 1 (NEVER prescribe a gemstone
+    for a functional malefic)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Saturn.gemstone_contraindicated
+    op: eq
+    value: true
+    description: Saturn's gemstone is contraindicated
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      effect: Saturn is functionally malefic (or, for Rahu/Ketu, lacks its documented
+        narrow exception) -- gemstone amplification is unsafe. Dana of Saturn's significations
+        is the preferred remedy (Rule 5).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Safety-critical rule family -- directly implements Remedy Safety Rule 1, the single
+    most important gate in this pack.
+- id: REM-NOGEM-RAH
+  title: Gemstone remedy CONTRAINDICATED for Rahu
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 1 (NEVER prescribe a gemstone
+    for a functional malefic)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Rahu.gemstone_contraindicated
+    op: eq
+    value: true
+    description: Rahu's gemstone is contraindicated
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      effect: Rahu is functionally malefic (or, for Rahu/Ketu, lacks its documented
+        narrow exception) -- gemstone amplification is unsafe. Dana of Rahu's significations
+        is the preferred remedy (Rule 5).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Safety-critical rule family -- directly implements Remedy Safety Rule 1, the single
+    most important gate in this pack.
+- id: REM-NOGEM-KET
+  title: Gemstone remedy CONTRAINDICATED for Ketu
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 1 (NEVER prescribe a gemstone
+    for a functional malefic)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Ketu.gemstone_contraindicated
+    op: eq
+    value: true
+    description: Ketu's gemstone is contraindicated
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      effect: Ketu is functionally malefic (or, for Rahu/Ketu, lacks its documented
+        narrow exception) -- gemstone amplification is unsafe. Dana of Ketu's significations
+        is the preferred remedy (Rule 5).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Safety-critical rule family -- directly implements Remedy Safety Rule 1, the single
+    most important gate in this pack.
+- id: REM-SAT-SPECIAL
+  title: Saturn blocked by the yogakaraka-only gemstone gate
+  category: remedy
+  source_tier: 1
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 6 (NEVER blue sapphire unless
+    Saturn is yogakaraka)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Saturn.blocked_by_yogakaraka_gate
+    op: eq
+    value: true
+    description: Saturn is functional_benefic (kendra-only inversion) but NOT yoga_karaka
+  outputs:
+  - kind: classification
+    payload:
+      effect: Saturn's generic functional_benefic status (natural-malefic-ruling-kendra-only
+        inversion) is NOT sufficient for blue sapphire -- Rule 6 requires the stricter
+        yogakaraka test specifically, which this chart does not meet.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Demonstrates the safety rule actually blocking what a naive generic-benefic reading
+    would have wrongly allowed.
+- id: REM-RAHU-SPECIAL
+  title: Rahu's narrow hessonite exception is met
+  category: remedy
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Remedy Safety Rule 7 (NEVER hessonite unless
+    Rahu is well-placed and its dispositor is strong)
+  tradition: parasari
+  conditions:
+  - path: remedies.planets.Rahu.well_placed_and_strong_dispositor
+    op: eq
+    value: true
+    description: Rahu is not in a dusthana AND its sign dispositor is strong/very_strong
+  outputs:
+  - kind: classification
+    payload:
+      effect: Rahu is well-placed (not in a dusthana) and its sign dispositor tests
+        strong -- Rule 7's narrow exception is met, so hessonite may be considered
+        (still not a default recommendation).
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Reports that the exception CONDITION is met -- does not itself force a gemstone
+    recommendation, per Rule 7's own cautious framing.

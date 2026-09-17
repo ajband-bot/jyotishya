@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Sai Shivani Part 3: D12 to D60 [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+.conflict-register{background:#fdf4ff;border-left:4px solid #9333ea;padding:1rem;margin:0.5rem 0}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 3 of 5: D12 to D60 (Practitioner Reference)</h1>
+  <p class="text-sm text-gray-500">Itta Sai Shivani | Generated: 2026-08-21</p>
+</header>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Full Raw Varga Dump (D16, D20, D24, D27, D40, D45 — all 9 grahas)</h2>
+  <p class="text-sm mb-3">Shareable Part 3 §2 only surfaced the standout dignity per varga to keep the reading focused. Full raw data for audit purposes:</p>
+  <div class="debug mb-4">
+D16 (Sodasamsa): Lagna=Pisces H1 | Sun=Libra H8(DEBIL) | Moon=Libra H8 | Mars=Pisces H1 | Mercury=Sagittarius H10 | Jupiter=Virgo H7 | Venus=Taurus H3(OWN) | Saturn=Aries H2(DEBIL) | Rahu=Capricorn H11 | Ketu=Capricorn H11<br><br>
+D20 (Vimsamsa): Lagna=Pisces H1 | Sun=Taurus H3 | Moon=Sagittarius H10 | Mars=Leo H6 | Mercury=Leo H6 | Jupiter=Libra H8 | Venus=Leo H6 | Saturn=Cancer H5 | Rahu=Pisces H1 | Ketu=Pisces H1<br><br>
+D24 (Chaturvimsamsa/Siddhamsa): Lagna=Cancer H1 | Sun=Taurus H11 | Moon=Gemini H12 | Mars=Taurus H11 | Mercury=Leo H2 | Jupiter=Aries H10 | Venus=Pisces H9(EXALTED) | Saturn=Aquarius H8(OWN) | Rahu=Leo H2 | Ketu=Leo H2<br><br>
+D27 (Bhamsa/Nakshatramsa): Lagna=Sagittarius H1 | Sun=Aries H5(EXALTED) | Moon=Virgo H10 | Mars=Gemini H7 | Mercury=Aquarius H3 | Jupiter=Capricorn H2(DEBIL) | Venus=Taurus H6(OWN) | Saturn=Sagittarius H1 | Rahu=Libra H11 | Ketu=Aries H5<br><br>
+D40 (Khavedamsa): Lagna=Cancer H1 | Sun=Pisces H9 | Moon=Virgo H3 | Mars=Pisces H9 | Mercury=Scorpio H5 | Jupiter=Taurus H11 | Venus=Cancer H1 | Saturn=Libra H4(EXALTED) | Rahu=Leo H2 | Ketu=Leo H2<br><br>
+D45 (Akshavedamsa): Lagna=Cancer H1 | Sun=Sagittarius H6 | Moon=Scorpio H5(DEBIL) | Mars=Pisces H9 | Mercury=Aquarius H8 | Jupiter=Cancer H1(EXALTED) | Venus=Taurus H11(OWN) | Saturn=Aquarius H8(OWN) | Rahu=Taurus H11 | Ketu=Taurus H11
+  </div>
+  <p class="text-sm">Confidence: <span class="conf-high">HIGH</span> — all computed via the identical scheme functions used for Nikita/Raghunandan, spot-checked by hand (see Part 2 Internal §2 methodology, same approach applied here for D16/D20/D24/D27/D40/D45).</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Upapada Conflict Register (carried forward from Validation §13)</h2>
+  <div class="conflict-register">
+    <p><strong>Same standing corpus conflict class as ajay_kumar, sandeep_0700, itta_raghunandan, itta_sai_nikita fixtures:</strong></p>
+    <ul class="list-disc list-inside mt-2 text-sm">
+      <li>Canonical Ārūḍha distance formula → <strong>Virgo</strong> (H12 Taurus, lord Venus in H2, distance 3, counted forward per exception rule)</li>
+      <li>Project guide's inclusive-count formula → <strong>Gemini</strong> (same base, distance counted as raw lord-house value = 2, forward from H12 itself)</li>
+      <li>Verified directly via <code>app.derived.factors.upapada_lagna()</code> and <code>upapada_lagna_project_legacy()</code> function calls against a mock chart dict — both functions' exact output reproduced by hand, zero discrepancy.</li>
+    </ul>
+    <p class="mt-2 text-sm">Recommendation unchanged from Validation doc: present canonical (Virgo) as primary in Shareable copy, mention Gemini as the alternate.</p>
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Iṣṭa Devatā — Confidence Calibration</h2>
+  <table>
+    <thead><tr><th>Method</th><th>Result</th><th>Confidence</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>Kārakāṁśa dispositor</td><td>Jupiter → Viṣṇu-Nārāyaṇa</td><td class="conf-high">HIGH</td><td>Primary Jaimini method, computed directly (AK Sun's D9 sign = Sagittarius, ruled by Jupiter)</td></tr>
+      <tr><td>Lagna Nakṣatra deity</td><td>Aditi (mother of Ādityas, incl. Viṣṇu)</td><td class="conf-med">MEDIUM</td><td>Supporting/corroborating thread, not a primary determination method on its own</td></tr>
+      <tr><td>AK's own D1 nakṣatra deity</td><td>Aryaman (contracts/alliance)</td><td class="conf-med">MEDIUM</td><td>Secondary/flavor-adding thread, adds partnership-oriented nuance to the primary finding</td></tr>
+      <tr><td>9th lord nakṣatra deity</td><td>Yama (dharma/justice)</td><td class="conf-low">LOW-MEDIUM</td><td>Weakest of the four methods used here — included for completeness/transparency per the project's "check multiple methods, don't silently favor one" practice, not because it's independently decisive</td></tr>
+    </tbody>
+  </table>
+  <p class="text-sm mt-2">Two of four methods converge cleanly on Jupiter/Viṣṇu — presented in Shareable copy as the "primary recommendation," language calibrated to reflect genuine convergence without overstating certainty to the level of a single unambiguous classical rule (data_gap: this project has no dedicated Iṣṭa Devatā calculator in app/derived/, so all four methods above are computed manually per reading, per the standing data_gap noted in AGENTS.md §6).</p>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>Companion shareable file: Itta_Sai_Shivani_Part3_D12_to_D60_Karmic.html</p>
+</footer>
+
+</main></body></html>

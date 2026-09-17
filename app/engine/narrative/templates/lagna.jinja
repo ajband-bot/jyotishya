@@ -1,0 +1,26 @@
+{% if records %}
+<section class="narrative-section lagna-section">
+  <h2>Lagna Analysis</h2>
+  <p>
+    Lagna: <strong>{{ display.lagna_sign_en }}</strong>, ruled by
+    <strong>{{ display.lagna_lord }}</strong> (occupying House {{ display.lagna_lord_house }}).
+    Functional classification: <strong>{{ display.lagna_lord_classification }}</strong>.
+  </p>
+  {% for evaluation in records %}
+  <div class="rule-evidence" data-rule-id="{{ evaluation.rule_id }}" data-quality="{{ evaluation.quality }}">
+    <p>{{ evaluation.outputs[0].payload.get("effect", evaluation.title) }}</p>
+    <p class="evidence-meta">
+      <span class="source-tier">source tier {{ evaluation.source_tier }}</span>
+      &middot; <span class="confidence">confidence: {{ evaluation.confidence }}</span>
+      &middot; <span class="quality">quality: {{ evaluation.quality }}</span>
+      &middot; <span class="rule-id">{{ evaluation.rule_id }}</span>
+    </p>
+  </div>
+  {% endfor %}
+</section>
+{% else %}
+<section class="narrative-section lagna-section narrative-empty">
+  <h2>Lagna Analysis</h2>
+  <p class="data-gap">No Lagna-lord-placement rule matched for this chart -- see gap report.</p>
+</section>
+{% endif %}

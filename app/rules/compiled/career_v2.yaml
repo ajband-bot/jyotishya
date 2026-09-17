@@ -1,0 +1,700 @@
+- id: CAR-10L-01
+  title: 10th Lord (career significator) placed in House 1
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 1
+    description: 10th lord occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      house: 1
+      effect: The 10th lord's placement in the 1st house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-02
+  title: 10th Lord (career significator) placed in House 2
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 2
+    description: 10th lord occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      house: 2
+      effect: The 10th lord's placement in the 2nd house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-03
+  title: 10th Lord (career significator) placed in House 3
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 3
+    description: 10th lord occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      house: 3
+      effect: The 10th lord's placement in the 3rd house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-04
+  title: 10th Lord (career significator) placed in House 4
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 4
+    description: 10th lord occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      house: 4
+      effect: The 10th lord's placement in the 4th house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-05
+  title: 10th Lord (career significator) placed in House 5
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 5
+    description: 10th lord occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      house: 5
+      effect: The 10th lord's placement in the 5th house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-06
+  title: 10th Lord (career significator) placed in House 6
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 6
+    description: 10th lord occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      house: 6
+      effect: The 10th lord's placement in the 6th house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-07
+  title: 10th Lord (career significator) placed in House 7
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 7
+    description: 10th lord occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      house: 7
+      effect: The 10th lord's placement in the 7th house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-08
+  title: 10th Lord (career significator) placed in House 8
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 8
+    description: 10th lord occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      house: 8
+      effect: The 10th lord's placement in the 8th house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-09
+  title: 10th Lord (career significator) placed in House 9
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 9
+    description: 10th lord occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      house: 9
+      effect: The 10th lord's placement in the 9th house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-10
+  title: 10th Lord (career significator) placed in House 10
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 10
+    description: 10th lord occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      house: 10
+      effect: The 10th lord's placement in the 10th house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-11
+  title: 10th Lord (career significator) placed in House 11
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 11
+    description: 10th lord occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      house: 11
+      effect: The 10th lord's placement in the 11th house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-10L-12
+  title: 10th Lord (career significator) placed in House 12
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th Lord row; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.10.occupies_house
+    op: eq
+    value: 12
+    description: 10th lord occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      house: 12
+      effect: The 10th lord's placement in the 12th house routes career success through
+        that house's affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.career_analysis.tenth_lord_report via lord_placements.10 --
+    lagna-agnostic by design.
+- id: CAR-OCC-SUN
+  title: Sun occupies the 10th house (career profession-type)
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th House row (classical
+    occupant-profession convention)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 10
+    description: Sun occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      effect: Government service, administration, authority, leadership roles.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Distinct interpretive lens from the generic PIH-*-10 planet-in-house rule (profession-TYPE,
+    not general house-10 significations).
+- id: CAR-OCC-MOO
+  title: Moon occupies the 10th house (career profession-type)
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th House row (classical
+    occupant-profession convention)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 10
+    description: Moon occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      effect: Public-facing work, hospitality, nursing/caregiving, food/liquids trade.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Distinct interpretive lens from the generic PIH-*-10 planet-in-house rule (profession-TYPE,
+    not general house-10 significations).
+- id: CAR-OCC-MAR
+  title: Mars occupies the 10th house (career profession-type)
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th House row (classical
+    occupant-profession convention)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 10
+    description: Mars occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      effect: Engineering, military, police, surgery, real estate, sports.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Distinct interpretive lens from the generic PIH-*-10 planet-in-house rule (profession-TYPE,
+    not general house-10 significations).
+- id: CAR-OCC-MER
+  title: Mercury occupies the 10th house (career profession-type)
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th House row (classical
+    occupant-profession convention)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 10
+    description: Mercury occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      effect: Trade, writing, accounting, IT, journalism, teaching.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Distinct interpretive lens from the generic PIH-*-10 planet-in-house rule (profession-TYPE,
+    not general house-10 significations).
+- id: CAR-OCC-JUP
+  title: Jupiter occupies the 10th house (career profession-type)
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th House row (classical
+    occupant-profession convention)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 10
+    description: Jupiter occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      effect: Teaching, law, consulting, priesthood, banking, counseling.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Distinct interpretive lens from the generic PIH-*-10 planet-in-house rule (profession-TYPE,
+    not general house-10 significations).
+- id: CAR-OCC-VEN
+  title: Venus occupies the 10th house (career profession-type)
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th House row (classical
+    occupant-profession convention)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 10
+    description: Venus occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      effect: Arts, entertainment, fashion, luxury goods, diplomacy.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Distinct interpretive lens from the generic PIH-*-10 planet-in-house rule (profession-TYPE,
+    not general house-10 significations).
+- id: CAR-OCC-SAT
+  title: Saturn occupies the 10th house (career profession-type)
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th House row (classical
+    occupant-profession convention)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 10
+    description: Saturn occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      effect: Labor-intensive or service trades, mining, engineering, long-term institutional
+        roles.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Distinct interpretive lens from the generic PIH-*-10 planet-in-house rule (profession-TYPE,
+    not general house-10 significations).
+- id: CAR-OCC-RAH
+  title: Rahu occupies the 10th house (career profession-type)
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th House row (classical
+    occupant-profession convention)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 10
+    description: Rahu occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      effect: Foreign-linked, unconventional, or technology-driven careers.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Distinct interpretive lens from the generic PIH-*-10 planet-in-house rule (profession-TYPE,
+    not general house-10 significations).
+- id: CAR-OCC-KET
+  title: Ketu occupies the 10th house (career profession-type)
+  category: career
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Career Analysis Framework, 10th House row (classical
+    occupant-profession convention)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 10
+    description: Ketu occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      effect: Research, spirituality, healing, detached/behind-the-scenes work.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Distinct interpretive lens from the generic PIH-*-10 planet-in-house rule (profession-TYPE,
+    not general house-10 significations).
+- id: CAR-LORDIS-SUN
+  title: 10th Lord IS Sun (career flavor via natural karakatva)
+  category: career
+  source_tier: 1
+  source_ref: BPHS Ch.10 / Saravali Ch.2 (app.knowledge.planets.KARAKATVA)
+  tradition: parasari
+  conditions:
+  - path: house_lords.10
+    op: eq
+    value: Sun
+    description: 10th lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      effect: 'With Sun ruling the 10th, career naturally leans toward: government
+        official, doctor, politician, administrator, CEO.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Reuses KARAKATVA's already-cited professions list verbatim (DRY) -- only the 7
+    classical planets can be sign lords, Rahu/Ketu honestly excluded.
+- id: CAR-LORDIS-MOO
+  title: 10th Lord IS Moon (career flavor via natural karakatva)
+  category: career
+  source_tier: 1
+  source_ref: BPHS Ch.10 / Saravali Ch.2 (app.knowledge.planets.KARAKATVA)
+  tradition: parasari
+  conditions:
+  - path: house_lords.10
+    op: eq
+    value: Moon
+    description: 10th lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      effect: 'With Moon ruling the 10th, career naturally leans toward: nurse, teacher,
+        public relations, marine, psychology, food industry.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Reuses KARAKATVA's already-cited professions list verbatim (DRY) -- only the 7
+    classical planets can be sign lords, Rahu/Ketu honestly excluded.
+- id: CAR-LORDIS-MAR
+  title: 10th Lord IS Mars (career flavor via natural karakatva)
+  category: career
+  source_tier: 1
+  source_ref: BPHS Ch.10 / Saravali Ch.2 (app.knowledge.planets.KARAKATVA)
+  tradition: parasari
+  conditions:
+  - path: house_lords.10
+    op: eq
+    value: Mars
+    description: 10th lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      effect: 'With Mars ruling the 10th, career naturally leans toward: military,
+        surgeon, engineer, athlete, police, real estate.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Reuses KARAKATVA's already-cited professions list verbatim (DRY) -- only the 7
+    classical planets can be sign lords, Rahu/Ketu honestly excluded.
+- id: CAR-LORDIS-MER
+  title: 10th Lord IS Mercury (career flavor via natural karakatva)
+  category: career
+  source_tier: 1
+  source_ref: BPHS Ch.10 / Saravali Ch.2 (app.knowledge.planets.KARAKATVA)
+  tradition: parasari
+  conditions:
+  - path: house_lords.10
+    op: eq
+    value: Mercury
+    description: 10th lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      effect: 'With Mercury ruling the 10th, career naturally leans toward: writer,
+        accountant, lawyer, trader, teacher, IT professional, journalist.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Reuses KARAKATVA's already-cited professions list verbatim (DRY) -- only the 7
+    classical planets can be sign lords, Rahu/Ketu honestly excluded.
+- id: CAR-LORDIS-JUP
+  title: 10th Lord IS Jupiter (career flavor via natural karakatva)
+  category: career
+  source_tier: 1
+  source_ref: BPHS Ch.10 / Saravali Ch.2 (app.knowledge.planets.KARAKATVA)
+  tradition: parasari
+  conditions:
+  - path: house_lords.10
+    op: eq
+    value: Jupiter
+    description: 10th lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      effect: 'With Jupiter ruling the 10th, career naturally leans toward: priest,
+        judge, professor, counselor, banker, philosopher.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Reuses KARAKATVA's already-cited professions list verbatim (DRY) -- only the 7
+    classical planets can be sign lords, Rahu/Ketu honestly excluded.
+- id: CAR-LORDIS-VEN
+  title: 10th Lord IS Venus (career flavor via natural karakatva)
+  category: career
+  source_tier: 1
+  source_ref: BPHS Ch.10 / Saravali Ch.2 (app.knowledge.planets.KARAKATVA)
+  tradition: parasari
+  conditions:
+  - path: house_lords.10
+    op: eq
+    value: Venus
+    description: 10th lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      effect: 'With Venus ruling the 10th, career naturally leans toward: artist,
+        musician, designer, actor, beautician, jeweler, diplomat.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Reuses KARAKATVA's already-cited professions list verbatim (DRY) -- only the 7
+    classical planets can be sign lords, Rahu/Ketu honestly excluded.
+- id: CAR-LORDIS-SAT
+  title: 10th Lord IS Saturn (career flavor via natural karakatva)
+  category: career
+  source_tier: 1
+  source_ref: BPHS Ch.10 / Saravali Ch.2 (app.knowledge.planets.KARAKATVA)
+  tradition: parasari
+  conditions:
+  - path: house_lords.10
+    op: eq
+    value: Saturn
+    description: 10th lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      effect: 'With Saturn ruling the 10th, career naturally leans toward: laborer,
+        miner, ascetic, judge, scientist, engineer, administrator.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Reuses KARAKATVA's already-cited professions list verbatim (DRY) -- only the 7
+    classical planets can be sign lords, Rahu/Ketu honestly excluded.
+- id: CAR-YK
+  title: 10th Lord is a Yoga-Karaka for this Lagna
+  category: career
+  source_tier: 1
+  source_ref: BPHS Ch.34 (via app.derived.functional_nature)
+  tradition: parasari
+  conditions:
+  - path: career_analysis.tenth_lord.is_yoga_karaka
+    op: eq
+    value: true
+    description: 10th lord is classified yoga_karaka
+  outputs:
+  - kind: classification
+    payload:
+      effect: The 10th lord also rules a trikona -- the strongest possible functional-benefic
+        case for career success (BPHS Ch.34).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.functional_nature verbatim -- zero new logic.
+- id: CAR-KD
+  title: 10th Lord suffers Kendradhipati Dosha
+  category: career
+  source_tier: 1
+  source_ref: BPHS Ch.34 (via app.derived.functional_nature)
+  tradition: parasari
+  conditions:
+  - path: career_analysis.tenth_lord.is_kendradhipati_dosha
+    op: eq
+    value: true
+    description: 10th lord is classified kendradhipati_dosha
+  outputs:
+  - kind: classification
+    payload:
+      effect: The 10th lord is a natural benefic ruling ONLY a kendra -- it still
+        delivers career results but loses some unconditioned benefic purity (BPHS
+        Ch.34).
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps app.derived.functional_nature verbatim -- zero new logic.

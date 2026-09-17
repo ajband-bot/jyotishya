@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Sai Nikita Part 5: Forecast &amp; Remedies [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+.internal-note{background:#fef9c3;border-left:4px solid #ca8a04;padding:1rem;margin:0.5rem 0;font-size:0.9rem}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 5 of 5: Forecast &amp; Remedies (Practitioner Reference)</h1>
+</header>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Forecast Window — Raw Dasha Computation</h2>
+  <div class="debug mb-4">
+Venus AD (within Moon MD) Pratyantardashas, full list covering forecast window:<br>
+  Venus   : 2026-03-29 -> 2026-07-08<br>
+  Sun     : 2026-07-08 -> 2026-08-07<br>
+  Moon    : 2026-08-07 -> 2026-09-26  (ACTIVE as of analysis date 2026-08-15)<br>
+  Mars    : 2026-09-26 -> 2026-10-31<br>
+  Rahu    : 2026-10-31 -> 2027-01-30<br>
+Computed via app.astro.dashas.compute_pratyantaradashas(moon_md, venus_ad), reused directly from scripts/compute_nikita.py
+output (§ Vimshottari Dashas section) -- no recomputation needed, DRY reuse of already-verified data.<br><br>
+Jupiter transit sign-change scan (20-day scan initially, refined to 3-day scan for the Aug2026-Feb2027 window):<br>
+  2026-08-15 -> Jupiter in Cancer (H5 from Lagna)<br>
+  2026-11-01 -> Jupiter enters Leo (H6 from Lagna -- EXACT natal Moon+Rahu house)<br>
+  2027-01-27 -> Jupiter enters Cancer (retrograde re-entry)<br>
+Confidence: <span class="conf-high">HIGH</span> -- 3-day resolution scan is precise enough for a monthly-forecast-grade claim; the
+Nov 1 entry date could shift by a day or two at exact-hour resolution but the "early November" framing used in shareable
+copy is appropriately hedged against that minor precision gap.
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Remedy Safety Checklist (Applied)</h2>
+  <table class="mb-4">
+    <thead><tr><th>Rule</th><th>Applied?</th></tr></thead>
+    <tbody>
+      <tr><td>No gemstones for functional malefics (Venus, Saturn)</td><td class="conf-high">YES — explicitly warned against in shareable copy §2 closing warning</td></tr>
+      <tr><td>Mantra/charity offered before any gemstone</td><td class="conf-high">YES — every remedy section leads with mantra/charity, gemstones mentioned only as optional/conditional</td></tr>
+      <tr><td>No gemstone recommended for a combust/afflicted planet without caveat</td><td class="conf-high">YES — Mercury Emerald explicitly ruled out given combustion + gandanta, not merely deferred</td></tr>
+      <tr><td>Yellow Sapphire (Jupiter) caveat given despite favorable functional role</td><td class="conf-high">YES — flagged for consultation given the debilitation-though-cancelled nuance, not a blanket endorsement</td></tr>
+      <tr><td>No medical/legal remedy claims made</td><td class="conf-high">YES — all remedies are devotional/charitable in nature; D7 remedy language (Part 2) also stayed devotional, no fertility-medical claims</td></tr>
+      <tr><td>Ishta Devata practice grounded in computed nakshatra/lordship facts, not generic</td><td class="conf-high">YES — Hanuman Chalisa recommendation tied directly to the computed 9th-lord-Mars-exalted finding (Part 3, §8), not a generic default</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Internal Note — Jupiter Transit Timing Claim</h2>
+  <div class="internal-note">
+    <p>The shareable copy's "best news of this forecast" framing for the Nov 1 Jupiter-into-Leo transit is a deliberately weighted editorial choice — of everything computed for this forecast window, this is the one finding with a directly favorable, unambiguous classical interpretation (benefic planet transiting a house already flagged as needing support), so it was given prominent placement. This is disclosed here as an intentional narrative/emphasis decision, not a claim that this is the astronomically most significant event of the window (the Saturn return and ongoing Moon-Venus-Moon dasha stack are arguably more structurally significant, but less immediately actionable as day-to-day forecast guidance).</p>
+  </div>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>Companion shareable file: Itta_Sai_Nikita_Part5_Forecast_Remedies.html. This completes the full 5-Part Internal + Shareable set for Itta Sai Nikita.</p>
+</footer>
+
+</main></body></html>

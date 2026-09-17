@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F8F7F3;
+  --color-surface: #FFFFFF;
+  --color-ink: #1E293B;
+  --color-ink-muted: #64748B;
+  --color-gold: #B58A3A;
+  --color-indigo: #27346A;
+  --color-sage: #6E8B74;
+  --color-amber: #B7791F;
+  --color-red-muted: #A94A4A;
+
+  --font-serif: "Source Serif 4", "Noto Serif", Georgia, serif;
+  --font-ui: "Inter", "Geist", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+}
+
+h1, h2, h3, .font-scripture {
+  font-family: var(--font-serif);
+}
+
+@keyframes chartlab-aspect-flow {
+  to { stroke-dashoffset: -12; }
+}
+.chartlab-aspect-animated {
+  animation: chartlab-aspect-flow 1.1s linear infinite;
+}
+.chartlab-planet-chip {
+  transition: opacity 300ms ease, box-shadow 300ms ease;
+}
+
+/* Dasha -> chart glow (Chart Lab v2 Sprint 2, spec section 5). MD = soft
+   outer glow, AD = medium glow, PD = a subtle 2.5s breathing pulse -- kept
+   gentle per spec's explicit "do not make it distracting" instruction. */
+@keyframes chartlab-dasha-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px var(--dasha-glow-color, transparent); }
+  50% { box-shadow: 0 0 0 6px var(--dasha-glow-color, transparent); }
+}
+.chartlab-dasha-md {
+  box-shadow: 0 0 0 2px var(--dasha-glow-color, transparent);
+}
+.chartlab-dasha-ad {
+  box-shadow: 0 0 0 3px var(--dasha-glow-color, transparent);
+}
+.chartlab-dasha-pd {
+  animation: chartlab-dasha-pulse 2.5s ease-in-out infinite;
+}

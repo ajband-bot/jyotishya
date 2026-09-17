@@ -1,0 +1,19 @@
+chart_id: itta_sai_shivani
+name: Itta Sai Shivani
+dob: 1999-09-14
+time_local: "02:05:00"
+timezone: IST
+utc_offset: 5.5
+location:
+  place: Kadiri, Andhra Pradesh
+  latitude: 14.12
+  longitude: 78.17
+settings:
+  ayanamsha: lahiri
+  node_type: mean
+  house_system: whole_sign
+notes:
+- "Birth data provided directly and unambiguously: 14-9-1999 (DD-MM-YYYY) means 14 September 1999, 2:05 AM IST, Kadiri (14.12N, 78.17E)."
+- "User supplied both decimal and DMS coordinates: 14.12N (stated as 14 deg 7m N) and 78.17E (stated as 78 deg 10m E). Exact DMS-to-decimal conversion of 14 deg 7m N = 14.1167 and 78 deg 10m E = 78.1667, which differs slightly (within ~0.05 deg, ~3-6 km) from the stated decimals. Used the user's explicitly stated decimal values (14.12, 78.17) as primary per Cardinal Rule 2 (use what was given, do not silently substitute); this is the same class of minor rounding note documented for Itta Raghunandan's fixture."
+- "Birth seconds assumed as 00."
+- "Same Kadiri family location as Itta Sai Nikita (14.12N, 78.16E) and likely a family member of Nikita/Raghunandan; treated as an independent profile per input lock, no assumptions carried over from prior charts."

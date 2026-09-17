@@ -1,0 +1,802 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gayathri — INTERNAL Part 2: D2–D10 [Practitioner]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-green:#2a8703;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+.highlight{background:#fffbeb;border-left:4px solid var(--wm-gold);padding:1rem}
+.verse{background:#f0f4ff;border-left:4px solid var(--wm-blue);padding:1rem;font-style:italic}
+.warn{background:#fef2f2;border-left:4px solid var(--wm-red);padding:1rem}
+.blessing{background:#f0fdf4;border-left:4px solid var(--wm-green);padding:1rem}
+.internal-note{background:#fef9c3;border-left:4px solid #ca8a04;padding:1rem;margin:0.5rem 0}
+.conflict{background:#fff1f2;border-left:4px solid #be123c;padding:1rem;margin:0.5rem 0}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+tr:hover{background:#f1f5f9}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+h3{color:#1e3a5f}
+h4{color:#374151;margin-top:1rem}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-low{background:#fecaca;color:#991b1b;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.vargottama{background:#e0e7ff;color:#3730a3;display:inline-block;padding:2px 8px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+.debilitated{background:#fef3c7;color:#92400e;display:inline-block;padding:2px 8px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+.exalted{background:#dbeafe;color:#1e3a8a;display:inline-block;padding:2px 8px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+.own-sign{background:#d1fae5;color:#065f46;display:inline-block;padding:2px 8px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+.neechabhanga{background:#fce7f3;color:#9d174d;display:inline-block;padding:2px 8px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+.retro{background:#dbeafe;color:#1e40af;display:inline-block;padding:2px 8px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+.matrix-row-good{background:#f0fdf4}
+.matrix-row-bad{background:#fef2f2}
+.matrix-row-mixed{background:#fffbeb}
+.matrix-row-gem{background:#eff6ff}
+.banner-internal{background:#991b1b;color:white;padding:1.5rem 2rem;text-align:center;font-family:monospace;letter-spacing:0.05em}
+.math-block{background:#1e293b;color:#e2e8f0;font-family:monospace;font-size:0.8rem;padding:1rem;border-radius:4px;margin:0.5rem 0;line-height:1.6}
+</style></head>
+<body class="min-h-screen">
+
+<!-- INTERNAL BANNER -->
+<div class="banner-internal">
+  <p class="text-2xl font-bold">&#9888; INTERNAL — PRACTITIONER USE ONLY</p>
+  <p class="mt-1 text-base">Gayathri | D2–D10 Divisional Chart Analysis | Ajay Reference Document</p>
+  <p class="text-sm mt-1">NOT FOR NATIVE. Contains raw assessments, derivation math, and conflict register.</p>
+  <p class="text-sm mt-1">Generated: 2026-06-07 | Based on Chart Brief v1.1 (authoritative source)</p>
+</div>
+
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<!-- COMPUTATION METHOD DEBUG REFERENCE -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">0. D-Chart Computation Method — Debug Reference</h2>
+
+  <div class="highlight mb-4">
+    <p><strong>General D-N Lagna Derivation Formula (Parāśarī — used throughout this document):</strong></p>
+    <ul class="list-disc pl-6 mt-2">
+      <li>Each sign = 30°. Each D-N portion = 30°/N degrees.</li>
+      <li>Degree in sign ÷ (30/N) = portion index (1-based: floor of (degree × N / 30) + 1).</li>
+      <li><strong>Odd signs</strong>: count portion N from the sign itself (1st = same sign, 2nd = next sign, etc.).</li>
+      <li><strong>Even signs</strong>: <em>D3</em> counts from 5th/9th; <em>D4</em> counts from same/4th/7th/10th; <em>D7</em> counts from 7th sign. Rules vary by D-number — see per-chart derivations below.</li>
+      <li>Navāṁśa (D9): for fire lagnas → start Aries; earth → Capricorn; air → Libra; water → Cancer.</li>
+    </ul>
+  </div>
+
+  <div class="internal-note">
+    <p><strong>INTERNAL NOTE — Authoritative Source Protocol:</strong> The Part 2 Shareable agent computed all divisional charts carefully, correcting several errors present in initial prompt derivations. The Chart Brief v1.1 documents these corrections. All D-chart values in this internal document cross-reference the Brief v1.1 and the Shareable's verified output tables. Where the initial generation prompt's derivations contain errors (documented in §6 Conflict Register), the Brief v1.1 values are used. The prompt is treated as a workflow instruction document, not as a computation authority.</p>
+    <p class="mt-2"><strong>Three prompt errors corrected in this document:</strong> (1) D2 Lagna — prompt says "Aquarius (even) → Cancer" but Aquarius is ODD → Lagna is Leo (Sūrya). (2) D4 — prompt's Jupiter and Venus D4 positions are wrong; Brief/Shareable corrected values used. (3) D5 Lagna school conflict — documented in §6.</p>
+  </div>
+</section>
+
+<!-- ======== D2 HORA ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. D2 — Horā (Wealth Polarity)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">1A. Lagna Derivation</h3>
+  <div class="math-block">
+D2 METHOD: Each rāśi → 2 horās of 15° each.
+Odd signs: 0–15° = Sūrya-horā (Leo); 15–30° = Candra-horā (Cancer).
+Even signs: 0–15° = Candra-horā (Cancer); 15–30° = Sūrya-horā (Leo).
+
+LAGNA: Aquarius = ODD sign. Degree = 06°57'.
+  06°57' is in 0–15° zone → 1st horā of odd sign = SŪRYA-HORĀ → Leo.
+D2 LAGNA = Leo (Sūrya-horā).
+
+⚠ PROMPT ERROR CORRECTION: The initial prompt stated "Aquarius (even) → D2 Cancer Lagna."
+  Aquarius is an ODD sign (Aries, Gemini, Leo, Libra, Sagittarius, Aquarius = 1,3,5,7,9,11 = odd).
+  06°57' falls in the 0–15° zone. For odd signs, 0–15° = Sūrya-horā = Leo.
+  Correct D2 Lagna = LEO, not Cancer. Confirmed by Chart Brief v1.1.
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">1B. Full D2 Computation Table</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Sign</th><th>Odd/Even</th><th>Degree</th><th>Zone</th><th>D2 Horā</th></tr></thead>
+    <tbody>
+      <tr class="bg-blue-50"><td><strong>Lagna</strong></td><td>Aquarius</td><td>ODD</td><td>06°57'</td><td>0–15° → Sūrya</td><td><strong>Leo (Sūrya)</strong></td></tr>
+      <tr><td>Sun (DK)</td><td>Sagittarius</td><td>ODD</td><td>12°57'</td><td>0–15° → Sūrya</td><td><strong>Leo (Sūrya)</strong></td></tr>
+      <tr><td>Moon (AK)</td><td>Capricorn</td><td>EVEN</td><td>29°55'</td><td>15–30° → Sūrya</td><td><strong>Leo (Sūrya)</strong></td></tr>
+      <tr class="matrix-row-mixed"><td>Mars (Vargottama, BK)</td><td>Gemini</td><td>ODD</td><td>28°05'</td><td>15–30° → Candra</td><td><strong>Cancer (Candra)</strong></td></tr>
+      <tr><td>Mercury (MK)</td><td>Scorpio</td><td>EVEN</td><td>28°04'</td><td>15–30° → Sūrya</td><td><strong>Leo (Sūrya)</strong></td></tr>
+      <tr><td>Jupiter (GK)</td><td>Virgo</td><td>EVEN</td><td>19°22'</td><td>15–30° → Sūrya</td><td><strong>Leo (Sūrya)</strong></td></tr>
+      <tr><td>Venus (Yogakāraka)</td><td>Capricorn</td><td>EVEN</td><td>28°39'</td><td>15–30° → Sūrya</td><td><strong>Leo (Sūrya)</strong></td></tr>
+      <tr><td>Saturn (Lagneśa)</td><td>Capricorn</td><td>EVEN</td><td>22°11'</td><td>15–30° → Sūrya</td><td><strong>Leo (Sūrya)</strong></td></tr>
+      <tr><td>Rahu</td><td>Scorpio</td><td>EVEN</td><td>26°52'</td><td>15–30° → Sūrya</td><td><strong>Leo (Sūrya)</strong></td></tr>
+      <tr><td>Ketu</td><td>Taurus</td><td>EVEN</td><td>26°52'</td><td>15–30° → Sūrya</td><td><strong>Leo (Sūrya)</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="text-sm mt-2 text-gray-500"><strong>Result: 9/10 in Sūrya-horā (Leo). Only Mars in Candra-horā (Cancer).</strong> Matches Chart Brief v1.1.</p>
+
+  <h3 class="text-xl mt-4 mb-3">1C. Critical Findings <span class="conf-med">CONFIDENCE: MEDIUM</span></h3>
+  <div class="internal-note">
+    <p><strong>INTERNAL — Raw Practitioner Assessment:</strong></p>
+    <p class="mt-2">D2 Sūrya-horā dominates at 9/10 bodies. The practitioner take: this native's wealth mechanism is solar and authority-based. The D1 H12 placement of Venus (Yogakāraka) creates a surface impression of hidden, passive, or spiritually-oriented wealth channels. The D2 corrects this impression — the quality of wealth is solar, structured, and earned through visible roles. Money comes when the native assumes authority, not when she retreats into H12.</p>
+    <p class="mt-2">Mars alone in Candra-horā (Cancer) = the career planet (H10 lord) and courage planet (H3 lord) has lunar-public reach. The practical read: the authority-earnings of the 9 Sūrya planets are best monetized when deployed toward a large public (Mars-Candra) rather than kept in small authoritative circles. Teaching or healing at scale produces both the solar dignity and the lunar public-reach. This combination is rare — it's the signature of someone who can lead an institution (Sūrya) serving the masses (Mars-Candra).</p>
+    <p class="mt-2"><strong>Confidence caveat:</strong> D2 is the most simplified divisional chart. The Parāśarī degree-based method (used here) differs from the Jaimini school which assigns all planets of even or odd signs differently. The 9/10 Sūrya concentration is so extreme that the directional finding holds regardless of school. Certainty on exact lagna placement is MEDIUM due to school variation; certainty on overall solar dominance is HIGH.</p>
+  </div>
+  <div class="internal-note">
+    <p><strong>WHAT WAS TOLD TO CUSTOMER:</strong> Shareable correctly presented Leo Sūrya-horā dominance (9/10), interpreted Mars in Candra-horā as "public reach through career." No significant discrepancy between shareable and this internal assessment. The shareable appropriately framed the D2 finding without disclosing the exact lagna placement confusion in the prompt. Customer received accurate guidance on solar wealth channels.</p>
+  </div>
+</section>
+
+<!-- ======== D3 DREKKANA ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. D3 — Drekkāṇa (Siblings, Courage, Communication)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">2A. Lagna Derivation</h3>
+  <div class="math-block">
+D3 METHOD: Each rāśi → 3 drekkāṇas of 10° each.
+  1st (0–10°): same sign.
+  2nd (10–20°): 5th from natal sign.
+  3rd (20–30°): 9th from natal sign.
+
+LAGNA: Aquarius (odd), 06°57'.
+  06°57' → 1st drekkāṇa (0–10°) → same sign.
+D3 LAGNA = Aquarius. (Vargottama-quality echo of D1 Lagna.)
+
+MARS CHECK: Gemini (odd), 28°05'.
+  28°05' → 3rd drekkāṇa (20–30°) → 9th from Gemini.
+  9th from Gemini (Gem=3rd sign): 3+9-1=11 → 11th sign = Aquarius.
+D3 Mars = Aquarius = D3 LAGNA. Mars conjunct D3 Lagna confirmed.
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">2B. Key Planetary Positions</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Sign</th><th>Degree</th><th>Drekkāṇa</th><th>D3 Sign</th><th>D3 House</th></tr></thead>
+    <tbody>
+      <tr class="bg-blue-50"><td><strong>Lagna</strong></td><td>Aquarius</td><td>06°57'</td><td>1st (0–10°)</td><td><strong>Aquarius</strong></td><td>H1</td></tr>
+      <tr class="matrix-row-gem"><td><strong>Mars (BK, Vargottama)</strong></td><td>Gemini (odd)</td><td>28°05'</td><td>3rd → 9th from Gem</td><td><strong>Aquarius</strong></td><td><strong>H1 — ON LAGNA</strong></td></tr>
+      <tr><td>Sun (DK)</td><td>Sagittarius (odd)</td><td>12°57'</td><td>2nd → 5th from Sag</td><td>Aries</td><td>H3</td></tr>
+      <tr><td>Moon (AK)</td><td>Capricorn (even)</td><td>29°55'</td><td>3rd → 9th from Cap</td><td>Virgo</td><td>H8</td></tr>
+      <tr><td>Mercury (MK)</td><td>Scorpio (even)</td><td>28°04'</td><td>3rd → 9th from Sco</td><td>Cancer</td><td>H6</td></tr>
+      <tr><td>Jupiter (GK)</td><td>Virgo (even)</td><td>19°22'</td><td>2nd → 5th from Vir</td><td>Capricorn</td><td>H12</td></tr>
+      <tr><td>Venus (Yogakāraka)</td><td>Capricorn (even)</td><td>28°39'</td><td>3rd → 9th from Cap</td><td>Virgo</td><td>H8</td></tr>
+      <tr><td>Saturn (Lagneśa)</td><td>Capricorn (even)</td><td>22°11'</td><td>3rd → 9th from Cap</td><td>Virgo</td><td>H8</td></tr>
+      <tr><td>Rahu</td><td>Scorpio (even)</td><td>26°52'</td><td>3rd → 9th from Sco</td><td>Cancer</td><td>H6</td></tr>
+      <tr><td>Ketu</td><td>Taurus (even)</td><td>26°52'</td><td>3rd → 9th from Tau</td><td>Capricorn</td><td>H12</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">2C. Critical Findings <span class="conf-med">CONFIDENCE: MEDIUM</span></h3>
+  <div class="internal-note">
+    <p><strong>INTERNAL — Raw Practitioner Assessment:</strong></p>
+    <p class="mt-2">BK Mars (sibling kāraka) on D3 Lagna is the defining D3 fact. BK = Bhrātṛkāraka = significator of siblings. If this native has siblings, they are likely Martian types: direct, competitive, possibly in engineering, military, sports, or technical leadership. The native herself carries the BK's courage-energy as her own identity — she is her own "sibling archetype." D3 H1 Mars (retrograde) = courage that moves inward before outward. She thinks through action deeply before committing, then acts with finality. This is not hesitation; it is compression before release.</p>
+    <p class="mt-2">D3 H8 stellium (Moon AK + Venus Yogakāraka + Saturn Lagneśa in Virgo): In the courage chart, the soul's three most identity-defining planets cluster in H8. Transformation, research, and hidden depths are where the native's core planetary weight sits in the courage domain. Her courage is not surface-level social bravado — it is the courage of going deep into difficult terrain (H8) where others won't. Writing, speaking, or communicating about deep, difficult, or taboo subjects is where the D3 fully activates.</p>
+    <p class="mt-2">Mercury + Rahu in D3 H6 Cancer: Communication mode in the courage chart carries an unconventional, intuitive, potentially investigative edge. Mercury+Rahu is a powerful combination for research journalism, psychology, or esoteric writing. H6 = service orientation to this communication. Best deployed in service of a cause, not self-promotion.</p>
+  </div>
+  <div class="internal-note">
+    <p><strong>WHAT WAS TOLD TO CUSTOMER:</strong> Shareable correctly flagged Mars on D3 Lagna, the H8 stellium of Moon+Venus+Saturn, and Mercury+Rahu H6 communication. The framing was appropriately encouraging without overstating the difficulty. No significant discrepancy.</p>
+  </div>
+</section>
+
+<!-- ======== D4 CHATURTHAMSHA ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. D4 — Caturthāṁśa (Property, Comfort, Inner Sanctuary)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">3A. Lagna Derivation</h3>
+  <div class="math-block">
+D4 METHOD: Each rāśi → 4 caturthāṁśas of 7°30' each.
+  1st (0–7.5°): same sign.
+  2nd (7.5–15°): 4th from sign.
+  3rd (15–22.5°): 7th from sign.
+  4th (22.5–30°): 10th from sign.
+(Same counting rule for both odd and even signs in Parāśarī D4.)
+
+LAGNA: Aquarius, 06°57'.
+  06°57' → 1st portion (0–7.5°) → same sign → D4 LAGNA = Aquarius. ✅
+
+JUPITER VERIFICATION: Virgo (6th sign), 19°22'.
+  19°22' → 3rd portion (15–22.5°) → 7th from Virgo.
+  7th from Virgo (6): 6+7-1=12 → 12th sign = Pisces.
+  Pisces = JUPITER OWN-SIGN → D4 Jupiter in Pisces.
+  From Aquarius D4 Lagna: Pisces is H2. Jupiter own-sign in D4 H2. ✅
+
+VENUS VERIFICATION: Capricorn (10th sign), 28°39'.
+  28°39' → 4th portion (22.5–30°) → 10th from Capricorn.
+  10th from Capricorn (10): 10+10-1=19 → 19-12=7 → 7th sign = Libra.
+  Libra = VENUS OWN-SIGN → D4 Venus in Libra.
+  From Aquarius D4 Lagna: Libra is H9. Venus own-sign in D4 H9. ✅
+
+⚠ PROMPT ERROR CORRECTION: The prompt stated "Jupiter at 19°22' Virgo = 3rd D4 = Aquarius"
+  and "Venus Capricorn → odd sign → 4th D4 → Aries." Both wrong.
+  Jupiter 3rd D4 from Virgo = 7th from Virgo = PISCES (not Aquarius).
+  Venus 4th D4 from Capricorn = 10th from Capricorn = LIBRA (not Aries; Capricorn is EVEN not odd).
+  The Brief v1.1 correctly states: Jupiter own-sign D4 H2; Venus own-sign D4 H9.
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">3B. Key Planetary Positions</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Sign</th><th>Degree</th><th>D4 Portion</th><th>D4 Sign</th><th>D4 House</th><th>Dignity</th></tr></thead>
+    <tbody>
+      <tr class="bg-blue-50"><td><strong>Lagna</strong></td><td>Aquarius</td><td>06°57'</td><td>1st (0–7.5°)</td><td><strong>Aquarius</strong></td><td>H1</td><td>Same as D1</td></tr>
+      <tr><td>Ketu</td><td>Taurus (even)</td><td>26°52'</td><td>4th (22.5–30°) → 10th from Tau</td><td>Aquarius</td><td>H1</td><td>Ketu on D4 Lagna</td></tr>
+      <tr class="matrix-row-gem"><td><strong>Jupiter (GK)</strong></td><td>Virgo (even)</td><td>19°22'</td><td>3rd (15–22.5°) → 7th from Vir</td><td><strong>Pisces</strong></td><td><strong>H2</strong></td><td><span class="own-sign">OWN-SIGN</span></td></tr>
+      <tr><td>Sun (DK)</td><td>Sagittarius (odd)</td><td>12°57'</td><td>2nd (7.5–15°) → 4th from Sag</td><td>Pisces</td><td>H2</td><td>Neutral</td></tr>
+      <tr><td>Mars (Vargottama)</td><td>Gemini (odd)</td><td>28°05'</td><td>4th (22.5–30°) → 10th from Gem</td><td>Pisces</td><td>H2</td><td>Neutral</td></tr>
+      <tr class="matrix-row-gem"><td><strong>Venus (Yogakāraka)</strong></td><td>Capricorn (even)</td><td>28°39'</td><td>4th (22.5–30°) → 10th from Cap</td><td><strong>Libra</strong></td><td><strong>H9</strong></td><td><span class="own-sign">OWN-SIGN</span></td></tr>
+      <tr><td>Moon (AK)</td><td>Capricorn (even)</td><td>29°55'</td><td>4th (22.5–30°) → 10th from Cap</td><td>Libra</td><td>H9</td><td>Neutral (Venus-sign)</td></tr>
+      <tr><td>Saturn (Lagneśa)</td><td>Capricorn (even)</td><td>22°11'</td><td>3rd (15–22.5°) → 7th from Cap</td><td>Cancer</td><td>H6</td><td>Neutral</td></tr>
+      <tr><td>Mercury</td><td>Scorpio (even)</td><td>28°04'</td><td>4th (22.5–30°) → 10th from Sco</td><td>Leo</td><td>H7</td><td>Neutral</td></tr>
+      <tr><td>Rahu</td><td>Scorpio (even)</td><td>26°52'</td><td>4th (22.5–30°) → 10th from Sco</td><td>Leo</td><td>H7</td><td>With Mercury</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">3C. Critical Findings <span class="conf-med">CONFIDENCE: MEDIUM</span></h3>
+  <div class="internal-note">
+    <p><strong>INTERNAL — Raw Practitioner Assessment:</strong></p>
+    <p class="mt-2">The two headline D4 facts are Jupiter own-sign in H2 (wealth-of-property) and Venus own-sign in H9 (dharma-and-fortune). This is the chart's hidden property gift: the Yogakāraka in its own sign in D4's dharma house. In D1 Venus is in H12 (hidden, suppressed), but in D4 Venus is in own-sign H9 — the property domain's fortune house. This means: property acquisition is more dharma-aligned and more naturally blessed than the D1 alone suggests. Jupiter own-sign in D4 H2 (wealth-of-property) = any property acquired has a rightful, ordained quality. This is not someone who acquires questionably.</p>
+    <p class="mt-2">Ketu on D4 Lagna: non-attachment to fixed assets as identity. This is actually functionally healthy for a chart with strong Vimala VRY — the detachment prevents over-identification with property which can create suffering during transit periods. However, actively encourage the native to not be SO detached that she fails to secure basic property stability during the current Jupiter MD (favorable for D4 matters given Jupiter's own-sign D4 H2 placement).</p>
+    <p class="mt-2">Timing note: H2 lord of D4 from Aquarius Lagna = Pisces, lord = Jupiter. Jupiter is the MD lord (2014–2030) AND it sits in its own sign in D4 H2. The property window is open right now. The Saturn MD (2030+) will consolidate. But action for first property should be taken in Jupiter MD, ideally Jupiter-Venus or Jupiter-Moon sub-periods. This is a practitioner action item.</p>
+  </div>
+  <div class="internal-note">
+    <p><strong>WHAT WAS TOLD TO CUSTOMER:</strong> Shareable correctly presented Jupiter own-sign H2 and Venus own-sign H9 (correcting the prompt's wrong derivations silently). Ketu on D4 Lagna noted as "detachment not neglect." The timing guidance about Jupiter MD being the property window was included. No discrepancy.</p>
+  </div>
+</section>
+
+<!-- ======== D5 PANCHAMSHA ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. D5 — Pañcāṁśa (Past-Life Meritorious Deeds)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">4A. Lagna Derivation — Two Schools</h3>
+  <div class="math-block">
+D5 METHOD (two schools):
+SCHOOL A — Parāśarī (simple sign-count):
+  Each rāśi → 5 pañcāṁśas of 6° each.
+  Odd signs: count from sign itself (1st=same, 2nd=next, etc.)
+  Even signs: count from 9th sign.
+  AQUARIUS (odd), 06°57': portion = floor(6.95/6)+1 = 2nd → 2nd from Aquarius = Pisces.
+  D5 LAGNA (School A) = Pisces.
+
+SCHOOL B — Parāśarī alternate (fire/earth/air/water cycle start):
+  Odd signs from Aries; Even signs from Sagittarius.
+  AQUARIUS (odd): starts from Aries.
+  06°57' → 2nd portion → 2nd from Aries = Taurus.
+  D5 LAGNA (School B) = Taurus.
+
+⚠ CONFLICT: The two Parāśarī D5 schools give Pisces vs Taurus for D5 Lagna.
+  The Shareable used contextual interpretation of the D5 chart rather than committing
+  to a lagna-first derivation. This is the right approach when there is school ambiguity.
+  See §6 Conflict Register for full documentation.
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">4B. Critical Findings <span class="conf-low">CONFIDENCE: LOW-MEDIUM (school uncertainty)</span></h3>
+  <div class="internal-note">
+    <p><strong>INTERNAL — Raw Practitioner Assessment:</strong></p>
+    <p class="mt-2">D5 interpretation is safest when focusing on planetary positions rather than the lagna-centric house analysis, because the lagna school ambiguity propagates to all house assignments. The highest-confidence D5 reading focuses on dignified planets in the D5 regardless of lagna.</p>
+    <p class="mt-2">Regardless of D5 lagna school, the planet-level findings are consistent: Mars (Vargottama) in Leo D5 = solar warrior past-life merit; Moon (AK) and Venus (Yogakāraka) in Aries D5 (via Capricorn even-sign starting Sagittarius: 5th = Aries) = soul and fortune merit earned through courageous past-life action. These are the D5's main signals and they are school-independent. Practitioner confidence on the past-life courage-merit reading: HIGH despite lagna school uncertainty.</p>
+    <p class="mt-2">The D5 Jupiter and Saturn positions vary by school and carry lower confidence. Focus client guidance on the Mars/Moon/Venus D5 findings; hold the Jupiter/Saturn D5 interpretations lightly.</p>
+  </div>
+  <div class="internal-note">
+    <p><strong>WHAT WAS TOLD TO CUSTOMER:</strong> Shareable focused on planetary-level D5 readings (Mars in Leo, Moon+Venus in Aries) rather than detailed house analysis from a contested lagna. This was the correct approach given the school ambiguity. The customer received meaningful D5 guidance without being given false precision. No discrepancy.</p>
+  </div>
+</section>
+
+<!-- ======== D6 SHASHTHAMSHA ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">5. D6 — Ṣaṣṭhāṁśa (Health, Service, Enemies)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">5A. Lagna Derivation</h3>
+  <div class="math-block">
+D6 METHOD: Each rāśi → 6 ṣaṣṭhāṁśas of 5° each.
+  Odd signs: count from sign itself.
+  Even signs: count from 7th sign.
+
+LAGNA: Aquarius (odd), 06°57'.
+  Portion: floor(6.95/5)+1 = 2nd portion.
+  2nd from Aquarius = Pisces.
+D6 LAGNA = Pisces (Jupiter-ruled). ✅
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">5B. Key Health Indicators</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Planet</th><th>D6 Position</th><th>House from Pisces</th><th>Health/Service Implication</th></tr></thead>
+    <tbody>
+      <tr><td>Moon (AK, H6 lord)</td><td>Sagittarius</td><td>H10</td><td>Soul health = vocational purpose. H6 lord AK in D6 H10 = service is the native's constitutional medicine</td></tr>
+      <tr><td>Venus (Yogakāraka)</td><td>Sagittarius</td><td>H10</td><td>Yogakāraka in D6 H10 = healing vocation is the fortune mechanism in health domain</td></tr>
+      <tr><td>Saturn (Lagneśa)</td><td>Scorpio</td><td>H9</td><td>Structural/skeletal health; joint and bone vulnerabilities</td></tr>
+      <tr><td>Jupiter (MD lord)</td><td>Capricorn</td><td>H11</td><td>MD lord in D6 H11 = Jupiter period (current) is gains-oriented for health domain; healing services pay</td></tr>
+      <tr><td>Mars (Vargottama)</td><td>Virgo</td><td>H7</td><td>Vargottama Mars in D6 H7 = Mars energy directed at health-discipline; physical exercise regime is necessary</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">5C. Critical Findings <span class="conf-med">CONFIDENCE: MEDIUM</span></h3>
+  <div class="internal-note">
+    <p><strong>INTERNAL — Raw Practitioner Assessment:</strong></p>
+    <p class="mt-2">Pisces D6 Lagna (Jupiter-ruled) = the health chart naturally bends toward Jupiter vulnerabilities: liver, fat metabolism, excess sitting, overindulgence in food or philosophical overthinking that leads to inactivity. The Jupiter MD (current) makes this more active, not less — Jupiter rules D6 lagna and is the MD lord. During Jupiter MD, health expansion (both good and risky) is highlighted.</p>
+    <p class="mt-2">The triple H12 stellium in D1 (Moon+Venus+Saturn in Capricorn) creates a psychosomatic tendency: the body will faithfully manifest what is emotionally unprocessed. This is not metaphysical fluff — it is practically actionable. Moon AD currently (2025–2027) activates the H12 stellium. Advise: during this Moon AD, somatic complaints should be taken seriously as signals, not suppressed with surface remedies. Address emotional root. Saturn PD (Jun–Aug 2026) adds structural/bone-level consideration.</p>
+    <p class="mt-2">Mars in D6 H7 (Vargottama): physical exercise is not optional for this chart. Retrograde Vargottama Mars in D6 H7 = the health chart's martial energy is internally directed. Without physical outlet, Mars's energy stagnates and creates vāta-kapha disturbance (joint stiffness, fatigue, circulatory sluggishness). Minimum 30 minutes of active movement daily is a health prescription, not a suggestion. Specifically: weight-bearing exercise (Mars-Saturn combination = bones and muscle).</p>
+    <p class="mt-2">Vāta constitution primary (Aquarius lagna, Saturn dominant, Rahu-Śatabhiṣā). Kapha secondary (Moon+Jupiter influence). Ayurvedic recommendation: vāta pacification diet (warm, oily, grounding foods), pitta activation exercise (sufficient to counter kapha sluggishness), avoid cold, dry, and raw food excess especially in Vāyu seasons (late autumn, early winter).</p>
+  </div>
+  <div class="internal-note">
+    <p><strong>WHAT WAS TOLD TO CUSTOMER:</strong> Shareable presented health vulnerabilities (skeletal/joint, nervous system, psychosomatic H12 pattern) and the healing gift (Moon+Venus in D6 H10 as healing vocation). Constitutional medicine of movement and Sūrya upāsana included. The raw vāta-kapha Ayurvedic framing was softened appropriately. No significant discrepancy; Shareable gave accurate direction without clinical over-specification.</p>
+  </div>
+</section>
+
+<!-- ======== D7 SAPTAMSHA ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">6. D7 — Saptāṁśa (Children, Progeny, Creative Lineage)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">6A. Lagna Derivation</h3>
+  <div class="math-block">
+D7 METHOD: Each rāśi → 7 saptāṁśas of 4°17'8.57" (30/7°) each.
+  Odd signs: count from sign itself.
+  Even signs: count from 7th sign.
+
+LAGNA: Aquarius (odd), 06°57' = 6.95°.
+  Portion: floor(6.95 / 4.2857) + 1 = floor(1.622) + 1 = 1 + 1 = 2nd saptāṁśa.
+  2nd from Aquarius = Pisces.
+D7 LAGNA = Pisces (Jupiter-ruled). ✅
+
+MARS VERIFICATION: Gemini (odd), 28°05' = 28.083°.
+  Portion: floor(28.083 / 4.2857) + 1 = floor(6.553) + 1 = 6 + 1 = 7th saptāṁśa.
+  7th from Gemini (3rd sign): 3+7-1=9 → 9th sign = Sagittarius.
+  D7 Mars = Sagittarius.
+  From D7 Lagna Pisces (12th sign): Sagittarius (9th sign) = 10th from Pisces → D7 H10. ✅
+
+JUPITER VERIFICATION: Virgo (even, 6th sign), 19°22' = 19.367°.
+  Portion: floor(19.367 / 4.2857) + 1 = floor(4.519) + 1 = 4 + 1 = 5th saptāṁśa.
+  Even sign → count from 7th: 7th from Virgo = Pisces (12th sign).
+  5th from Pisces: 12+5-1=16 → 16-12=4 → 4th sign = Cancer.
+  D7 Jupiter = Cancer.
+  From D7 Lagna Pisces: Cancer (4th sign) = 5th from Pisces → D7 H5. Jupiter EXALTED in Cancer. ✅
+
+⚠ ORIGINAL PROMPT CORRECTION (already in Brief v1.1): Mars was initially placed in Gemini D7
+  (the D1 sign). Correct computation gives Sagittarius (7th saptāṁśa of odd sign Gemini).
+  Correction documented in Brief v1.1 and applied in Shareable.
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">6B. Key Planetary Positions</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Sign</th><th>Degree</th><th>Saptāṁśa</th><th>D7 Sign</th><th>D7 House</th><th>Dignity</th></tr></thead>
+    <tbody>
+      <tr class="bg-blue-50"><td><strong>Lagna</strong></td><td>Aquarius (odd)</td><td>06°57'</td><td>2nd</td><td><strong>Pisces</strong></td><td>H1</td><td>Jupiter-ruled</td></tr>
+      <tr><td>Sun (DK)</td><td>Sagittarius (odd)</td><td>12°57'</td><td>4th</td><td>Pisces</td><td>H1</td><td>DK in D7 H1 — Sun+Lagna alignment</td></tr>
+      <tr class="matrix-row-gem"><td><strong>Jupiter (GK)</strong></td><td>Virgo (even)</td><td>19°22'</td><td>5th (from 7th Pis)</td><td><strong>Cancer</strong></td><td><strong>H5</strong></td><td><span class="exalted">EXALTED in D7 H5</span></td></tr>
+      <tr class="matrix-row-mixed"><td><strong>Mars (Vargottama)</strong></td><td>Gemini (odd)</td><td>28°05'</td><td>7th</td><td><strong>Sagittarius</strong></td><td><strong>H10</strong></td><td>Neutral (Jupiter-sign)</td></tr>
+      <tr><td>Saturn (Lagneśa)</td><td>Capricorn (even)</td><td>22°11'</td><td>6th (from 7th Can)</td><td>Sagittarius</td><td>H10</td><td>Mars in D7 H10 conjunct Saturn</td></tr>
+      <tr><td>Mercury (MK)</td><td>Scorpio (even)</td><td>28°04'</td><td>7th (from 7th Tau)</td><td>Scorpio</td><td>H9</td><td><span class="own-sign">OWN-SIGN in D7 H9</span></td></tr>
+      <tr><td>Moon (AK)</td><td>Capricorn (even)</td><td>29°55'</td><td>7th (from 7th Can)</td><td>Capricorn</td><td>H11</td><td>Neutral</td></tr>
+      <tr><td>Venus (Yogakāraka)</td><td>Capricorn (even)</td><td>28°39'</td><td>7th (from 7th Can)</td><td>Capricorn</td><td>H11</td><td>Neutral</td></tr>
+      <tr><td>Ketu</td><td>Taurus (even)</td><td>26°52'</td><td>7th (from 7th Sco)</td><td>Taurus</td><td>H3</td><td>Neutral</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">6C. Critical Findings <span class="conf-med">CONFIDENCE: MEDIUM-HIGH for Jupiter exaltation finding</span></h3>
+  <div class="internal-note">
+    <p><strong>INTERNAL — Raw Practitioner Assessment:</strong></p>
+    <p class="mt-2">Jupiter exalted in D7 H5 is the chart's most complete progeny blessing. Natural kāraka for children in its exaltation sign in the children's house of the children's chart. This is a triple-lock confirmation of children. The "when" question is more nuanced: Mars in D7 H10 = progeny comes into active picture through career (children after career establishment). Retrograde Mars in D1 = possible non-linear path — not necessarily biological first-child linearity, could include creative progeny, adoption, or a first child who arrives in an unexpected context.</p>
+    <p class="mt-2">DK Sun in D7 H1 (Pisces): The spouse significator lands in the D7 lagna sign. This creates a DK-D7Lagna connection that suggests: the spouse has a relationship to children/progeny themes, possibly already having children, working with children, or being deeply invested in the parenthood dimension of the marriage. This is worth noting to Ajay as a potential conversation point with the native if relevant.</p>
+    <p class="mt-2">Mercury own-sign in D7 H9: The children will carry Mercury's intelligence — specifically communicative, analytical, and technologically oriented. This has a past-life karma quality: the native's intellectual lineage is strong and self-perpetuating. D7 H9 = the children also carry dharmic inclinations (H9 = dharma house in D7).</p>
+    <p class="mt-2">Current dasha stack for progeny timing: Jupiter MD + Moon AD (2025–2027). Moon = H6 lord in D1, but in D7 context it's in H11 (gains). The Moon AD doesn't block children — it just means the window is quiet, internal, being prepared. Mars AD (2027–2028, approximately) is the activation for the D7 H10 Mars. That period is the highest-probability progeny-timing window in the current dasha trajectory.</p>
+  </div>
+  <div class="internal-note">
+    <p><strong>WHAT WAS TOLD TO CUSTOMER:</strong> Shareable correctly presented Jupiter exalted D7 H5, Mercury own-sign H9, and Mars+Saturn D7 H10. DK Sun in D7 H1 noted as "D7 lagna sign." Timing guidance pointed at Moon AD (current) and Mars AD (2027–2028) without over-committing. The DK-D7-lagna connection regarding spouse's relationship to children was not highlighted in the Shareable (appropriate to hold for practitioner analysis). No errors in Shareable; this internal note adds the DK-lagna-D7 angle for Ajay's live session use.</p>
+  </div>
+</section>
+
+<!-- ======== D9 NAVAMSHA ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">7. D9 — Navāṁśa: The Soul Chart — Internal Deep Analysis</h2>
+
+  <h3 class="text-xl mt-4 mb-3">7A. Lagna Derivation — Full Mathematical Proof</h3>
+  <div class="math-block">
+D9 METHOD: Each rāśi → 9 navāṁśas of 3°20' (3.333°) each.
+STARTING SIGN by triplicity:
+  Fire (Ari/Leo/Sag): start from Aries.
+  Earth (Tau/Vir/Cap): start from Capricorn.
+  Air (Gem/Lib/Aqu): start from Libra.
+  Water (Can/Sco/Pis): start from Cancer.
+
+LAGNA: Aquarius (AIR sign), 06°57' = 6.95°.
+  Start from Libra.
+  Portion: floor(6.95 / 3.333) + 1 = floor(2.085) + 1 = 2 + 1 = 3rd navāṁśa.
+  3rd from Libra (7th sign): 7+3-1=9 → 9th sign = Sagittarius.
+D9 LAGNA = Sagittarius. ✅
+
+MARS VARGOTTAMA PROOF: Gemini (AIR sign), 28°05' = 28.083°.
+  Start from Libra.
+  Portion: floor(28.083 / 3.333) + 1 = floor(8.425) + 1 = 8 + 1 = 9th navāṁśa.
+  9th from Libra (7th sign): 7+9-1=15 → 15-12=3 → 3rd sign = Gemini.
+D9 Mars = Gemini. D1 Mars = Gemini. VARGOTTAMA CONFIRMED. ✅
+
+VENUS DEBILITATION PROOF: Capricorn (EARTH sign), 28°39' = 28.65°.
+  Start from Capricorn.
+  Portion: floor(28.65 / 3.333) + 1 = floor(8.595) + 1 = 8 + 1 = 9th navāṁśa.
+  9th from Capricorn (10th sign): 10+9-1=18 → 18-12=6 → 6th sign = Virgo.
+D9 Venus = Virgo. Venus debilitated in Virgo. DEBILITATION CONFIRMED. ✅
+
+MOON (AK) VERIFICATION: Capricorn (EARTH), 29°55' = 29.917°.
+  Start from Capricorn.
+  Portion: floor(29.917 / 3.333) + 1 = floor(8.975) + 1 = 8 + 1 = 9th navāṁśa.
+  9th from Capricorn = Virgo.
+D9 Moon = Virgo → from Sag lagna = H10. AK Moon in D9 H10 Virgo confirmed. ✅
+
+SUN (DK) VERIFICATION: Sagittarius (FIRE), 12°57' = 12.95°.
+  Start from Aries.
+  Portion: floor(12.95 / 3.333) + 1 = floor(3.885) + 1 = 3 + 1 = 4th navāṁśa.
+  4th from Aries (1st sign): 1+4-1=4 → 4th sign = Cancer.
+D9 Sun = Cancer → from Sag lagna = H8. DK Sun in D9 H8 Cancer confirmed. ✅
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">7B. Full D9 Position Derivations</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Sign</th><th>Degree</th><th>Triplicity Start</th><th>Navāṁśa#</th><th>D9 Sign</th><th>D9 House</th><th>State</th></tr></thead>
+    <tbody>
+      <tr class="bg-blue-50"><td><strong>Lagna</strong></td><td>Aquarius (Air)</td><td>06°57'</td><td>Libra</td><td>3rd</td><td><strong>Sagittarius</strong></td><td>H1</td><td>Jupiter-ruled</td></tr>
+      <tr><td>Sun (DK)</td><td>Sagittarius (Fire)</td><td>12°57'</td><td>Aries</td><td>4th</td><td>Cancer</td><td>H8</td><td>Neutral</td></tr>
+      <tr class="matrix-row-mixed"><td>Moon (AK)</td><td>Capricorn (Earth)</td><td>29°55'</td><td>Capricorn</td><td>9th</td><td>Virgo</td><td>H10</td><td>Neutral</td></tr>
+      <tr class="matrix-row-gem"><td><strong>Mars (BK)</strong></td><td>Gemini (Air)</td><td>28°05'</td><td>Libra</td><td>9th</td><td><strong>Gemini</strong></td><td><strong>H7</strong></td><td><span class="vargottama">VARGOTTAMA</span></td></tr>
+      <tr class="matrix-row-bad"><td>Mercury (MK)</td><td>Scorpio (Water)</td><td>28°04'</td><td>Cancer</td><td>9th</td><td>Pisces</td><td>H4</td><td><span class="debilitated">DEBILITATED</span> → <span class="neechabhanga">Neechābhaṅga</span></td></tr>
+      <tr><td>Jupiter (GK)</td><td>Virgo (Earth)</td><td>19°22'</td><td>Capricorn</td><td>6th</td><td>Gemini</td><td>H7</td><td>Neutral — with Mars</td></tr>
+      <tr class="matrix-row-bad"><td><strong>Venus (Yogakāraka)</strong></td><td>Capricorn (Earth)</td><td>28°39'</td><td>Capricorn</td><td>9th</td><td><strong>Virgo</strong></td><td><strong>H10</strong></td><td><span class="debilitated">DEBILITATED</span> → <span class="neechabhanga">Neechābhaṅga</span></td></tr>
+      <tr><td>Saturn (PK, Lagneśa)</td><td>Capricorn (Earth)</td><td>22°11'</td><td>Capricorn</td><td>8th</td><td>Leo</td><td>H9</td><td>Neutral</td></tr>
+      <tr><td>Rahu</td><td>Scorpio (Water)</td><td>26°52'</td><td>Cancer</td><td>9th</td><td>Pisces</td><td>H4</td><td>Neutral — with Mercury</td></tr>
+      <tr><td>Ketu</td><td>Virgo (Earth)</td><td>26°52'</td><td>Capricorn</td><td>9th</td><td>Virgo</td><td>H10</td><td>With Moon+Venus</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">7C. D9 Venus Debilitation — Internal Assessment (Most Critical Finding)</h3>
+  <div class="warn mb-4">
+    <p><strong>INTERNAL NOTE — Venus debilitated D9 is the single most consequential D9 finding in this chart.</strong></p>
+    <p class="mt-2">For a chart where Venus is Yogakāraka (H4+H9 lord for Aquarius lagna = supreme functional benefic), D9 debilitation carries maximum interpretive weight. The D1+D9 matrix verdict: "Promise real but delayed/effortful." Do not water this down in client sessions. Tell it clearly: the fortune-factor that should be this chart's greatest gift (Venus Yogakāraka) operates under a soul-level mandate of purification. It does not arrive without effort. It does not arrive through passive waiting. It does not arrive through the native simply existing and expecting the universe to deliver.</p>
+    <p class="mt-2">What this means practically: Every time Gayathri has expected Venus-domains (relationships, beauty, material prosperity, artistic expression, property luck) to unfold naturally without active engagement, she has been disappointed. The disappointment is not the chart failing — it is the D9 doing its job of insisting on conscious engagement. The Neechābhaṅga (Mercury in D9 H4 kendra) provides genuine mitigation — she won't be eternally denied — but the mitigation activates THROUGH effort, not instead of effort.</p>
+    <p class="mt-2">Advise Ajay: In the session, when discussing Venus, do not softly say "it will come in time." Say specifically: "What conscious action are you taking toward [the Venus domain in question]? The chart requires action from you here." This is the difference between an internal and a shareable reading.</p>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">7D. DK Sun in D9 Cancer H8 — Marriage Internal Assessment</h3>
+  <div class="internal-note">
+    <p><strong>INTERNAL — Marriage Raw Assessment:</strong></p>
+    <p class="mt-2">DK Sun in D9 Cancer H8: The marriage this person will have is not a comfortable one — it is a transformative one. H8 in D9 for the DK means: the marriage carries themes of depth, intensity, possible complexity around shared resources or hidden circumstances in the early phases. Cancer quality softens this somewhat — the spouse is genuinely nurturing and emotionally invested. But the H8 means: things will not be surface-level with this person, and the native should not enter the relationship expecting ease.</p>
+    <p class="mt-2">Confidence: MEDIUM. D9 DK H8 is a reliable indicator but the manifestation range is wide. Could mean: spouse from healing/research/occult background; significant age difference; relationship involves one party undergoing major transformation (career change, relocation, loss of parent, etc.) during the union; shared resources carry complexity (prior debt, inheritance issues, or a joint financial undertaking that carries risk). None of these are dealbreakers — H8 is depth, not destruction. But the native should enter this union clear-eyed about the fact that this is high-demand relationship territory.</p>
+    <p class="mt-2">Saturn also in D9 H8 Cancer (as Lagneśa): Lagneśa in D9 H8 alongside DK = the native's own identity and self-expression are also somewhat placed in transformative, hidden territory in the navāṁśa. She carries her Saturnine depth inwardly. The marriage will bring two deeply inward types together — which can be either profoundly bonded or isolating if communication is not actively maintained. Advise native: in this marriage, verbal/emotional communication must be consciously practiced, as both she and the spouse will tend to process internally.</p>
+    <p class="mt-2">UL Cancer (D1 analysis) + DK D9 Cancer + 2nd from UL = Leo (Sun's sign) + DK = Sun: Triple coherence across three independent analytical methods. The spouse picture is stable. Cancer = nurturing, home-oriented, emotionally deep. Solar backbone = dignified, possibly in a recognized profession. The person is out there. The question is availability of the native (see Marriage section below).</p>
+  </div>
+</section>
+
+<!-- ======== D9 TRUTH TABLE ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">8. D9 Truth Table — D1+D9 Matrix (Full 10 Bodies)</h2>
+
+  <div class="overflow-x-auto">
+  <table>
+    <thead>
+      <tr>
+        <th>Graha</th>
+        <th>D1 State</th>
+        <th>D9 Sign/House</th>
+        <th>D9 State</th>
+        <th>Matrix Verdict</th>
+        <th>Practitioner Note (Internal)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="matrix-row-gem">
+        <td><strong>Mars (BK)</strong></td>
+        <td>Neutral H5, Retrograde, Vargottama</td>
+        <td>Gemini H7</td>
+        <td><span class="vargottama">VARGOTTAMA</span></td>
+        <td><strong>Bedrock confirmed. Full D1 promise sealed at soul level.</strong></td>
+        <td>The Mahā Parivartana anchor is sound. Mars is this chart's single most reliable planet. When native needs strength, point to Mars. When she doubts her capacity, point to this.</td>
+      </tr>
+      <tr class="matrix-row-bad">
+        <td><strong>Venus (Yogakāraka)</strong></td>
+        <td>Neutral H12</td>
+        <td>Virgo H10</td>
+        <td><span class="debilitated">DEBILITATED</span> → <span class="neechabhanga">NBY</span></td>
+        <td>Promise real but effortful. Late blooming. Never automatic.</td>
+        <td>Most important finding. Repeat to Ajay: native must be told directly — active engagement required. Passive waiting will not activate the Yogakāraka.</td>
+      </tr>
+      <tr class="matrix-row-mixed">
+        <td><strong>Moon (AK)</strong></td>
+        <td>Neutral H12, H6 lord</td>
+        <td>Virgo H10</td>
+        <td>Neutral (AK prominent)</td>
+        <td>Soul consistent. D1 H12 → D9 H10 = soul evolving from withdrawal to purposeful vocation.</td>
+        <td>The AK's D9 H10 placement confirms career IS the soul's dharmic path. Don't let native think spirituality and career are in conflict for her — they are the same for this AK placement.</td>
+      </tr>
+      <tr class="matrix-row-bad">
+        <td><strong>Mercury (MK)</strong></td>
+        <td>Neutral H10, + Rahu</td>
+        <td>Pisces H4</td>
+        <td><span class="debilitated">DEBILITATED</span> → <span class="neechabhanga">NBY</span></td>
+        <td>Linear intelligence challenged; intuitive intelligence sovereign.</td>
+        <td>Native likely performs poorly on standardized analytical tests but excels at insight-based, intuitive, or holistic problem-solving. Advise not to judge her intelligence by linear metrics.</td>
+      </tr>
+      <tr class="matrix-row-mixed">
+        <td><strong>Jupiter (GK, MD lord)</strong></td>
+        <td>Neutral H8 (dusthāna)</td>
+        <td>Gemini H7</td>
+        <td>Neutral</td>
+        <td>Wisdom through partnership. MD activates through relationships and collaborations.</td>
+        <td>MD lord in D9 H7 = the entire Jupiter MD (2014–2030) is primarily activated by partners, teachers, and significant dialogues. Relationships (including with Ajay as advisor) are the MD's primary activation channel.</td>
+      </tr>
+      <tr class="matrix-row-mixed">
+        <td><strong>Saturn (PK, Lagneśa)</strong></td>
+        <td><span class="own-sign">OWN H12 (Vimala VRY)</span></td>
+        <td>Leo H9</td>
+        <td>Neutral (H9 dharma house)</td>
+        <td>D1 strength (VRY) partially carried in D9 (H9 = dharma). Long-term authority confirmed but delayed.</td>
+        <td>Saturn in D9 H9 (Leo): the Lagneśa finds dharmic expression in the solar house. The Vimala VRY's dharmic output is confirmed at soul level. Saturn MD (2030+) will be the chart's fullest authority expression.</td>
+      </tr>
+      <tr class="matrix-row-mixed">
+        <td><strong>Sun (DK)</strong></td>
+        <td>Neutral H11 Mūla</td>
+        <td>Cancer H8</td>
+        <td>Neutral</td>
+        <td>Marriage = transformative depth. Cancer = nurturing spouse. H8 = hidden complexity.</td>
+        <td>DK in D9 H8: enter this marriage counseling with awareness that early phases may carry complexity. Not a warning against marriage — a preparation for the native's realistic expectations.</td>
+      </tr>
+      <tr>
+        <td><strong>Rahu</strong></td>
+        <td>Gandānta H10 (Scorpio)</td>
+        <td>Pisces H4</td>
+        <td>Neutral</td>
+        <td>Unconventional domestic and home environment. With Mercury in D9 H4.</td>
+        <td>Rahu+Mercury in D9 H4 = unusual home context (possibly living abroad, non-traditional living arrangements, or domestic environment tied to Mercury-Rahu themes: technology, research, or unconventional housing).</td>
+      </tr>
+      <tr>
+        <td><strong>Ketu</strong></td>
+        <td>H4 (Taurus)</td>
+        <td>Virgo H10</td>
+        <td>Neutral</td>
+        <td>Past-life Virgo service mastery present in soul chart's career house.</td>
+        <td>Ketu D9 H10 Virgo with Moon+Venus: past-life expert in Virgoan service. Intuitive expertise in healing, service, precision analysis. She "knows" things in her vocation domain without having learned them linearly.</td>
+      </tr>
+      <tr>
+        <td><strong>Lagna</strong></td>
+        <td>Aquarius (Saturnine, Rahu-ruled)</td>
+        <td>Sagittarius H1</td>
+        <td>Jupiter-ruled</td>
+        <td>D1 exterior = cool, analytical, restrained. D9 soul = philosophical, expansive, dharma-seeking.</td>
+        <td>Critical interpretive note: do not read this native purely from her Aquarian exterior. The D9 Sagittarius lagna = the soul is a philosopher and a truth-seeker. When she is in philosophical, exploratory mode, she is most herself. Give her this permission in sessions.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ======== D10 DASAMSHA ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">9. D10 — Daśāṁśa (Career Chart, Public Karma)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">9A. Lagna Derivation</h3>
+  <div class="math-block">
+D10 METHOD: Each rāśi → 10 daśāṁśas of 3° each.
+  Odd signs: count from sign itself (1st=same, 2nd=next, etc.).
+  Even signs: count from 9th sign.
+
+LAGNA: Aquarius (odd), 06°57' = 6.95°.
+  Portion: floor(6.95 / 3) + 1 = floor(2.317) + 1 = 2 + 1 = 3rd daśāṁśa.
+  3rd from Aquarius (11th sign): 11+3-1=13 → 13-12=1 → 1st sign = Aries.
+D10 LAGNA = Aries. ✅
+
+SUN EXALTED PROOF: Sagittarius (odd), 12°57' = 12.95°.
+  Portion: floor(12.95 / 3) + 1 = floor(4.317) + 1 = 4 + 1 = 5th daśāṁśa.
+  5th from Sagittarius (9th sign): 9+5-1=13 → 13-12=1 → 1st sign = Aries.
+D10 Sun = Aries. Sun EXALTED in Aries. In D10 H1 (Aries = lagna). EXALTED IN CAREER LAGNA. ✅
+
+SATURN DEBILITATED PROOF: Capricorn (even), 22°11' = 22.183°.
+  Even sign → count from 9th: 9th from Capricorn = Virgo (6th sign).
+  Portion: floor(22.183 / 3) + 1 = floor(7.394) + 1 = 7 + 1 = 8th daśāṁśa.
+  8th from Virgo (6th sign): 6+8-1=13 → 13-12=1 → 1st sign = Aries.
+D10 Saturn = Aries. Saturn DEBILITATED in Aries. In D10 H1. Debilitated in career lagna alongside exalted Sun. ✅
+
+MERCURY PROOF: Scorpio (even), 28°04' = 28.067°.
+  Even → count from 9th: 9th from Scorpio (8th sign) = 8+9-1=16 → 16-12=4 = Cancer.
+  Portion: floor(28.067 / 3) + 1 = floor(9.356) + 1 = 9 + 1 = 10th daśāṁśa.
+  10th from Cancer (4th sign): 4+10-1=13 → 13-12=1 → 1st sign = Aries.
+D10 Mercury = Aries H1. Mercury in D10 career lagna. ✅
+
+⚠ ORIGINAL PROMPT CORRECTION (already in Brief v1.1): Initial prompt derivations suggested an
+  H10 stellium with multiple planets in the career's 10th house. Correct computation shows
+  Sun+Saturn+Mercury all in D10 H1 (Aries), not H10. The H10 stellium assumption was wrong.
+  This is a significant correction: the actual picture (exalted Sun in D10 H1) is BETTER
+  than the original incorrect derivation, but the corrected values must be used.
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">9B. Full D10 Planetary Positions</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Sign</th><th>Degree</th><th>D10 Portion</th><th>D10 Sign</th><th>D10 House</th><th>Dignity</th></tr></thead>
+    <tbody>
+      <tr class="bg-blue-50"><td><strong>Lagna</strong></td><td>Aquarius (odd)</td><td>06°57'</td><td>3rd</td><td><strong>Aries</strong></td><td>H1</td><td>Mars-ruled career lagna</td></tr>
+      <tr class="matrix-row-gem"><td><strong>Sun (DK)</strong></td><td>Sagittarius (odd)</td><td>12°57'</td><td>5th</td><td><strong>Aries</strong></td><td><strong>H1</strong></td><td><span class="exalted">EXALTED in D10 H1</span></td></tr>
+      <tr><td>Mercury (MK)</td><td>Scorpio (even)</td><td>28°04'</td><td>10th (from Cancer)</td><td>Aries</td><td>H1</td><td>Neutral (friend-sign)</td></tr>
+      <tr class="matrix-row-bad"><td>Saturn (Lagneśa)</td><td>Capricorn (even)</td><td>22°11'</td><td>8th (from Virgo)</td><td>Aries</td><td>H1</td><td><span class="debilitated">DEBILITATED in D10 H1</span></td></tr>
+      <tr><td>Moon (AK)</td><td>Capricorn (even)</td><td>29°55'</td><td>10th (from Virgo)</td><td>Gemini</td><td>H3</td><td>Neutral</td></tr>
+      <tr><td>Venus (Yogakāraka)</td><td>Capricorn (even)</td><td>28°39'</td><td>10th (from Virgo)</td><td>Gemini</td><td>H3</td><td>Neutral — with Moon</td></tr>
+      <tr><td>Jupiter (GK, MD lord)</td><td>Virgo (even)</td><td>19°22'</td><td>7th (from Taurus)</td><td>Scorpio</td><td>H8</td><td>Neutral</td></tr>
+      <tr><td>Mars (Vargottama)</td><td>Gemini (odd)</td><td>28°05'</td><td>10th</td><td>Pisces</td><td>H12</td><td>Neutral (D10 Lagna lord in H12)</td></tr>
+      <tr><td>Rahu</td><td>Scorpio (even)</td><td>26°52'</td><td>9th (from Cancer)</td><td>Pisces</td><td>H12</td><td>With Mars in D10 H12</td></tr>
+      <tr><td>Ketu</td><td>Taurus (even)</td><td>26°52'</td><td>9th (from Virgo)</td><td>Capricorn</td><td>H10</td><td>Neutral</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">9C. Critical Findings <span class="conf-high">CONFIDENCE: HIGH for Sun exalted D10 H1 (math verified)</span></h3>
+  <div class="internal-note">
+    <p><strong>INTERNAL — Career Raw Practitioner Assessment:</strong></p>
+    <p class="mt-2">Sun EXALTED in D10 H1 is the most important career finding. It overrides a surface reading of this chart as someone "hidden" (D1 H12 orientation, Vimala VRY, Mars in D10 H12). The Darakāraka (Sun) is simultaneously the career chart's most powerful planet — exalted in the career lagna. Career carries genuine authoritative solar quality, regardless of the H12 mechanism through which it operates.</p>
+    <p class="mt-2">The DK-D10 overlap: Sun is DK (spouse significator). Sun is exalted in D10 H1 (career chart lagna). This means: spouse and career are intertwined. Either the spouse is in the same field, or marriage and career milestones align, or the spouse plays a significant role in the career's public recognition. This is worth asking Ajay to probe in the session: is the native looking for a partner who is also vocationally aligned? The D10 suggests that alignment is optimal for this chart.</p>
+    <p class="mt-2">Saturn debilitated in D10 H1 alongside exalted Sun = the career chart's signature tension. The Lagneśa (Saturn) is at its weakest in the career's most prominent house. Career advancement through purely Saturnine means (hierarchical patience, institutional grinding, seniority-based promotion) will feel effortful and under-rewarding. The prescription: lead with solar authority (exalted Sun), not Saturnine waiting. Career breakthroughs come from bold dharmic assertion, not from quietly climbing rungs.</p>
+    <p class="mt-2">Mars (D10 Lagna lord) in D10 H12 (Pisces) with Rahu: The career engine operates from behind the scenes. The visible face (H1: Sun exalted, Mercury, Saturn) is public and recognized. The generating engine (H12: Vargottama Mars + Rahu) is private, research-oriented, spiritually framed, or foreign-connected. This is the "Mystic Achiever" pattern at the D10 level. The most powerful career work happens in quiet, in depth, often unseen — and then surfaces as the publicly-recognized exalted Sun output.</p>
+    <p class="mt-2">Moon (AK) + Venus (Yogakāraka) in Gemini D10 H3: Soul and fortune both land in the skills/communication house. The career's soul-alignment = communication, teaching, skilled service. The career's fortune = Venusian skills (aesthetic, healing, harmonizing). D10 H3 with Moon+Venus is a strong communication-vocation indicator. Writing, teaching, counseling, healing communication, or any role where Mercurian-Venusian skill expression is the primary career activity will maximize the D10's promise.</p>
+    <p class="mt-2">Jupiter (MD lord) in D10 H8 Scorpio: Current MD lord in D10's 8th house = current career growth comes through depth, research, transformation. This is not a glamour period for the career — it is a depth period. Research, counseling, investigation, healing arts, or any depth-oriented professional engagement. The Jupiter MD's career fruits will emerge from the well, not from the surface.</p>
+    <p class="mt-2">Current period (June 2026) assessment: Saturn PD on D10 — foundation-building mode. Not a peak activation moment for career. Mercury PD begins August 2026 → Mercury in D10 H1 = communication/intelligence activated in career. This is a more active career period. Advise Ajay to tell native: June–August 2026 = building foundations; post-August 2026 = time to put communications and skills out publicly.</p>
+  </div>
+  <div class="internal-note">
+    <p><strong>WHAT WAS TOLD TO CUSTOMER:</strong> Shareable correctly presented Sun exalted D10 H1 (the corrected finding), Saturn debilitated D10 H1, Mercury+Moon+Venus positions, and the DK-career overlap. The "Mystic Achiever" framing captured the H12 engine / H1 solar output polarity well. The raw DK-career-alignment-with-spouse angle was softened appropriately for shareable. The timing guidance (Saturn PD = building; Mercury PD post-August = activation) was included. No significant discrepancy between internal and shareable on D10.</p>
+  </div>
+</section>
+
+<!-- ======== MARRIAGE PRACTITIONER ASSESSMENT ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">10. Marriage Analysis — Raw Practitioner Assessment (5-Pillar Framework)</h2>
+
+  <div class="warn mb-4">
+    <p><strong>INTERNAL ONLY — This section is for Ajay's live session guidance. Not for the native to read.</strong></p>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">Five Pillars of Marriage Analysis</h3>
+
+  <table class="mb-4">
+    <thead><tr><th>#</th><th>Pillar</th><th>Indicator</th><th>Assessment</th><th>Confidence</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>H7 Lord + H7 State</td>
+        <td>H7 = Leo; Sun (H7 lord) in H11 Mūla (Ketu-ruled)</td>
+        <td>Marriage arrives through social/network channel. Mūla = dissolution deity (Nirṛtī). Some element of disruption or non-linearity in H7 significations. The native's impulse to pursue marriage may be repeatedly disrupted by dissolution themes (Mūla = "uprooting"). Each time marriage seems imminent, something dissolves or delays. This is patterned behavior observable if you ask about past near-relationships.</td>
+        <td><span class="conf-med">MED</span></td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>DK Analysis</td>
+        <td>DK = Sun (12°57'); D9 DK Cancer H8</td>
+        <td>Partner type: Cancer-quality (nurturing, home-oriented, emotionally deep). Solar backbone (dignified, possibly publicly recognized). H8 in D9 = marriage will be transformative; hidden complexity early; both parties changed at foundations by this union.</td>
+        <td><span class="conf-med">MED</span></td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td>UL (Upapada Lagna)</td>
+        <td>UL = Cancer. 2nd from UL = Leo (Sun). DK = Sun.</td>
+        <td>Triple coherence: UL Cancer + DK Cancer D9 + 2nd from UL Leo + DK = Sun. The marriage picture is stable across all analytical methods. The person is real and well-characterized. Marriage stability (2nd from UL) depends on solar/authority energy — the native needs to honor her own solar dharma for the marriage to sustain.</td>
+        <td><span class="conf-high">HIGH</span></td>
+      </tr>
+      <tr>
+        <td><strong>4</strong></td>
+        <td>Venus (H9 lord, Yogakāraka, natural marriage factor)</td>
+        <td>Venus in H12 D1; debilitated D9; Sūrya-horā D2</td>
+        <td>H12 placement = passive orientation. The native may hold an "I'll wait for it to arrive" attitude toward marriage — just as she does toward Venus-domains generally. The D2 Sūrya dominance says: when she takes active authority over the marriage question (solar initiative), it responds. The D9 debilitation says: she must consciously choose this domain. It will not arrive unbidden.</td>
+        <td><span class="conf-high">HIGH</span></td>
+      </tr>
+      <tr>
+        <td><strong>5</strong></td>
+        <td>Dasha Timing</td>
+        <td>Jupiter MD; Moon AD (Nov 2025 – Mar 2027); Venus PD ~Nov 2026 – Feb 2027</td>
+        <td>Moon AD = AD of UL lord activator (Moon rules Cancer = UL). This IS the dasha window for marriage-topic activation. Venus PD within Moon AD = the peak sub-period. The window is narrow but real. The technical confluence is strong. Execution requires native's active engagement.</td>
+        <td><span class="conf-med">MED-HIGH</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warn mb-4">
+    <p><strong>PRACTITIONER DIRECT INSTRUCTION — Ask These Questions in Session:</strong></p>
+    <ol class="list-decimal pl-6 mt-2">
+      <li>"Are you actively available for a relationship right now — emotionally, logistically, and intentionally?"</li>
+      <li>"When you imagine yourself in a committed relationship, does it feel desired or does it feel like a disruption to your current peace?"</li>
+      <li>"Have you noticed a pattern of near-relationships dissolving? [Mūla H7 lord pattern — validate if yes]"</li>
+      <li>"What specifically are you doing to make yourself accessible to this relationship?" [The H12 Venus orientation creates passive waiting — surface this explicitly]</li>
+    </ol>
+    <p class="mt-3">If the native answers "I'm not sure I want it" or "I'll know when the right person appears" — that IS the H12 Venus operating. Tell her directly: "The chart says you want this. The chart also says you won't get it by waiting. What's one concrete thing you can do differently?"</p>
+  </div>
+
+  <div class="highlight mb-4">
+    <p><strong>Timing Window Assessment:</strong> <span class="conf-med">CONFIDENCE: MEDIUM</span></p>
+    <p class="mt-2">Moon AD UL-lord activation is real and technically grounded. Venus PD within Moon AD (approximately November 2026 – February 2027) is the peak window. The D9 Venus debilitation means execution of this window requires the native's active effort — the window opens but does not walk the native through it. If the native is passively waiting, the window closes without result. Advise Ajay to emphasize: this window is real AND it requires action from the native. The responsibility for walking through the door is hers.</p>
+    <p class="mt-2">After this window: Mars AD (approximately 2027–2028). Mars Vargottama in D9 H7 (marriage house). If the Moon AD Venus PD window does not yield a clear result, the Mars AD will carry its own activation of D9 H7 — and Mars's Vargottama quality in the marriage house is strong. So the 2026–2028 period overall is the viable marriage timing band.</p>
+  </div>
+</section>
+
+<!-- ======== CONFLICT REGISTER ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">11. Conflict Register — Part 2 Discrepancies and School Divergences</h2>
+
+  <table>
+    <thead><tr><th>#</th><th>Conflict</th><th>Nature</th><th>Resolution</th><th>Impact</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>CR-01</strong></td>
+        <td>D2 Lagna — Initial Prompt Error</td>
+        <td><span class="conf-low">PROMPT FACTUAL ERROR</span></td>
+        <td>Prompt stated "Aquarius (even) → Cancer Lagna." Aquarius is ODD → Leo (Sūrya-horā) is correct. Shareable and Brief v1.1 correctly use Leo. This document uses Leo.</td>
+        <td>HIGH — changes D2 Lagna from Cancer to Leo. However, the dominant finding (9/10 Sūrya-horā bodies) is unchanged because Lagna itself is in Sūrya-horā. Direction of reading unchanged.</td>
+      </tr>
+      <tr>
+        <td><strong>CR-02</strong></td>
+        <td>D4 Jupiter and Venus positions — Initial Prompt Error</td>
+        <td><span class="conf-low">PROMPT COMPUTATION ERROR</span></td>
+        <td>Prompt said Jupiter D4 = Aquarius H1; Venus D4 = Aries. Correct: Jupiter D4 = Pisces H2 (own-sign); Venus D4 = Libra H9 (own-sign). Brief v1.1 correct values used. Shareable also used correct values.</td>
+        <td>HIGH — changes the D4 interpretation substantially. The correct interpretation (Jupiter own-sign H2 + Venus own-sign H9) is MORE favorable than the prompt's wrong version. Customer received the correct better reading.</td>
+      </tr>
+      <tr>
+        <td><strong>CR-03</strong></td>
+        <td>D5 Lagna — School Divergence (genuine uncertainty)</td>
+        <td><span class="conf-med">SCHOOL AMBIGUITY</span></td>
+        <td>School A (simple sign-count from odd sign itself): D5 Lagna = Pisces. School B (Parāśarī fire/earth/air/water cycle): D5 Lagna = Taurus. Not a computation error — a genuine school disagreement. Shareable used planet-level readings (school-independent) rather than committing to a lagna. This is the correct approach.</td>
+        <td>MEDIUM — D5 Lagna uncertainty propagates to all D5 house assignments. Planet-level D5 readings (Mars in Leo, Moon+Venus in Aries) remain valid regardless of school. House-specific D5 interpretations should be held lightly.</td>
+      </tr>
+      <tr>
+        <td><strong>CR-04</strong></td>
+        <td>D7 Mars position — Original Prompt Error (corrected in Brief v1.1)</td>
+        <td><span class="conf-low">PROMPT COMPUTATION ERROR</span></td>
+        <td>Original prompt (pre-Brief v1.1) placed Mars D7 in Gemini (same as D1 — a naive non-computation). Correct computation: 28°05' Gemini, 7th saptāṁśa, odd sign → 7th from Gemini = Sagittarius. D7 Mars = Sagittarius D7 H10. Brief v1.1 documents correction. Shareable used Sagittarius H10 correctly.</td>
+        <td>HIGH — changes D7 Mars from a meaningless "same sign" placement to a powerful H10 placement in the progeny chart. The corrected reading is more interpretively rich and consistent with broader chart patterns.</td>
+      </tr>
+      <tr>
+        <td><strong>CR-05</strong></td>
+        <td>D10 H1 vs H10 Stellium — Original Prompt Error (corrected in Brief v1.1)</td>
+        <td><span class="conf-low">PROMPT DERIVATION ERROR</span></td>
+        <td>Initial prompt derivation assumed (without full computation) an H10 stellium in D10. Correct computation places Sun (exalted), Saturn (debilitated), and Mercury in D10 H1 (Aries). The H1 exalted Sun finding is the most important career finding. Brief v1.1 documents correction. Shareable used correct H1 values.</td>
+        <td>HIGH — the corrected finding (Sun exalted D10 H1) is significantly more important and more positive than the original H10 assumption. Customer received the correct and better reading. Internal confidence in D10 Sun exaltation: HIGH (math verified twice).</td>
+      </tr>
+      <tr>
+        <td><strong>CR-06</strong></td>
+        <td>D2 Lagna School — Parāśarī degree-based vs Jaimini odd/even sign</td>
+        <td><span class="conf-med">SCHOOL VARIATION</span></td>
+        <td>Parāśarī degree-based method (used here): Lagna = Leo. Jaimini method assigns horā by sign's fundamental odd/even status only. Both give Leo for Aquarius lagna (both schools agree here). No practical conflict for this chart on D2 Lagna. Documented for completeness.</td>
+        <td>LOW for this chart — both schools agree on Leo D2 Lagna. Minor school variation on exact individual planet horā assignments (Mars in Candra vs Sūrya) may differ; the 9/10 solar dominance direction is stable.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="internal-note mt-4">
+    <p><strong>OVERALL CONFLICT STATUS:</strong> Five of six conflicts are resolved. CR-03 (D5 school ambiguity) is an inherent uncertainty that cannot be resolved without committing to a school — Shareable's approach of using planet-level readings is the correct practitioner response. All other conflicts were corrected between initial prompt and Shareable, with corrections documented in Chart Brief v1.1. This Internal document uses Chart Brief v1.1 as authoritative throughout.</p>
+  </div>
+</section>
+
+<!-- ======== PART 2 PRACTITIONER SUMMARY ======== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">12. Part 2 Practitioner Summary — Top Findings for Ajay's Session</h2>
+
+  <div class="internal-note mb-4">
+    <p><strong>The three findings to emphasize in every session (from D2–D10 analysis):</strong></p>
+    <ol class="list-decimal pl-6 mt-2">
+      <li><strong>Sun EXALTED in D10 H1</strong> — This native is not destined for background obscurity despite D1 H12 architecture. The career's solar authority is real and confirmed at the varga level. When she steps into solar leadership, the chart responds. This is the most important D10 correction to any narrative she may carry about being "too spiritual for career success."</li>
+      <li><strong>Venus DEBILITATED in D9 (Neechābhaṅga)</strong> — The Yogakāraka requires active conscious engagement to manifest. Passive waiting in Venus domains (relationship, prosperity, creative expression) will not work for this chart. This applies directly to marriage timing: the November 2026 – February 2027 Venus PD window requires her active participation.</li>
+      <li><strong>Jupiter EXALTED in D7 H5</strong> — The progeny blessing is real and confirmed at the deepest varga level. Children are indicated. The quality of the relationship with children will be one of the most fulfilling dimensions of her life. Do not let this native believe the H8 Jupiter in D1 makes children unlikely — the D7 overrides that surface impression completely.</li>
+    </ol>
+  </div>
+
+  <div class="internal-note mb-4">
+    <p><strong>The single most important practitioner instruction for marriage counseling:</strong> Ask the native directly whether she is actively available and actively seeking. The chart shows the partner is available in the 2026–2028 window. The chart also shows she has a structural tendency (H12 Venus, D9 Venus debilitation) to wait passively. These two facts together mean: the window will pass if she does not actively walk through it. Your job as her astrologer is to tell her that clearly — not to soften it into "the right person will come." He won't come without her moving.</p>
+  </div>
+
+  <div class="highlight mb-4">
+    <p><strong>Computation Integrity Statement:</strong> All D-chart lagna derivations in this document have been independently computed using the Parāśarī formula and cross-checked against Chart Brief v1.1 and the verified Shareable output. Where the initial generation prompt contained errors (CR-01 through CR-05), the corrected values from the Brief v1.1 are used. Confidence ratings reflect both computation school certainty and interpretive strength.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center text-sm text-gray-400 mt-12 pb-8 border-t pt-4">
+  <p class="text-red-600 font-bold">INTERNAL DOCUMENT — NOT FOR NATIVE</p>
+  <p class="mt-2">Gayathri | INTERNAL Part 2 of 5 — D2 through D10 Divisional Chart Analysis [Practitioner]</p>
+  <p>28 Dec 1992 | 10:15 IST | Andhra Pradesh (14.6856° N, 77.5954° E)</p>
+  <p class="mt-2">Computed with Swiss Ephemeris DE431 | Lahiri Ayanāṁśa 23°45'33" | Whole-Sign Houses</p>
+  <p class="mt-1">Source authority: Chart Brief v1.1 (2026-06-07) | Verified Shareable: Gayathri_Part2_D2_to_D10.html</p>
+  <p class="mt-2 text-gray-300 text-xs italic">Pramāṇa-pūrvakaṁ gaṇanaṁ kṛtvā, śāstra-dṛṣṭyā vicārayet</p>
+</footer>
+
+</main>
+</body>
+</html>

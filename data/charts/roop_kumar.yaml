@@ -1,0 +1,18 @@
+chart_id: roop_kumar
+name: Roop Kumar
+dob: 1971-12-13
+time_local: "17:45:00"
+timezone: IST
+utc_offset: 5.5
+location:
+  place: Tirupati, Andhra Pradesh
+  latitude: 13.6288
+  longitude: 79.4192
+settings:
+  ayanamsha: lahiri
+  node_type: mean
+  house_system: whole_sign
+notes:
+- Reconstructed from existing output/Roop_Kumar_Validation.md for property/real-estate
+  analysis task; no prior fixture existed for this chart.
+- Cross-verified against engine output before use (see analysis session notes).

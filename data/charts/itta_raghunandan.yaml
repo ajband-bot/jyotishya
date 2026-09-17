@@ -1,0 +1,18 @@
+chart_id: itta_raghunandan
+name: Itta Raghunandan
+dob: 1966-10-07
+time_local: "13:52:00"
+timezone: IST
+utc_offset: 5.5
+location:
+  place: Bellary, Karnataka
+  latitude: 15.139167
+  longitude: 76.921389
+settings:
+  ayanamsha: lahiri
+  node_type: mean
+  house_system: whole_sign
+notes:
+- "DOB format confirmed by user on 2026-08-15: 7-10-66 means 7 October 1966 (DD-MM-YY), not 10 July 1966."
+- "Birth seconds assumed as 00."
+- "Lat/lon derived from DMS 15 deg 8m 21s N, 76 deg 55m 17s E; matches user-supplied decimal 15.14N/76.92E within rounding."

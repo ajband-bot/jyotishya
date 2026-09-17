@@ -1,0 +1,116 @@
+# Rule Engine v2 pilot pack -- structured, machine-executable Rule schema
+# (see app/rules/schema.py). This is a proof-of-concept demonstrating the
+# generic evaluator with rules translated from the spirit of
+# bphs_top20_rule_cards_v1.yaml's RC-001/RC-002/RC-005.
+#
+# The rich v1 pack (bphs_top20_rule_cards_v1.yaml) remains the canonical
+# provenance/citation source. Migrating all 20 rules into this structured
+# format is real editorial effort (see docs/technical-architecture.md 4.3,
+# 12) and happens incrementally, rule-by-rule, each one re-verified
+# against the source citation before being marked ACTIVE here.
+
+- id: PILOT-001
+  title: "Functional nature overrides natural nature -- H7 lord is maraka regardless of natural benefic/malefic status"
+  category: dignity
+  source_tier: 1
+  source_ref: "BPHS Ch.34 -- maraka doctrine (functional-role-overrides-natural-nature)"
+  tradition: parasari
+  conditions:
+    - path: "lagna_sign"
+      op: eq
+      value: 8
+      description: "Scorpio Lagna"
+    - path: "house_lords.7"
+      op: eq
+      value: "Venus"
+      description: "7th house (maraka house, Taurus) is Venus-ruled for Scorpio Lagna"
+  outputs:
+    - kind: classification
+      payload:
+        planet: Venus
+        classification: functional_maraka
+        note: "Venus owns the 7th (maraka house, Taurus) for Scorpio Lagna -- a natural benefic becomes a functional maraka here. Functional nature overrides natural nature per BPHS Ch.34."
+  confidence: high
+  status: ACTIVE
+  notes:
+    - "Pilot rule for Rule Engine v2 -- demonstrates lagna-conditional lordship classification without any Python branching."
+    - "AUDIT FINDING: bphs_top20_rule_cards_v1.yaml RC-001's own worked example claims 'Ajay (Scorpio lagna): Same Saturn rules H7+H8' -- this does NOT match standard whole-sign lordship (Saturn actually owns H3+H4, i.e. Capricorn+Aquarius, from Scorpio Lagna; H7 is Venus-ruled Taurus). Flagged here for the Cheat-Sheet Validation Console (docs/technical-architecture.md 4.4) to formally re-audit against BPHS Ch.34 source text; the corpus example should not be treated as verified until re-checked."
+
+- id: PILOT-002
+  title: "Mercury combustion applies a 0.70x strength multiplier"
+  category: dignity
+  source_tier: 1
+  source_ref: "app/rules/bphs_top20_rule_cards_v1.yaml graha_condition_policy.sub_factors.combustion"
+  tradition: parasari
+  conditions:
+    - path: "combustion.Mercury.combust"
+      op: eq
+      value: true
+      description: "Mercury is within combustion orb of Sun"
+  outputs:
+    - kind: score_modifier
+      payload:
+        planet: Mercury
+        modifier: combust
+        multiplier: 0.70
+  confidence: high
+  status: ACTIVE
+
+- id: PILOT-003
+  title: "Jupiter's special aspect (5th/7th/9th) reaches the Lagna (H1)"
+  category: aspect
+  source_tier: 1
+  source_ref: "BPHS Ch.3 -- graha drishti (Parasari special aspects)"
+  tradition: parasari
+  conditions:
+    - path: "aspect_map.Jupiter"
+      op: contains
+      value: 1
+      description: "H1 is among Jupiter's aspected houses"
+  outputs:
+    - kind: connection
+      payload:
+        from_planet: Jupiter
+        to_house: 1
+        connection_type: special_aspect
+  confidence: high
+  status: ACTIVE
+
+- id: PILOT-004
+  title: "Upapada formula conflict preserved -- canonical Arudha vs. project-guide inclusive count"
+  category: lord_placement
+  source_tier: 5
+  source_ref: "docs/technical-architecture.md Known Conflicts; AGENTS.md section 6"
+  tradition: application_heuristic
+  conditions:
+    - path: "upapada.matches"
+      op: eq
+      value: false
+      description: "Canonical and legacy inclusive-count Upapada formulas disagree for this chart"
+  outputs:
+    - kind: classification
+      payload:
+        classification: source_conflict
+        note: "Both Upapada formulas are preserved and exposed -- never silently reconciled."
+  confidence: medium
+  status: ACTIVE
+  contradictions:
+    - "canonical_standard_arudha vs project_guides_inclusive"
+
+- id: PILOT-005
+  title: "Yoga-karaka detection is context-conditional, not a fixed planet-to-Lagna table"
+  category: yoga
+  source_tier: 1
+  source_ref: "BPHS Ch.34 -- Kendra+Trikona dual ownership doctrine"
+  tradition: parasari
+  conditions:
+    - path: "yoga_karakas"
+      op: neq
+      value: []
+      description: "At least one planet owns both a Kendra and a Trikona for this Lagna"
+  outputs:
+    - kind: yoga_flag
+      payload:
+        yoga: yoga_karaka_present
+  confidence: high
+  status: ACTIVE

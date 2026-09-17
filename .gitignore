@@ -1,0 +1,43 @@
+.venv/
+__pycache__/
+*.pyc
+*.db
+.env
+ephe/
+*.swp
+.pytest_cache/
+
+# Third-party reference repos (license review: docs/public-repo-review/)
+# Two of these are AGPL-3.0 -- never vendor, never import from app/, never commit.
+public-git-repos/
+
+# Workbench frontend (webapp/)
+webapp/node_modules/
+webapp/dist/
+webapp/.vite/
+
+# ─── Personal horoscope results (PII — never push) ───
+Sandeep_Jyotish_*.md
+Sandeep_Horoscope_*.md
+Swaroop_Jyotish_*.md
+Sumanth_Jyotish_*.md
+Shubhanshu_Jyotish_*.md
+Shubhanshu_Tahiti_*.md
+Tahiti_Jyotish_*.md
+Sravani_Jyotish*.md
+Ajay_Sravani_*.md
+*_Compatibility*.md
+
+# Keep these (explicitly tracked):
+# Jyotish_Learning_Part*.md
+# Jyotish_Process_Guide_Part*.md
+# Marriage_Guide_Part*.md
+# CONTEXT.md
+# app/
+# start.sh
+-e 
+# IDE and OS
+.idea/
+.DS_Store
+*.pyc
+__pycache__/

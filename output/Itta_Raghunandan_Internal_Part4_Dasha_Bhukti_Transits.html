@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Raghunandan Part 4: Dasha &amp; Transits [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+.internal-note{background:#fef9c3;border-left:4px solid #ca8a04;padding:1rem;margin:0.5rem 0;font-size:0.9rem}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 4 of 5: Dasha &amp; Transits (Practitioner Reference)</h1>
+</header>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Live Transit Computation (Raw)</h2>
+  <div class="debug mb-4">
+Computed via app.astro.transits.transit_assessment(natal, date(2026,8,15)):<br>
+Transit Jupiter: Cancer 15.87deg, direct, speed 0.2186 -- SAME SIGN as natal Jupiter (Cancer 7.98deg, H7).
+  relative_sign(lagna=Capricorn, transit Jupiter sign=Cancer) = 7 -- i.e. transiting Jupiter is in the 7th-from-lagna,
+  the EXACT SAME HOUSE as natal Jupiter. This is a genuine Jupiter-return-to-natal-house event (~12yr cycle), confirmed
+  by direct computation, not estimated from memory of the 12-year cycle.<br><br>
+Transit Saturn: Pisces 20.1992deg, RETROGRADE, speed -0.0325 -- same sign as natal Saturn (Pisces 1.5324deg) but 18.67deg
+  apart -- same-sign "Saturn return window" per the standard practical definition (Saturn re-entering its natal sign),
+  not an exact-degree conjunction. First return was ~1996 (Saturn's ~29.5yr period: 1966+29.5=1995.5). Verified: Pisces
+  entry for the current pass began ~April 2025 per the sign-change scan table in Validation.md SS15 -- consistent.<br><br>
+saturn_assessment.quality = "kantaka" (10th-from-Moon, confirmed) | sade_sati.active = False (confirmed)<br>
+marriage_alignment = {jupiter_from_moon: False, jupiter_from_lagna: True, saturn_not_ashtama: True, rahu_ketu_h1_h7: False}
+  </div>
+  <p class="text-sm">Confidence: <span class="conf-high">HIGH</span> — all values direct tool output, degree-level precision, re-verified by manual relative_sign() recomputation.</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. "Saturn Return" Framing — Confidence Note</h2>
+  <div class="internal-note">
+    <p>The term "Saturn return" is a Western astrological convention, not classical Jyotiṣa vocabulary. I used it in the shareable copy as an accessible descriptive label for "Saturn transiting its own natal sign," which IS a valid classical concept (Saturn's ~29.5-year orbital period naturally producing this). Confidence in the underlying astronomy: <span class="conf-high">HIGH</span>. This is a deliberate accessibility choice, not a corpus deviation — flagging per transparency practice in case a stricter-traditionalist reviewer questions the terminology.</p>
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Sade Sati Table — Recomputation Method</h2>
+  <p class="mb-3 text-sm">The historical table in Part 4 §4 (shareable) reuses the exact sign-change scan already performed and logged in Validation.md §15 (scanning Jan/Apr/Jul/Oct of each year 1966-2031 via transit_chart(), detecting Saturn sign transitions, cross-referencing against relative_sign(Moon=Gemini, transit_sign)). No new computation was needed for Part 4 — reused verbatim per DRY principle. Confidence: <span class="conf-high">HIGH</span>, same as originally logged.</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. Marriage 5-Pillar — Raw Scoring Notes</h2>
+  <p class="mb-3 text-sm">Pillar scoring is qualitative synthesis, not a numeric formula in this codebase (no dedicated marriage-scoring calculator exists yet — this is a documented gap similar to the missing RC-018 Raja Yoga Synthesis calculator). Confidence in each individual pillar's underlying FACT is <span class="conf-high">HIGH</span> (all directly computed: 7th house occupant, 7th lord dignity, Venus state, Upapada, Mangal Dosha). Confidence in the overall qualitative SYNTHESIS ("not effortless ease, but powerful blessing available") is <span class="conf-med">MEDIUM-HIGH</span> — this is practitioner judgment applied to computed facts per the Three Lenses + 10-Layer framework, appropriately labeled as synthesis in tone, not raw fact.</p>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>Companion shareable file: Itta_Raghunandan_Part4_Dasha_Bhukti_Transits.html</p>
+</footer>
+
+</main></body></html>

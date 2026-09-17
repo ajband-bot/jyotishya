@@ -1,0 +1,1021 @@
+- id: MAR-7L-01
+  title: 7th Lord (marriage significator) placed in House 1
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 1
+    description: 7th lord occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      house: 1
+      effect: The 7th lord's placement in the 1st house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 1's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-02
+  title: 7th Lord (marriage significator) placed in House 2
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 2
+    description: 7th lord occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      house: 2
+      effect: The 7th lord's placement in the 2nd house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 2's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-03
+  title: 7th Lord (marriage significator) placed in House 3
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 3
+    description: 7th lord occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      house: 3
+      effect: The 7th lord's placement in the 3rd house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 3's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-04
+  title: 7th Lord (marriage significator) placed in House 4
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 4
+    description: 7th lord occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      house: 4
+      effect: The 7th lord's placement in the 4th house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 4's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-05
+  title: 7th Lord (marriage significator) placed in House 5
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 5
+    description: 7th lord occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      house: 5
+      effect: The 7th lord's placement in the 5th house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 5's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-06
+  title: 7th Lord (marriage significator) placed in House 6
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 6
+    description: 7th lord occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      house: 6
+      effect: The 7th lord's placement in the 6th house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 6's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-07
+  title: 7th Lord (marriage significator) placed in House 7
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 7
+    description: 7th lord occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      house: 7
+      effect: The 7th lord's placement in the 7th house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 7's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-08
+  title: 7th Lord (marriage significator) placed in House 8
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 8
+    description: 7th lord occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      house: 8
+      effect: The 7th lord's placement in the 8th house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 8's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-09
+  title: 7th Lord (marriage significator) placed in House 9
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 9
+    description: 7th lord occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      house: 9
+      effect: The 7th lord's placement in the 9th house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 9's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-10
+  title: 7th Lord (marriage significator) placed in House 10
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 10
+    description: 7th lord occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      house: 10
+      effect: The 7th lord's placement in the 10th house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 10's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-11
+  title: 7th Lord (marriage significator) placed in House 11
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 11
+    description: 7th lord occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      house: 11
+      effect: The 7th lord's placement in the 11th house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 11's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-7L-12
+  title: 7th Lord (marriage significator) placed in House 12
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 2; BPHS
+    Ch.11
+  tradition: parasari
+  conditions:
+  - path: lord_placements.7.occupies_house
+    op: eq
+    value: 12
+    description: 7th lord occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      house: 12
+      effect: The 7th lord's placement in the 12th house routes marriage matters through
+        that house's affairs -- the native's path to a stable married life runs through
+        House 12's themes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Wraps app.derived.marriage_analysis.seventh_lord_report via lord_placements.7
+    -- lagna-agnostic by design.
+- id: MAR-VEN-01
+  title: Venus (marriage karaka, male native) in House 1
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 1
+    description: Venus occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 1
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 1 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-1
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-02
+  title: Venus (marriage karaka, male native) in House 2
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 2
+    description: Venus occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 2
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 2 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-2
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-03
+  title: Venus (marriage karaka, male native) in House 3
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 3
+    description: Venus occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 3
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 3 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-3
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-04
+  title: Venus (marriage karaka, male native) in House 4
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 4
+    description: Venus occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 4
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 4 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-4
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-05
+  title: Venus (marriage karaka, male native) in House 5
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 5
+    description: Venus occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 5
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 5 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-5
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-06
+  title: Venus (marriage karaka, male native) in House 6
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 6
+    description: Venus occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 6
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 6 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-6
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-07
+  title: Venus (marriage karaka, male native) in House 7
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 7
+    description: Venus occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 7
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 7 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-7
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-08
+  title: Venus (marriage karaka, male native) in House 8
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 8
+    description: Venus occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 8
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 8 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-8
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-09
+  title: Venus (marriage karaka, male native) in House 9
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 9
+    description: Venus occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 9
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 9 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-9
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-10
+  title: Venus (marriage karaka, male native) in House 10
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 10
+    description: Venus occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 10
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 10 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-10
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-11
+  title: Venus (marriage karaka, male native) in House 11
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 11
+    description: Venus occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 11
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 11 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-11
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-VEN-12
+  title: Venus (marriage karaka, male native) in House 12
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 12
+    description: Venus occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 12
+      applies_to_native_gender: male
+      effect: As the marriage karaka for a male native, Venus in House 12 concentrates
+        the spouse/partnership theme there -- distinct from Venus's own generic house-12
+        significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-VEN planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-01
+  title: Jupiter (marriage karaka, female native) in House 1
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 1
+    description: Jupiter occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 1
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 1 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-1 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-02
+  title: Jupiter (marriage karaka, female native) in House 2
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 2
+    description: Jupiter occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 2
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 2 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-2 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-03
+  title: Jupiter (marriage karaka, female native) in House 3
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 3
+    description: Jupiter occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 3
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 3 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-3 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-04
+  title: Jupiter (marriage karaka, female native) in House 4
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 4
+    description: Jupiter occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 4
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 4 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-4 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-05
+  title: Jupiter (marriage karaka, female native) in House 5
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 5
+    description: Jupiter occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 5
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 5 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-5 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-06
+  title: Jupiter (marriage karaka, female native) in House 6
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 6
+    description: Jupiter occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 6
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 6 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-6 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-07
+  title: Jupiter (marriage karaka, female native) in House 7
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 7
+    description: Jupiter occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 7
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 7 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-7 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-08
+  title: Jupiter (marriage karaka, female native) in House 8
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 8
+    description: Jupiter occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 8
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 8 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-8 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-09
+  title: Jupiter (marriage karaka, female native) in House 9
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 9
+    description: Jupiter occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 9
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 9 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-9 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-10
+  title: Jupiter (marriage karaka, female native) in House 10
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 10
+    description: Jupiter occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 10
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 10 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-10 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-11
+  title: Jupiter (marriage karaka, female native) in House 11
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 11
+    description: Jupiter occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 11
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 11 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-11 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-JUP-12
+  title: Jupiter (marriage karaka, female native) in House 12
+  category: marriage
+  source_tier: 4
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 3; Marriage_Guide_Part1.md
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 12
+    description: Jupiter occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 12
+      applies_to_native_gender: female
+      effect: As the marriage karaka for a female native, Jupiter in House 12 concentrates
+        the spouse/partnership theme there -- distinct from Jupiter's own generic
+        house-12 significations.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Karaka-lens reading, distinct from the generic PIH-JUP planet-in-house rule (different
+    interpretive angle, not a duplicate).
+- id: MAR-DK-EXALTED
+  title: 'Darakaraka D1 dignity: exalted'
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 4 (Jaimini
+    Darakaraka)
+  tradition: jaimini
+  conditions:
+  - path: marriage_analysis.darakaraka.d1_dignity_state
+    op: eq
+    value: exalted
+    description: Darakaraka's D1 dignity is exalted
+  outputs:
+  - kind: classification
+    payload:
+      dignity_state: exalted
+      effect: Darakaraka exalted in D1 -- a strong, elevating signal for spouse quality
+        and marital fortune.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Fires on the dynamic marriage_analysis.darakaraka field -- correct regardless
+    of which literal planet is DK for a given chart.
+- id: MAR-DK-OWN_SIGN
+  title: 'Darakaraka D1 dignity: own-sign'
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 4 (Jaimini
+    Darakaraka)
+  tradition: jaimini
+  conditions:
+  - path: marriage_analysis.darakaraka.d1_dignity_state
+    op: eq
+    value: own-sign
+    description: Darakaraka's D1 dignity is own-sign
+  outputs:
+  - kind: classification
+    payload:
+      dignity_state: own-sign
+      effect: Darakaraka in its own sign in D1 -- a stable, self-assured signal for
+        spouse quality.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Fires on the dynamic marriage_analysis.darakaraka field -- correct regardless
+    of which literal planet is DK for a given chart.
+- id: MAR-DK-NEUTRAL
+  title: 'Darakaraka D1 dignity: neutral'
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 4 (Jaimini
+    Darakaraka)
+  tradition: jaimini
+  conditions:
+  - path: marriage_analysis.darakaraka.d1_dignity_state
+    op: eq
+    value: neutral
+    description: Darakaraka's D1 dignity is neutral
+  outputs:
+  - kind: classification
+    payload:
+      dignity_state: neutral
+      effect: Darakaraka in a neutral D1 dignity -- spouse quality is average, more
+        dependent on other pillars.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Fires on the dynamic marriage_analysis.darakaraka field -- correct regardless
+    of which literal planet is DK for a given chart.
+- id: MAR-DK-DEBILITATED
+  title: 'Darakaraka D1 dignity: debilitated'
+  category: marriage
+  source_tier: 3
+  source_ref: docs/domain-playbooks.md Marriage Five-Pillar Framework, Pillar 4 (Jaimini
+    Darakaraka)
+  tradition: jaimini
+  conditions:
+  - path: marriage_analysis.darakaraka.d1_dignity_state
+    op: eq
+    value: debilitated
+    description: Darakaraka's D1 dignity is debilitated
+  outputs:
+  - kind: classification
+    payload:
+      dignity_state: debilitated
+      effect: Darakaraka debilitated in D1 -- a genuine strain signal for spouse quality,
+        per Cardinal Rule 9 (never sugarcoat), though see Neechabhanga checks before
+        finalizing.
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Fires on the dynamic marriage_analysis.darakaraka field -- correct regardless
+    of which literal planet is DK for a given chart.

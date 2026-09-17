@@ -1,0 +1,17 @@
+chart_id: ajay_kumar
+name: Bandlapalli Ajay Kumar
+dob: 1987-12-31
+time_local: "04:15:00"
+timezone: IST
+utc_offset: 5.5
+location:
+  place: Kalyandurg AP
+  latitude: 14.54519
+  longitude: 77.10552
+settings:
+  ayanamsha: lahiri
+  node_type: mean
+  house_system: whole_sign
+notes:
+- Confirmed by user on 2026-04-11.
+- Birth seconds currently assumed as 00.

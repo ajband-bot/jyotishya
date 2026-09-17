@@ -1,0 +1,3111 @@
+- id: PIH-SUN-01
+  title: Sun in House 1
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 1
+    description: Sun occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 1
+      effect: 'Strong personality, commanding presence, leadership. Health is good.
+        Self-reliant. (సూర్యుడు లగ్నంలో: ప్రభుత్వ సేవ, ఆత్మవిశ్వాసం)'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-02
+  title: Sun in House 2
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 2
+    description: Sun occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 2
+      effect: Accumulates wealth through authority. Speech is commanding but harsh
+        at times. Eye issues possible.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-03
+  title: Sun in House 3
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 3
+    description: Sun occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 3
+      effect: Courageous, bold communication. Siblings may be powerful. Short journeys
+        favor career.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-04
+  title: Sun in House 4
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 4
+    description: Sun occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 4
+      effect: Domestic tension. Father may be strict. Property matters. Heart or chest
+        health.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-05
+  title: Sun in House 5
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 5
+    description: Sun occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 5
+      effect: Creative, intelligent children. Government favor. Interest in politics,
+        speculation, education.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-06
+  title: Sun in House 6
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 6
+    description: Sun occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 6
+      effect: 'Defeats enemies easily. Good for medicine, law, service. Health issues:
+        stomach, blood.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-07
+  title: Sun in House 7
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 7
+    description: Sun occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 7
+      effect: Spouse may be domineering. Partnership issues. Career in public-facing
+        roles.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-08
+  title: Sun in House 8
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 8
+    description: Sun occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 8
+      effect: Hidden knowledge. Longevity issues unless strong. Sudden inheritance
+        or loss.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-09
+  title: Sun in House 9
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 9
+    description: Sun occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 9
+      effect: Very fortunate. Righteous, philosophical, excellent father. Fortune
+        comes through dharma.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-10
+  title: Sun in House 10
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 10
+    description: Sun occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 10
+      effect: Excellent for career — raj yoga potential. Fame, authority, government
+        employment.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-11
+  title: Sun in House 11
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 11
+    description: Sun occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 11
+      effect: Gains through powerful connections. Elder siblings support. Fulfills
+        ambitions.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SUN-12
+  title: Sun in House 12
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.house
+    op: eq
+    value: 12
+    description: Sun occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      house: 12
+      effect: Expenses on status. Foreign connections. Spiritual inclination. Eye
+        health.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-01
+  title: Moon in House 1
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 1
+    description: Moon occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 1
+      effect: Charming appearance, popular, emotional, maternal instinct. Mind fluctuates
+        like Moon phases.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-02
+  title: Moon in House 2
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 2
+    description: Moon occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 2
+      effect: Wealth through public, mother. Sweet speech. Family-oriented. Eating
+        habits important.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-03
+  title: Moon in House 3
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 3
+    description: Moon occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 3
+      effect: Courageous but restless mind. Frequent short travels. Communication
+        through emotions.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-04
+  title: Moon in House 4
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 4
+    description: Moon occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 4
+      effect: Excellent for mother and home. Strong emotional foundation. Real estate
+        benefits.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-05
+  title: Moon in House 5
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 5
+    description: Moon occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 5
+      effect: Romantic, creative, intuitive children. Emotional intelligence. Memory
+        is excellent.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-06
+  title: Moon in House 6
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 6
+    description: Moon occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 6
+      effect: Health fluctuates. Service to others emotionally. Enemies through emotional
+        reactions.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-07
+  title: Moon in House 7
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 7
+    description: Moon occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 7
+      effect: Attractive, popular spouse. Public dealings. Emotions involved in partnerships.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-08
+  title: Moon in House 8
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 8
+    description: Moon occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 8
+      effect: Hidden depths. Occult interests. Mother's health concern. Inheritance
+        through mother.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-09
+  title: Moon in House 9
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 9
+    description: Moon occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 9
+      effect: Philosophical emotions. Fortunate through mother, religion. Travel to
+        sacred places.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-10
+  title: Moon in House 10
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 10
+    description: Moon occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 10
+      effect: Public career. Fame. Changes in profession. Mother influences career.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-11
+  title: Moon in House 11
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 11
+    description: Moon occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 11
+      effect: Gains through public, women. Fulfills desires. Elder sibling is female.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MOO-12
+  title: Moon in House 12
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.house
+    op: eq
+    value: 12
+    description: Moon occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      house: 12
+      effect: Spiritual, reclusive. Hidden emotional world. Foreign settlement. Sleep
+        issues.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-01
+  title: Mars in House 1
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 1
+    description: Mars occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 1
+      effect: Aggressive, energetic, competitive. Scar on body possible. High physical
+        energy.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-02
+  title: Mars in House 2
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 2
+    description: Mars occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 2
+      effect: Harsh speech. Financial ups-downs. Family disputes. Accumulates through
+        hard work.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-03
+  title: Mars in House 3
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 3
+    description: Mars occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 3
+      effect: 'Excellent: courageous, bold, athletic. Brothers are strong. Technical
+        skills.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-04
+  title: Mars in House 4
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 4
+    description: Mars occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 4
+      effect: Manglik effects. Home disputes. Property gains through struggle. Real
+        estate profits.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-05
+  title: Mars in House 5
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 5
+    description: Mars occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 5
+      effect: Speculative losses possible. Intelligence in technical fields. Sons
+        are athletic.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-06
+  title: Mars in House 6
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 6
+    description: Mars occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 6
+      effect: Best placement — destroys enemies, diseases. Surgeon, military, police
+        service.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-07
+  title: Mars in House 7
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 7
+    description: Mars occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 7
+      effect: 'Manglik: spouse issues. Passionate marriage. Partner is energetic/athletic.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-08
+  title: Mars in House 8
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 8
+    description: Mars occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 8
+      effect: Long life. Accidents possible. Sudden gains/losses. Inheritance disputes.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-09
+  title: Mars in House 9
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 9
+    description: Mars occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 9
+      effect: Dharma through action. Pilgrimage. Religious conflicts. Fortune through
+        effort.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-10
+  title: Mars in House 10
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 10
+    description: Mars occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 10
+      effect: Excellent career drive. Engineer, military, sports. Strong ambition
+        for success.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-11
+  title: Mars in House 11
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 11
+    description: Mars occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 11
+      effect: Huge gains. Elder brothers are energetic. Profits from real estate/industry.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MAR-12
+  title: Mars in House 12
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.house
+    op: eq
+    value: 12
+    description: Mars occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      house: 12
+      effect: Expenses on pleasures/enemies. Foreign enemies. Hidden conflicts. Hospital
+        stays.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-01
+  title: Mercury in House 1
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 1
+    description: Mercury occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 1
+      effect: Intelligent, witty, communicative. Youthful appearance. Business-minded.
+        Analytical.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-02
+  title: Mercury in House 2
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 2
+    description: Mercury occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 2
+      effect: Eloquent speech. Gains through writing, business. Family is educated.
+        Financial skills.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-03
+  title: Mercury in House 3
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 3
+    description: Mercury occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 3
+      effect: Excellent communication skills. Writing, media, teaching. Siblings are
+        intelligent.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-04
+  title: Mercury in House 4
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 4
+    description: Mercury occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 4
+      effect: Educated in homeland. Logical home environment. Real estate through
+        intellect.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-05
+  title: Mercury in House 5
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 5
+    description: Mercury occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 5
+      effect: Highly intelligent children. Creative writing. Speculative gains through
+        analysis.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-06
+  title: Mercury in House 6
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 6
+    description: Mercury occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 6
+      effect: Excellent for medicine, law, finance. Defeats enemies through wit. Health
+        management.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-07
+  title: Mercury in House 7
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 7
+    description: Mercury occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 7
+      effect: Spouse is intelligent. Partnership in business/writing. Contracts favorable.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-08
+  title: Mercury in House 8
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 8
+    description: Mercury occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 8
+      effect: Research, occult, deep analysis. Longevity through carefulness. Hidden
+        knowledge.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-09
+  title: Mercury in House 9
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 9
+    description: Mercury occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 9
+      effect: Philosophical intellect. Good teacher. Fortune through writing/communication.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-10
+  title: Mercury in House 10
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 10
+    description: Mercury occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 10
+      effect: Career in IT, media, finance, education. Business success. Versatile
+        professional.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-11
+  title: Mercury in House 11
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 11
+    description: Mercury occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 11
+      effect: Gains through communication, business, intellect. Networks are vast.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-MER-12
+  title: Mercury in House 12
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.house
+    op: eq
+    value: 12
+    description: Mercury occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      house: 12
+      effect: Foreign trade profits. Hidden intellectual pursuits. Spiritual writing.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-01
+  title: Jupiter in House 1
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 1
+    description: Jupiter occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 1
+      effect: Wise, learned, generous. Good body (tends to weight). Respected in society.
+        Spiritual.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-02
+  title: Jupiter in House 2
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 2
+    description: Jupiter occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 2
+      effect: Excellent wealth accumulation. Learned family. Sweet, wise speech. Financial
+        luck.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-03
+  title: Jupiter in House 3
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 3
+    description: Jupiter occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 3
+      effect: Wisdom in communication. Siblings are fortunate. Learning through short
+        journeys.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-04
+  title: Jupiter in House 4
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 4
+    description: Jupiter occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 4
+      effect: Home is a center of learning. Excellent for mother. Real estate fortune.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-05
+  title: Jupiter in House 5
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 5
+    description: Jupiter occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 5
+      effect: Strong children, intelligent and fortunate. Creative, philosophical,
+        speculative gains.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-06
+  title: Jupiter in House 6
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 6
+    description: Jupiter occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 6
+      effect: Defeats illness through wisdom. Service-oriented. Medical or legal profession.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-07
+  title: Jupiter in House 7
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 7
+    description: Jupiter occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 7
+      effect: Excellent spouse — wise, fortunate. Business partnerships prosper. Marriage
+        is blissful.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-08
+  title: Jupiter in House 8
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 8
+    description: Jupiter occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 8
+      effect: Longevity. Hidden wisdom. Inheritance. Occult knowledge. Spiritual transformation.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-09
+  title: Jupiter in House 9
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 9
+    description: Jupiter occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 9
+      effect: 'Best placement: Dharmadhipati — maximum fortune, wisdom, spiritual
+        progress.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-10
+  title: Jupiter in House 10
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 10
+    description: Jupiter occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 10
+      effect: Career in law, education, religion, medicine. Authority. Raj yoga potential.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-11
+  title: Jupiter in House 11
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 11
+    description: Jupiter occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 11
+      effect: Massive gains. Elder sibling is wise. All ambitions fulfilled. Social
+        connections.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-JUP-12
+  title: Jupiter in House 12
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.house
+    op: eq
+    value: 12
+    description: Jupiter occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      house: 12
+      effect: Spiritual liberation. Foreign ashram. Expenses on charity. Moksha-oriented
+        life.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-01
+  title: Venus in House 1
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 1
+    description: Venus occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 1
+      effect: Beautiful, charming, artistic. Loves luxury. Attractive personality.
+        Fond of pleasures.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-02
+  title: Venus in House 2
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 2
+    description: Venus occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 2
+      effect: Wealthy family. Beautiful face/voice. Gains through art, luxury goods,
+        beauty industry.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-03
+  title: Venus in House 3
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 3
+    description: Venus occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 3
+      effect: Artistic communication. Creative writing, music. Siblings are artistic.
+        Social travels.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-04
+  title: Venus in House 4
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 4
+    description: Venus occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 4
+      effect: Beautiful home. Devoted mother. Vehicles, comforts. Real estate profits.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-05
+  title: Venus in House 5
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 5
+    description: Venus occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 5
+      effect: Romantic, artistic children. Love affairs. Creative talents prominent.
+        Speculation wins.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-06
+  title: Venus in House 6
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 6
+    description: Venus occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 6
+      effect: Health from beauty/luxury imbalance. Gains by serving through art. Enemies
+        may be women.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-07
+  title: Venus in House 7
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 7
+    description: Venus occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 7
+      effect: Excellent spouse — beautiful, artistic. Successful partnerships. Marriage
+        is central.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-08
+  title: Venus in House 8
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 8
+    description: Venus occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 8
+      effect: Inherited luxuries. Mysterious romantic life. Longevity. Secret love
+        affairs.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-09
+  title: Venus in House 9
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 9
+    description: Venus occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 9
+      effect: Fortune through art, luxury, women. Spiritual practices with grace.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-10
+  title: Venus in House 10
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 10
+    description: Venus occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 10
+      effect: Career in arts, entertainment, fashion, beauty, luxury. Fame through
+        creative work.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-11
+  title: Venus in House 11
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 11
+    description: Venus occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 11
+      effect: Gains from women, art, luxury. Social network through artistic circles.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-VEN-12
+  title: Venus in House 12
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.house
+    op: eq
+    value: 12
+    description: Venus occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      house: 12
+      effect: Pleasure-seeking. Foreign luxuries. Bed comforts. Spiritual devotion
+        through art.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-01
+  title: Saturn in House 1
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 1
+    description: Saturn occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 1
+      effect: Serious, disciplined, hardworking. Slow but steady success. Delay in
+        everything but permanent gains.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-02
+  title: Saturn in House 2
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 2
+    description: Saturn occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 2
+      effect: Speech is serious/harsh. Wealth through hard work. Family hardships.
+        Dental issues.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-03
+  title: Saturn in House 3
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 3
+    description: Saturn occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 3
+      effect: Hardworking in communication. Disciplined siblings. Technical writer.
+        Slow but successful.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-04
+  title: Saturn in House 4
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 4
+    description: Saturn occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 4
+      effect: Property through hard work. Mother's health concern. Separation from
+        homeland.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-05
+  title: Saturn in House 5
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 5
+    description: Saturn occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 5
+      effect: Delayed children. Serious intellect. Gains through discipline, research,
+        long-term plans.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-06
+  title: Saturn in House 6
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 6
+    description: Saturn occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 6
+      effect: 'Excellent: Saturn rules service/discipline — defeats enemies through
+        persistence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-07
+  title: Saturn in House 7
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 7
+    description: Saturn occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 7
+      effect: Delayed or serious marriage. Spouse is older or disciplined. Partnerships
+        require patience.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-08
+  title: Saturn in House 8
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 8
+    description: Saturn occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 8
+      effect: Very long life. Inheritance disputes. Hidden karmas. Chronic health
+        issues possible.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-09
+  title: Saturn in House 9
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 9
+    description: Saturn occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 9
+      effect: Fortune comes slowly but surely. Disciplined dharma. Father may be strict/absent.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-10
+  title: Saturn in House 10
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 10
+    description: Saturn occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 10
+      effect: Excellent career through hard work — eventual peak success. Government,
+        engineering.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-11
+  title: Saturn in House 11
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 11
+    description: Saturn occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 11
+      effect: Gains come slowly but accumulate enormously. Elder siblings are disciplined.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-SAT-12
+  title: Saturn in House 12
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.house
+    op: eq
+    value: 12
+    description: Saturn occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      house: 12
+      effect: Foreign lands. Spiritual discipline. Isolation for learning. Expenses
+        are controlled.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-01
+  title: Rahu in House 1
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 1
+    description: Rahu occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 1
+      effect: Unconventional personality. Foreign or unusual appearance. Ambitious
+        to the extreme.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-02
+  title: Rahu in House 2
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 2
+    description: Rahu occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 2
+      effect: Unconventional wealth sources. Foreign income. Family may be unusual.
+        Speech is deceptive.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-03
+  title: Rahu in House 3
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 3
+    description: Rahu occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 3
+      effect: Bold, unconventional courage. Media, technology communication. Siblings
+        are unusual.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-04
+  title: Rahu in House 4
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 4
+    description: Rahu occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 4
+      effect: Unusual home situation. Foreign properties. Mother may be different
+        background.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-05
+  title: Rahu in House 5
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 5
+    description: Rahu occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 5
+      effect: Unusual intelligence. Foreign education. Speculation gains/losses. Unconventional
+        children.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-06
+  title: Rahu in House 6
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 6
+    description: Rahu occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 6
+      effect: Excellent — defeats enemies through cunning. Works in research, IT,
+        foreign service.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-07
+  title: Rahu in House 7
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 7
+    description: Rahu occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 7
+      effect: Foreign or unusual spouse. Unconventional partnerships. Business with
+        foreigners.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-08
+  title: Rahu in House 8
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 8
+    description: Rahu occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 8
+      effect: Occult, research, sudden transformation. Hidden gains. Past life karma
+        is intense.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-09
+  title: Rahu in House 9
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 9
+    description: Rahu occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 9
+      effect: Foreign religion or philosophy. Fortune through unconventional paths.
+        Guru is unusual.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-10
+  title: Rahu in House 10
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 10
+    description: Rahu occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 10
+      effect: Career in technology, foreign companies, media, research. Ambition for
+        unusual heights.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-11
+  title: Rahu in House 11
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 11
+    description: Rahu occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 11
+      effect: Massive gains from foreign/technology/unconventional sources. Unique
+        social network.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-RAH-12
+  title: Rahu in House 12
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.house
+    op: eq
+    value: 12
+    description: Rahu occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      house: 12
+      effect: Foreign settlement. Spiritual paths outside mainstream. Hidden vices
+        possible.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-01
+  title: Ketu in House 1
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 1
+    description: Ketu occupies House 1
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 1
+      effect: Spiritual, detached personality. Past life carry-over. Unusual health
+        patterns. Mystical.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-02
+  title: Ketu in House 2
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 2
+    description: Ketu occupies House 2
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 2
+      effect: Detachment from wealth. Speech is unusual/spiritual. Family karma from
+        past lives.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-03
+  title: Ketu in House 3
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 3
+    description: Ketu occupies House 3
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 3
+      effect: Spiritual communication. Detachment from siblings. Writing on spiritual/occult
+        topics.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-04
+  title: Ketu in House 4
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 4
+    description: Ketu occupies House 4
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 4
+      effect: Detachment from home/mother. Foreign homes. Spiritual home environment.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-05
+  title: Ketu in House 5
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 5
+    description: Ketu occupies House 5
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 5
+      effect: Spiritual intelligence. Past life karmic children. Occult, meditation,
+        mantra knowledge.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-06
+  title: Ketu in House 6
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 6
+    description: Ketu occupies House 6
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 6
+      effect: Excellent for healing — fights enemies/disease through spiritual means.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-07
+  title: Ketu in House 7
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 7
+    description: Ketu occupies House 7
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 7
+      effect: Spiritual spouse or unusual marriage. Detachment in partnerships. Karmic
+        relationships.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-08
+  title: Ketu in House 8
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 8
+    description: Ketu occupies House 8
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 8
+      effect: Deepest occult knowledge. Spiritual transformation. Past life debts
+        resolved.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-09
+  title: Ketu in House 9
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 9
+    description: Ketu occupies House 9
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 9
+      effect: Moksha orientation. Spiritual fortune. Detachment from conventional
+        dharma. Guru is rare.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-10
+  title: Ketu in House 10
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 10
+    description: Ketu occupies House 10
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 10
+      effect: Career in spirituality, healing, research, mysticism. Unusual professional
+        path.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-11
+  title: Ketu in House 11
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 11
+    description: Ketu occupies House 11
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 11
+      effect: Gains through spiritual/occult work. Detachment from material gains
+        despite having them.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).
+- id: PIH-KET-12
+  title: Ketu in House 12
+  category: bhava_signification
+  source_tier: 1
+  source_ref: Saravali Ch.7-15 + BPHS Ch.24-32 (as cited in app.knowledge.planets.PLANET_IN_HOUSE)
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.house
+    op: eq
+    value: 12
+    description: Ketu occupies House 12
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      house: 12
+      effect: Liberation (moksha) orientation. Foreign spiritual journeys. Final karma
+        resolution.
+  confidence: medium
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.planets.PLANET_IN_HOUSE (v1 prose dict) per build_plan.md
+    §3.2 workflow.
+  - Source cited at module level (Saravali Ch.7-15, BPHS Ch.24-32); confidence stays
+    'medium' pending a per-entry re-verification pass directly against the primary
+    PDFs (tracked as a follow-up enrichment task, not a blocker for ACTIVE status
+    -- the content is not fabricated, just not yet chapter/verse-pinned per individual
+    entry).

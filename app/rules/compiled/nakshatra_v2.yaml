@@ -1,0 +1,837 @@
+- id: NAK-01
+  title: 'Janma Nakṣatra: Ashwini'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 1
+    description: Moon occupies Ashwini nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 1
+      nakshatra_en: Ashwini
+      effect: 'Janma Nakṣatra: Ashwini, ruled by Ketu, presided over by Ashwins. Gaṇa:
+        Deva (sattvic, generous). Tattva: Earth. Yoni: Horse (M). Underlying motivation
+        (puruṣārtha): Dharma.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-02
+  title: 'Janma Nakṣatra: Bharani'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 2
+    description: Moon occupies Bharani nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 2
+      nakshatra_en: Bharani
+      effect: 'Janma Nakṣatra: Bharani, ruled by Venus, presided over by Yama. Gaṇa:
+        Manusya (rajasic, practical). Tattva: Earth. Yoni: Elephant (M). Underlying
+        motivation (puruṣārtha): Artha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-03
+  title: 'Janma Nakṣatra: Krittika'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 3
+    description: Moon occupies Krittika nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 3
+      nakshatra_en: Krittika
+      effect: 'Janma Nakṣatra: Krittika, ruled by Sun, presided over by Agni. Gaṇa:
+        Rakshasa (tamasic, intense, transformative). Tattva: Earth. Yoni: Goat (F).
+        Underlying motivation (puruṣārtha): Kama.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-04
+  title: 'Janma Nakṣatra: Rohini'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 4
+    description: Moon occupies Rohini nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 4
+      nakshatra_en: Rohini
+      effect: 'Janma Nakṣatra: Rohini, ruled by Moon, presided over by Brahma. Gaṇa:
+        Manusya (rajasic, practical). Tattva: Water. Yoni: Serpent (M). Underlying
+        motivation (puruṣārtha): Moksha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-05
+  title: 'Janma Nakṣatra: Mrigashira'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 5
+    description: Moon occupies Mrigashira nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 5
+      nakshatra_en: Mrigashira
+      effect: 'Janma Nakṣatra: Mrigashira, ruled by Mars, presided over by Soma. Gaṇa:
+        Deva (sattvic, generous). Tattva: Earth. Yoni: Serpent (F). Underlying motivation
+        (puruṣārtha): Moksha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-06
+  title: 'Janma Nakṣatra: Ardra'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 6
+    description: Moon occupies Ardra nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 6
+      nakshatra_en: Ardra
+      effect: 'Janma Nakṣatra: Ardra, ruled by Rahu, presided over by Rudra. Gaṇa:
+        Manusya (rajasic, practical). Tattva: Water. Yoni: Dog (F). Underlying motivation
+        (puruṣārtha): Kama.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-07
+  title: 'Janma Nakṣatra: Punarvasu'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 7
+    description: Moon occupies Punarvasu nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 7
+      nakshatra_en: Punarvasu
+      effect: 'Janma Nakṣatra: Punarvasu, ruled by Jupiter, presided over by Aditi.
+        Gaṇa: Deva (sattvic, generous). Tattva: Water. Yoni: Cat (F). Underlying motivation
+        (puruṣārtha): Artha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-08
+  title: 'Janma Nakṣatra: Pushyami'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 8
+    description: Moon occupies Pushyami nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 8
+      nakshatra_en: Pushyami
+      effect: 'Janma Nakṣatra: Pushyami, ruled by Saturn, presided over by Brihaspati.
+        Gaṇa: Deva (sattvic, generous). Tattva: Water. Yoni: Goat (M). Underlying
+        motivation (puruṣārtha): Dharma.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-09
+  title: 'Janma Nakṣatra: Aslesha'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 9
+    description: Moon occupies Aslesha nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 9
+      nakshatra_en: Aslesha
+      effect: 'Janma Nakṣatra: Aslesha, ruled by Mercury, presided over by Sarpa.
+        Gaṇa: Rakshasa (tamasic, intense, transformative). Tattva: Water. Yoni: Cat
+        (M). Underlying motivation (puruṣārtha): Dharma.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-10
+  title: 'Janma Nakṣatra: Magha'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 10
+    description: Moon occupies Magha nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 10
+      nakshatra_en: Magha
+      effect: 'Janma Nakṣatra: Magha, ruled by Ketu, presided over by Pitris. Gaṇa:
+        Rakshasa (tamasic, intense, transformative). Tattva: Fire. Yoni: Rat (M).
+        Underlying motivation (puruṣārtha): Artha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-11
+  title: 'Janma Nakṣatra: Purva Phalguni'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 11
+    description: Moon occupies Purva Phalguni nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 11
+      nakshatra_en: Purva Phalguni
+      effect: 'Janma Nakṣatra: Purva Phalguni, ruled by Venus, presided over by Bhaga.
+        Gaṇa: Manusya (rajasic, practical). Tattva: Fire. Yoni: Rat (F). Underlying
+        motivation (puruṣārtha): Kama.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-12
+  title: 'Janma Nakṣatra: Uttara Phalguni'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 12
+    description: Moon occupies Uttara Phalguni nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 12
+      nakshatra_en: Uttara Phalguni
+      effect: 'Janma Nakṣatra: Uttara Phalguni, ruled by Sun, presided over by Aryama.
+        Gaṇa: Manusya (rajasic, practical). Tattva: Fire. Yoni: Cow (M). Underlying
+        motivation (puruṣārtha): Moksha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-13
+  title: 'Janma Nakṣatra: Hasta'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 13
+    description: Moon occupies Hasta nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 13
+      nakshatra_en: Hasta
+      effect: 'Janma Nakṣatra: Hasta, ruled by Moon, presided over by Savitar. Gaṇa:
+        Deva (sattvic, generous). Tattva: Fire. Yoni: Buffalo (F). Underlying motivation
+        (puruṣārtha): Moksha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-14
+  title: 'Janma Nakṣatra: Chitra'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 14
+    description: Moon occupies Chitra nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 14
+      nakshatra_en: Chitra
+      effect: 'Janma Nakṣatra: Chitra, ruled by Mars, presided over by Tvashta. Gaṇa:
+        Rakshasa (tamasic, intense, transformative). Tattva: Fire. Yoni: Tiger (F).
+        Underlying motivation (puruṣārtha): Kama.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-15
+  title: 'Janma Nakṣatra: Swati'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 15
+    description: Moon occupies Swati nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 15
+      nakshatra_en: Swati
+      effect: 'Janma Nakṣatra: Swati, ruled by Rahu, presided over by Vayu. Gaṇa:
+        Deva (sattvic, generous). Tattva: Air. Yoni: Buffalo (M). Underlying motivation
+        (puruṣārtha): Artha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-16
+  title: 'Janma Nakṣatra: Vishakha'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 16
+    description: Moon occupies Vishakha nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 16
+      nakshatra_en: Vishakha
+      effect: 'Janma Nakṣatra: Vishakha, ruled by Jupiter, presided over by Indragni.
+        Gaṇa: Rakshasa (tamasic, intense, transformative). Tattva: Air. Yoni: Tiger
+        (M). Underlying motivation (puruṣārtha): Dharma.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-17
+  title: 'Janma Nakṣatra: Anuradha'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 17
+    description: Moon occupies Anuradha nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 17
+      nakshatra_en: Anuradha
+      effect: 'Janma Nakṣatra: Anuradha, ruled by Saturn, presided over by Mitra.
+        Gaṇa: Deva (sattvic, generous). Tattva: Air. Yoni: Deer (F). Underlying motivation
+        (puruṣārtha): Dharma.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-18
+  title: 'Janma Nakṣatra: Jyeshtha'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 18
+    description: Moon occupies Jyeshtha nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 18
+      nakshatra_en: Jyeshtha
+      effect: 'Janma Nakṣatra: Jyeshtha, ruled by Mercury, presided over by Indra.
+        Gaṇa: Rakshasa (tamasic, intense, transformative). Tattva: Air. Yoni: Deer
+        (M). Underlying motivation (puruṣārtha): Artha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-19
+  title: 'Janma Nakṣatra: Moola'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 19
+    description: Moon occupies Moola nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 19
+      nakshatra_en: Moola
+      effect: 'Janma Nakṣatra: Moola, ruled by Ketu, presided over by Nirrti. Gaṇa:
+        Rakshasa (tamasic, intense, transformative). Tattva: Air. Yoni: Dog (M). Underlying
+        motivation (puruṣārtha): Kama.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-20
+  title: 'Janma Nakṣatra: Purvashadha'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 20
+    description: Moon occupies Purvashadha nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 20
+      nakshatra_en: Purvashadha
+      effect: 'Janma Nakṣatra: Purvashadha, ruled by Venus, presided over by Apas.
+        Gaṇa: Manusya (rajasic, practical). Tattva: Air. Yoni: Monkey (M). Underlying
+        motivation (puruṣārtha): Moksha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-21
+  title: 'Janma Nakṣatra: Uttarashadha'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 21
+    description: Moon occupies Uttarashadha nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 21
+      nakshatra_en: Uttarashadha
+      effect: 'Janma Nakṣatra: Uttarashadha, ruled by Sun, presided over by Vishvadevas.
+        Gaṇa: Manusya (rajasic, practical). Tattva: Air. Yoni: Mongoose (M). Underlying
+        motivation (puruṣārtha): Moksha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-22
+  title: 'Janma Nakṣatra: Shravana'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 22
+    description: Moon occupies Shravana nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 22
+      nakshatra_en: Shravana
+      effect: 'Janma Nakṣatra: Shravana, ruled by Moon, presided over by Vishnu. Gaṇa:
+        Deva (sattvic, generous). Tattva: Air. Yoni: Monkey (F). Underlying motivation
+        (puruṣārtha): Artha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-23
+  title: 'Janma Nakṣatra: Dhanishtha'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 23
+    description: Moon occupies Dhanishtha nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 23
+      nakshatra_en: Dhanishtha
+      effect: 'Janma Nakṣatra: Dhanishtha, ruled by Mars, presided over by Ashta Vasus.
+        Gaṇa: Rakshasa (tamasic, intense, transformative). Tattva: Ether. Yoni: Lion
+        (F). Underlying motivation (puruṣārtha): Dharma.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-24
+  title: 'Janma Nakṣatra: Shatabhisha'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 24
+    description: Moon occupies Shatabhisha nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 24
+      nakshatra_en: Shatabhisha
+      effect: 'Janma Nakṣatra: Shatabhisha, ruled by Rahu, presided over by Varuna.
+        Gaṇa: Rakshasa (tamasic, intense, transformative). Tattva: Ether. Yoni: Horse
+        (F). Underlying motivation (puruṣārtha): Dharma.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-25
+  title: 'Janma Nakṣatra: Purva Bhadra'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 25
+    description: Moon occupies Purva Bhadra nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 25
+      nakshatra_en: Purva Bhadra
+      effect: 'Janma Nakṣatra: Purva Bhadra, ruled by Jupiter, presided over by Ajaikapada.
+        Gaṇa: Manusya (rajasic, practical). Tattva: Ether. Yoni: Lion (M). Underlying
+        motivation (puruṣārtha): Artha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-26
+  title: 'Janma Nakṣatra: Uttara Bhadra'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 26
+    description: Moon occupies Uttara Bhadra nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 26
+      nakshatra_en: Uttara Bhadra
+      effect: 'Janma Nakṣatra: Uttara Bhadra, ruled by Saturn, presided over by Ahirbudhnya.
+        Gaṇa: Manusya (rajasic, practical). Tattva: Ether. Yoni: Cow (F). Underlying
+        motivation (puruṣārtha): Kama.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.
+- id: NAK-27
+  title: 'Janma Nakṣatra: Revati'
+  category: nakshatra
+  source_tier: 1
+  source_ref: BPHS Ch.86 / Nakṣatra Cintāmaṇi Ch.1 (docs/nakshatra-framework.md §1
+    master reference table)
+  tradition: parasari
+  conditions:
+  - path: nakshatra_analysis.Moon.nakshatra_id
+    op: eq
+    value: 27
+    description: Moon occupies Revati nakshatra
+  outputs:
+  - kind: classification
+    payload:
+      nakshatra_id: 27
+      nakshatra_en: Revati
+      effect: 'Janma Nakṣatra: Revati, ruled by Mercury, presided over by Pusha. Gaṇa:
+        Deva (sattvic, generous). Tattva: Ether. Yoni: Elephant (F). Underlying motivation
+        (puruṣārtha): Moksha.'
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Migrated from app.knowledge.nakshatras.NAKSHATRA_PROFILES (itself transcribed
+    from docs/nakshatra-framework.md §1) per build_plan.md §3.2 workflow.
+  - Keyed on the MOON's nakṣatra (Janma Nakṣatra) specifically -- the primary application
+    per docs/nakshatra-framework.md §9 item 5. The underlying app.derived.nakshatra_analysis
+    engine computes this profile for every planet, not just Moon; a future rule set
+    could key on Lagna/Sun/any-planet nakshatra the same way if a reading domain needs
+    it.

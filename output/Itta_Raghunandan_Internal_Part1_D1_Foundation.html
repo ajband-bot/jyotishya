@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Raghunandan Part 1: D1 Foundation [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-green:#2a8703;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+.highlight{background:#fffbeb;border-left:4px solid var(--wm-gold);padding:1rem}
+.verse{background:#f0f4ff;border-left:4px solid var(--wm-blue);padding:1rem;font-style:italic}
+.warn{background:#fef2f2;border-left:4px solid var(--wm-red);padding:1rem}
+.blessing{background:#f0fdf4;border-left:4px solid var(--wm-green);padding:1rem}
+.spiritual{background:#faf5ff;border-left:4px solid #7c3aed;padding:1rem}
+.dosha{background:#fff1f2;border-left:4px solid #be123c;padding:1rem}
+.remedy{background:#ecfdf5;border-left:4px solid #059669;padding:1rem}
+.internal-note{background:#fef9c3;border-left:4px solid #ca8a04;padding:1rem;margin:0.5rem 0;font-size:0.9rem}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+tr:hover{background:#f1f5f9}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+h3{color:#1e3a5f}
+.planet-tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+.retro{background:#dbeafe;color:#1e40af}.yogakaraka{background:#dcfce7;color:#166534}
+.debilitated{background:#fef3c7;color:#92400e}.vargottama{background:#e0e7ff;color:#3730a3}
+.neechabhanga{background:#fce7f3;color:#9d174d}.own-sign{background:#d1fae5;color:#065f46}
+.gandanta{background:#fef3c7;color:#92400e}.combust{background:#fee2e2;color:#991b1b}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-low{background:#fecaca;color:#991b1b;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conflict-register{background:#fdf4ff;border-left:4px solid #9333ea;padding:1rem;margin:0.5rem 0}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;letter-spacing:0.05em;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+.bug{background:#fff7ed;border-left:4px solid #ea580c;padding:1rem;margin:0.5rem 0}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">
+  WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE<br>
+  <span style="font-size:0.85rem;font-weight:normal">Prepared for Ajay (astrologer). Contains raw derivation chains, confidence ratings, conflict register, engine-bug notes, and uncensored practitioner assessment.</span>
+</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 1 of 5: D1 Foundation (Practitioner Reference)</h1>
+  <p class="text-xl font-semibold mt-2" style="color:var(--wm-blue)">Itta Raghunandan — Capricorn Lagna | Neechābhaṅga Venus | Mercury-Venus Mahā Parivartana</p>
+  <p class="text-sm mt-2 text-gray-500">Document version: 1.0 | Generated: 2026-08-15 | Consultation current as of: Jupiter AD / Rahu PD (ends 2026-09-05)</p>
+</header>
+
+<!-- 1. VERIFICATION BLOCK -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Dual-Agent Cross-Verification Block</h2>
+  <p class="mb-3 text-sm italic">All values confirmed against Swiss Ephemeris via scripts/compute_chart_cli.py (equivalent to compute_chart MCP tool). Fixture locked at data/charts/itta_raghunandan.yaml.</p>
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Verification Item</th><th>Expected</th><th>Result</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Lagna = House 1</td><td>Capricorn</td><td>Capricorn, H1</td><td class="conf-high">PASS</td></tr>
+      <tr><td>Moon nakṣatra lord = birth dasha planet</td><td>Ārdrā → Rāhu</td><td>Rāhu MD at birth, balance 3.03y</td><td class="conf-high">PASS</td></tr>
+      <tr><td>Retrograde eligibility</td><td>Only Mars/Merc/Jup/Ven/Sat can retro; Sun/Moon never</td><td>Sun=F, Moon=F, Mars=F, Mercury=F, Jupiter=F, Venus=F, Saturn=T, Rahu=T, Ketu=T</td><td class="conf-high">PASS</td></tr>
+      <tr><td>Combustion orbs</td><td>Moon 12°/Merc 14°/Ven 10°/Mars 17°/Jup 11°/Sat 15°</td><td>Venus 8.39°&lt;10°=COMBUST; Mercury 18.48°&gt;14°=clear; Mars 46.9°=clear; Jupiter 72.2°=clear; Saturn 161.3°=clear; Moon 92.5°=clear (moon combustion non-classical anyway)</td><td class="conf-high">PASS</td></tr>
+      <tr><td>Dasha chain brackets today (2026-08-15)</td><td>MD/AD/PD must contain today</td><td>Ketu MD (2021-10-18→2028-10-17) / Jupiter AD (2025-10-04→2026-09-09) / Rahu PD (2026-07-16→2026-09-05)</td><td class="conf-high">PASS</td></tr>
+      <tr><td>D9 vargottama scan</td><td>Flag any D1=D9 sign match</td><td>None found across all 9 grahas — manually re-verified sign-by-sign</td><td class="conf-high">PASS</td></tr>
+      <tr><td>AK/DK cross-check</td><td>classical_karakas() vs D9 darakaraka field</td><td>AK=Sun (max deg 20.23°), DK=Saturn (min deg 1.54°) — matches d9.darakaraka field exactly</td><td class="conf-high">PASS</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- 2. ENGINE BUG -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Engine Finding — Yogakāraka Over-Detection Bug</h2>
+  <div class="bug">
+    <p><strong>Location:</strong> <code>app/derived/factors.py::is_yoga_karaka()</code></p>
+    <p class="mt-2"><strong>Root cause:</strong> <code>KENDRA = {1,4,7,10}</code> and <code>TRIKONA = {1,5,9}</code> both include house 1. The function checks <code>any(h in KENDRA for h in owned) and any(h in TRIKONA for h in owned)</code> — a planet that owns ONLY house 1 (plus any other non-kendra/trikona house) satisfies both conditions via house 1 alone, without genuinely owning a distinct kendra AND a distinct trikoṇa.</p>
+    <p class="mt-2"><strong>Observed effect on this chart:</strong> Raw output was <code>yoga_karakas: ['Venus', 'Saturn']</code>. Saturn owns H1+H2 only — H1 alone satisfies both set memberships. Saturn is NOT a true yogakāraka by classical definition (BPHS requires kendra AND trikoṇa lordship over two distinct houses beyond the automatic Lagna-lord benefic status).</p>
+    <p class="mt-2"><strong>Cross-check:</strong> Same bug reproduces on <code>ajay_kumar</code> fixture (Mars flagged yogakāraka for Scorpio Lagna via H1+H6 ownership) — Ajay's original hand-written Validation.md correctly avoided this by treating Mars as "Lagna Lord (Special)" separately from the true yogakāraka Jupiter. The bug exists in code but was masked by manual correction in that older doc.</p>
+    <p class="mt-2"><strong>Action taken this reading:</strong> Manually overrode to Venus-only per classical rule. <strong>Recommended fix</strong> (out of scope for this reading): require <code>owned</code> houses to intersect KENDRA∖{1} and TRIKONA∖{1} as two separate non-empty sets, OR check kendra/trikona membership excluding house 1, treating H1 lordship as a separate "svāmī" flag.</p>
+  </div>
+</section>
+
+<!-- 3. RAW D1 TABLE WITH DEGREES -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Raw D1 Positions (Full Precision)</h2>
+  <div class="debug mb-4">
+Lagna   : Capricorn  H1  06°41'13.6"  Uttarashadha P4  lord=Sun     longitude=276.6871<br>
+Sun     : Virgo      H9  20°13'46.6"  Hasta P4         lord=Moon    longitude=170.2296  state=neutral<br>
+Moon    : Gemini     H6  17°45'07.9"  Ardra P4         lord=Rahu    longitude=77.7522   state=neutral  combust_diff=92.48 (n/a)<br>
+Mars    : Leo        H8  03°19'12.7"  Magha P1         lord=Ketu    longitude=123.3202  state=neutral  combust_diff=46.91<br>
+Mercury : Libra      H10 08°42'36.7"  Swati P1         lord=Rahu    longitude=188.7102  state=neutral  combust_diff=18.48<br>
+Jupiter : Cancer     H7  07°58'57.0"  Pushyami P2      lord=Saturn  longitude=97.9825   state=exalted  combust_diff=72.25<br>
+Venus   : Virgo      H9  11°50'30.1"  Hasta P1         lord=Moon    longitude=161.8417  state=debilitated  COMBUST_diff=8.39<br>
+Saturn  : Pisces     H3  01°32'32.6"  Purva Bhadra P4  lord=Jupiter longitude=331.5424  state=neutral  retrograde=True<br>
+Rahu    : Aries      H4  24°27'56.5"  Bharani P4       lord=Venus   longitude=24.4657   retrograde=True<br>
+Ketu    : Libra      H10 24°27'56.5"  Vishakha P2      lord=Jupiter longitude=204.4657  retrograde=True<br>
+Julian Day (UT): 2439405.848611  |  Ayanamsa (Lahiri): 23.392868°
+  </div>
+</section>
+
+<!-- 4. DISPOSITOR CHAIN TRACE -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. Dispositor Chain Trace (Full Derivation)</h2>
+  <div class="debug mb-4">
+Saturn(H1 lord, in Pisces) -> Jupiter (Pisces lord)<br>
+Jupiter (in Cancer) -> Moon (Cancer lord)<br>
+Moon (in Gemini) -> Mercury (Gemini lord)<br>
+Mercury (in Libra) -> Venus (Libra lord)<br>
+Venus (in Virgo) -> Mercury (Virgo lord)  ** LOOP CLOSES: Mercury <-> Venus **<br>
+<br>
+Sun (in Virgo) -> Mercury -> [loop]<br>
+Mars (in Leo) -> Sun -> Mercury -> [loop]<br>
+Rahu (in Aries) -> Mars -> Sun -> Mercury -> [loop]<br>
+Ketu (in Libra) -> Venus -> Mercury -> [loop]<br>
+<br>
+CONCLUSION: All 9 grahas terminate in the Mercury-Venus mutual-exchange loop.
+No planet in the chart self-terminates in its own sign (no "clean" ultimate dispositor exists
+outside this pair) -- Mercury and Venus are joint ultimate dispositors by elimination.
+  </div>
+  <p class="text-sm">Confidence: <span class="conf-high">HIGH</span> — this was traced twice independently (forward from each graha, and via the closed-loop detection) with identical results both times.</p>
+</section>
+
+<!-- 5. YOGA VERIFICATION TABLES (already in validation doc, cross-ref) -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">5. Yoga 8-Step Verification — Confidence Summary</h2>
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Yoga</th><th>Rating</th><th>Confidence</th><th>Key uncertainty</th></tr></thead>
+    <tbody>
+      <tr><td>Hamsa Mahapurusha (Jupiter)</td><td>Strong</td><td class="conf-high">HIGH</td><td>D9 softening (neutral, not exalted) noted but doesn't change classical D1 qualification</td></tr>
+      <tr><td>Neechabhanga Raja Yoga (Venus)</td><td>Confirmed</td><td class="conf-high">HIGH</td><td>Single-condition pass is classically sufficient per BPHS Ch.28; some traditions prefer multiple conditions for full strength — flagging as a nuance for Part 5 remedy calibration, not a validity question</td></tr>
+      <tr><td>Maha Parivartana (Mercury-Venus)</td><td>Strong, full flowering future</td><td class="conf-high">HIGH</td><td>Peak activation is Venus MD (2028+), meaning present-day life impact is present but not yet maximal — do not overstate current-day effects in Part 4/5 without dasha qualification</td></tr>
+      <tr><td>Mangal Dosha (uncancelled)</td><td>Moderate-significant</td><td class="conf-med">MEDIUM-HIGH</td><td>No partner chart available to check mutual-cancellation condition #2 — if a partner's chart becomes available, re-run this check</td></tr>
+      <tr><td>Pitru Dosha</td><td>Present, moderate</td><td class="conf-med">MEDIUM</td><td>Based on Saturn's aspect on 9th-house Sun, not direct conjunction — a stricter interpretation might rate this milder; presenting as moderate is the honest middle path</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- 6. CONFLICT REGISTER -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">6. Conflict Register</h2>
+  <div class="conflict-register">
+    <p><strong>Upapada Lagna (UL) formula disagreement</strong> — same standing corpus conflict class as ajay_kumar and sandeep_0700 fixtures:</p>
+    <ul class="list-disc list-inside mt-2 text-sm">
+      <li>Canonical Arūḍha distance formula → <strong>Aquarius</strong> (H12 lord Jupiter in H7, distance 8, counted forward from H7)</li>
+      <li>Project guide's inclusive-count formula → <strong>Gemini</strong> (same base, distance counted inclusively = 7, forward from H12 itself)</li>
+      <li><code>upapada.matches = False</code>, quality label = <code>computed_with_conflict</code> (RC-015) — verified via rule evaluator run</li>
+    </ul>
+    <p class="mt-2 text-sm">Recommendation: present canonical (Aquarius) as primary in Part 3, mention Gemini as the alternate per standing project convention. Do not silently drop either.</p>
+  </div>
+</section>
+
+<!-- 7. GANDANTA / PUSHKARA PRECISION -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">7. Gāndānta &amp; Puṣkara — Precision Notes</h2>
+  <div class="debug mb-4">
+Mars: Leo 03.3202 deg-in-sign. Cancer-Leo gandanta junction = 3.3333 deg (3d20m) into Leo from the Cancer/Leo boundary.
+Distance past junction = 3.3333 - 3.3202 = 0.0131 deg = 0 deg 47' -- Mars sits 47 ARCMINUTES INSIDE the safe zone,
+i.e. NOT in gandanta but extremely close. Flagged as "mild sensitivity" in shareable copy, not full affliction.
+Confidence: HIGH (direct degree subtraction, no ambiguity).
+
+Moon: Gemini 17.7522 deg-in-sign. Gemini Pushkara Bhaga = 18 deg exactly. Diff = 0.2478 deg (14.9 arcmin). Within 1 deg tolerance -> HIT.
+Moon also within Gemini Pushkara Navamsa band (16.6667-20.0000 deg) -> DOUBLE HIT. Confidence: HIGH.
+
+Jupiter: Cancer 07.9825 deg-in-sign. Cancer Pushkara Bhaga = 8 deg exactly. Diff = 0.0175 deg (1.05 arcmin). Confidence: HIGH, near-exact.
+  </div>
+</section>
+
+<!-- 8. WHY I SAID X -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">8. "Why I Said X" — Derivation Notes for Shareable Claims</h2>
+  <ul class="list-disc list-inside text-sm space-y-2">
+    <li><strong>"Rise after early struggle" (Venus theme)</strong>: Derived from Neechābhaṅga (structural cancellation of debilitation) + combustion (real but separate affliction) + Venus MD falling late in life (age 62-82) rather than early. This is a synthesis across three separate computed facts, not a single-factor claim — passes the 10-Layer Synthesis test (§4B).</li>
+    <li><strong>"Marriage requires conscious effort" (Mangal Dosha)</strong>: Derived from 2-of-3 reference presence + zero cancellation conditions met. Chose "requires conscious effort" over stronger language like "severe" because 1-of-3 references (Moon) is clear, keeping this from being a maximum-severity case.</li>
+    <li><strong>"Career-linked communication skill" (H6 resolution)</strong>: Derived from Mercury's dual role as 6th lord AND being part of the Mahā Parivartana anchoring career (H10) — a genuine cross-house structural link, not a generic platitude.</li>
+    <li><strong>Ishta Devata direction (Rudra/Shiva)</strong>: Derived from Janma Nakshatra deity (Ardra=Rudra) per §4O.2 rule "Janma Nakshatra defines the native's core rhythm... use this for Ishta Devata determination." Full cross-check against 9th-lord and AK-D9 methods deferred to Part 3 per the mandated structure — flagging here so Part 3 doesn't contradict this initial direction without explicit reconciliation.</li>
+  </ul>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>This document contains clinical Jyotisha assessments, gemstone safety prohibitions, engine-bug notes, and confidence ratings not suitable for direct client delivery. Companion shareable file: Itta_Raghunandan_Part1_D1_Foundation.html</p>
+</footer>
+
+</main></body></html>

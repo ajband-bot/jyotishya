@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sharan — 6-Month Forecast (Jun–Dec 2026): Health · Business · Finance · Work</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .glass { backdrop-filter: blur(8px); }
+  .chip { font-variant-numeric: tabular-nums; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  @media print { .no-print { display: none !important; } details { page-break-inside: avoid; } }
+</style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 text-slate-100 min-h-screen">
+
+<!-- HEADER -->
+<header class="border-b border-amber-500/30 bg-slate-950/60 glass sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-3">
+    <div>
+      <h1 class="text-xl sm:text-2xl font-bold text-amber-300"> Sharan — 6-Month Darśana Forecast</h1>
+      <p class="text-xs sm:text-sm text-slate-400">Jun 7 → Dec 7, 2026 · Health · Business · Finance · Work · Relationships</p>
+    </div>
+    <nav class="flex flex-wrap gap-2 text-xs no-print" aria-label="Section navigation">
+      <a href="#clock" class="px-3 py-1.5 rounded-full bg-indigo-800/60 hover:bg-indigo-700 transition">Dasha Clock</a>
+      <a href="#health" class="px-3 py-1.5 rounded-full bg-emerald-800/60 hover:bg-emerald-700 transition">Health</a>
+      <a href="#business" class="px-3 py-1.5 rounded-full bg-amber-800/60 hover:bg-amber-700 transition">Business</a>
+      <a href="#monthwise" class="px-3 py-1.5 rounded-full bg-rose-800/60 hover:bg-rose-700 transition">Month-by-Month</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-5 py-8 space-y-12">
+
+  <!-- EXECUTIVE INSIGHTS (TOP) -->
+  <section class="rounded-2xl border border-amber-500/30 bg-slate-900/50 p-6">
+    <h2 class="text-lg font-bold text-amber-300 mb-3">⭐ Executive Insights — Read This First</h2>
+    <div class="grid sm:grid-cols-2 gap-4 text-sm">
+      <div class="space-y-2">
+        <p><span class="text-amber-300 font-semibold">The whole period is "Sun-colored."</span> <b>Saturn–Venus AD closes ~mid-July</b>; <b>Saturn–Sun AD opens</b> and runs the rest of the window. Theme = <em>authority, visibility, heart/eyes/BP</em> — but Sun is debilitated in D9, so step into spotlight <em>deliberately, sharing credit</em>.</p>
+        <p><span class="text-emerald-300 font-semibold">Jun–early Jul = the Golden Window.</span> Jupiter exalted in his own sign (Cancer) = peak immunity + best window to <em>close deals, finalize contracts, do elective procedures</em>. This rarity passes by mid-July.</p>
+      </div>
+      <div class="space-y-2">
+        <p><span class="text-rose-300 font-semibold">Aug 18 – Nov 1 = double-caution corridor.</span> Sat-Sun-<b>Mars</b> (accidents/conflict) + Aug <b>solar eclipse in 8H</b> + Sat-Sun-<b>Rāhu</b> (the diagnose-don't-ignore + don't-speculate zone). <em>No major financial commitments, no elective surgery.</em></p>
+        <p><span class="text-indigo-300 font-semibold">Mid-Nov → Dec = the Crown.</span> Sat-Sun-<b>Jupiter</b> PD + <b>Rāhu returns to lagna</b> = the most blessed sub-window: <em>green light for the new role, major deals, investments, recovery & rebuild.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREND CHART -->
+  <section id="clock" class="rounded-2xl border border-indigo-500/30 bg-slate-900/50 p-6">
+    <h2 class="text-lg font-bold text-indigo-300 mb-1"> Overall Trend Curve (Jun → Dec 2026)</h2>
+    <p class="text-xs text-slate-400 mb-4">Composite of dasha activation × transit weather × natal promise. Higher = more favorable / lower-friction.</p>
+    <div class="grid lg:grid-cols-3 gap-5">
+      <div class="lg:col-span-2 bg-slate-950/50 rounded-xl p-3" style="height: 320px;">
+        <canvas id="trendChart" aria-label="Monthly favorability trend chart" role="img"></canvas>
+      </div>
+      <div class="space-y-3 text-sm">
+        <div class="rounded-lg bg-indigo-950/50 border border-indigo-700/40 p-3">
+          <p class="text-indigo-300 font-semibold mb-1">Active Dasha Sub-Periods</p>
+          <ul class="space-y-1 text-slate-300 text-xs chip">
+            <li>• Sat–Venus AD → <b>~mid-Jul 2026</b> (closing)</li>
+            <li>• Sat–Sun AD → opens ~Jul 2026 (runs to Jun 2027)</li>
+            <li>&nbsp;&nbsp;↳ Sun-Sun/Moon → Jul–early Aug</li>
+            <li>&nbsp;&nbsp;↳ Sun-<b>Mars</b> → ~Aug 18 – Sep 8 </li>
+            <li>&nbsp;&nbsp;↳ Sun-<b>Rāhu</b> → ~Sep 8 – Nov 1 </li>
+            <li>&nbsp;&nbsp;↳ Sun-<b>Jupiter</b> → ~Nov 1 – Jan 2027 ⭐</li>
+          </ul>
+        </div>
+        <div class="rounded-lg bg-amber-950/40 border border-amber-700/40 p-3 text-xs">
+          <p class="text-amber-300 font-semibold mb-1">Transit Weather</p>
+          <p class="text-slate-300">Jupiter exalted Cancer → Leo (~Jul) · Saturn in 3H (self-effort favored) · <b>Rāhu returns to Capricorn lagna ~Nov</b> · Ketu → 7H · <b>Solar eclipse in Leo (8H) ~Aug</b>.</p>
+        </div>
+      </div>
+    </div>
+    <p class="text-[11px] text-slate-500 mt-3"> Pratyantara (PD) dates are approximate (±~1 week) per the source corpus. Ask to compute exact PD boundaries via the engine for day-precision.</p>
+  </section>
+
+  <!-- ================= HEALTH ================= -->
+  <section id="health" class="space-y-6">
+    <h2 class="text-2xl font-bold text-emerald-300 flex items-center gap-2"> Health Map</h2>
+    <p class="text-sm text-slate-300">Constitution: Capricorn lagna, Saturn-12 retro (bones/sleep/nerves), Mars Rucaka-4 (head/blood/BP), Mercury-8 (digestion/depth), Moon-10 (throat/mind). Long-arc, ages well — <b>āyur-daya 78–92, no short-life signatures.</b> This is tuning, not alarm.</p>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <!-- Phase 0 -->
+      <div class="rounded-xl border border-emerald-500/40 bg-emerald-950/30 p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-bold text-emerald-300">Phase 0 · Jun 7 – ~Jul 10</h3>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-600/40">⭐⭐⭐⭐⭐ Golden Repair</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-2">Sat-Venus closing + Jupiter exalted in Cancer = peak healing.</p>
+        <ul class="text-sm space-y-1 text-slate-200">
+          <li> <b>Best window for elective/planned surgery, dental, procedures.</b></li>
+          <li> Start new fitness/physio regimen — it "takes."</li>
+          <li> Focus organs: kidneys, skin, throat, hormonal (Venus).</li>
+          <li> Curb sugar/dairy/rich-food (Venus = sugar metabolism).</li>
+        </ul>
+      </div>
+      <!-- Phase 1 -->
+      <div class="rounded-xl border border-sky-500/40 bg-sky-950/30 p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-bold text-sky-300">Phase 1 · ~Jul 10 – Aug 15</h3>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-sky-600/40">Heart & Eyes switch on</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-2">Sat-Sun-Sun → Sun-Moon. Sun-AD opens.</p>
+        <ul class="text-sm space-y-1 text-slate-200">
+          <li> <b>Cardiac baseline: BP + ECG + lipid panel</b> (Sun=heart; D9 Sun debility).</li>
+          <li> <b>Eye exam</b> + spine posture check.</li>
+          <li> Late-Jul→Aug: stomach lining, acidity, water retention, sleep (Moon).</li>
+          <li> Moon+Saturn dip + possible mother's-health stress — protect sleep.</li>
+        </ul>
+      </div>
+      <!-- Phase 2 -->
+      <div class="rounded-xl border border-rose-500/50 bg-rose-950/40 p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-bold text-rose-300">Phase 2 · ~Aug 18 – Sep 8</h3>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-rose-600/50"> Highest precaution</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-2">Sat-Sun-Mars + Solar eclipse in 8H on natal Mercury.</p>
+        <ul class="text-sm space-y-1 text-slate-200">
+          <li> <b>Drive defensively; avoid contact/adventure sports, ladders, sharp tools.</b></li>
+          <li> Guard head/skull/eyes (Mars-Aries-head).</li>
+          <li> <b>No elective surgery in eclipse week.</b></li>
+          <li> <b>Anger = a BP/cardiac risk</b> — treat as health discipline. Tuesdays sharpest.</li>
+          <li> Treat fevers/infections early — don't tough it out.</li>
+        </ul>
+      </div>
+      <!-- Phase 3 -->
+      <div class="rounded-xl border border-fuchsia-500/50 bg-fuchsia-950/30 p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-bold text-fuchsia-300">Phase 3 · ~Sep 8 – Nov 1</h3>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-fuchsia-600/50"> Diagnose, don't ignore</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-2">Sat-Sun-Rāhu + Rāhu returning to lagna.</p>
+        <ul class="text-sm space-y-1 text-slate-200">
+          <li> <b>Don't ignore vague symptoms — get proper testing/specialist.</b></li>
+          <li> Nervous system + sleep + anxiety are soft targets (Mercury-combust + Rāhu).</li>
+          <li> Immunity/allergy/viral care as season turns.</li>
+          <li> Avoid intoxicants + random self-medication (Rāhu = toxicity).</li>
+          <li> Don't isolate — Saturn-12 default is withdrawal. Journaling + Mahā-Mṛtyuñjaya.</li>
+        </ul>
+      </div>
+      <!-- Phase 4 -->
+      <div class="rounded-xl border border-amber-500/40 bg-amber-950/30 p-5 md:col-span-2">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-bold text-amber-300">Phase 4 · ~Nov 1 – Dec 7</h3>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-amber-600/40">⭐⭐⭐⭐ Recovery & rebuild</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-2">Sat-Sun-Jupiter PD = healing/convalescence window.</p>
+        <ul class="text-sm space-y-1 text-slate-200 grid sm:grid-cols-2 gap-x-6">
+          <li> Recovery, immunity rebuild, return to fuller training.</li>
+          <li> Follow-ups deferred from caution windows.</li>
+          <li> Jupiter shadow: <b>liver / weight / blood sugar</b> during festive overindulgence.</li>
+          <li> Keep dinners light, sugar moderate.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Constant backdrop + day cheat sheet -->
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="rounded-xl border border-slate-600/50 bg-slate-900/50 p-5">
+        <h3 class="font-bold text-slate-200 mb-2"> Constant Backdrop (all 6 months)</h3>
+        <ul class="text-sm space-y-1 text-slate-300">
+          <li>• Knees / lower back / bones (Saturn-12 + D27): <b>45-min sitting cap</b>, weekly yin/restorative yoga, turmeric + warm water daily.</li>
+          <li>• Mental: Saturn-12 melancholy is the baseline tax → pre-sleep "Oṁ Nārāyaṇāya namaḥ" + 5-min morning silence (nervous-system regulator).</li>
+          <li>• Maintain comprehensive health + accident insurance (structural prudence).</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-slate-600/50 bg-slate-900/50 p-5">
+        <h3 class="font-bold text-slate-200 mb-2"> Day-of-Week Cheat Sheet</h3>
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-slate-700/50">
+            <tr><td class="py-1.5 font-semibold text-amber-300">Sunday</td><td class="text-slate-300">Heart/eye day · Sūrya namaskāra · don't overexert in Sun hora</td></tr>
+            <tr><td class="py-1.5 font-semibold text-rose-300">Tuesday</td><td class="text-slate-300">Accident/anger caution (acute in Phase 2)</td></tr>
+            <tr><td class="py-1.5 font-semibold text-sky-300">Monday</td><td class="text-slate-300">Lighter food · protect stomach + sleep + mood</td></tr>
+            <tr><td class="py-1.5 font-semibold text-slate-300">Saturday</td><td class="text-slate-300">Joints/bones · abhyanga (oil massage) · rest · oil-pulling</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BUSINESS / FINANCE / WORK ================= -->
+  <section id="business" class="space-y-6">
+    <h2 class="text-2xl font-bold text-amber-300 flex items-center gap-2"> Business · Finance · Work — Overall Trend</h2>
+    <p class="text-sm text-slate-300">Career engine = Moon-10 (visibility) + 10L Venus-6 (institutional/service career) + Saturn-12 & Rāhu-1 (foreign/USD income favored) + Jupiter-7 (partnership ventures &gt; solo). Style = <b>quiet-quality builder, not loud promoter</b>.</p>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="rounded-xl border border-emerald-500/40 bg-emerald-950/30 p-5">
+        <h3 class="font-bold text-emerald-300 mb-2"> What Works</h3>
+        <ul class="text-sm space-y-1 text-slate-200">
+          <li>• Accepting <b>visible authority/leadership roles</b> (Sun-AD).</li>
+          <li>• <b>Partnership / multinational / cross-cultural</b> ventures.</li>
+          <li>• Research-driven, recurring/subscription/licensing income.</li>
+          <li>• Foreign / USD-denominated income channels.</li>
+          <li>• Tech/AI/fintech/future-tech investments (A10 Aquarius).</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-rose-500/40 bg-rose-950/30 p-5">
+        <h3 class="font-bold text-rose-300 mb-2"> Precautions</h3>
+        <ul class="text-sm space-y-1 text-slate-200">
+          <li>• <b>No major investments in Mars-Rāhu PDs</b> (~Aug 18 – Nov 1).</li>
+          <li>• <b>No big financial commitments in eclipse week</b> (~Aug).</li>
+          <li>• Avoid pure speculation / derivative trading.</li>
+          <li>• Don't start a brand-new venture in Jun (let Sat-Venus AD complete).</li>
+          <li>• Receive any Rāhu windfall with discipline — don't squander.</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-indigo-500/40 bg-indigo-950/30 p-5">
+        <h3 class="font-bold text-indigo-300 mb-2"> Work Relationships</h3>
+        <ul class="text-sm space-y-1 text-slate-200">
+          <li>• Sun-AD → <b>ego-friction in groups</b>; D9 Sun debility says <b>share credit</b>.</li>
+          <li>• <b>Authority/senior clash risk</b> — don't push ego frontally; use Saturn patience.</li>
+          <li>• Father/mentor figure becomes prominent (tarpaṇa at AD start helps).</li>
+          <li>• Competition spike in Aug–Sep (Mars PD) — channel into work, not people.</li>
+          <li>• Ketu-7H → partnership recalibration; some peripheral ties drop away.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rounded-xl border border-slate-600/50 bg-slate-900/50 p-5">
+      <h3 class="font-bold text-slate-200 mb-2"> Financial Transactions — Hygiene</h3>
+      <div class="grid sm:grid-cols-2 gap-x-8 gap-y-1 text-sm text-slate-300">
+        <p>• Decision days: <b>Thursday &gt; Wednesday &gt; Monday</b>. Avoid Saturday (close only) &amp; Tuesday (volatile).</p>
+        <p>• Time major investments inside <b>Jupiter/Mercury</b> sub-periods → <b>Nov–Dec (Sun-Jupiter PD) is the green-light.</b></p>
+        <p>• Allocation tilt: ~40% equity (tech/global), 25% real-estate, 15% gold, 15% fixed-income, 5% dāna.</p>
+        <p>• Real-estate: big purchase window is later (Sat-Mars AD, 2029) — this period favors <b>setup, not closing</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MONTH-WISE ================= -->
+  <section id="monthwise" class="space-y-4">
+    <h2 class="text-2xl font-bold text-rose-300 flex items-center gap-2"> Month-by-Month Breakdown</h2>
+
+    <!-- JUNE -->
+    <details open class="rounded-xl border border-emerald-500/40 bg-slate-900/50 overflow-hidden">
+      <summary class="px-5 py-3 flex items-center justify-between bg-emerald-950/40">
+        <span class="font-bold text-emerald-300">June 2026 · Sat–Venus closing + Jupiter exalted</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-600/40">⭐⭐⭐⭐⭐ Peak-blessed</span>
+      </summary>
+      <div class="px-5 py-4 grid md:grid-cols-3 gap-4 text-sm">
+        <div><p class="text-emerald-300 font-semibold mb-1"> Works</p><ul class="space-y-1 text-slate-200"><li>• Close/finalize contracts, partnership terms, advisory roles.</li><li>• Best healing window — elective procedures.</li><li>• Consolidate existing deals.</li></ul></div>
+        <div><p class="text-amber-300 font-semibold mb-1"> Finance</p><ul class="space-y-1 text-slate-200"><li>• Green for closing/consolidation, Thursdays best.</li><li>• Set up (not yet launch) new income streams.</li></ul></div>
+        <div><p class="text-rose-300 font-semibold mb-1"> Precautions</p><ul class="space-y-1 text-slate-200"><li>• <b>Don't start a brand-new venture</b> — let the AD complete.</li><li>• Curb rich food / sugar.</li></ul></div>
+      </div>
+    </details>
+
+    <!-- JULY -->
+    <details class="rounded-xl border border-sky-500/40 bg-slate-900/50 overflow-hidden">
+      <summary class="px-5 py-3 flex items-center justify-between bg-sky-950/40">
+        <span class="font-bold text-sky-300">July 2026 · AD switch → Sat–Sun begins · Jupiter → Leo</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-sky-600/40">⭐⭐⭐⭐ Authority opens</span>
+      </summary>
+      <div class="px-5 py-4 grid md:grid-cols-3 gap-4 text-sm">
+        <div><p class="text-emerald-300 font-semibold mb-1"> Works</p><ul class="space-y-1 text-slate-200"><li>• Step into a visible role/title when offered.</li><li>• Jupiter→Leo (11H from Moon) = gains, networking yields.</li></ul></div>
+        <div><p class="text-amber-300 font-semibold mb-1"> Finance</p><ul class="space-y-1 text-slate-200"><li>• Wrap any carry-over agreements before mid-July.</li><li>• Stable; favor structured/recurring setups.</li></ul></div>
+        <div><p class="text-rose-300 font-semibold mb-1"> Precautions / Health</p><ul class="space-y-1 text-slate-200"><li>• <b>Cardiac + eye baseline</b> at AD start.</li><li>• Father-anxiety / tarpaṇa; ego-friction watch begins.</li></ul></div>
+      </div>
+    </details>
+
+    <!-- AUGUST -->
+    <details class="rounded-xl border border-rose-500/50 bg-slate-900/50 overflow-hidden">
+      <summary class="px-5 py-3 flex items-center justify-between bg-rose-950/50">
+        <span class="font-bold text-rose-300">August 2026 · Sun-Moon → Sun-Mars · Solar eclipse (8H)</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-rose-600/50"> High caution from ~18th</span>
+      </summary>
+      <div class="px-5 py-4 grid md:grid-cols-3 gap-4 text-sm">
+        <div><p class="text-emerald-300 font-semibold mb-1"> Works</p><ul class="space-y-1 text-slate-200"><li>• Visibility surge early month; public-facing wins.</li><li>• Channel Mars energy into bold <b>work output</b>.</li></ul></div>
+        <div><p class="text-amber-300 font-semibold mb-1"> Finance</p><ul class="space-y-1 text-slate-200"><li>• <b>AVOID major financial commitments in eclipse week.</b></li><li>• Mars-PD = volatile — defer big buys.</li></ul></div>
+        <div><p class="text-rose-300 font-semibold mb-1"> Precautions</p><ul class="space-y-1 text-slate-200"><li>• Accident/injury caution; drive defensively.</li><li>• Competition/conflict at work — don't make it interpersonal.</li><li>• No elective surgery.</li></ul></div>
+      </div>
+    </details>
+
+    <!-- SEPTEMBER -->
+    <details class="rounded-xl border border-fuchsia-500/50 bg-slate-900/50 overflow-hidden">
+      <summary class="px-5 py-3 flex items-center justify-between bg-fuchsia-950/40">
+        <span class="font-bold text-fuchsia-300">September 2026 · Sun-Mars → Sun-Rāhu</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-fuchsia-600/50"> Pressure peak / opportunity</span>
+      </summary>
+      <div class="px-5 py-4 grid md:grid-cols-3 gap-4 text-sm">
+        <div><p class="text-emerald-300 font-semibold mb-1"> Works</p><ul class="space-y-1 text-slate-200"><li>• Rāhu PD (~mid-Sep) opens <b>foreign/multinational opportunity</b>.</li><li>• Transformative external offers may arrive.</li></ul></div>
+        <div><p class="text-amber-300 font-semibold mb-1"> Finance</p><ul class="space-y-1 text-slate-200"><li>• <b>Mars-Rāhu zone = never make major investments.</b></li><li>• Avoid speculation; hold cash discipline.</li></ul></div>
+        <div><p class="text-rose-300 font-semibold mb-1"> Precautions</p><ul class="space-y-1 text-slate-200"><li>• Work pressure + competition peak.</li><li>• Guard against impulsive/ego-driven moves.</li><li>• Diagnose vague health symptoms properly.</li></ul></div>
+      </div>
+    </details>
+
+    <!-- OCTOBER -->
+    <details class="rounded-xl border border-violet-500/50 bg-slate-900/50 overflow-hidden">
+      <summary class="px-5 py-3 flex items-center justify-between bg-violet-950/40">
+        <span class="font-bold text-violet-300">October 2026 · Sun-Rāhu (major PD)</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-violet-600/50"> Crossroads / identity-shift</span>
+      </summary>
+      <div class="px-5 py-4 grid md:grid-cols-3 gap-4 text-sm">
+        <div><p class="text-emerald-300 font-semibold mb-1"> Works</p><ul class="space-y-1 text-slate-200"><li>• Major role-change / foreign assignment can crystallize.</li><li>• Networking + large-platform visibility.</li></ul></div>
+        <div><p class="text-amber-300 font-semibold mb-1"> Finance</p><ul class="space-y-1 text-slate-200"><li>• Still caution: receive windfalls with discipline.</li><li>• Negotiate terms now, <b>sign in Nov–Dec</b>.</li></ul></div>
+        <div><p class="text-rose-300 font-semibold mb-1"> Precautions</p><ul class="space-y-1 text-slate-200"><li>• Partnership recalibration (Ketu-7H) — re-clarify, don't rupture.</li><li>• Nervous system / anxiety / sleep care.</li></ul></div>
+      </div>
+    </details>
+
+    <!-- NOVEMBER -->
+    <details class="rounded-xl border border-amber-500/50 bg-slate-900/50 overflow-hidden">
+      <summary class="px-5 py-3 flex items-center justify-between bg-amber-950/40">
+        <span class="font-bold text-amber-300">November 2026 · Sun-Rāhu → Sun-Jupiter · Rāhu returns to lagna</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-amber-600/50">⭐⭐⭐⭐⭐ The Crown opens</span>
+      </summary>
+      <div class="px-5 py-4 grid md:grid-cols-3 gap-4 text-sm">
+        <div><p class="text-emerald-300 font-semibold mb-1"> Works</p><ul class="space-y-1 text-slate-200"><li>• From ~mid-Nov (Jupiter PD): <b>accept advisory role, formal commitments, dharmic decisions</b>.</li><li>• Recognition / wisdom-role offer likely.</li></ul></div>
+        <div><p class="text-amber-300 font-semibold mb-1"> Finance</p><ul class="space-y-1 text-slate-200"><li>• <b>Best window of the half-year for major investment/commitment</b> (Thursdays).</li></ul></div>
+        <div><p class="text-rose-300 font-semibold mb-1"> Precautions</p><ul class="space-y-1 text-slate-200"><li>• Rāhu-return = identity recalibration; meditate, journal, clarify intent.</li><li>• Begin recovery/rebuild on health front.</li></ul></div>
+      </div>
+    </details>
+
+    <!-- DECEMBER -->
+    <details class="rounded-xl border border-indigo-500/50 bg-slate-900/50 overflow-hidden">
+      <summary class="px-5 py-3 flex items-center justify-between bg-indigo-950/40">
+        <span class="font-bold text-indigo-300">December 2026 · Sat-Sun-Jupiter</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-600/50">⭐⭐⭐⭐ Crowning continues</span>
+      </summary>
+      <div class="px-5 py-4 grid md:grid-cols-3 gap-4 text-sm">
+        <div><p class="text-emerald-300 font-semibold mb-1"> Works</p><ul class="space-y-1 text-slate-200"><li>• Formalize the new role; sign major deals.</li><li>• Work relationships harmonize under Jupiter.</li></ul></div>
+        <div><p class="text-amber-300 font-semibold mb-1"> Finance</p><ul class="space-y-1 text-slate-200"><li>• Green for major investments (Thursday best).</li></ul></div>
+        <div><p class="text-rose-300 font-semibold mb-1"> Precautions</p><ul class="space-y-1 text-slate-200"><li>• Festive overspend + liver/weight/sugar watch.</li></ul></div>
+      </div>
+    </details>
+  </section>
+
+  <!-- EXECUTIVE INSIGHTS (BOTTOM) -->
+  <section class="rounded-2xl border border-amber-500/30 bg-slate-900/50 p-6">
+    <h2 class="text-lg font-bold text-amber-300 mb-3"> Closing Synthesis — The Five Non-Negotiables</h2>
+    <ol class="list-decimal list-inside space-y-2 text-sm text-slate-200">
+      <li><b>Cardio + BP + eye baseline in July</b> (Sun-AD opener — flagged in the chart's own Part 4).</li>
+      <li><b>Aug 18 – Sep 8:</b> physical/accident caution + anger-as-BP-discipline; no elective surgery.</li>
+      <li><b>Sep – early Nov:</b> diagnose-don't-ignore health; <b>no major investments / speculation</b> (Mars-Rāhu zone).</li>
+      <li><b>Knees / lower back / bones</b> = constant backdrop all 6 months: 45-min sitting cap + weekly restorative yoga.</li>
+      <li><b>Mid-Nov → Dec is the green light</b> for the new role, major deals & investments — and for health recovery/rebuild.</li>
+    </ol>
+    <p class="text-xs text-slate-400 mt-4">Persona &amp; computations sourced from the Sharan corpus (Foundation D1 · Part 4 Dasha/Bhukti/Transits · Part 5 Remedies). Pratyantara dates are approximate (±~1 week). This is a darśana-guidance document, not medical or financial advice — pair with qualified professionals.</p>
+  </section>
+
+</main>
+
+<footer class="border-t border-slate-700/50 py-6 text-center text-xs text-slate-500">
+   Sharan · 6-Month Forecast · Generated Jun 7, 2026 · <span class="text-slate-400">Compute first, interpret second.</span>
+</footer>
+
+<script>
+  const ctx = document.getElementById('trendChart');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      datasets: [
+        {
+          label: 'Business / Career favorability',
+          data: [8.5, 7.5, 5, 4, 5.5, 9, 8.5],
+          borderColor: '#fbbf24',
+          backgroundColor: 'rgba(251,191,36,0.12)',
+          tension: 0.4, fill: true, pointRadius: 5, pointBackgroundColor: '#fbbf24'
+        },
+        {
+          label: 'Health stability',
+          data: [9, 7, 4, 4.5, 6, 8, 8],
+          borderColor: '#34d399',
+          backgroundColor: 'rgba(52,211,153,0.10)',
+          tension: 0.4, fill: true, pointRadius: 5, pointBackgroundColor: '#34d399'
+        },
+        {
+          label: 'Financial-commitment safety',
+          data: [9, 8, 3.5, 3, 5, 9.5, 9],
+          borderColor: '#818cf8',
+          backgroundColor: 'rgba(129,140,248,0.10)',
+          tension: 0.4, fill: true, pointRadius: 5, pointBackgroundColor: '#818cf8'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: { min: 0, max: 10, grid: { color: 'rgba(148,163,184,0.15)' }, ticks: { color: '#94a3b8' }, title: { display: true, text: 'Favorability (0–10)', color: '#94a3b8' } },
+        x: { grid: { color: 'rgba(148,163,184,0.08)' }, ticks: { color: '#cbd5e1' } }
+      },
+      plugins: {
+        legend: { labels: { color: '#e2e8f0', boxWidth: 14, font: { size: 11 } } },
+        tooltip: { backgroundColor: '#0f172a', borderColor: '#fbbf24', borderWidth: 1 }
+      }
+    }
+  });
+</script>
+</body>
+</html>

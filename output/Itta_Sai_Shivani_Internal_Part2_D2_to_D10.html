@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Sai Shivani Part 2: D2 to D10 [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+tr:hover{background:#f1f5f9}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 2 of 5: D2 to D10 (Practitioner Reference)</h1>
+  <p class="text-sm text-gray-500">Itta Sai Shivani | Generated: 2026-08-21 | No fixture existed for D2/D3/D4/D7/D10 prior to this profile — computed fresh via the project's standard varga-scheme functions (identical schemes used for Nikita/Raghunandan)</p>
+</header>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Computation Method &amp; Verification</h2>
+  <p class="text-sm mb-3">All vargas below computed via the same portion-based scheme functions used in scripts/compute_nikita.py (d2_scheme, d3_scheme, d4_scheme, d7_scheme, d10_scheme) applied to Shivani's D1 longitudes. House numbers derived as (varga_sign - varga_lagna_sign) mod 12 + 1, consistent with whole-sign varga convention used throughout this project.</p>
+  <div class="debug mb-4">
+D2 (divisor 2, portion_size=15deg): odd sign portion1->5(Leo), portion2->4(Cancer); even sign portion1->4(Cancer), portion2->5(Leo)
+D3 (divisor 3, portion_size=10deg): offsets {1:0,2:4,3:8} from own sign
+D4 (divisor 4, portion_size=7.5deg): offsets {1:0,2:3,3:6,4:9} from own sign
+D7 (divisor 7, portion_size=4.2857deg): odd sign base=self, even sign base=(sign+5)%12
+D10 (divisor 10, portion_size=3deg): odd sign base=self, even sign base=(sign+7)%12
+All verified by re-running the portion-index arithmetic by hand for Lagna, Sun, and Saturn in each varga -- zero discrepancies against script output.
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Verification Table</h2>
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Varga</th><th>Check</th><th>Result</th><th>Confidence</th></tr></thead>
+    <tbody>
+      <tr><td>D2</td><td>Lagna portion index for 29.2963deg (Gemini, odd sign)</td><td>portion=int(29.2963/15)+1=2 -&gt; odd-sign-portion2 -&gt; Cancer (4). Matches script output.</td><td class="conf-high">HIGH</td></tr>
+      <tr><td>D3</td><td>Sun portion index for 26.7589deg (Leo, odd)</td><td>portion=int(26.7589/10)+1=3 -&gt; offset 8 -&gt; sign=((5-1+8)%12)+1=1 (Aries). Matches.</td><td class="conf-high">HIGH</td></tr>
+      <tr><td>D4</td><td>Jupiter portion index for 10.4923deg (Aries, odd)</td><td>portion=int(10.4923/7.5)+1=2 -&gt; offset 3 -&gt; sign=((1-1+3)%12)+1=4 (Cancer), exalted there. Matches.</td><td class="conf-high">HIGH</td></tr>
+      <tr><td>D7</td><td>Mercury portion index for 1.3724deg (Virgo, even)</td><td>portion=int(1.3724/4.2857)+1=1 -&gt; even-sign base=(6+5)%12=11(0-idx)->12(Pisces) -&gt; sign=((12-1+0)%12)+1=12 (Pisces), debilitated there. Matches.</td><td class="conf-high">HIGH</td></tr>
+      <tr><td>D10</td><td>Mars portion index for 13.2215deg (Scorpio, even)</td><td>portion=int(13.2215/3)+1=5 -&gt; even-sign base=(8+7)%12=3(0-idx)->4 -&gt; sign=((4-1+4)%12)+1=8 (Scorpio), own-sign. Matches script's D10 Mars=Scorpio exactly.</td><td class="conf-high">HIGH</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Confidence Notes on Interpretive Claims</h2>
+  <ul class="list-disc list-inside text-sm space-y-2">
+    <li><strong>D2 wealth-temperament-vs-generator split</strong>: <span class="conf-high">HIGH</span> confidence on the raw placement data (D2 only has two possible outcome signs, easy to verify exhaustively). <span class="conf-med">MEDIUM</span> confidence on the specific "security temperament, status-driven generation" interpretive framing — this is a reasonable classical reading of a Cancer-Lagna/Leo-benefics split but is a synthesis judgment, not a single-citation classical rule.</li>
+    <li><strong>D7 Mercury debilitation caution</strong>: Deliberately kept soft ("worth naming... should not be treated as a firm prediction... needs daśā/transit confirmation") per Cardinal Rule 8 (no single factor is decisive) — this is a single-varga finding with no daśā/transit corroboration yet gathered. Do not let this get amplified into a firm claim in Part 4/5 without an actual daśā-timing check.</li>
+    <li><strong>D10 stellium (Mars/Venus/Saturn in H9) synthesis with A10=H12 tension</strong>: This is a genuine synthesis across two different documents (Validation §13 Ārūḍha Pada + this Part's D10 computation) — flagged explicitly as a resolution of an apparent tension (public image modest, substance strong) rather than picking one and ignoring the other, per Cardinal Rule 3's spirit (preserve, don't silently resolve, conflicting signals).</li>
+    <li><strong>D9 marriage section (debilitated Rahu in D9-7th)</strong>: New finding not surfaced in the Validation Document (which focused on D9 for chart-strength, not specifically marriage-house analysis) — computed fresh for this Part by checking the D9 house of Sagittarius (7th from D9 Lagna Gemini) and finding Rahu's D9 placement (Sagittarius, debilitated) lands there. Confidence: <span class="conf-high">HIGH</span> on the placement fact itself, <span class="conf-med">MEDIUM</span> on the "idealization/illusion" interpretive gloss (a reasonable classical reading of debilitated Rahu in a 7th house, not an over-claim, but worth flagging as interpretive rather than purely computational).</li>
+  </ul>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>Companion shareable file: Itta_Sai_Shivani_Part2_D2_to_D10.html</p>
+</footer>
+
+</main></body></html>

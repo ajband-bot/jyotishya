@@ -1,0 +1,20 @@
+chart_id: sravani
+name: Sravani
+gender: female
+dob: 1997-07-19
+time_local: "22:16:00"
+timezone: IST
+utc_offset: 5.5
+location:
+  place: Anantapur, Andhra Pradesh
+  latitude: 14.6819
+  longitude: 77.6006
+settings:
+  ayanamsha: lahiri
+  node_type: mean
+  house_system: whole_sign
+notes:
+- "Birth data transcribed from Ajay_Sravani_Compatibility.md's Couple Summary table (19 July 1997, 22:16 IST, Anantapur AP) -- the existing LLM-authored compatibility reading used as the cross-check target for build_plan.md Phase 4a (Marriage Compatibility engine)."
+- "Added specifically to give the Ashtakuta/synastry/marriage-timing engine (app/derived/compatibility.py, synastry.py, marriage_timing.py) a real second-person fixture to pair with ajay_kumar -- the exact running example Marriage_Guide_Part1-4.md itself uses throughout."
+- "Anantapur coordinates (14.6819N, 77.6006E) are the town's standard published lat/long, not independently re-derived -- flag as approximate if sub-minute precision ever matters for a future rectification exercise."
+- "'gender: female' is a new fixture field, used only by app.derived.marriage_timing to select the correct natural marriage karaka (Jupiter for a female chart vs Venus for a male chart per BPHS Ch.32); no other engine code depends on it."

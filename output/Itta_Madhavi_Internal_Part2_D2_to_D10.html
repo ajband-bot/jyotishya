@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Madhavi Part 2: D2-D10 Divisional Deep Dive [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-green:#2a8703;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+.highlight{background:#fffbeb;border-left:4px solid var(--wm-gold);padding:1rem}
+.warn{background:#fef2f2;border-left:4px solid var(--wm-red);padding:1rem}
+.internal-note{background:#fef9c3;border-left:4px solid #ca8a04;padding:1rem;margin:0.5rem 0;font-size:0.9rem}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+tr:hover{background:#f1f5f9}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+h3{color:#1e3a5f}
+.planet-tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+.debilitated{background:#fef3c7;color:#92400e}.vargottama{background:#e0e7ff;color:#3730a3}
+.exalted{background:#d1fae5;color:#065f46}.own-sign{background:#d1fae5;color:#065f46}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;letter-spacing:0.05em;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+.bug{background:#fff7ed;border-left:4px solid #ea580c;padding:1rem;margin:0.5rem 0}
+.gap{background:#f3f4f6;border-left:4px solid #6b7280;padding:1rem;margin:0.5rem 0}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">
+  WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE
+</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 2 of 5: D2-D10 Divisional Deep Dive</h1>
+  <p class="text-xl font-semibold mt-2" style="color:var(--wm-blue)">Itta Madhavi — Raw Varga Computation Tables</p>
+  <p class="text-sm mt-2 text-gray-500">Computed via app.astro.vargas.compute_all_vargas() against the same D1 sidereal chart already verified in Part 1.</p>
+</header>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Calculator Coverage &amp; Honesty Notice</h2>
+  <div class="gap">
+    <p><strong>Implemented in this project:</strong> D1, D2 (Hora), D3 (Drekkāṇa), D4 (Caturthāṁśa), D7 (Saptāṁśa), D9 (Navāṁśa), D10 (Daśāṁśa), D12, D16, D20, D24, D27, D30, D60.</p>
+    <p class="mt-2"><strong>data_gap — NOT implemented in this codebase:</strong> D5 (Pañcāṁśa), D6 (Ṣaṣṭhāṁśa), D8, D11, D40, D45. The Advanced 5-Part spec (validation-document-spec.md §3) lists D5/D6 under Part 2 coverage; per Cardinal Rule 2 (never fabricate), these two are explicitly reported as data_gap rather than estimated or skipped silently. D2/D3/D4/D7/D9/D10 — all of which ARE implemented — are covered in full below.</p>
+    <p class="mt-2 text-sm">Per <code>app/astro/vargas.py</code>'s own module docstring: all varga computation rules here carry <code>citation_status: "pending_audit"</code> (verse-by-verse BPHS Ch.6-7 cross-check not yet performed for anything beyond D1/D9). This is disclosed per Cardinal Rule 5 (cite sources) — the computational method used is the standard Pārāśarī/JHora-convention formula, not independently re-verified against primary text in this pass.</p>
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. D2 Hora (Wealth) — Full Raw Table</h2>
+  <p class="text-sm mb-2">D2 Lagna: <strong>Leo</strong>. citation_status: pending_audit.</p>
+  <div class="debug mb-4">
+Lagna   : Leo      H1  state=n/a
+Sun     : Cancer   H12 state=neutral
+Moon    : Cancer   H12 state=own-sign
+Mars    : Cancer   H12 state=debilitated  VARGOTTAMA(D1=D2 sign match: Cancer=Cancer)
+Mercury : Cancer   H12 state=neutral
+Jupiter : Cancer   H12 state=exalted
+Venus   : Leo      H1  state=neutral
+Saturn  : Cancer   H12 state=neutral  VARGOTTAMA
+Rahu    : Cancer   H12 state=neutral
+Ketu    : Cancer   H12 state=neutral
+  </div>
+  <p class="text-sm">Striking finding: <strong>8 of 9 grahas land in Cancer/H12</strong> in D2 — an extreme concentration matched only by the D1's own H4 stellium in intensity. Only Venus escapes, sitting alone in Leo/H1 (the D2 Lagna itself). Confidence: <span class="conf-high">HIGH</span> on the raw computation (deterministic sign-division math); <span class="conf-med">MEDIUM</span> on how much classical interpretive weight an 8-planet D2 stellium should carry, since this is a `pending_audit` calculator — flagged for Part 2 shareable as a genuine, notable finding but without overclaiming precision beyond "wealth themes are heavily concentrated and 12th-house-flavored."</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. D3 Drekkāṇa (Siblings, Courage) — Full Raw Table</h2>
+  <p class="text-sm mb-2">D3 Lagna: <strong>Virgo</strong>. citation_status: pending_audit.</p>
+  <div class="debug mb-4">
+Lagna   : Virgo       H1  state=n/a
+Sun     : Sagittarius H4  state=neutral
+Moon    : Sagittarius H4  state=neutral
+Mars    : Cancer      H11 state=debilitated  VARGOTTAMA(D1 house H7 -> D3 sign still Cancer)
+Mercury : Virgo       H1  state=exalted
+Jupiter : Leo         H12 state=neutral
+Venus   : Leo         H12 state=neutral
+Saturn  : Cancer      H11 state=neutral  VARGOTTAMA
+Rahu    : Aquarius    H6  state=neutral
+Ketu    : Leo         H12 state=neutral
+  </div>
+  <p class="text-sm">Mercury exalted directly in the D3 Lagna (H1) is a strong, clean finding for courage/sibling-domain vitality. Mars/Saturn again pair together (H11 here, mirroring their D1 H7 conjunction) and Mars again registers Vargottama by sign (Cancer repeats) even across divisional schemes — worth noting as a pattern but not over-interpreted, since "Vargottama" strictly refers to D1-D9 sign match; this D1-D3 sign repetition is a separate, non-classical observation included here only as a corroborating data point, not claimed as formal Vargottama.</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. D4 Caturthāṁśa (Property, Home) — Full Raw Table</h2>
+  <p class="text-sm mb-2">D4 Lagna: <strong>Libra</strong>. citation_status: pending_audit.</p>
+  <div class="debug mb-4">
+Lagna   : Libra      H1  state=n/a
+Sun     : Capricorn  H4  state=neutral
+Moon    : Aquarius   H5  state=neutral
+Mars    : Cancer     H10 state=debilitated  VARGOTTAMA(sign)
+Mercury : Leo        H11 state=neutral
+Jupiter : Libra      H1  state=neutral
+Venus   : Cancer     H10 state=neutral
+Saturn  : Cancer     H10 state=neutral  VARGOTTAMA(sign)
+Rahu    : Aries      H7  state=neutral
+Ketu    : Libra      H1  state=neutral
+  </div>
+  <p class="text-sm">Jupiter lands directly in the D4 Lagna itself (H1) — notable given Jupiter's D1 functional-malefic status; property/home matters may carry a genuinely different (more supportive) texture than the 3rd/12th-lordship caution suggests for other domains. Venus/Mars/Saturn cluster in Cancer/H10 here (a different house grouping than their D1 relationship), worth a brief mention in shareable copy but not over-weighted, since D4 is `pending_audit`.</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">5. D7 Saptāṁśa (Children, Progeny) — Full Raw Table</h2>
+  <p class="text-sm mb-2">D7 Lagna: <strong>Capricorn</strong> — same sign as the D1 Lagna itself (Vargottama Lagna). citation_status: pending_audit.</p>
+  <div class="debug mb-4">
+Lagna   : Capricorn  H1  state=n/a  VARGOTTAMA(D1 Lagna sign = D7 Lagna sign: Capricorn=Capricorn)
+Sun     : Virgo      H9  state=neutral
+Moon    : Scorpio    H11 state=debilitated
+Mars    : Capricorn  H1  state=exalted
+Mercury : Capricorn  H1  state=neutral
+Jupiter : Cancer     H7  state=exalted
+Venus   : Cancer     H7  state=neutral
+Saturn  : Capricorn  H1  state=own-sign
+Rahu    : Aquarius   H2  state=neutral
+Ketu    : Leo        H8  state=neutral
+  </div>
+  <p class="text-sm">This is the strongest, cleanest divisional chart found anywhere in this reading: D7 Lagna is Vargottama with D1, and its own H1 hosts <strong>Mars EXALTED + Saturn OWN-SIGN + Mercury neutral</strong> — a three-body stellium of which two members are in their best possible dignity. Separately, <strong>Jupiter is exalted in H7</strong> of this same D7 chart. Confidence: <span class="conf-high">HIGH</span> on computation; this is a genuinely strong children/progeny signature and should be presented with appropriate weight in Part 2 shareable, balanced against Moon's debilitation in H11 there (a single caution amid otherwise strong signals).</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">6. D9 Navāṁśa — Deep D1+D9 Matrix (recap + extension beyond Part 1)</h2>
+  <p class="text-sm mb-2">D9 Lagna: Virgo (already established in Validation §5 / Part 1). Applying the full D1+D9 Interpretation Matrix (interpretive-frameworks.md §A) to every graha:</p>
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 State</th><th>D9 State</th><th>Matrix Cell</th><th>Reading</th></tr></thead>
+    <tbody>
+      <tr><td>Sun</td><td>Strong (exalted)</td><td>Neutral</td><td>Strong→Weaker-than-D1</td><td>Promise partly softened — real strength, not maximal</td></tr>
+      <tr><td>Moon</td><td>Neutral, Vargottama</td><td>Neutral, Vargottama</td><td>Consistent</td><td>Stable, self-confirming — what you see is what you get</td></tr>
+      <tr><td>Mars</td><td>Weak (debilitated, cancelled)</td><td>Weak (debilitated)</td><td>Weak→Weak</td><td>Genuine, repeating weakness on the DK — requires the remedial support detailed in Part 5, not denial</td></tr>
+      <tr><td>Mercury</td><td>Neutral</td><td>Neutral</td><td>Consistent</td><td>Stable</td></tr>
+      <tr><td>Jupiter</td><td>Neutral, combust</td><td>Neutral, lands in D9 Lagna</td><td>Weak(combust)→mild improvement</td><td>D9 gives a small supportive echo despite D1 combustion — not a full reversal</td></tr>
+      <tr><td>Venus</td><td>Neutral, own nakṣatra, yogakāraka</td><td>Neutral</td><td>Consistent</td><td>Stable — the yogakāraka status itself comes from rāśi-lordship, unaffected by D9 sign dignity</td></tr>
+      <tr><td>Saturn</td><td>Neutral, own nakṣatra, Puṣkara</td><td>Neutral</td><td>Consistent</td><td>Stable</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="text-sm">Confidence: <span class="conf-high">HIGH</span>. Only Mars shows a genuinely concerning Weak→Weak cell — every other graha is either stable or shows Strong→mild-softening or Weak→mild-improvement, none of which are severe matrix cells. This chart's D1/D9 relationship is, on the whole, unusually harmonious.</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">7. D10 Daśāṁśa (Career) — Full Raw Table</h2>
+  <p class="text-sm mb-2">D10 Lagna: <strong>Gemini</strong>. citation_status: pending_audit.</p>
+  <div class="debug mb-4">
+Lagna   : Gemini      H1  state=n/a
+Sun     : Sagittarius H7  state=neutral
+Moon    : Capricorn   H8  state=neutral
+Mars    : Pisces      H10 state=neutral
+Mercury : Aries       H11 state=neutral
+Jupiter : Virgo       H4  state=neutral
+Venus   : Leo         H3  state=neutral
+Saturn  : Aries       H11 state=debilitated
+Rahu    : Aries       H11 state=neutral
+Ketu    : Libra       H5  state=neutral
+  </div>
+  <p class="text-sm">Notably, this D10 shows <strong>zero exalted or own-sign placements</strong> — every graha is neutral except Saturn, which is debilitated. This is a materially more muted D10 than the D1's own strong career signature (yogakāraka Venus ruling H10, Rahu alone in H10). Honest synthesis: <strong>Mars sits directly in the D10's own 10th house</strong> (career-of-career), which is a genuine direct-occupation signal even at neutral dignity — this is the strongest single data point in an otherwise unremarkable D10, and should be the anchor of the Part 2 career-D10 narrative rather than overstating the muted overall picture. Saturn's debilitation in H11 (gains house) suggests networking/peer-recognition-linked career gains may require more sustained effort than the D1 alone would suggest.</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">8. Marriage 5-Pillar Framework — Raw Cross-Check</h2>
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Pillar</th><th>D1 Finding</th><th>D9/Divisional Cross-Check</th></tr></thead>
+    <tbody>
+      <tr><td>1. 7th House</td><td>Cancer, occupied by debilitated-cancelled Mars + Saturn (both malefics)</td><td>D7 (progeny-focused, not directly marriage, but cross-referenced): H7 there hosts exalted Jupiter — a genuinely different, more supportive signal in the progeny-adjacent divisional context</td></tr>
+      <tr><td>2. 7th Lord (Moon)</td><td>H8, Kendrādhipati Doṣa</td><td>D9: Leo, H12 — joins a 3-planet D9 stellium with Venus+Saturn; Vargottama confirms stability of this placement across both charts</td></tr>
+      <tr><td>3. Venus (women's marriage kāraka is traditionally Jupiter; Venus is used here as the chart's general relationship/love significator alongside Jupiter)</td><td>Neutral, own nakṣatra, yogakāraka, in H4</td><td>D9: Leo, H12 — same stellium as Moon/Saturn</td></tr>
+      <tr><td>3b. Jupiter (traditional female-marriage kāraka)</td><td>Neutral, combust, functionally malefic, H4</td><td>D9: lands in D9 Lagna itself (Virgo) — a genuinely more supportive echo than D1 combustion alone suggests</td></tr>
+      <tr><td>4. Dārakāraka (Mars)</td><td>Debilitated-cancelled, Vargottama, in H7 itself (conjunct Saturn)</td><td>D9: still debilitated, Vargottama — the one genuinely unresolved caution across this whole 5-pillar check</td></tr>
+      <tr><td>5. Upapada Lagna (UL)</td><td>Canonical: Leo (H8) / Legacy formula: Pisces (H12) — conflict preserved</td><td>Leo UL ruled by Sun (exalted in D1) — a supportive lord if canonical formula is used</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="text-sm">Synthesis for Part 2 shareable: 4 of 5 pillars show genuine mitigating strength (Moon Vargottama, Jupiter's D9 echo, UL's exalted lord) alongside real caution; only the Dārakāraka pillar (Mars) remains a consistently-flagged weak point across every cross-check performed. This should be the calibrated, honest takeaway — not "marriage is doomed" nor "marriage is easy," but "marriage is a genuine growth area, well-supported by surrounding factors, with one specific and consistent caution around the spouse-significator himself/relationship-partner-signature."</p>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>Companion shareable file: Itta_Madhavi_Part2_D2_to_D10.html</p>
+</footer>
+
+</main></body></html>

@@ -1,0 +1,2812 @@
+meta:
+  version: v1
+  source_priority: BPHS-first
+  source_pdf: BPHS - 1 RSanthanam.pdf
+  method:
+  - Extracted BPHS TOC and keyword signals from readable PDF text
+  - Prioritized by scriptural centrality, dependency value, predictive impact, graph
+    readiness
+  notes:
+  - Companion reference PDFs in Telugu require OCR/font decoding for reliable machine
+    reading
+  - This set is intentionally foundational for D1 and D9 first
+  - sloka_range values are parser-estimated from extracted verse markers and should
+    be manually audited against the Sanskrit print before production locking
+  citation_audit:
+    audit_date: '2026-04-11'
+    audit_method: chapter-window + verse-range + topic-token validation against extracted
+      BPHS text
+    audit_scope: all rule card citations
+  graha_condition_policy:
+    status: active
+    applied_in: graha_strength_modifier
+    source: Jyotish_Learning_Part2_Calculations.md (CALC-7, CALC-8); Part5 Cheat Sheets 2,6
+    notes:
+    - Combustion, retrograde state, and friend/enemy dignity are mandatory sub-factors
+      in normalized graha strength.
+    - These modifiers do not replace base rule fulfillment; they scale it.
+    sub_factors:
+      combustion:
+        accounted: true
+        formula: abs(planet_long - sun_long); if diff > 180 use 360 - diff; COMBUST if diff < orb
+        orbs_degrees:
+          Moon: 12
+          Mercury: 14
+          Mercury_retrograde: 13
+          Venus: 10
+          Venus_retrograde: 8
+          Mars: 17
+          Jupiter: 11
+          Saturn: 15
+          Rahu: null  # cannot be combust — mathematical point
+          Ketu: null  # cannot be combust — mathematical point
+        impact_ranking: Jupiter_combust > Venus_combust > Saturn_combust > Mars_combust > Moon_combust > Mercury_combust
+        note: Mercury combust is most frequent (never >28° from Sun) and least severe
+        multiplier:
+          combust: 0.70
+          safe: 1.0
+      retrograde:
+        accounted: true
+        formula: speed < 0 from ephemeris; Sun and Moon never retrograde; Rahu/Ketu always retrograde
+        source_rule: BPHS Ch3 — "Vakri-grahaḥ ucca-tulyaḥ" (retrograde ≈ exalted in power)
+        multiplier:
+          retrograde_in_exaltation: 1.30   # extraordinarily powerful
+          retrograde_in_own_sign: 1.20
+          retrograde_neutral: 1.10         # internalized but stronger
+          retrograde_enemy: 0.95           # delayed expression
+          direct: 1.0
+      natural_relationship:
+        accounted: true
+        table:
+          Sun:     {friends: [Moon, Mars, Jupiter], neutral: [Mercury], enemies: [Venus, Saturn]}
+          Moon:    {friends: [Sun, Mercury], neutral: [Mars, Jupiter, Venus, Saturn], enemies: []}
+          Mars:    {friends: [Sun, Moon, Jupiter], neutral: [Venus, Saturn], enemies: [Mercury]}
+          Mercury: {friends: [Sun, Venus], neutral: [Mars, Jupiter, Saturn], enemies: [Moon]}
+          Jupiter: {friends: [Sun, Moon, Mars], neutral: [Saturn], enemies: [Mercury, Venus]}
+          Venus:   {friends: [Mercury, Saturn], neutral: [Mars, Jupiter], enemies: [Sun, Moon]}
+          Saturn:  {friends: [Mercury, Venus], neutral: [Jupiter], enemies: [Sun, Moon, Mars]}
+        multiplier:
+          mutual_friend: 1.10
+          friend_neutral: 1.05
+          mutual_neutral: 1.0
+          friend_enemy: 0.95
+          neutral_enemy: 0.92
+          mutual_enemy: 0.85
+      temporal_relationship:
+        accounted: true
+        note: Planets in H2/H3/H4/H10/H11/H12 from each other (natal) = temporary friends
+        multiplier:
+          mutual_temporal_friend: 1.08
+          temporal_neutral: 1.0
+          mutual_temporal_enemy: 0.92
+      combined_relationship:
+        note: Both natural AND temporal relationships combined per BPHS rule
+        multiplier:
+          great_friend: 1.15   # friend in both natural and temporal
+          friend: 1.10
+          neutral: 1.0
+          enemy: 0.90
+          bitter_enemy: 0.80   # enemy in both natural and temporal
+      functional_benefic_malefic:
+        accounted: true
+        note: Determined by house lordship for specific Lagna; overrides natural classification
+        yoga_karaka_bonus: 1.20   # owns both Kendra + Trikona
+        trikona_only_bonus: 1.10
+        kendra_only_neutral: 1.0  # Kendradhipati Dosha for natural benefics
+        dusthana_lord_penalty: 0.85
+        maraka_lord_penalty: 0.80
+      dignity_levels:
+        exaltation: 1.30
+        vargottama: 1.20        # same sign in D1 and D9
+        own_sign: 1.15
+        moolatrikona: 1.12
+        great_friend: 1.10
+        friend: 1.05
+        neutral: 1.0
+        enemy: 0.90
+        debilitation: 0.70
+        neechabhanga: 1.10      # debilitation cancelled → becomes powerful
+    implementation_rule:
+    - Final graha_strength_modifier = dignity × combustion × retrograde × combined_relationship × functional_role
+    - All factors are multiplicative; apply in that order
+    - If data is missing for a sub-factor, use neutral multiplier 1.0 and mark low-confidence
+      trace in explanation.
+    - "Neechabhanga conditions (CALC-9 source) -- debil sign lord in Kendra; exalt sign lord in Kendra; debilitated planet retrograde; conjunct exalted planet; exalt lord aspects debil planet"
+rule_cards:
+- priority: 1
+  rule_id: RC-001
+  rule_name: Graha Nature and Functional Role
+  authority_tier: T1
+  chapter_signal: 'Chapter 3: Planetary Characters and Description'
+  domain_tags:
+  - foundation
+  - classification
+  why_top20: All interpretation layers depend on baseline nature and functional behavior
+    of planets by ascendant context.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Define natural graha nature and ascendant-based functional
+      role before all outcome rules.
+    activation_conditions:
+    - Lagna is known
+    - Planet under evaluation is known
+    exclusions:
+    - Do not use natural benefic/malefic alone without lordship context
+    default_modifiers:
+    - functional_role_override_by_lordship
+    scoring_hooks:
+      base_fulfillment: binary
+      graha_strength_modifier: required
+      divisional_support_modifier: optional
+    graph_mapping:
+      requires_nodes:
+      - Lagna
+      - GrahaState
+      produces_nodes:
+      - RuleEvaluation
+      edge_types:
+      - RULE_REQUIRES_CONDITION
+      - RULE_MODIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 3
+      sloka_range: 2-70 (parser-est.)
+      translation_snippet: benefics and malefics, planetary governances
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-70 within extracted chapter markers 2-70 and topic token
+        matched
+    examples:
+    - 'Sandeep (Capricorn lagna): Saturn is Lagna lord (H1+H2 owner) = foundational personal identity marker. Same Saturn rules Career house H10 for professional expression. Result: Personal discipline = professional structure.'
+    - 'Ajay (Scorpio lagna): Same Saturn rules H7+H8 (marriage + mortality) = functional maraka+dusthana malefic despite natural benefic role. Result: Saturn delays/tests relationships; requires spiritual maturity for processing.'
+  citation_status: verified
+- priority: 2
+  rule_id: RC-002
+  rule_name: Rashi Properties and Sign Classification
+  authority_tier: T1
+  chapter_signal: 'Chapter 4: Zodiacal Signs Described'
+  domain_tags:
+  - foundation
+  - sign-logic
+  why_top20: Sign qualities are primary condition inputs for lordship, aspect effects,
+    dignity, and outcomes.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Use sign nature as mandatory context in all placement interpretation.
+    activation_conditions:
+    - Sign occupied by planet/house is known
+    - Sign class (movable/fixed/dual etc.) is known
+    exclusions:
+    - Do not infer final outcome from sign alone
+    default_modifiers:
+    - dignity_layer
+    scoring_hooks:
+      base_fulfillment: binary
+      graha_strength_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - Sign
+      - GrahaState
+      produces_nodes:
+      - ConditionEvaluation
+      edge_types:
+      - RULE_REQUIRES_CONDITION
+    citations:
+    - text: BPHS
+      chapter: 4
+      sloka_range: 2-20 (parser-est.)
+      translation_snippet: zodiacal signs described
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-20 within extracted chapter markers 2-161 and topic token
+        matched
+    examples:
+    - 'Sandeep Saturn in Libra (dual air sign = analysis, balance, fluctuation) exalted, in H10 = strategic negotiator. Dignity overcomes sign fluidity.'
+    - 'Ajay Saturn in Sagittarius (dual fire sign = expansion, philosophy, wandering) combust, in H2 = philosophical loss of wealth/values. Sign property + combustion compounds weakness.'
+  citation_status: verified
+- priority: 3
+  rule_id: RC-003
+  rule_name: Bhava Significations (1-12)
+  authority_tier: T1
+  chapter_signal: 'Chapters 7, 12-23: Bhava names and effects'
+  domain_tags:
+  - foundation
+  - outcome-mapping
+  why_top20: Defines what each house means; required for all domain outcomes and interpretation
+    templates.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Map every predicted outcome to explicit bhava domain ownership.
+    activation_conditions:
+    - House under evaluation is known
+    - Domain query is known
+    exclusions:
+    - Do not map domain without primary/secondary house list
+    default_modifiers:
+    - house_strength
+    scoring_hooks:
+      base_fulfillment: binary
+      graha_strength_modifier: optional
+    graph_mapping:
+      requires_nodes:
+      - Bhava
+      - OutcomeDomain
+      produces_nodes:
+      - OutcomeCandidate
+      edge_types:
+      - RULE_PRODUCES_OUTCOME
+    citations:
+    - text: BPHS
+      chapter: 7
+      sloka_range: 2-91 (parser-est.)
+      translation_snippet: names of bhavas, indications from houses
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-91 within extracted chapter markers 2-91 and topic token
+        matched
+    - text: BPHS
+      chapter: 12-23
+      sloka_range: 'Ch12-23 aggregate: 1-41 (parser-est., chapter-specific)'
+      translation_snippet: effects of houses
+      citation_status: needs_manual_review
+      audit_note: Some chapters in block unavailable for direct audit
+    examples:
+    - 'TBD: career mapped via 10th with support houses'
+  citation_status: partial_manual_review_needed
+- priority: 4
+  rule_id: RC-004
+  rule_name: Bhava Lord Effects (Lord of X in Y)
+  authority_tier: T1
+  chapter_signal: 'Chapter 24: Effects of Bhava Lords'
+  domain_tags:
+  - core-engine
+  - combinational
+  why_top20: High-coverage engine for predictive synthesis across all houses and topics.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Evaluate house outcomes primarily through lord placement
+      and condition.
+    activation_conditions:
+    - Source house lord identified
+    - Target house placement identified
+    exclusions:
+    - Do not skip dignity and affliction of the lord
+    default_modifiers:
+    - lord_dignity_modifier
+    - lord_affliction_modifier
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: required
+      affliction_relief_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - BhavaLord
+      - HousePlacement
+      - GrahaState
+      produces_nodes:
+      - OutcomeCandidate
+      edge_types:
+      - RULE_REQUIRES_CONDITION
+      - RULE_PRODUCES_OUTCOME
+    citations:
+    - text: BPHS
+      chapter: 24
+      sloka_range: 1-148 (parser-est.)
+      translation_snippet: effects due to bhava lords in various bhavas
+      citation_status: verified_range_and_topic
+      audit_note: Range 1-148 within extracted chapter markers 1-148 and topic token
+        matched
+    examples:
+    - 'Sandeep H10 lord Venus in H12 (loss house) = career operates through private/institutional channels, not direct public visibility. Result: Success hidden/accumulated privately.'
+    - 'Ajay H10 lord Sun in Leo H10 = natural alignment (Sun loves H10 arena). Result: Career prominence natural. BUT Sun also H8 lord (mortality) = sudden ups/downs.'
+  citation_status: verified
+- priority: 5
+  rule_id: RC-005
+  rule_name: Drishti Framework and Special Aspects
+  authority_tier: T1
+  chapter_signal: 'Chapters 8 and 26: Aspects'
+  domain_tags:
+  - core-engine
+  - interaction
+  why_top20: Aspects are a universal interaction mechanism and key modifier of otherwise
+    isolated placements.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Apply general and special aspects before concluding planetary
+      interaction effects.
+    activation_conditions:
+    - Aspecting planet identified
+    - Aspected sign/planet/house identified
+    exclusions:
+    - Do not treat conjunction as aspect substitute
+    default_modifiers:
+    - special_aspect_bonus
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - Aspect
+      - GrahaState
+      produces_nodes:
+      - RuleInteraction
+      edge_types:
+      - RULE_MODIFIES_RULE
+      - RULE_AMPLIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 8
+      sloka_range: 2-45 (parser-est.)
+      translation_snippet: sign aspects, planetary aspects
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-45 within extracted chapter markers 2-45 and topic token
+        matched
+    - text: BPHS
+      chapter: 26
+      sloka_range: 2-68 (parser-est.)
+      translation_snippet: special rules for aspects of Saturn, Mars and Jupiter
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-68 within extracted chapter markers 2-68 and topic token
+        matched
+    examples:
+    - 'TBD: Mars special aspect modifying 7th house interpretation'
+  citation_status: verified
+- priority: 6
+  rule_id: RC-006
+  rule_name: Divisional Consideration (D1-D9 first)
+  authority_tier: T1
+  chapter_signal: 'Chapter 7: Divisional Consideration'
+  domain_tags:
+  - varga
+  - validation
+  why_top20: Mandatory for cross-divisional support/contradiction and conservative
+    downgrade policy.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: No final claim without checking D1 structural promise and
+      D9 support state.
+    activation_conditions:
+    - D1 condition evaluated
+    - D9 corroboration/contradiction evaluated
+    exclusions:
+    - Do not use D9 contradiction to erase D1 entirely
+    default_modifiers:
+    - navamsa_downgrade_default
+    scoring_hooks:
+      base_fulfillment: weighted
+      divisional_support_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - Condition_D1
+      - Condition_D9
+      produces_nodes:
+      - DivisionalResolution
+      edge_types:
+      - RULE_DOWNGRADES_OUTCOME
+      - RULE_MODIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 7
+      sloka_range: 2-91 (parser-est.)
+      translation_snippet: use of the 16 divisions
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-91 within extracted chapter markers 2-91 and topic token
+        matched
+    examples:
+    - 'TBD: D1 promise medium, D9 weak -> downgraded output'
+  citation_status: verified
+- priority: 7
+  rule_id: RC-007
+  rule_name: Vimsopaka and Varga Quality Weighting
+  authority_tier: T1
+  chapter_signal: 'Chapter 7: Vimsopaka Strength'
+  domain_tags:
+  - scoring
+  - varga
+  why_top20: Provides quantitative route from varga status to weighted confidence
+    in outcomes.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Use Vimsopaka framework as varga quality input to weighting,
+      not as isolated score.
+    activation_conditions:
+    - Required varga positions computed
+    - Vimsopaka class resolved
+    exclusions:
+    - Do not compare raw scores across incompatible contexts
+    default_modifiers:
+    - varga_quality_multiplier
+    scoring_hooks:
+      base_fulfillment: weighted
+      divisional_support_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - VargaProfile
+      - GrahaState
+      produces_nodes:
+      - WeightComponent
+      edge_types:
+      - RULE_MODIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 7
+      sloka_range: 2-91 (parser-est.)
+      translation_snippet: Vimsopaka strength
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-91 within extracted chapter markers 2-91 and topic token
+        matched
+    examples:
+    - 'TBD: same yoga score with low vs high Vimsopaka support'
+  citation_status: verified
+- priority: 8
+  rule_id: RC-008
+  rule_name: Planetary Strength Aggregation (Shadbala family)
+  authority_tier: T1
+  chapter_signal: 'Chapter 27: Evaluation of Strengths'
+  domain_tags:
+  - scoring
+  - planet-strength
+  why_top20: Core numeric layer for translating dignity and strength into stable modifiers.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Resolve a normalized graha strength before applying major
+      outcome rules.
+    activation_conditions:
+    - Shadbala components available
+    - Normalization scale selected
+    exclusions:
+    - Do not use one bala component as total strength
+    default_modifiers:
+    - graha_strength_multiplier
+    scoring_hooks:
+      base_fulfillment: binary
+      graha_strength_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - ShadbalaProfile
+      - GrahaState
+      produces_nodes:
+      - NormalizedStrength
+      edge_types:
+      - RULE_MODIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 27
+      sloka_range: 2-360 (parser-est.)
+      translation_snippet: Shadbala requirements
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-360 within extracted chapter markers 2-360 and topic token
+        matched
+    examples:
+    - 'TBD: Jupiter strong by dignity but weak by total bala'
+  citation_status: verified
+- priority: 9
+  rule_id: RC-009
+  rule_name: Ishta-Kashta Balance
+  authority_tier: T1
+  chapter_signal: 'Chapter 28: Ishta and Kashta Balas'
+  domain_tags:
+  - scoring
+  - benefic-malefic-balance
+  why_top20: Important correction layer for tendency polarity and confidence tuning.
+  score_weight_hint: medium-high
+  card_fields:
+    canonical_statement: Use Ishta-Kashta to tune benefic/malefic tendency of otherwise
+      valid outcomes.
+    activation_conditions:
+    - Ishta and Kashta values derived
+    exclusions:
+    - Do not override explicit scriptural prohibition with Ishta advantage
+    default_modifiers:
+    - ishta_kashta_adjustment
+    scoring_hooks:
+      base_fulfillment: binary
+      affliction_relief_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - IshtaKashtaProfile
+      produces_nodes:
+      - TendencyAdjustment
+      edge_types:
+      - RULE_MODIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 28
+      sloka_range: 15-20 (parser-est.)
+      translation_snippet: beneficial and malefic tendencies
+      citation_status: verified_range_and_topic
+      audit_note: Range 15-20 within extracted chapter markers 15-20 and topic token
+        matched
+    examples:
+    - 'Sandeep: Strong Shasha (Saturn in H10 Kendra) + Vimala yoga balanced by Moon in dusthana H6 from lagna? No, Moon in H2 (neutral). Result: Yogas mostly untempered = strong manifestation.'
+    - 'Ajay: Strong Ruchaka (Mars in H1 Kendra Scorpio) HIGH yoga BUT Venus D9 debilitated + H7 maraka = marriage arena gets high Kashta pressure. Result: Career success easy (Ruchaka), relationship requires effort.'
+  citation_status: verified
+- priority: 10
+  rule_id: RC-010
+  rule_name: Yoga-karaka by Ascendant
+  authority_tier: T1
+  chapter_signal: 'Chapter 34: Yoga Karakas'
+  domain_tags:
+  - ascendant-specific
+  - synthesis
+  why_top20: Prevents generic interpretation errors by ascendant-specific functional
+    behavior.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Determine yoga-karaka status only after ascendant-specific
+      lordship mapping.
+    activation_conditions:
+    - Lagna fixed
+    - Planetary lordships resolved
+    exclusions:
+    - Do not apply one lagna's yoga-karaka rule to another lagna
+    default_modifiers:
+    - lagna_specific_functional_weight
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - Lagna
+      - LordshipMap
+      produces_nodes:
+      - YogaKarakaStatus
+      edge_types:
+      - RULE_REQUIRES_CONDITION
+      - RULE_AMPLIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 34
+      sloka_range: 2-99 (parser-est.)
+      translation_snippet: nature due to lordships of planets
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-99 within extracted chapter markers 2-99 and topic token
+        matched
+    examples:
+    - 'TBD: Saturn for Taurus lagna vs other lagnas'
+  citation_status: verified
+- priority: 11
+  rule_id: RC-011
+  rule_name: Karakas and Significator Hierarchy
+  authority_tier: T1
+  chapter_signal: 'Chapter 32: Planetary Karakatwas'
+  domain_tags:
+  - semantics
+  - signification
+  why_top20: Adds significance mapping needed for robust domain interpretation and
+    conflict resolution.
+  score_weight_hint: medium-high
+  card_fields:
+    canonical_statement: Use karaka hierarchy to prioritize significator pathways
+      in domain reading.
+    activation_conditions:
+    - Domain query mapped to karakas
+    exclusions:
+    - Do not ignore house/lordship in favor of karaka alone
+    default_modifiers:
+    - karaka_priority_weight
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - Karaka
+      - OutcomeDomain
+      produces_nodes:
+      - SignificatorPath
+      edge_types:
+      - RULE_MODIFIES_RULE
+      - RULE_PRODUCES_OUTCOME
+    citations:
+    - text: BPHS
+      chapter: 32
+      sloka_range: 2-24 (parser-est.)
+      translation_snippet: Atmakaraka defined, importance of Atmakaraka
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-24 within extracted chapter markers 2-24 and topic token
+        matched
+    examples:
+    - 'Sandeep marriage: D9 Venus own-sign Taurus >> 7th lord Moon Aquarius. Venus significance overrides Moon lord-ship. Result: Marriage destiny strong despite Moon challenges.'
+    - 'Ajay marriage: D9 Venus DEBILITATED Virgo >> 7th lord Venus H3 maraka. Both pathways show constraint. Result: Marriage requires conscious construction; natural blessing absent.'
+  citation_status: verified
+- priority: 12
+  rule_id: RC-012
+  rule_name: Karakamsa Interpretation Base
+  authority_tier: T1
+  chapter_signal: 'Chapter 33: Effects of Karakamsa'
+  domain_tags:
+  - advanced-core
+  - dharma
+  why_top20: High-value interpretive layer tied to Atmakaraka; supports deeper but
+    structured reading.
+  score_weight_hint: medium
+  card_fields:
+    canonical_statement: Evaluate Karakamsa as a structured secondary layer, not a
+      standalone override.
+    activation_conditions:
+    - Atmakaraka determined
+    - Karakamsa sign determined
+    exclusions:
+    - Do not negate strong bhava-lord evidence solely by Karakamsa
+    default_modifiers:
+    - karakamsa_context_weight
+    scoring_hooks:
+      base_fulfillment: weighted
+      divisional_support_modifier: optional
+    graph_mapping:
+      requires_nodes:
+      - Atmakaraka
+      - Karakamsa
+      produces_nodes:
+      - InterpretiveContext
+      edge_types:
+      - RULE_MODIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 33
+      sloka_range: 2-86 (parser-est.)
+      translation_snippet: effects of planets in Karakamsa
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-86 within extracted chapter markers 2-86 and topic token
+        matched
+    examples:
+    - 'TBD: vocation refinement using Karakamsa'
+  citation_status: verified
+- priority: 13
+  rule_id: RC-013
+  rule_name: Argala (Intervention/Obstruction)
+  authority_tier: T1
+  chapter_signal: 'Chapter 31: Argala'
+  domain_tags:
+  - interaction
+  - conflict-resolution
+  why_top20: Useful for managing conflicting signals and explaining override-like
+    behavior.
+  score_weight_hint: medium-high
+  card_fields:
+    canonical_statement: Apply Argala and Virodha-Argala before final ranking of competing
+      outcomes.
+    activation_conditions:
+    - Primary house/planet selected
+    - Argala-producing houses assessed
+    exclusions:
+    - Do not apply Argala without obstruction check
+    default_modifiers:
+    - argala_intervention_modifier
+    scoring_hooks:
+      base_fulfillment: weighted
+      affliction_relief_modifier: optional
+    graph_mapping:
+      requires_nodes:
+      - ArgalaPattern
+      - HousePlacement
+      produces_nodes:
+      - ConflictResolutionAdjustment
+      edge_types:
+      - RULE_MODIFIES_RULE
+      - RULE_CONTRADICTS_RULE
+    citations:
+    - text: BPHS
+      chapter: 31
+      sloka_range: 2-2 (parser-est.; chapter short in extraction)
+      translation_snippet: formation of Argala, Argala effects
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-2 within extracted chapter markers 2-2 and topic token matched
+    examples:
+    - 'TBD: favorable wealth signal blocked by counter Argala'
+  citation_status: verified
+- priority: 14
+  rule_id: RC-014
+  rule_name: Bhavapada/Lagna Pada Fundamentals
+  authority_tier: T1
+  chapter_signal: 'Chapter 29: Bhavapadas'
+  domain_tags:
+  - derived-indicators
+  - wealth-social
+  why_top20: Adds practical predictive depth, especially for material projection and
+    status outcomes.
+  score_weight_hint: medium
+  card_fields:
+    canonical_statement: Use Padas as derived projection indicators, secondary to
+      primary bhava-lord logic.
+    activation_conditions:
+    - Relevant Pada computed
+    exclusions:
+    - Do not replace base house analysis with Pada only
+    default_modifiers:
+    - pada_projection_weight
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: optional
+    graph_mapping:
+      requires_nodes:
+      - Pada
+      - Bhava
+      produces_nodes:
+      - ProjectionSignal
+      edge_types:
+      - RULE_PRODUCES_OUTCOME
+      - RULE_MODIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 29
+      sloka_range: 2-37 (parser-est.)
+      translation_snippet: method of Pada calculations
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-37 within extracted chapter markers 2-37 and topic token
+        matched
+    examples:
+    - 'TBD: Lagna Pada and status projection'
+  citation_status: verified
+- priority: 15
+  rule_id: RC-015
+  rule_name: Upapada Relationship Layer
+  authority_tier: T1
+  chapter_signal: 'Chapter 30: Upa Pada'
+  domain_tags:
+  - relationship
+  - marriage
+  why_top20: High-impact and teachable relationship module that links cleanly into
+    case validation.
+  score_weight_hint: medium-high
+  card_fields:
+    canonical_statement: Use Upapada as a structured relationship lens integrated
+      with 7th house logic.
+    activation_conditions:
+    - Upapada calculated
+    - 2nd from Upapada evaluated
+    exclusions:
+    - Do not conclude marriage outcomes from Upapada alone
+    default_modifiers:
+    - relationship_projection_modifier
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: optional
+    graph_mapping:
+      requires_nodes:
+      - Upapada
+      - HousePlacement
+      produces_nodes:
+      - RelationshipOutcomeCandidate
+      edge_types:
+      - RULE_PRODUCES_OUTCOME
+      - RULE_MODIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 30
+      sloka_range: 13-43 (parser-est.)
+      translation_snippet: effect of 2nd from Upapada
+      citation_status: verified_range_and_topic
+      audit_note: Range 13-43 within extracted chapter markers 13-43 and topic token
+        matched
+    examples:
+    - 'TBD: delayed marriage vs stable marriage case split'
+  citation_status: verified
+- priority: 16
+  rule_id: RC-016
+  rule_name: Lunar Yogas Base Set (Sunapha/Anapha/Duradhara/Kemadruma)
+  authority_tier: T1
+  chapter_signal: 'Chapter 37: Lunaryogas'
+  domain_tags:
+  - yoga
+  - mind-pattern
+  why_top20: Foundational and recurrent yogas with strong practical utility in early
+    chart synthesis.
+  score_weight_hint: medium-high
+  card_fields:
+    canonical_statement: Evaluate core lunar yogas as baseline psycho-behavioral and
+      resource pattern signals.
+    activation_conditions:
+    - Moon reference frame resolved
+    - 2nd/12th from Moon occupancy checked
+    exclusions:
+    - Do not use Kemadruma without cancellation checks
+    default_modifiers:
+    - kemadruma_cancellation_modifier
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - MoonFrame
+      - PlanetPlacement
+      produces_nodes:
+      - YogaSignal
+      edge_types:
+      - RULE_PRODUCES_OUTCOME
+      - RULE_CANCELS_RULE
+    citations:
+    - text: BPHS
+      chapter: 37
+      sloka_range: 2-13 (parser-est.)
+      translation_snippet: Sunapha, Anapha, Duradhura and Kemadruma yogas
+      citation_status: verified_topic_hit
+      audit_note: Topic token matched chapter text; stated range not fully within
+        extracted marker window 2-6
+    examples:
+    - 'TBD: Kemadruma with cancellation'
+  citation_status: verified_with_extraction_limits
+- priority: 17
+  rule_id: RC-017
+  rule_name: Core Canonical Yogas (incl. Gajakesari)
+  authority_tier: T1
+  chapter_signal: 'Chapter 36: Many Other Yogas'
+  domain_tags:
+  - yoga
+  - high-impact
+  why_top20: Captures major named yogas where scriptural explicitness should dominate
+    derived pattern heuristics.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Named scriptural yogas outrank derived convergence when both
+      are present.
+    activation_conditions:
+    - Named yoga condition list evaluated
+    exclusions:
+    - Do not force named yoga if core condition missing
+    default_modifiers:
+    - named_yoga_authority_priority
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: required
+      affliction_relief_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - YogaDefinition
+      - PlanetPlacement
+      produces_nodes:
+      - YogaSignal
+      - OutcomeCandidate
+      edge_types:
+      - RULE_PRODUCES_OUTCOME
+      - RULE_AMPLIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 36
+      sloka_range: 2-49 (parser-est.)
+      translation_snippet: Gajakesari, Amala, Parvatha ...
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-49 within extracted chapter markers 2-49 and topic token
+        matched
+    - text: BPHS
+      chapter: 36
+      sloka_range: 3-4 (text-hit)
+      translation_snippet: Gajakesari Yoga details
+      citation_status: verified_range_and_topic
+      audit_note: Range 3-4 within extracted chapter markers 2-49 and topic token
+        matched
+    examples:
+    - 'TBD: partial Gajakesari (2/3 conditions) scoring'
+  citation_status: verified
+- priority: 18
+  rule_id: RC-018
+  rule_name: Raja Yoga Synthesis
+  authority_tier: T1
+  chapter_signal: 'Chapters 39-40: Rajayogas'
+  domain_tags:
+  - status
+  - power
+  why_top20: Central composite outcome family integrating lordship, strength, and
+    yogic combinations.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Raja yoga claims require multi-factor validation across lordship,
+      strength and support.
+    activation_conditions:
+    - Trine/angle relation evaluated
+    - Supportive strength thresholds met
+    exclusions:
+    - Do not output high rank raja outcome with severe contradiction in D9
+    default_modifiers:
+    - divisional_downgrade_for_status_claims
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: required
+      divisional_support_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - LordshipPattern
+      - StrengthProfile
+      - VargaProfile
+      produces_nodes:
+      - StatusOutcomeCandidate
+      edge_types:
+      - RULE_PRODUCES_OUTCOME
+      - RULE_DOWNGRADES_OUTCOME
+    citations:
+    - text: BPHS
+      chapter: 39
+      sloka_range: 4-47 (parser-est.; Ch40 continuation 2-48)
+      translation_snippet: Rajayogas making one entitled to royal honours
+      citation_status: verified_range_and_topic
+      audit_note: Range 4-47 within extracted chapter markers 4-47 and topic token
+        matched
+    examples:
+    - 'TBD: strong raja pattern downgraded by weakness factors'
+  citation_status: verified
+- priority: 19
+  rule_id: RC-019
+  rule_name: Dhana vs Penury Counterpair
+  authority_tier: T1
+  chapter_signal: 'Chapters 41-42: Wealth and Penury'
+  domain_tags:
+  - wealth
+  - counter-rules
+  why_top20: Builds balanced domain reasoning by forcing both prosperity and deprivation
+    logic in one module.
+  score_weight_hint: high
+  card_fields:
+    canonical_statement: Always evaluate wealth-producing and wealth-denying combinations
+      together.
+    activation_conditions:
+    - Dhana factors scored
+    - Penury factors scored
+    exclusions:
+    - Do not report wealth signal without counter-signal audit
+    default_modifiers:
+    - counterpair_netting
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: required
+      timing_activation_modifier: optional
+    graph_mapping:
+      requires_nodes:
+      - DhanaPattern
+      - PenuryPattern
+      produces_nodes:
+      - NetWealthOutcome
+      edge_types:
+      - RULE_CONTRADICTS_RULE
+      - RULE_PRODUCES_OUTCOME
+    citations:
+    - text: BPHS
+      chapter: 41
+      sloka_range: 2-28 (parser-est.)
+      translation_snippet: yogas for affluence
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-28 within extracted chapter markers 2-28 and topic token
+        matched
+    - text: BPHS
+      chapter: 42
+      sloka_range: 2-18 (parser-est.)
+      translation_snippet: combinations for penury
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-18 within extracted chapter markers 2-18 and topic token
+        matched
+    examples:
+    - 'TBD: strong earnings with strong leakage/deprivation'
+  citation_status: verified
+- priority: 20
+  rule_id: RC-020
+  rule_name: Longevity-Maraka-Avastha Caution Triad
+  authority_tier: T1
+  chapter_signal: 'Chapters 43-45: Longevity, Maraka, Avastha'
+  domain_tags:
+  - risk
+  - timing
+  - confidence-gating
+  why_top20: A high-stakes guardrail layer that conditions certainty and timing-related
+    statements.
+  score_weight_hint: medium-high
+  card_fields:
+    canonical_statement: Apply longevity, maraka and avastha as confidence gates for
+      high-risk and timing claims.
+    activation_conditions:
+    - Longevity class estimated
+    - Maraka periods identified
+    - Avastha state computed
+    exclusions:
+    - Do not make deterministic life/death claim from a single sub-rule
+    default_modifiers:
+    - risk_domain_confidence_cap
+    scoring_hooks:
+      base_fulfillment: weighted
+      timing_activation_modifier: required
+      affliction_relief_modifier: required
+    graph_mapping:
+      requires_nodes:
+      - LongevityProfile
+      - MarakaProfile
+      - AvasthaProfile
+      produces_nodes:
+      - RiskTimingGate
+      edge_types:
+      - RULE_DOWNGRADES_OUTCOME
+      - RULE_MODIFIES_RULE
+    citations:
+    - text: BPHS
+      chapter: 43
+      sloka_range: 2-77 (parser-est.)
+      translation_snippet: Pindayu, Naisargayu, Amsayu
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-77 within extracted chapter markers 2-77 and topic token
+        matched
+    - text: BPHS
+      chapter: 44
+      sloka_range: 1-46 (parser-est.)
+      translation_snippet: Marakas based on lordship
+      citation_status: verified_range_and_topic
+      audit_note: Range 1-46 within extracted chapter markers 1-46 and topic token
+        matched
+    - text: BPHS
+      chapter: 45
+      sloka_range: 2-86 (parser-est.)
+      translation_snippet: Avasthas of planets
+      citation_status: verified_range_and_topic
+      audit_note: Range 2-86 within extracted chapter markers 2-86 and topic token
+        matched
+    examples:
+    - 'TBD: strong prosperity signal but risk gate reduces confidence band'
+  citation_status: verified
+next_fill_sequence:
+- Fill exact sloka ranges for each citation entry
+- Convert activation_conditions into atomic graph conditions
+- Attach numeric default multipliers for all scoring_hooks
+- Add one verified chart case per rule card
+external_sources:
+  telugu_corpus:
+    ingestion_status: blocked_in_current_runtime
+    blocker: tesseract_telugu_language_model_not_installed
+    books:
+    - file: /Users/a0b1803/Documents/jyotisha/Reference books/VA323-NakshatraChintamani.pdf
+      source_tag: NakshatraChintamani
+      extraction_status: unreadable_without_telugu_ocr
+    - file: /Users/a0b1803/Documents/jyotisha/Reference books/VA325-Saaraavali (1).pdf
+      source_tag: Saravali
+      extraction_status: unreadable_without_telugu_ocr
+    - file: /Users/a0b1803/Documents/jyotisha/Reference books/VA326-SankethaNidhi (1).pdf
+      source_tag: SanketaNidhi
+      extraction_status: unreadable_without_telugu_ocr
+  integration_policy:
+    bpht_tier: T1
+    external_initial_tier: T4
+    promotion_criteria:
+    - cross-text consistency
+    - repeated case validation
+    - no unresolved contradiction to T1
+nakshatra_extension:
+  status: provisional_pending_telugu_source_verification
+  description: Adds Nakshatra-level interpretation over existing rashi-house-lord engine.
+  rule_pack:
+  - rule_id: NK-001
+    rule_name: Moon Nakshatra Baseline
+    purpose: Establish cognitive style, emotional response, and event sensitivity baseline.
+    activation_conditions:
+    - Moon longitude known
+    - Nakshatra and pada computed
+    scoring_hooks:
+      base_fulfillment: binary
+      graha_strength_modifier: required
+      timing_activation_modifier: optional
+  - rule_id: NK-002
+    rule_name: Lagna Nakshatra Character Layer
+    purpose: Add behavioral expression layer to natal personality and decision patterns.
+    activation_conditions:
+    - Lagna longitude known
+    - Lagna Nakshatra and pada computed
+    scoring_hooks:
+      base_fulfillment: binary
+      graha_strength_modifier: optional
+  - rule_id: NK-003
+    rule_name: Nakshatra Lord Strength Transfer
+    purpose: Transfer strength/affliction from Nakshatra lord to occupied graha outcomes.
+    activation_conditions:
+    - Planet Nakshatra known
+    - Nakshatra lord dignity/strength known
+    scoring_hooks:
+      base_fulfillment: weighted
+      graha_strength_modifier: required
+      affliction_relief_modifier: required
+  - rule_id: NK-004
+    rule_name: Dasha Star Activation Bridge
+    purpose: Increase confidence when active dasha lords connect to key outcome Nakshatras.
+    activation_conditions:
+    - Active dasha-bhukti known
+    - Dasha lord Nakshatra links computed
+    scoring_hooks:
+      base_fulfillment: weighted
+      timing_activation_modifier: required
+  - rule_id: NK-005
+    rule_name: Transit Through Natal Nakshatra Triggers
+    purpose: Identify short-window activation when transits hit natal Nakshatra points.
+    activation_conditions:
+    - Current transit longitudes known
+    - Natal Nakshatra anchors known
+    scoring_hooks:
+      base_fulfillment: weighted
+      timing_activation_modifier: required
+  graph_mapping:
+    nodes:
+    - Nakshatra
+    - Pada
+    - NakshatraLord
+    - NakshatraActivationEvent
+    edges:
+    - GRAHA_OCCUPIES_NAKSHATRA
+    - NAKSHATRA_OWNED_BY_GRAHA
+    - DASHA_LORD_ACTIVATES_NAKSHATRA
+    - TRANSIT_TRIGGERS_NAKSHATRA
+    - NAKSHATRA_MODIFIES_OUTCOME
+contradiction_registry:
+  status: initialized
+  required_fields:
+  - contradiction_id
+  - topic
+  - base_rule_ref
+  - external_source_tag
+  - contradiction_type
+  - contradiction_description
+  - resolution_policy
+  - confidence_impact
+  - status
+  entries:
+  - contradiction_id: CR-001
+    topic: Lunar yoga outcome severity
+    base_rule_ref: RC-016
+    external_source_tag: pending_telugu_sources
+    contradiction_type: pending_intake
+    contradiction_description: To be populated after Telugu text ingestion and translation.
+    resolution_policy: conservative_ranked_output
+    confidence_impact: medium
+    status: open
+  - contradiction_id: CR-002
+    topic: Wealth yoga qualification thresholds
+    base_rule_ref: RC-019
+    external_source_tag: pending_telugu_sources
+    contradiction_type: pending_intake
+    contradiction_description: To be populated after Telugu text ingestion and translation.
+    resolution_policy: bpht_t1_precedence
+    confidence_impact: high
+    status: open
+
+expansion_backlog:
+  version: v1
+  created: '2026-04-11'
+  total_cards: 30
+  authority_tier_default: T4
+  tier_note: All backlog cards are T4 (pending cross-source validation). Candidates
+    for promotion to T2/T3 once Telugu OCR corpus is translated and cross-checked.
+  ocr_source_map:
+    VA301: VA301-30MukhyamainaYogamulu  # yoga(312), dhana(36), rajayoga(7)
+    VA304: VA304-SarvarthaChintamani    # yoga(58), dasha(11), bhava(16)
+    VA305: VA305-PurohithaDarshini      # yoga(12), bhava(13), dhana(6)
+    VA306: VA306-Jyothirvedam           # yoga(3), dasha(3), bhava(4)
+    VA307: VA307-JathakaChakramu        # yoga(6), dasha(3), bhava(14)
+    VA308: VA308-JathakaRahasyamu       # yoga(45), bhava(5), dhana(6)
+    VA309: VA309-JathakaChandrika       # shani(13), lagna(12), rahu(4)
+    VA323: VA323-NakshatraChintamani    # nakshatra(4) — primary nakshatra source
+    VA325: VA325-Saaraavali             # yoga(18), rajayoga(2), dhana(7)
+    VA326: VA326-SankethaNidhi          # yoga(5), dasha(6), ayu(3)
+
+  # ── SECTION 1: NAKSHATRA GROUP RULES (NK-006 to NK-018) ──────────────────────
+  # Grouped by ruling lord (9 Vimshottari lords × 3 nakshatras each = 27),
+  # then tara-bala, dasha-seed, pada-navamsha, and sandhi rules.
+  # Primary OCR signal: VA323-NakshatraChintamani; corroboration in VA325/VA326.
+
+  nakshatra_group_rules:
+
+  - rule_id: NK-006
+    rule_name: Ketu Nakshatras — Ashwini, Magha, Mula
+    authority_tier: T4
+    domain_tags: [nakshatra, ketu, initiation, ancestral, dissolution]
+    ocr_signal: VA323 nakshatra(4)
+    canonical_statement: >
+      Planets in Ketu-ruled nakshatras operate with sudden initiating energy
+      (Ashwini), ancestral/rajyakaraka resonance (Magha), or radical dissolution
+      and root-cause research drive (Mula). Ketu-nakshatra planets gain potency
+      through detachment and prior-life karma activation.
+    activation_conditions:
+    - Planet longitude falls in Ashwini (0°00'–13°20' Aries),
+      Magha (0°00'–13°20' Leo), or Mula (0°00'–13°20' Sagittarius)
+    - Ketu's own sign/nakshatra dignity and aspect known
+    scoring_hooks:
+      base_fulfillment: weighted_by_nakshatra_match
+      graha_strength_modifier: required
+      ketu_disposition_modifier: required
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraLord_Ketu, RashiPosition]
+      produces_nodes: [NakshatraGroupSignal_Ketu]
+      edge_types: [PLANET_IN_KETU_NAKSHATRA, KETU_CONDITIONS_EXPRESSION]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-007
+    rule_name: Venus Nakshatras — Bharani, Purva Phalguni, Purva Ashadha
+    authority_tier: T4
+    domain_tags: [nakshatra, venus, pleasure, creativity, invincibility]
+    ocr_signal: VA323 nakshatra(4); VA325 yoga(18)
+    canonical_statement: >
+      Planets in Venus-ruled nakshatras emphasize karmic completion and
+      experiential depth (Bharani), patronage, arts, and bed comforts
+      (Purva Phalguni), and unconquerable forward momentum or aesthetic mastery
+      (Purva Ashadha). Shukra-nakshatra strength directly modulates relationship
+      and kama outcomes.
+    activation_conditions:
+    - Planet longitude in Bharani (13°20'–26°40' Aries),
+      Purva Phalguni (13°20'–26°40' Leo), or Purva Ashadha (13°20'–26°40' Sagittarius)
+    - Venus dignity and lord-strength computed
+    scoring_hooks:
+      base_fulfillment: weighted_by_nakshatra_match
+      graha_strength_modifier: required
+      venus_disposition_modifier: required
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraLord_Venus, RashiPosition]
+      produces_nodes: [NakshatraGroupSignal_Venus]
+      edge_types: [PLANET_IN_VENUS_NAKSHATRA, VENUS_CONDITIONS_EXPRESSION]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-008
+    rule_name: Sun Nakshatras — Krittika, Uttara Phalguni, Uttara Ashadha
+    authority_tier: T4
+    domain_tags: [nakshatra, sun, fire, partnership, final-victory]
+    ocr_signal: VA323 nakshatra(4); VA325 yoga(18)
+    canonical_statement: >
+      Planets in Sun-ruled nakshatras carry a purifying, fire-like discriminating
+      quality (Krittika), stable partnership and service orientation (Uttara
+      Phalguni), or a drive toward irreversible final achievement and divine sanction
+      (Uttara Ashadha). Surya-nakshatra clarity amplifies authority themes.
+    activation_conditions:
+    - Planet longitude in Krittika (26°40' Aries–10°00' Taurus),
+      Uttara Phalguni (26°40' Leo–10°00' Virgo), or Uttara Ashadha (26°40' Sagittarius–10°00' Capricorn)
+    - Sun dignity and combustion status of other planets near it noted
+    scoring_hooks:
+      base_fulfillment: weighted_by_nakshatra_match
+      graha_strength_modifier: required
+      sun_disposition_modifier: required
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraLord_Sun, RashiPosition]
+      produces_nodes: [NakshatraGroupSignal_Sun]
+      edge_types: [PLANET_IN_SUN_NAKSHATRA, SUN_CONDITIONS_EXPRESSION]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-009
+    rule_name: Moon Nakshatras — Rohini, Hasta, Shravana
+    authority_tier: T4
+    domain_tags: [nakshatra, moon, material-prosperity, craft, learning]
+    ocr_signal: VA323 nakshatra(4); VA301 bhava(21)
+    canonical_statement: >
+      Planets in Moon-ruled nakshatras manifest through material abundance and
+      fixed sensory enjoyment (Rohini), exquisite craftsmanship, healing, and
+      dexterous skill (Hasta), or devotional listening, learning retention, and
+      long-distance connection (Shravana). Chandra-nakshatra waxing/waning and
+      paksha bala multiply outcome confidence.
+    activation_conditions:
+    - Planet longitude in Rohini (10°00'–23°20' Taurus),
+      Hasta (10°00'–23°20' Virgo), or Shravana (10°00'–23°20' Capricorn)
+    - Moon paksha bala and dignity evaluated
+    scoring_hooks:
+      base_fulfillment: weighted_by_nakshatra_match
+      graha_strength_modifier: required
+      chandra_paksha_modifier: required
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraLord_Moon, RashiPosition]
+      produces_nodes: [NakshatraGroupSignal_Moon]
+      edge_types: [PLANET_IN_MOON_NAKSHATRA, MOON_CONDITIONS_EXPRESSION]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-010
+    rule_name: Mars Nakshatras — Mrigashira, Chitra, Dhanishtha
+    authority_tier: T4
+    domain_tags: [nakshatra, mars, seeking, architecture, wealth-accumulation]
+    ocr_signal: VA323 nakshatra(4); VA301 yoga(312)
+    canonical_statement: >
+      Planets in Mars-ruled nakshatras express restless seeking and gentle hunter
+      energy (Mrigashira), precise architectural brilliance and aesthetic
+      perfectionism (Chitra), or wealth accumulation through relentless execution
+      (Dhanishtha). Kuja strength and aspect patterns scale the intensity of
+      drive and conflict potential.
+    activation_conditions:
+    - Planet longitude in Mrigashira (23°20' Taurus–6°40' Gemini),
+      Chitra (23°20' Virgo–6°40' Libra), or Dhanishtha (23°20' Capricorn–6°40' Aquarius)
+    - Mars strength and aspect evaluated; affliction to Mars noted
+    scoring_hooks:
+      base_fulfillment: weighted_by_nakshatra_match
+      graha_strength_modifier: required
+      kuja_dosha_modifier: conditional
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraLord_Mars, RashiPosition]
+      produces_nodes: [NakshatraGroupSignal_Mars]
+      edge_types: [PLANET_IN_MARS_NAKSHATRA, MARS_CONDITIONS_EXPRESSION]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-011
+    rule_name: Rahu Nakshatras — Ardra, Swati, Shatabhisha
+    authority_tier: T4
+    domain_tags: [nakshatra, rahu, storm, independence, mystery-healing]
+    ocr_signal: VA309 rahu(4); VA323 nakshatra(4)
+    canonical_statement: >
+      Planets in Rahu-ruled nakshatras bring disruptive storm intelligence and
+      cutting through illusion (Ardra), fierce independence and entrepreneurial
+      restlessness (Swati), or esoteric healing, secrecy, and thousand-branch
+      complexity (Shatabhisha). Rahu's house placement and sign modifies the
+      expression significantly; consider shadowy amplification of co-occupants.
+    activation_conditions:
+    - Planet longitude in Ardra (6°40'–20°00' Gemini),
+      Swati (6°40'–20°00' Libra), or Shatabhisha (6°40'–20°00' Aquarius)
+    - Rahu-Ketu axis position and sign dignities computed
+    scoring_hooks:
+      base_fulfillment: weighted_by_nakshatra_match
+      graha_strength_modifier: required
+      rahu_amplification_modifier: required
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraLord_Rahu, RashiPosition, RahuKetuAxis]
+      produces_nodes: [NakshatraGroupSignal_Rahu]
+      edge_types: [PLANET_IN_RAHU_NAKSHATRA, RAHU_CONDITIONS_EXPRESSION]
+    citations:
+    - text: VA309-JathakaChandrika
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-012
+    rule_name: Jupiter Nakshatras — Punarvasu, Vishakha, Purva Bhadrapada
+    authority_tier: T4
+    domain_tags: [nakshatra, jupiter, renewal, goal-achievement, intense-ascent]
+    ocr_signal: VA323 nakshatra(4); VA325 yoga(18), rajayoga(2)
+    canonical_statement: >
+      Planets in Jupiter-ruled nakshatras operate with returning abundance and
+      mother-nurture energy (Punarvasu), two-branched goal intensity and
+      tireless pursuit (Vishakha), or fierce-ascent transformative fire on the
+      path to moksha (Purva Bhadrapada). Guru strength and beneficence tier
+      multiply outcome reliability.
+    activation_conditions:
+    - Planet longitude in Punarvasu (20°00' Gemini–3°20' Cancer),
+      Vishakha (20°00' Libra–3°20' Scorpio), or Purva Bhadrapada (20°00' Aquarius–3°20' Pisces)
+    - Jupiter sign, exaltation/debilitation, and beeja/kshetra sphuta assessed
+    scoring_hooks:
+      base_fulfillment: weighted_by_nakshatra_match
+      graha_strength_modifier: required
+      guru_karaka_modifier: required
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraLord_Jupiter, RashiPosition]
+      produces_nodes: [NakshatraGroupSignal_Jupiter]
+      edge_types: [PLANET_IN_JUPITER_NAKSHATRA, JUPITER_CONDITIONS_EXPRESSION]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-013
+    rule_name: Saturn Nakshatras — Pushya, Anuradha, Uttara Bhadrapada
+    authority_tier: T4
+    domain_tags: [nakshatra, saturn, nourishment, loyalty, depth-tapas]
+    ocr_signal: VA309 shani(13); VA323 nakshatra(4)
+    canonical_statement: >
+      Planets in Saturn-ruled nakshatras carry nourishing dutiful dharma energy
+      (Pushya), deep loyal devotional friendship with tested perseverance
+      (Anuradha), or profound cosmic depth, tapas completion, and serpent wisdom
+      (Uttara Bhadrapada). Shani's retrograde state substantially shifts delay vs
+      acceleration of these themes.
+    activation_conditions:
+    - Planet longitude in Pushya (3°20'–16°40' Cancer),
+      Anuradha (3°20'–16°40' Scorpio), or Uttara Bhadrapada (3°20'–16°40' Pisces)
+    - Saturn retrograde flag and sign dignity computed
+    scoring_hooks:
+      base_fulfillment: weighted_by_nakshatra_match
+      graha_strength_modifier: required
+      shani_retrograde_modifier: required
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraLord_Saturn, RashiPosition, SaturnRetroFlag]
+      produces_nodes: [NakshatraGroupSignal_Saturn]
+      edge_types: [PLANET_IN_SATURN_NAKSHATRA, SATURN_CONDITIONS_EXPRESSION]
+    citations:
+    - text: VA309-JathakaChandrika
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-014
+    rule_name: Mercury Nakshatras — Ashlesha, Jyeshtha, Revati
+    authority_tier: T4
+    domain_tags: [nakshatra, mercury, serpent-power, authority-protection, transcendence]
+    ocr_signal: VA323 nakshatra(4); VA308 yoga(45)
+    canonical_statement: >
+      Planets in Mercury-ruled nakshatras operate through subtle kundalini and
+      psychological penetration (Ashlesha), protective elder authority and sting-
+      guard of the tribe (Jyeshtha), or transcendent wayfinding and completion
+      of cycles in oceanic compassion (Revati). Budha combustion in any of these
+      nakshatras forces interpretation revision.
+    activation_conditions:
+    - Planet longitude in Ashlesha (16°40'–30°00' Cancer),
+      Jyeshtha (16°40'–30°00' Scorpio), or Revati (16°40'–30°00' Pisces)
+    - Mercury combustion status checked; Mercury retrograde state noted
+    scoring_hooks:
+      base_fulfillment: weighted_by_nakshatra_match
+      graha_strength_modifier: required
+      budha_combustion_modifier: required
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraLord_Mercury, RashiPosition, MercuryCombustionFlag]
+      produces_nodes: [NakshatraGroupSignal_Mercury]
+      edge_types: [PLANET_IN_MERCURY_NAKSHATRA, MERCURY_CONDITIONS_EXPRESSION]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-015
+    rule_name: Tara Bala Birth Star Favorability
+    authority_tier: T4
+    domain_tags: [nakshatra, tara-bala, muhurta, transit-favorability]
+    ocr_signal: VA323 nakshatra(4); VA326 dasha(6)
+    canonical_statement: >
+      Count from birth nakshatra to current nakshatra (transit or muhurta) in
+      nine-fold repeating sequence: Janma (1), Sampat (2), Vipat (3), Kshema (4),
+      Pratyak (5), Sadhana (6), Naidhana (7), Mitra (8), Parama-Mitra (9).
+      Odd tara 1/3/5/7 are unfavorable; even 2/4/6/8/9 are favorable. Scale
+      transit/event confidence by tara favorability factor.
+    activation_conditions:
+    - Birth nakshatra known (from Moon longitude)
+    - Transit or event nakshatra known
+    - Counting direction: from birth to event nakshatra inclusive
+    exclusions:
+    - Tara bala alone does not override strong dasha/transit confluence
+    scoring_hooks:
+      base_fulfillment: multiplicative_modifier_only
+      tara_bala_modifier:
+        favorable_taras: [2, 4, 6, 8, 9]
+        unfavorable_taras: [1, 3, 5, 7]
+        default_multiplier_favorable: 1.1
+        default_multiplier_unfavorable: 0.85
+    graph_mapping:
+      requires_nodes: [BirthNakshatra, EventNakshatra]
+      produces_nodes: [TaraBalaScore]
+      edge_types: [TARA_COUNTED_FROM_BIRTH, TARA_MODIFIES_EVENT_CONFIDENCE]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: BPHS
+      chapter: 8
+      sloka_range: TBD
+      citation_status: pending_bphs_vol2_check
+    status: stub_pending_translation
+
+  - rule_id: NK-016
+    rule_name: Vimshottari Dasha Nakshatra Seed
+    authority_tier: T2
+    domain_tags: [nakshatra, vimshottari, dasha, birth-star-seed]
+    ocr_signal: VA326 dasha(6); VA304 dasha(11)
+    canonical_statement: >
+      The Vimshottari dasha sequence is seeded by the birth Moon's nakshatra.
+      The nakshatra lord at birth determines the first active mahadasha lord
+      and the fraction of that dasha period remaining at birth (proportional to
+      Moon's position within the nakshatra). All subsequent mahadashas follow
+      the fixed Vimshottari sequence.
+    activation_conditions:
+    - Moon longitude at birth known to arc-minute precision
+    - Nakshatra boundary tables loaded (27 nakshatras × 13°20' each)
+    exclusions:
+    - Yogini dasha and other dasha systems are excluded; this rule governs Vimshottari only
+    scoring_hooks:
+      base_fulfillment: binary
+      dasha_remaining_fraction: computed_from_moon_position_in_nakshatra
+    graph_mapping:
+      requires_nodes: [MoonNakshatra, NakshatraLord, BirthDateTime]
+      produces_nodes: [FirstDashaLord, RemainingDashaFraction, DashaSequence]
+      edge_types: [MOON_SEEDS_DASHA, NAKSHATRA_DETERMINES_DASHA_LORD]
+    citations:
+    - text: BPHS
+      chapter: 46
+      sloka_range: TBD
+      citation_status: pending_bphs_vol2_check
+      audit_note: BPHS Vol 2 covers Dasha system; Vol 1 (current source) ends at Ch45
+    - text: VA326-SankethaNidhi
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_high_confidence
+
+  - rule_id: NK-017
+    rule_name: Nakshatra Pada Navamsha Bridge
+    authority_tier: T4
+    domain_tags: [nakshatra, pada, navamsha, D9, integration]
+    ocr_signal: VA323 nakshatra(4)
+    canonical_statement: >
+      Each nakshatra is divided into 4 padas of 3°20' each. Each pada maps to a
+      navamsha sign in regular sequence: pada-1 → Aries, pada-2 → Taurus,
+      pada-3 → Gemini, pada-4 → Cancer (restarting per nakshatra group of 9).
+      Planets in specific padas acquire the D9 sign qualities of that pada in
+      addition to the nakshatra lord's stamp.
+    activation_conditions:
+    - Planet longitude known to arc-minute precision
+    - Exact pada derived (floor division by 3°20' within nakshatra)
+    scoring_hooks:
+      base_fulfillment: computed
+      navamsha_dignity_modifier: required
+      pada_sign_resonance_with_natal_chart: optional
+    graph_mapping:
+      requires_nodes: [Planet, Nakshatra, PadaNumber]
+      produces_nodes: [NavamshaSignForPada, D9PlanetSignal]
+      edge_types: [PADA_MAPS_TO_NAVAMSHA_SIGN, PLANET_GAINS_PADA_SIGN_COLOR]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: NK-018
+    rule_name: Sandhi Nakshatra Boundary Sensitivity
+    authority_tier: T4
+    domain_tags: [nakshatra, sandhi, rashi-junction, debility-risk]
+    ocr_signal: VA323 nakshatra(4); VA309 lagna(12)
+    canonical_statement: >
+      A planet at the junction of two nakshatras (last 1° of outgoing or
+      first 1° of incoming nakshatra) loses stable expression of either lord.
+      Additionally, where nakshatra boundaries coincide with rashi boundaries
+      (e.g., Krittika spans Aries-Taurus), the planet acquires rashi-sandhi
+      weakness on top of nakshatra-sandhi weakness. Confidence in predictive
+      output must be downgraded unless strong divisional support offsets.
+    activation_conditions:
+    - Planet longitude within 1° of any nakshatra boundary
+    - Extra flag if near rashi boundary simultaneously
+    exclusions:
+    - Do not apply sandhi weakness to nodes (Rahu/Ketu) per traditional practice
+    scoring_hooks:
+      base_fulfillment: downgrade_trigger
+      sandhi_downgrade_multiplier: 0.80
+      rashi_sandhi_addl_downgrade: 0.90
+    graph_mapping:
+      requires_nodes: [Planet, NakshatraBoundary, RashiBoundary]
+      produces_nodes: [SandhiWeaknessFlag]
+      edge_types: [PLANET_IN_SANDHI, SANDHI_REDUCES_CONFIDENCE]
+    citations:
+    - text: VA323-NakshatraChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  # ── SECTION 2: DASHA GRANULARITY RULES (DG-001 to DG-003) ───────────────────
+  # Refine timing from mahadasha level to antardasha and pratyantardasha events.
+  # OCR signals: VA304 dasha(11), VA326 dasha(6), VA325 dasha(4).
+
+  dasha_granularity_rules:
+
+  - rule_id: DG-001
+    rule_name: Antardasha Event Precision Layer
+    authority_tier: T4
+    domain_tags: [dasha, antardasha, timing, sub-period]
+    ocr_signal: VA304 dasha(11); VA326 dasha(6)
+    canonical_statement: >
+      Within a Mahadasha, each sub-lord (antardasha bhukti lord) activates
+      the natal promise of BOTH the mahadasha lord AND the antardasha lord
+      simultaneously. The event fires when both lords relate to the relevant
+      house/yoga through ownership, aspect, or karaka role, and when the
+      antardasha lord's natal strength is not severely afflicted.
+    activation_conditions:
+    - Mahadasha lord identified and natal position evaluated
+    - Antardasha lord identified and relationship with mahadasha lord computed
+    - Both lords' house associations evaluated for the event domain
+    exclusions:
+    - If mahadasha lord is strong but antardasha lord is severely afflicted
+      (combust + debilitated), reduce confidence to low
+    scoring_hooks:
+      base_fulfillment: joint_lord_activation
+      dasha_lord_strength_modifier: required
+      antardasha_lord_strength_modifier: required
+      mutual_relation_modifier:
+        friend: 1.1
+        neutral: 1.0
+        enemy: 0.85
+    graph_mapping:
+      requires_nodes: [DashaLord, AntardashaLord, NatalChart]
+      produces_nodes: [EventTimingWindow, EventDomainSignal]
+      edge_types: [DASHA_ACTIVATES_NATAL_PROMISE, ANTARDASHA_REFINES_WINDOW]
+    citations:
+    - text: VA304-SarvarthaChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: VA326-SankethaNidhi
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: DG-002
+    rule_name: Pratyantardasha Precise Timing Window
+    authority_tier: T4
+    domain_tags: [dasha, pratyantardasha, micro-timing]
+    ocr_signal: VA304 dasha(11)
+    canonical_statement: >
+      The Pratyantardasha (sub-sub-period) narrows event timing to a window of
+      days to weeks. Activation requires the pratyantar lord to (a) own or aspect
+      the event bhava, (b) be linked to the mahadasha lord by sambandha, and
+      (c) receive a supporting transit trigger simultaneously. All three criteria
+      at once produce high-confidence event timing.
+    activation_conditions:
+    - Active dasha/antardasha/pratyantardasha lords all identified
+    - All three lords evaluated for sambandha (association, aspect, exchange)
+    - Supporting transit to natal activation point confirmed
+    exclusions:
+    - Use for short-window event confirmation only; not for multi-year life trends
+    scoring_hooks:
+      base_fulfillment: triple_activation_required
+      all_three_lords_linked: true
+      transit_support_required: true
+      confidence_without_transit: low
+    graph_mapping:
+      requires_nodes: [DashaLord, AntardashaLord, PratyantardashaLord, TransitTrigger]
+      produces_nodes: [PreciseEventWindow]
+      edge_types: [TRIPLE_LORD_ACTIVATION, TRANSIT_CONFIRMS_WINDOW]
+    citations:
+    - text: VA304-SarvarthaChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: DG-003
+    rule_name: Dasha-Antardasha Mutual Relation Scoring
+    authority_tier: T4
+    domain_tags: [dasha, mutual-relation, friend-enemy, timing-quality]
+    ocr_signal: VA304 dasha(11); VA325 dasha(4)
+    canonical_statement: >
+      The quality of results during an antardasha period is substantially
+      modified by the mutual natural and temporal relationship between the
+      mahadasha lord and the antardasha lord. Mutual friends in both natural and
+      temporal frames produce easy favorable results. Mutual enemies produce
+      obstacles or adverse experiences even if the native's natal chart is strong.
+    activation_conditions:
+    - Natural relationship (naisar-gika mitra/shatru) between dasha and antardasha lords computed
+    - Temporal relationship (tatkalika mitra/shatru from natal positions) computed
+    scoring_hooks:
+      base_fulfillment: relation_modifier_only
+      mutual_natural_friend: 1.15
+      mutual_temporal_friend: 1.10
+      one_friend_one_neutral: 1.0
+      one_friend_one_enemy: 0.90
+      mutual_natural_enemy: 0.75
+    graph_mapping:
+      requires_nodes: [DashaLord, AntardashaLord, NaturalRelationTable, TemporalRelationTable]
+      produces_nodes: [PeriodQualityModifier]
+      edge_types: [DASHA_ANTARDASHA_RELATIONSHIP_MODIFIES_QUALITY]
+    citations:
+    - text: VA325-Saaraavali
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  # ── SECTION 3: TRANSIT ENGINE RULES (TR-001 to TR-003) ──────────────────────
+  # Governs Gochara (transit) evaluation including Ashtakavarga and Vedha.
+  # Not well-covered in current BPHS Vol 1 cards; strong signal in corpora.
+
+  transit_engine_rules:
+
+  - rule_id: TR-001
+    rule_name: Gochara-Natal Activation Engine
+    authority_tier: T4
+    domain_tags: [transit, gochara, natal-trigger, timing]
+    ocr_signal: VA325 yoga(18); VA304 dasha(11)
+    canonical_statement: >
+      A transit planet activates natal promises when it occupies a sign that
+      is (a) the natal position, (b) the 5th/9th trine from natal, or (c) a
+      sign owned by a natal planet involved in the promise. Transit activation
+      is suppressed if the transiting planet receives Vedha obstruction from
+      another concurrent transit of a adversarial planet.
+    activation_conditions:
+    - Transit planet longitude and sign known
+    - Natal promise identified (relevant bhava and activating graha)
+    - Vedha obstruction check performed for all concurrent slow transits
+    scoring_hooks:
+      base_fulfillment: transit_position_match
+      trine_resonance_bonus: 1.05
+      natal_lord_transit_bonus: 1.10
+      vedha_suppression_multiplier: 0.70
+    graph_mapping:
+      requires_nodes: [TransitPlanet, NatalPosition, VedhaCheckTable]
+      produces_nodes: [TransitActivationSignal]
+      edge_types: [TRANSIT_OVER_NATAL_POINT, VEDHA_SUPPRESSES_TRANSIT]
+    citations:
+    - text: VA325-Saaraavali
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: TR-002
+    rule_name: Ashtakavarga Bindhu Threshold
+    authority_tier: T4
+    domain_tags: [transit, ashtakavarga, bindhu, strength-threshold]
+    ocr_signal: VA304 bhava(16); VA325 yoga(18)
+    canonical_statement: >
+      Evaluate transit favorability through Sarvashtakavarga bindhu count in
+      the sign transited. Signs with 30+ bindhu (out of 337 maximum) support
+      favorable transit results; signs with fewer than 25 bindhu indicate
+      suppressed or delayed results. Individual planetary Ashtakavarga
+      (PAV) of the transiting planet additionally refines this to 4+ bindhu
+      (favorable) vs 3 or fewer (unfavorable) in that sign.
+    activation_conditions:
+    - Sarvashtakavarga computation complete for natal chart
+    - Planet's own PAV in the transit sign computed
+    - Transit sign bindhu count retrieved
+    exclusions:
+    - Ashtakavarga alone does not override a strong dasha + transit confluence
+    scoring_hooks:
+      base_fulfillment: bindhu_threshold_check
+      sav_bindhu_favorable_threshold: 30
+      sav_bindhu_unfavorable_threshold: 25
+      pav_bindhu_favorable: 4
+      pav_bindhu_unfavorable: 3
+      favorable_multiplier: 1.10
+      unfavorable_multiplier: 0.85
+    graph_mapping:
+      requires_nodes: [TransitSign, SarvAshtakavarga, PlanetaryAshtakavarga]
+      produces_nodes: [BindhuFavorabilitySignal]
+      edge_types: [BINDHU_MODIFIES_TRANSIT_QUALITY]
+    citations:
+    - text: VA304-SarvarthaChintamani
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: TR-003
+    rule_name: Vedha Obstruction in Transit
+    authority_tier: T4
+    domain_tags: [transit, vedha, obstruction, cancellation]
+    ocr_signal: VA325 yoga(18)
+    canonical_statement: >
+      Each of the 12 signs has a specific Vedha sign pair. If a favorable
+      transiting planet occupies a sign AND another planet simultaneously
+      transits the Vedha sign for that first planet, the favorable results
+      are cancelled. Exception: Sun-Saturn, Moon-Mercury, and Mars-Jupiter
+      do not Vedha each other. This rule applies to all seven classical
+      planets; Rahu/Ketu Vedha relationships are system-dependent.
+    activation_conditions:
+    - Favorable transit planet in beneficial sign identified
+    - All other concurrent transit positions evaluated
+    - Vedha table for the favorable planet's sign loaded
+    exclusions:
+    - Sun-Saturn mutual Vedha is suspended per traditional exception
+    - Moon-Mercury mutual Vedha is suspended
+    - Mars-Jupiter mutual Vedha is suspended
+    scoring_hooks:
+      base_fulfillment: vedha_check_binary
+      vedha_active_multiplier: 0.65
+      vedha_absent_multiplier: 1.0
+    graph_mapping:
+      requires_nodes: [FavorableTransitPlanet, ConcurrentTransits, VedhaTable]
+      produces_nodes: [VedhaObstructionFlag]
+      edge_types: [VEDHA_CANCELS_FAVORABLE_TRANSIT]
+    citations:
+    - text: VA325-Saaraavali
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  # ── SECTION 4: YOGA LIBRARY EXPANSION (YL-001 to YL-006) ───────────────────
+  # Named yogas from VA301 (312 yoga signals), VA308 (45 yogas), VA325 (18 yogas)
+  # that are absent or only partially implied in the current 20 BPHS cards.
+
+  yoga_library_expansion:
+
+  - rule_id: YL-001
+    rule_name: Parivartana (Sign Exchange) Yoga
+    authority_tier: T3
+    domain_tags: [yoga, parivartana, sign-exchange, mutual-reception]
+    ocr_signal: VA301 yoga(312); VA308 yoga(45)
+    canonical_statement: >
+      When two planets mutually occupy each other's sign of rulership
+      (e.g., Sun in Aquarius and Saturn in Leo), they form Parivartana yoga.
+      Both planets gain the combined domain strength of each other's bhava
+      lordships. The yoga elevates both bhava outcomes simultaneously,
+      provided neither planet is severely debilitated or combust.
+    activation_conditions:
+    - Planet A occupies sign ruled by Planet B
+    - Planet B occupies sign ruled by Planet A
+    - Neither planet is in debilitation in the exchanged sign (verify)
+    exclusions:
+    - Nodes (Rahu/Ketu) cannot participate in Parivartana
+    - If one planet is combust, yoga strength is halved
+    scoring_hooks:
+      base_fulfillment: binary_mutual_occupation
+      parivartana_multiplier: 1.25
+      combustion_half_penalty: true
+    graph_mapping:
+      requires_nodes: [PlanetA, PlanetB, SignA, SignB]
+      produces_nodes: [ParivartanaYogaNode]
+      edge_types: [A_IN_B_SIGN, B_IN_A_SIGN, PARIVARTANA_ACTIVATES_BOTH_BHAVAS]
+    citations:
+    - text: VA301-30MukhyamainaYogamulu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: VA308-JathakaRahasyamu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: YL-002
+    rule_name: Argala System — Planetary Intervention Scoring
+    authority_tier: T4
+    domain_tags: [argala, intervention, blocking, house-2-4-11]
+    ocr_signal: VA325 yoga(18); VA304 bhava(16)
+    canonical_statement: >
+      Planets in the 2nd, 4th, and 11th houses from any reference point
+      (bhava, planet, or lagna) form Argala (intervention/obstruction).
+      Planets in the counter-Argala positions (12th, 10th, 3rd) can cancel
+      the Argala if stronger. Argala strengthens the reference bhava if the
+      intervening planets are benefics; weakens it if malefics predominate.
+    activation_conditions:
+    - Reference house/planet identified
+    - All planets in 2nd, 4th, 11th from reference counted
+    - Counter-Argala planets in 12th, 10th, 3rd evaluated for strength comparison
+    scoring_hooks:
+      base_fulfillment: weighted_by_argala_occupants
+      benefic_argala_multiplier: 1.10
+      malefic_argala_multiplier: 0.90
+      counter_argala_cancels_if_stronger: true
+    graph_mapping:
+      requires_nodes: [ReferencePoint, Argala2ndPlanets, Argala4thPlanets, Argala11thPlanets]
+      produces_nodes: [ArgalaStrengthSignal]
+      edge_types: [ARGALA_SUPPORTS_BHAVA, COUNTER_ARGALA_CANCELS]
+    citations:
+    - text: VA325-Saaraavali
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: YL-003
+    rule_name: Kendradhipati Dosha — Quadrant Lord Maleficence
+    authority_tier: T3
+    domain_tags: [yoga, kendradhipati-dosha, natural-benefic, kendra-lord]
+    ocr_signal: VA308 yoga(45); VA325 yoga(18)
+    canonical_statement: >
+      Natural benefics (Jupiter, Venus, full Moon, strong Mercury) become
+      functionally malefic when they rule kendra houses (1, 4, 7, 10) without
+      simultaneously ruling a trine house (5, 9). This Kendradhipati Dosha
+      reduces their benefic output and can make their periods obstruct
+      rather than support outcomes. The dosha is reduced if the planet also
+      owns a trine or is strongly placed in exaltation.
+    activation_conditions:
+    - Natural benefic identified as kendra lord for the given lagna
+    - Verify benefic does NOT simultaneously own a trine (5th or 9th)
+    - Evaluate benefic's sign placement for exaltation/own-sign relief
+    exclusions:
+    - Moon as lagna lord (1st house) is exempt per some traditions
+    scoring_hooks:
+      base_fulfillment: binary_dosha_flag
+      kendradhipati_dosha_multiplier: 0.80
+      exaltation_relief_multiplier: 1.10
+    graph_mapping:
+      requires_nodes: [NaturalBenefic, KendraOwnership, TrineOwnership]
+      produces_nodes: [KendradhipatiDoshaFlag]
+      edge_types: [BENEFIC_LORDS_KENDRA, DOSHA_REDUCES_BENEFICENCE]
+    citations:
+    - text: VA308-JathakaRahasyamu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: BPHS
+      chapter: 34
+      sloka_range: TBD
+      citation_status: pending_bphs_vol1_check
+    status: stub_high_confidence
+
+  - rule_id: YL-004
+    rule_name: Named Wealth Yoga Library — Kahala, Shankha, Chandra-Mangala
+    authority_tier: T4
+    domain_tags: [yoga, wealth, kahala, shankha, chandra-mangala]
+    ocr_signal: VA301 yoga(312), dhana(36); VA308 yoga(45); VA325 yoga(18),dhana(7)
+    canonical_statement: >
+      Kahala Yoga: 4th and 9th lords in mutual kendra + 9th lord strong →
+      raw courageous wealth and authority. Shankha Yoga: 5th and 6th lords in
+      mutual kendra + lagna lord strong → charitable and learned prosperity.
+      Chandra-Mangala Yoga: Moon and Mars conjunct → earned income through
+      enterprise and commercial drive. Each named yoga activates its specific
+      domain outcome bonus; non-cancelling yogas stack additively (capped at 1.5×).
+    activation_conditions:
+    - For each yoga: the specific planet combination and house placement verified
+    - Lagna lord dignity assessed for lagna-dependent yogas
+    - No direct mutual enemy state between combining planets
+    exclusions:
+    - Do not apply yoga multiplier if either planet is retrograde + combust simultaneously
+    scoring_hooks:
+      base_fulfillment: per_yoga_condition_check
+      kahala_multiplier: 1.20
+      shankha_multiplier: 1.15
+      chandra_mangala_multiplier: 1.10
+      stack_cap: 1.50
+    graph_mapping:
+      requires_nodes: [Lord4, Lord5, Lord6, Lord9, Moon, Mars, LagnaLord]
+      produces_nodes: [NamedWealthYogaNode]
+      edge_types: [YOGA_COMBINATION_MET, WEALTH_YOGA_ACTIVATES_DOMAIN]
+    citations:
+    - text: VA301-30MukhyamainaYogamulu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: VA308-JathakaRahasyamu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: YL-005
+    rule_name: Viparita Raja Yoga — Reversal Prosperity
+    authority_tier: T4
+    domain_tags: [yoga, viparita-raja-yoga, reversal, dusthana]
+    ocr_signal: VA325 rajayoga(2); VA308 yoga(45)
+    canonical_statement: >
+      When lords of dusthana houses (6, 8, 12) occupy other dusthana houses
+      (and do NOT simultaneously own or influence kona-kendra houses), the
+      adverse energy of those houses cancels itself and the native rises from
+      difficulties. Three subtypes: Harsha (6th lord in 6/8/12), Sarala
+      (8th lord in 6/8/12), and Vimala (12th lord in 6/8/12). Strongest when
+      the yoga lord is in its own or exalted sign within the dusthana.
+    activation_conditions:
+    - 6th, 8th, or 12th lord identified by lagna
+    - Lord occupies one of {6, 8, 12} houses only
+    - Lord does NOT own or strongly aspect kona-kendra (1/4/5/7/9/10) simultaneously
+    exclusions:
+    - If the yoga lord is conjunct a kendra/kona lord, full Viparita effect is diluted
+    scoring_hooks:
+      base_fulfillment: dusthana_self_cancellation
+      harsha_yoga_multiplier: 1.15
+      sarala_yoga_multiplier: 1.20
+      vimala_yoga_multiplier: 1.10
+    graph_mapping:
+      requires_nodes: [DusthanaLord, OccupiedHouse, KendraKonaOwnership]
+      produces_nodes: [ViparitaRajaYogaNode]
+      edge_types: [DUSTHANA_SELF_CANCELS, VIPARITA_RAISES_OUTCOME]
+    citations:
+    - text: VA325-Saaraavali
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: YL-006
+    rule_name: Graha Yuddha — Planetary War Outcome
+    authority_tier: T4
+    domain_tags: [yoga, graha-yuddha, planetary-war, close-conjunction]
+    ocr_signal: VA301 yoga(312); VA308 yoga(45)
+    canonical_statement: >
+      When two planets (excluding Sun/Moon) are within 1° longitude of each
+      other, Graha Yuddha (planetary war) occurs. The planet with higher
+      longitude wins; the loser is considered defeated (yuddha-hata) and
+      loses approximately 25-50% of its natal strength for outcome delivery.
+      Mars and Saturn at war create most severe disruptions to themes of
+      both planets. Jupiter winning a war intensifies dharma; Jupiter losing
+      reduces wisdom/guidance outcomes significantly.
+    activation_conditions:
+    - Two planets (not Sun or Moon or nodes) within 1° in longitude
+    - Winner determined by higher degree (some traditions use higher declination)
+    - Loser's house lordships and karaka roles all affected
+    exclusions:
+    - Sun and Moon do not participate in Graha Yuddha
+    - Rahu and Ketu do not participate
+    scoring_hooks:
+      base_fulfillment: proximity_check_binary
+      winner_strength_modifier: 1.10
+      loser_strength_modifier: 0.55
+    graph_mapping:
+      requires_nodes: [PlanetA, PlanetB, LongitudeDifference]
+      produces_nodes: [WarWinnerNode, WarLoserNode]
+      edge_types: [GRAHA_YUDDHA_DECLARED, LOSER_STRENGTH_REDUCED]
+    citations:
+    - text: VA301-30MukhyamainaYogamulu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  # ── SECTION 5: DOMAIN-SPECIFIC RULE PACKS (DP-001 to DP-005) ────────────────
+  # High-gap areas per corpus analysis: marriage, progeny, longevity, career, wealth.
+
+  domain_specific_rules:
+
+  - rule_id: DP-001
+    rule_name: Vivaha Yoga — Marriage Timing and Quality
+    authority_tier: T4
+    domain_tags: [marriage, vivaha, 7th-house, venus, kalatra]
+    ocr_signal: VA301 yoga(312); VA304 bhava(16)
+    canonical_statement: >
+      Marriage (Vivaha) is activated when: (a) 7th lord is strong and unafflicted,
+      (b) Venus (karaka) is in a favorable position for the lagna, (c) the active
+      dasha-antardasha lord has sambandha with the 7th house/lord or with Venus,
+      and (d) a supportive transit (Jupiter/Venus over 7th, lagna, or their lords)
+      confirms. Quality of marriage life is read from the 7th house condition;
+      spouse traits from the 7th lord sign and navamsha lagna.
+    activation_conditions:
+    - 7th lord position and dignity evaluated
+    - Venus dignity and relationship-karaka strength evaluated
+    - Active dasha lord's sambandha with 7th house/Venus verified
+    - Supporting Jupiter/Venus transit to 7th or lagna confirmed
+    exclusions:
+    - Strong malefic (Mars/Saturn) in 7th without benefic aspect can delay or
+      deny marriage regardless of dasha strength
+    scoring_hooks:
+      base_fulfillment: joint_7th_lord_venus_activation
+      supporting_transit_bonus: 1.15
+      7th_malefic_without_relief_penalty: 0.70
+    graph_mapping:
+      requires_nodes: [Lord7, Venus, Dasha_Antardasha_Lords, JupiterTransit]
+      produces_nodes: [VivahayogaSignal, MarriageWindow]
+      edge_types: [LORD7_ACTIVATES_MARRIAGE, VENUS_SUPPORTS_VIVAHA,
+        DASHA_CONNECTS_TO_7TH, JUPITER_TRANSIT_CONFIRMS]
+    citations:
+    - text: VA301-30MukhyamainaYogamulu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: BPHS
+      chapter: 18
+      sloka_range: TBD
+      citation_status: pending_bphs_vol1_check
+    status: stub_pending_translation
+
+  - rule_id: DP-002
+    rule_name: Putra Bhava — Progeny and Intellect Analysis
+    authority_tier: T4
+    domain_tags: [progeny, putra, 5th-house, jupiter, intellect]
+    ocr_signal: VA301 bhava(21); VA307 bhava(14)
+    canonical_statement: >
+      Putra Bhava (5th house) governs children, intelligence, past-life merit,
+      and speculative gains. Strong 5th lord + Jupiter (Putra karaka) in good
+      dignity = favorable progeny. Affliction to 5th house (from Mars, Saturn,
+      nodes without benefic cover) reduces or delays childirth outcomes.
+      Childlessness indicators: strong malefic in 5th, 5th lord in 6/8/12, and
+      Jupiter severely afflicted simultaneously confirm low progeny confidence.
+    activation_conditions:
+    - 5th lord position and dignity evaluated
+    - Jupiter karaka strength assessed
+    - Affliction to 5th house from malefics counted (0-3 scale)
+    - Saptamsha (D7) alignment for detailed progeny timing (optional)
+    scoring_hooks:
+      base_fulfillment: 5th_lord_jupiter_joint
+      d7_corroboration_bonus: 1.10
+      triple_affliction_severe_penalty: 0.50
+    graph_mapping:
+      requires_nodes: [Lord5, Jupiter, Bhava5Occupants, D7Chart]
+      produces_nodes: [PutraBhavaSignal]
+      edge_types: [5TH_LORD_KARAKA_JUPITER, AFFLICTION_REDUCES_PUTRA,
+        D7_CONFIRMS_PROGENY]
+    citations:
+    - text: VA301-30MukhyamainaYogamulu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: BPHS
+      chapter: 14
+      sloka_range: TBD
+      citation_status: pending_bphs_vol1_check
+    status: stub_pending_translation
+
+  - rule_id: DP-003
+    rule_name: Ayur Traya Pipeline — Longevity Assessment
+    authority_tier: T3
+    domain_tags: [longevity, ayur, alpayu, madhyayu, purnayu, maraka]
+    ocr_signal: VA326 ayu(3); VA307 longevity(1)
+    canonical_statement: >
+      Classical longevity (Ayur-nirnayana) follows three steps: (1) determine
+      longevity tier — Alpayu (short: 0-32), Madhyayu (medium: 32-64), or
+      Purnayu (full: 64-100+) from lagna lord, 8th lord, and Saturn positions
+      by Pindayu/Nisargayu consensus. (2) Identify primary Maraka lords (2nd
+      and 7th lords) and their dasha periods as death candidates. (3) Confirm
+      critical illness timing through malefic transit to 8th from Moon or lagna
+      during a Maraka dasha. Premature death requires all three confirmations.
+    activation_conditions:
+    - Lagna lord, 8th lord, and Saturn positions evaluated for tier consensus
+    - 2nd lord and 7th lord (Maraka lords) identified
+    - Active dasha period compared to Maraka lords
+    - Simultaneous transit to 8th house from Moon verified before conclusion
+    exclusions:
+    - Do NOT output premature death signal without all three columns confirming
+    scoring_hooks:
+      base_fulfillment: three_column_consensus
+      alpayu_signals_required: 2
+      madhyayu_mixed: true
+      maraka_dasha_required: true
+      transit_confirmation_required: true
+    graph_mapping:
+      requires_nodes: [LagnaLord, Lord8, Saturn, Lord2, Lord7, ActiveDasha, MarsaturnTransit8]
+      produces_nodes: [AyurTier, MagrakaAlert]
+      edge_types: [LONGEVITY_TIER_SET, MARAKA_DASHA_FLAGS_WINDOW,
+        TRANSIT_CONFIRMS_MARAKA]
+    citations:
+    - text: VA326-SankethaNidhi
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: BPHS
+      chapter: 44
+      sloka_range: 2-77 (parser-est.)
+      citation_status: partial_bphs_match
+    status: stub_high_confidence
+
+  - rule_id: DP-004
+    rule_name: Karma and Career Peak — 10th Lord Yoga
+    authority_tier: T4
+    domain_tags: [career, karma, 10th-house, rajayoga, professional-peak]
+    ocr_signal: VA301 rajayoga(7); VA325 rajayoga(2); VA308 yoga(45)
+    canonical_statement: >
+      Career peak (Karma Yoga) crystallizes when: 10th lord is strong in kendra
+      or kona, the 10th house receives benefic aspect or benefic occupation, and
+      the dasha-antardasha involves the 10th lord or lagna lord in combination.
+      Sun (natural karma karaka) dignity and aspect to 10th amplify. Navamsha
+      10th lord's condition in D9 confirms durability of career rise.
+    activation_conditions:
+    - 10th lord dignity and position classified (kendra/kona=strong; dusthana=weak)
+    - Benefic aspect to 10th house counted
+    - Dasha-antardasha lord sambandha to 10th evaluated
+    - D10 (Dashamsha) 10th lord corroboration checked (optional)
+    exclusions:
+    - Saturn in 10th from Kumbha/Makara lagna may delay but ultimately strengthen
+    scoring_hooks:
+      base_fulfillment: 10th_lord_dasha_conjunct
+      sun_aspect_to_10th_bonus: 1.10
+      d10_corroboration_bonus: 1.15
+      dusthana_10th_lord_penalty: 0.80
+    graph_mapping:
+      requires_nodes: [Lord10, Sun, Bhava10, Dasha_Antardasha, D10Chart]
+      produces_nodes: [CareerPeakSignal]
+      edge_types: [10TH_LORD_ACTIVATES_KARMA, SUN_DIGNIFIES_CAREER,
+        DASHA_TRIGGERS_PEAK, D10_CONFIRMS]
+    citations:
+    - text: VA301-30MukhyamainaYogamulu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: VA325-Saaraavali
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    status: stub_pending_translation
+
+  - rule_id: DP-005
+    rule_name: Artha Traya — Wealth Trine Axis 2-6-10-11
+    authority_tier: T4
+    domain_tags: [wealth, artha, 2nd-house, 11th-house, income-accumulation]
+    ocr_signal: VA301 dhana(36); VA325 dhana(7); VA308 dhana(6)
+    canonical_statement: >
+      Sustained wealth accumulation requires activating the Artha (wealth) axis:
+      strong 2nd lord (accumulated wealth), strong 11th lord (income gains), and
+      meaningful connection between them (mutual aspect, exchange, conjunction, or
+      common dasha). The 6th and 10th lords amplify earned income capacity when
+      they join this axis. Jupiter as natural dhana karaka in 2nd or 11th or
+      aspecting them adds a reliable multiplier. Peak wealth periods: dasha of
+      2nd or 11th lord with Jupiter transit over lagna/2nd/11th.
+    activation_conditions:
+    - 2nd lord and 11th lord are both dignified (not in dusthana)
+    - At least one of: mutual aspect, exchange, or conjunction between 2nd and 11th lords
+    - Jupiter's position vis-à-vis 2nd/11th assessed
+    - Active dasha involves 2nd or 11th lord or Jupiter
+    exclusions:
+    - Rahu/Ketu involvement in 2nd or 11th without benefic cover reduces reliability
+      of wealth yoga to speculative gains only
+    scoring_hooks:
+      base_fulfillment: 2nd_11th_lord_linked
+      jupiter_dhana_bonus: 1.20
+      6th_10th_amplifier: 1.10
+      rahu_ketu_speculative_flag: true
+    graph_mapping:
+      requires_nodes: [Lord2, Lord11, Jupiter, Lord6, Lord10, ActiveDasha, JupiterTransit]
+      produces_nodes: [WealthAxisSignal, DhanaYogaNode]
+      edge_types: [2ND_11TH_LINKED, JUPITER_AMPLIFIES_DHANA,
+        DASHA_ACTIVATES_WEALTH_AXIS, TRANSIT_CONFIRMS_DHANA]
+    citations:
+    - text: VA301-30MukhyamainaYogamulu
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: VA325-Saaraavali
+      chapter: unknown_pending_translation
+      sloka_range: TBD
+      citation_status: ocr_signal_only
+    - text: BPHS
+      chapter: 25
+      sloka_range: TBD
+      citation_status: pending_bphs_vol1_check
+    status: stub_pending_translation
+
+  expansion_summary:
+    total_added: 30
+    breakdown:
+      nakshatra_group_rules: 13   # NK-006 to NK-018
+      dasha_granularity: 3        # DG-001 to DG-003
+      transit_engine: 3           # TR-001 to TR-003
+      yoga_library: 6             # YL-001 to YL-006
+      domain_packs: 5             # DP-001 to DP-005
+    primary_sources_signalled:
+      VA323_NakshatraChintamani: nakshatra_group_rules (NK-006 to NK-018)
+      VA301_30Yogamulu: yoga_library, domain_packs (YL-001/004, DP-001/005)
+      VA304_SarvarthaChintamani: dasha_granularity (DG-001/002), transit (TR-002)
+      VA325_Saaraavali: transit_engine (TR-001/003), yoga_library (YL-001/004/005)
+      VA308_JathakaRahasyamu: yoga_library (YL-001/003/004/006)
+      VA309_JathakaChandrika: nakshatra saturn/rahu group (NK-013/011)
+      VA326_SankethaNidhi: dasha_granularity (DG-001/003), longevity (DP-003)
+    next_steps:
+    - Translate OCR Telugu text from VA323 fully; populate sloka_range for all NK cards
+    - Promote NK-016 (Vimshottari Seed) to T2 — high confidence from multiple sources
+    - Promote DP-003 (Ayur Traya) to T2 after cross-checking with BPHS Ch44-45
+    - Promote YL-003 (Kendradhipati Dosha) to T2 — strong BPHS + multi-corpus signal
+    - Lock numeric multipliers in scoring_hooks for all 30 cards after translation
+    - Add verified chart examples to each domain-specific card (DP series) first
+
+
+# ===============================================================================
+# CALCULATION PIPELINE
+# Source: Jyotish_Learning_Part2_Calculations.md (CALC-1 to CALC-15)
+#         Jyotish_Learning_Part5_Reference.md (Cheat Sheets 1-9)
+# ===============================================================================
+
+calculation_pipeline:
+  source_files:
+  - /Users/a0b1803/Documents/jyotisha/Jyotish_Learning_Part2_Calculations.md
+  - /Users/a0b1803/Documents/jyotisha/Jyotish_Learning_Part5_Reference.md
+  pipeline_source: Meeus + BPHS + Swiss Ephemeris SIDM_LAHIRI
+  total_steps: 15
+
+  steps:
+
+  - calc_id: CALC-1
+    name: Birth Data to UTC Conversion
+    source: Meeus Ch.1
+    inputs: [birth_date_DDMMYYYY, birth_time_HHMMSS_local, timezone_offset]
+    outputs: [utc_date, utc_time_HHMMSS]
+    formula: "UTC_time = Birth_time - Timezone_offset; if <0 date-=1day; if >=24h date+=1day"
+    key_constants:
+      IST_offset: "+5:30"
+      IST_pitfall: Any Indian birth before 05:30 IST falls on the PREVIOUS UTC date
+    example_sandeep: "07:00 IST - 5:30 = 01:30 UTC same date (05 Feb 1984)"
+    example_ajay: "04:15 IST - 5:30 = -1:15 -> 30 Dec 1987 22:45 UTC (previous date)"
+
+  - calc_id: CALC-2
+    name: UTC DateTime to Julian Day Number
+    source: Meeus Astronomical Algorithms Ch.7
+    inputs: [year_Y, month_M, day_fraction_D]
+    outputs: [JD_float]
+    formula: |
+      D = day + (hour + min/60 + sec/3600)/24
+      if M<=2: Y=Y-1; M=M+12
+      A=INT(Y/100); B=2-A+INT(A/4)
+      JD=INT(365.25*(Y+4716))+INT(30.6001*(M+1))+D+B-1524.5
+    pitfalls:
+    - JD starts at NOON not midnight; births at midnight UT have 0.5 in JD
+    - M<=2 treats Jan/Feb as months 13/14 of previous year
+    example_sandeep: JD=2445735.5625 for 05 Feb 1984 01:30 UT
+
+  - calc_id: CALC-3
+    name: Julian Day to Lahiri Ayanamsa
+    source: BPHS Ch.2; Govt of India 1955; Swiss Ephemeris SIDM_LAHIRI
+    inputs: [JD]
+    outputs: [ayanamsa_degrees]
+    formula_approx: "Ayanamsa = 22.460494 + 0.013955 * ((JD - 2415020.5) / 365.25)"
+    formula_exact: "swe.set_sid_mode(swe.SIDM_LAHIRI); swe.get_ayanamsa_ut(JD)"
+    key_fact: Ayanamsa increases ~50.3 arcseconds/year (precession of equinoxes)
+    current_approx: "~24.1 degrees in 2026"
+    example_sandeep: "23.634920 degrees for JD 2445735.5625"
+
+  - calc_id: CALC-4
+    name: Tropical Longitude to Sidereal Longitude
+    source: BPHS Ch.2
+    inputs: [tropical_longitude_0_360, ayanamsa]
+    outputs: [sidereal_longitude_0_360]
+    formula: "Sidereal = Tropical - Ayanamsa; if <0 add 360; if >=360 subtract 360"
+    critical_warning: Planets near sign cusps within ~24 degrees CHANGE SIGN sidereal vs tropical
+
+  - calc_id: CALC-5
+    name: Sidereal Longitude to Sign Degree House
+    source: BPHS Ch.11
+    inputs: [sidereal_longitude, lagna_sign_number_1_to_12]
+    outputs: [sign_number_1_12, degrees_in_sign_0_30, house_number_1_12]
+    formula: |
+      sign_number = FLOOR(sidereal_long / 30) + 1
+      deg_in_sign = sidereal_long MOD 30
+      house = ((sign_number - lagna_sign_number) MOD 12) + 1
+    house_system: Whole_Sign
+    sign_map:
+      1: Aries
+      2: Taurus
+      3: Gemini
+      4: Cancer
+      5: Leo
+      6: Virgo
+      7: Libra
+      8: Scorpio
+      9: Sagittarius
+      10: Capricorn
+      11: Aquarius
+      12: Pisces
+
+  - calc_id: CALC-6
+    name: Sidereal Longitude to Nakshatra and Pada
+    source: BPHS Ch.3 Ch.94
+    inputs: [sidereal_longitude]
+    outputs: [nakshatra_number_1_27, nakshatra_name, pada_1_4, nakshatra_lord, deg_into_nak]
+    formula: |
+      nak_number = FLOOR(sidereal_long / 13.3333) + 1
+      deg_into_nak = sidereal_long MOD 13.3333
+      pada = FLOOR(deg_into_nak / 3.3333) + 1
+    critical: Moons nakshatra determines starting Vimshottari Mahadasha
+    pitfall: Nakshatras do NOT align with sign boundaries (Krittika spans Aries-Taurus)
+    example_sandeep: "Moon at 325.2195 -> Nak 25 Purva Bhadrapada Pada 2 -> Jupiter lord"
+
+  - calc_id: CALC-7
+    name: Combustion Check
+    source: BPHS Ch.3
+    inputs: [sun_sidereal_long, planet_sidereal_long]
+    outputs: [combust_bool_per_planet]
+    formula: "angular_diff = abs(planet-sun); if >180 use 360-diff; COMBUST if diff < orb"
+    orbs_degrees:
+      Moon: 12
+      Mercury_direct: 14
+      Mercury_retrograde: 13
+      Venus_direct: 10
+      Venus_retrograde: 8
+      Mars: 17
+      Jupiter: 11
+      Saturn: 15
+      Rahu: null
+      Ketu: null
+    impact_ranking: Jupiter > Venus > Saturn > Mars > Moon > Mercury
+    note: Mercury combust is most frequent and least severe
+
+  - calc_id: CALC-8
+    name: Retrograde Check
+    source: BPHS Ch.3
+    inputs: [planet_daily_speed_from_ephemeris]
+    outputs: [retrograde_bool]
+    formula: "speed < 0 -> RETROGRADE"
+    special_cases:
+      Sun: never_retrograde
+      Moon: never_retrograde
+      Rahu: always_retrograde_mean_motion
+      Ketu: always_retrograde_mean_motion
+    bphs_rule: "Vakri-grahah ucca-tulyah -- retrograde planet power equals exalted"
+
+  - calc_id: CALC-9
+    name: Navamsha D9 Sign
+    source: BPHS Ch.6
+    inputs: [sidereal_longitude]
+    outputs: [d9_sign_number_1_12]
+    formula: "D9_sign_index = FLOOR(sidereal_long / 3.3333) MOD 12"
+    sign_index_map: "0=Ar 1=Ta 2=Ge 3=Ca 4=Le 5=Vi 6=Li 7=Sc 8=Sg 9=Cp 10=Aq 11=Pi"
+    d9_start_by_type:
+      Movable: {signs: [Aries, Cancer, Libra, Capricorn], starts_from: Aries, index: 0}
+      Fixed:   {signs: [Taurus, Leo, Scorpio, Aquarius],  starts_from: Capricorn, index: 9}
+      Dual:    {signs: [Gemini, Virgo, Sagittarius, Pisces], starts_from: Libra, index: 6}
+    critical: Always cross-verify with Swiss Ephemeris -- pada boundary off-by-one is the top D9 error
+    vargottama: Same sign D1 and D9 = Vargottama = strength multiplier 1.20
+
+  - calc_id: CALC-10
+    name: Vimshottari Dasha Balance at Birth
+    source: BPHS Ch.46
+    inputs: [moon_nakshatra_number, deg_into_nakshatra]
+    outputs: [starting_md_lord, remaining_years_float, dasha_sequence_with_dates]
+    formula: |
+      elapsed_fraction = deg_into_nak / 13.3333
+      remaining_fraction = 1 - elapsed_fraction
+      remaining_years = remaining_fraction * dasha_lord_total_years
+    dasha_years:
+      Ketu: 7
+      Venus: 20
+      Sun: 6
+      Moon: 10
+      Mars: 7
+      Rahu: 18
+      Jupiter: 16
+      Saturn: 19
+      Mercury: 17
+    total_years: 120
+    sequence: [Ketu, Venus, Sun, Moon, Mars, Rahu, Jupiter, Saturn, Mercury]
+    critical: A few arcminutes Moon error shifts dasha boundaries by months -- birth time accuracy is essential
+    example_sandeep: |
+      Moon nak 25 lord Jupiter (16yr); deg_into_nak=5.2195; remaining=9.736yr
+      Jupiter_MD ends Oct 1993; Saturn_MD Oct1993-Oct2012
+      Mercury_MD Oct2012-Oct2029 (CURRENT 2026); Venus_MD Oct2036-Oct2056 (LIFE_PEAK)
+
+  - calc_id: CALC-11
+    name: Antardasha Calculation
+    source: BPHS Ch.46
+    inputs: [md_lord_years, ad_lord_years]
+    outputs: [ad_duration_years]
+    formula: "AD_duration = (AD_lord_years / 120) * MD_lord_years"
+    sequence_rule: First AD within MD is MD lord itself then follows fixed Vimshottari sequence
+    example_mercury_md:
+      Mer_Mer: 2.408
+      Mer_Ket: 0.992
+      Mer_Ven: 2.833
+      Mer_Sun: 0.850
+      Mer_Moo: 1.417
+      Mer_Mar: 0.992
+      Mer_Rah: 2.550
+      Mer_Jup: 2.267
+      Mer_Sat: 2.692
+
+  - calc_id: CALC-12
+    name: Darakaraka Jaimini Spouse Significator
+    source: Jaimini Sutras 1.1.50-52
+    inputs: [degrees_in_sign_all_7_classical_planets]
+    outputs: [darakaraka, atmakaraka, amatyakaraka]
+    formula: "Minimum degree_in_sign planet = Darakaraka; Maximum = Atmakaraka; 2nd highest = Amatyakaraka"
+    example_sandeep: "Sun=21.80 Moon=25.22 Mars=18.45 Mercury=0.61 Jupiter=9.75 Venus=18.97 Saturn=22.42 -> DK=Mercury AK=Moon"
+
+  - calc_id: CALC-13
+    name: Upapada Lagna Marriage Significator
+    source: "Jaimini Sutras Ch.2; BPHS Ch.12"
+    inputs: [h12_sign, h12_lord_placement_sign]
+    outputs: [upapada_lagna_sign]
+    formula: |
+      Count signs from H12 to H12-lord's sign inclusive = X
+      UL = X signs forward from H12-lord's sign
+      Exception: if lord is in own H12, count 12 forward = H11 sign
+    example_sandeep: "UL = Scorpio; UL lord Mars in H10 = spouse professionally accomplished"
+
+  - calc_id: CALC-14
+    name: Mangal Dosha Check
+    source: "Jataka Parijata Ch.9; Muhurta Chintamani"
+    inputs: [mars_house_from_lagna, mars_house_from_moon, mars_house_from_venus]
+    outputs: [dosha_present_bool, cancellation_met, cancellation_reason]
+    dosha_houses: [1, 2, 4, 7, 8, 12]
+    check_from: [Lagna, Moon_sign, Venus_sign]
+    cancellations_any_one_cancels:
+    - Mars in own sign Aries or Scorpio
+    - Mars exalted in Capricorn
+    - Jupiter aspects Mars via 5th 7th or 9th
+    - Mars conjunct Jupiter or waxing Moon
+    - Mars in H1 for Aries Leo Sagittarius Lagna
+    - Mars in H2 for Gemini Virgo Lagna
+    - Mars in H4 for Scorpio Cancer Lagna
+    - Mars in H7 for Cancer Capricorn Lagna
+    - Mars in H8 for Sagittarius Pisces Lagna
+    - Mars in H12 for Taurus Libra Lagna
+    - Partner also Manglik
+    - Age 28 plus intensity reduces significantly
+    warning: Most over-diagnosed condition; always verify ALL 11 cancellation conditions
+
+  - calc_id: CALC-15
+    name: Yoga Detection 8-Step Verification
+    source: "BPHS Ch.36; Phaladeepika Ch.6"
+    inputs: [candidate_yoga_definition, planet_positions, dignities, aspects, houses]
+    outputs: [confirmed_denied_partial, strength_grade, activation_dasha]
+    steps:
+      A: Identify required planets; verify they exist
+      B: Check sign and house placement meets conditions
+      C: Check dignity; exalted or own = strong yoga
+      D: Check combustion; combust = weakened yoga
+      E: Check aspects; benefic strengthens; malefic weakens
+      F: Check counter-conditions; is yoga cancelled
+      G: Assign strength grade Strong Moderate Weak
+      H: Identify timing; yoga manifests in Dasha of involved planets
+    critical_pitfall: Yoga on paper but Dasha never runs in active lifetime equals zero real results
+
+# ===============================================================================
+# LOOKUP TABLES
+# Source: Jyotish_Learning_Part5_Reference.md (Cheat Sheets 1-9)
+# ===============================================================================
+
+lookup_tables:
+  source_file: /Users/a0b1803/Documents/jyotisha/Jyotish_Learning_Part5_Reference.md
+
+  signs:
+    1:  {name: Aries,       element: Fire,  mode: Movable, lord: Mars,    exalts: Sun,     exalt_deg: 10, debilitates: Saturn,  debil_deg: 20}
+    2:  {name: Taurus,      element: Earth, mode: Fixed,   lord: Venus,   exalts: Moon,    exalt_deg: 3,  debilitates: none,    debil_deg: null}
+    3:  {name: Gemini,      element: Air,   mode: Dual,    lord: Mercury, exalts: Rahu,    exalt_deg: null, debilitates: none,  debil_deg: null}
+    4:  {name: Cancer,      element: Water, mode: Movable, lord: Moon,    exalts: Jupiter, exalt_deg: 5,  debilitates: Mars,    debil_deg: 28}
+    5:  {name: Leo,         element: Fire,  mode: Fixed,   lord: Sun,     exalts: none,    exalt_deg: null, debilitates: none,  debil_deg: null}
+    6:  {name: Virgo,       element: Earth, mode: Dual,    lord: Mercury, exalts: Mercury, exalt_deg: 15, debilitates: Venus,   debil_deg: 27}
+    7:  {name: Libra,       element: Air,   mode: Movable, lord: Venus,   exalts: Saturn,  exalt_deg: 20, debilitates: Sun,     debil_deg: 10}
+    8:  {name: Scorpio,     element: Water, mode: Fixed,   lord: Mars,    exalts: none,    exalt_deg: null, debilitates: Moon,  debil_deg: 3}
+    9:  {name: Sagittarius, element: Fire,  mode: Dual,    lord: Jupiter, exalts: Ketu,    exalt_deg: null, debilitates: none,  debil_deg: null}
+    10: {name: Capricorn,   element: Earth, mode: Movable, lord: Saturn,  exalts: Mars,    exalt_deg: 28, debilitates: Jupiter, debil_deg: 5}
+    11: {name: Aquarius,    element: Air,   mode: Fixed,   lord: Saturn,  exalts: none,    exalt_deg: null, debilitates: none,  debil_deg: null}
+    12: {name: Pisces,      element: Water, mode: Dual,    lord: Jupiter, exalts: Venus,   exalt_deg: 27, debilitates: Mercury, debil_deg: 15}
+
+  sign_own_signs:
+    Sun: [Leo]
+    Moon: [Cancer]
+    Mars: [Aries, Scorpio]
+    Mercury: [Gemini, Virgo]
+    Jupiter: [Sagittarius, Pisces]
+    Venus: [Taurus, Libra]
+    Saturn: [Capricorn, Aquarius]
+
+  d9_start_signs:
+    Movable_signs: [Aries, Cancer, Libra, Capricorn]
+    Movable_d9_from: Aries
+    Movable_index: 0
+    Fixed_signs: [Taurus, Leo, Scorpio, Aquarius]
+    Fixed_d9_from: Capricorn
+    Fixed_index: 9
+    Dual_signs: [Gemini, Virgo, Sagittarius, Pisces]
+    Dual_d9_from: Libra
+    Dual_index: 6
+    absolute_formula: "D9_sign_index = FLOOR(sidereal_long / 3.3333) MOD 12"
+
+  house_classifications:
+    Kendra: [1, 4, 7, 10]
+    Trikona: [1, 5, 9]
+    Upachaya: [3, 6, 10, 11]
+    Dusthana: [6, 8, 12]
+    Maraka: [2, 7]
+    Dharma: [1, 5, 9]
+    Artha: [2, 6, 10]
+    Kama: [3, 7, 11]
+    Moksha: [4, 8, 12]
+    notes:
+    - H1 is BOTH Kendra AND Trikona -- doubly auspicious
+    - H10 is BOTH Kendra AND Upachaya -- career planets strongest here
+    - Malefics in Dusthana H6/H8/H12 can give Viparita Raja Yoga
+
+  aspects:
+    universal_7th: all_planets
+    special_aspects:
+      Mars: [4, 7, 8]
+      Jupiter: [5, 7, 9]
+      Saturn: [3, 7, 10]
+    quality:
+      Jupiter: grace_protection_wisdom
+      Mars: energy_conflict_drive
+      Saturn: delay_structure_restriction_not_destruction
+
+  vimshottari_dasha:
+    total_years: 120
+    sequence: [Ketu, Venus, Sun, Moon, Mars, Rahu, Jupiter, Saturn, Mercury]
+    years: {Ketu: 7, Venus: 20, Sun: 6, Moon: 10, Mars: 7, Rahu: 18, Jupiter: 16, Saturn: 19, Mercury: 17}
+    nakshatra_lords:
+      Ketu: [Ashwini, Magha, Mula]
+      Venus: [Bharani, PurvaPhalguni, PurvaAshadha]
+      Sun: [Krittika, UttaraPhalguni, UttaraAshadha]
+      Moon: [Rohini, Hasta, Shravana]
+      Mars: [Mrigashira, Chitra, Dhanishtha]
+      Rahu: [Ardra, Swati, Shatabhisha]
+      Jupiter: [Punarvasu, Vishakha, PurvaBhadrapada]
+      Saturn: [Pushya, Anuradha, UttaraBhadrapada]
+      Mercury: [Ashlesha, Jyeshtha, Revati]
+
+  yoga_karaka_by_lagna:
+    Aries:       {yoga_karaka: Saturn, owns: [H9, H10]}
+    Taurus:      {yoga_karaka: Saturn, owns: [H9, H10]}
+    Gemini:      {yoga_karaka: null, most_benefic: Venus, reason: H5_lord}
+    Cancer:      {yoga_karaka: Mars, owns: [H5, H10]}
+    Leo:         {yoga_karaka: Mars, owns: [H4, H9]}
+    Virgo:       {yoga_karaka: null, most_benefic: Venus, reason: H9_lord}
+    Libra:       {yoga_karaka: Saturn, owns: [H4, H5]}
+    Scorpio:     {yoga_karaka: null, most_benefic: Jupiter, reason: H5_lord}
+    Sagittarius: {yoga_karaka: null, most_benefic: Mars, reason: H5_lord}
+    Capricorn:   {yoga_karaka: Venus, owns: [H5, H10]}
+    Aquarius:    {yoga_karaka: Venus, owns: [H4, H9]}
+    Pisces:      {yoga_karaka: null, most_benefic: Mars, reason: H9_lord}
+
+  nakshatra_table:
+    1:  {name: Ashwini,          lord: Ketu,    span_start: 0.000,   span_end: 13.333}
+    2:  {name: Bharani,          lord: Venus,   span_start: 13.333,  span_end: 26.667}
+    3:  {name: Krittika,         lord: Sun,     span_start: 26.667,  span_end: 40.000}
+    4:  {name: Rohini,           lord: Moon,    span_start: 40.000,  span_end: 53.333}
+    5:  {name: Mrigashira,       lord: Mars,    span_start: 53.333,  span_end: 66.667}
+    6:  {name: Ardra,            lord: Rahu,    span_start: 66.667,  span_end: 80.000}
+    7:  {name: Punarvasu,        lord: Jupiter, span_start: 80.000,  span_end: 93.333}
+    8:  {name: Pushya,           lord: Saturn,  span_start: 93.333,  span_end: 106.667}
+    9:  {name: Ashlesha,         lord: Mercury, span_start: 106.667, span_end: 120.000}
+    10: {name: Magha,            lord: Ketu,    span_start: 120.000, span_end: 133.333}
+    11: {name: PurvaPhalguni,    lord: Venus,   span_start: 133.333, span_end: 146.667}
+    12: {name: UttaraPhalguni,   lord: Sun,     span_start: 146.667, span_end: 160.000}
+    13: {name: Hasta,            lord: Moon,    span_start: 160.000, span_end: 173.333}
+    14: {name: Chitra,           lord: Mars,    span_start: 173.333, span_end: 186.667}
+    15: {name: Swati,            lord: Rahu,    span_start: 186.667, span_end: 200.000}
+    16: {name: Vishakha,         lord: Jupiter, span_start: 200.000, span_end: 213.333}
+    17: {name: Anuradha,         lord: Saturn,  span_start: 213.333, span_end: 226.667}
+    18: {name: Jyeshtha,         lord: Mercury, span_start: 226.667, span_end: 240.000}
+    19: {name: Mula,             lord: Ketu,    span_start: 240.000, span_end: 253.333}
+    20: {name: PurvaAshadha,     lord: Venus,   span_start: 253.333, span_end: 266.667}
+    21: {name: UttaraAshadha,    lord: Sun,     span_start: 266.667, span_end: 280.000}
+    22: {name: Shravana,         lord: Moon,    span_start: 280.000, span_end: 293.333}
+    23: {name: Dhanishtha,       lord: Mars,    span_start: 293.333, span_end: 306.667}
+    24: {name: Shatabhisha,      lord: Rahu,    span_start: 306.667, span_end: 320.000}
+    25: {name: PurvaBhadrapada,  lord: Jupiter, span_start: 320.000, span_end: 333.333}
+    26: {name: UttaraBhadrapada, lord: Saturn,  span_start: 333.333, span_end: 346.667}
+    27: {name: Revati,           lord: Mercury, span_start: 346.667, span_end: 360.000}
+
+  tara_bala:
+    favorable: [2, 4, 6, 8, 9]
+    unfavorable: [1, 3, 5, 7]
+    names: {1: Janma, 2: Sampat, 3: Vipat, 4: Kshema, 5: Pratyak, 6: Sadhana, 7: Naidhana, 8: Mitra, 9: Parama_Mitra}
+    formula: Count from birth nak to event nak inclusive; result MOD 9; use 9 if remainder is 0
+    multiplier_favorable: 1.10
+    multiplier_unfavorable: 0.85
+
+  reading_priority_sequence:
+    1: Lagna_lord_house_dignity_combustion
+    2: Moon_sign_nakshatra_paksha_bala
+    3: Yoga_karaka_placement_dignity
+    4: Strongest_yoga_in_chart
+    5: Weakest_planet_and_area
+    6: Current_dasha_5_layer_reading
+    7: D9_Venus_for_marriage_truth
+    8: Active_transits_Jupiter_Saturn_from_Moon
+
+  golden_rules:
+  - Exalted in H6/H8/H12 is restricted; placement limits exaltation strength
+  - Debilitated plus retrograde is approximately as powerful as exalted; Neechabhanga is potent
+  - Combustion is the number-one strength reducer; always check before declaring yogas
+  - Natural benefic as Kendra-only lord creates Kendradhipati Dosha
+  - H1 is both Kendra and Trikona and is the single most powerful house
+  - Trikona lordship overrides Maraka/Dusthana lordship in functional assessment
+  - D9 is the tiebreaker; when D1 is ambiguous D9 resolves
+  - Jupiter 5th and 9th aspects protect everything they touch
+  - Saturn 10th aspect structures and delays but does not destroy
+  - Yoga on paper does not equal manifestation; verify Dasha runs in native's active lifetime
+
+# ===============================================================================
+# INTERPRETATION FRAMEWORK
+# Source: Jyotish_Learning_Part3_Interpretations.md
+# ===============================================================================
+
+interpretation_framework:
+  source_file: /Users/a0b1803/Documents/jyotisha/Jyotish_Learning_Part3_Interpretations.md
+
+  seven_level_ladder:
+    L1: {name: Single_Planet_Sign, factors: 2, example: Saturn in Libra = disciplined diplomat}
+    L2: {name: Planet_House_Lordship, factors: 4, key_rule: H1 lord in H10 means Self IS career}
+    L3: {name: Conjunction_Aspect_MultiFactor, factors: "6-8", key_rule: Benefic aspect = protection; malefic = pressure}
+    L4: {name: Yoga_Detection_Pattern, factors: "8-12", method: CALC-15_8step_verification}
+    L5: {name: D1_D9_CrossReference, factors: "12-16", key_rule: D1 promises; D9 confirms}
+    L6: {name: Dasha_Transit_Timing, factors: "16-20", method: 5_layer_dasha_plus_gochara}
+    L7: {name: Full_10Layer_Synthesis, factors: "20+", output: complete_life_narrative_timing_remedies}
+
+  five_dasha_reading_layers:
+    1: Houses owned by MD lord -- which themes activate this period
+    2: House occupied by MD lord -- where events play out
+    3: Dignity of MD lord -- full vs reduced expression
+    4: Aspects received by MD lord -- support vs obstacles
+    5: D9 dignity of MD lord -- inner quality of the period
+
+  three_lens_prediction_model:
+    D1: Promise
+    D9: Confirmation
+    Dasha_Transit: Timing
+    rule: All 3 aligned means event WILL manifest; 2/3 means partial or delayed; 1/3 means not this period
+
+  pancha_mahapurusha:
+    condition: Planet in own OR exalted sign AND in Kendra H1/H4/H7/H10
+    Ruchaka: {planet: Mars,    signs: [Aries, Scorpio, Capricorn], quality: warrior_leader}
+    Bhadra:  {planet: Mercury, signs: [Gemini, Virgo], quality: scholar_analyst}
+    Hamsa:   {planet: Jupiter, signs: [Sagittarius, Pisces, Cancer], quality: noble_guru}
+    Malavya: {planet: Venus,   signs: [Taurus, Libra, Pisces], quality: artistic_wealthy}
+    Shasha:  {planet: Saturn,  signs: [Capricorn, Aquarius, Libra], quality: disciplined_authority}
+
+  neechabhanga_rule:
+    result_multiplier: 1.25
+    conditions:
+    - Debilitation sign lord is in Kendra from Lagna or Moon
+    - Exaltation sign lord of debilitated planet is in Kendra
+    - Debilitated planet is retrograde
+    - Debilitated planet conjuncts an exalted planet
+    - Exaltation lord of the debilitated planet aspects it
+
+  functional_roles_capricorn_lagna_example:
+    Saturn:  {owns: [H1, H2], role: lagna_lord_personal}
+    Venus:   {owns: [H5, H10], role: yoga_karaka_supreme_benefic}
+    Mercury: {owns: [H6, H9], role: mixed_H9_good_H6_difficult}
+    Mars:    {owns: [H4, H11], role: neutral_benefic}
+    Jupiter: {owns: [H3, H12], role: mild_functional_malefic}
+    Moon:    {owns: [H7], role: maraka_lord}
+    Sun:     {owns: [H8], role: functional_malefic_dusthana}
+
+# ===============================================================================
+# VERIFIED EXAMPLE CHARTS
+# Source: Jyotish_Learning_Part4_Examples.md
+# Use to fill examples: TBD in rule cards (20 core + 30 expansion)
+# ===============================================================================
+
+verified_example_charts:
+  source_file: /Users/a0b1803/Documents/jyotisha/Jyotish_Learning_Part4_Examples.md
+
+  sandeep:
+    dob: "05 Feb 1984"
+    time_local: "07:00 IST"
+    time_utc: "01:30 UTC 05 Feb 1984"
+    jd: 2445735.5625
+    ayanamsa: 23.634920
+    lagna: Capricorn
+    lagna_nakshatra: Dhanishtha
+    lagna_pada: 1
+    moon_sign: Aquarius
+    moon_house: H2
+    moon_nakshatra: PurvaBhadrapada
+    moon_pada: 2
+    moon_nakshatra_lord: Jupiter
+    starting_md: Jupiter
+    md_timeline:
+      Jupiter_MD: {start: "05 Feb 1984", end: "Oct 1993", note: "9.736yr remaining at birth"}
+      Saturn_MD:  {start: "Oct 1993", end: "Oct 2012"}
+      Mercury_MD: {start: "Oct 2012", end: "Oct 2029", status: CURRENT_2026}
+      Ketu_MD:    {start: "Oct 2029", end: "Oct 2036"}
+      Venus_MD:   {start: "Oct 2036", end: "Oct 2056", label: life_peak}
+    current_ad_2026: "Mercury/Jupiter AD Sep 2024 to Dec 2026"
+    next_ad: "Mercury/Saturn AD Dec 2026 to Oct 2029 -- Career pinnacle window"
+    planet_positions:
+      Sun:     {sign: Capricorn,   house: H1}
+      Moon:    {sign: Aquarius,    house: H2, nak: PurvaBhadrapada, pada: 2}
+      Mars:    {sign: Libra,       house: H10}
+      Mercury: {sign: Capricorn,   house: H1, deg_in_sign: 0.61, role: Darakaraka}
+      Jupiter: {sign: Sagittarius, house: H12, dignity: own_sign}
+      Venus:   {sign: Sagittarius, house: H12, nak: PurvaAshadha, role: YogaKaraka_H5_H10}
+      Saturn:  {sign: Libra,       house: H10, dignity: exalted, deg_in_sign: 22.42, role: LagnaLord}
+    d9_planets:
+      Saturn: {sign: Libra, dignity: exalted, note: double_exaltation_D1_and_D9}
+      Venus:  {sign: Taurus, house: D9_H7, dignity: own_sign, note: supreme_marriage_indicator}
+    atmakaraka: Moon
+    darakaraka: Mercury
+    upapada_lagna: Scorpio
+    ul_lord: Mars
+    ul_lord_house: H10
+    key_yogas:
+    - {yoga: Shasha_Mahapurusha, planet: Saturn, house: H10, sign: Libra, status: confirmed_strong}
+    - {yoga: Vimala_Viparita_Raja, planet: Jupiter, house: H12, sign: Sagittarius, status: confirmed}
+    - {yoga: YogaKaraka_Venus, planet: Venus, owns: [H5, H10], house: H12, note: operates_through_private_institutional_channels}
+    marriage_verdict: "D9 Venus own sign Taurus in D9 H7 = soul-level marriage deeply blessed"
+    marriage_timing: "Saturn/Moon AD Oct 2004 to Apr 2006 = primary classical timing window"
+    career_peak_window: "Mercury/Saturn AD Dec 2026 to Oct 2029 = Shasha yoga reactivated"
+
+  ajay_kumar:
+    dob: "31 Dec 1987"
+    time_local: "04:15 IST"
+    time_utc: "22:45 UTC 30 Dec 1987"
+    lagna: Scorpio
+    lagna_nakshatra: Anuradha
+    lagna_pada: 2
+    moon_sign: Aries
+    moon_house: H6
+    moon_nakshatra: Krittika
+    moon_pada: 1
+    moon_nakshatra_lord: Sun
+    starting_md: Saturn
+    planet_positions:
+      Mars:    {sign: Scorpio,     house: H1, dignity: own_sign, role: LagnaLord}
+      Moon:    {sign: Aries,       house: H6, nak: Krittika, pada: 1}
+      Jupiter: {sign: Pisces,      house: H5, dignity: own_sign, note: most_benefic_for_scorpio_lagna}
+      Venus:   {sign: Capricorn,   house: H3, lords: [H7, H12], status: maraka_plus_dusthana_lord}
+      Saturn:  {sign: Sagittarius, house: H2, note: combust_d9_exalted}
+    d9_planets:
+      Venus: {sign: Virgo, dignity: debilitated, note: CRITICAL_marriage_needs_conscious_work}
+    key_yogas:
+    - {yoga: Ruchaka_Mahapurusha, planet: Mars, house: H1, sign: Scorpio, status: confirmed_strong}
+    - {yoga: Jupiter_H5_own_sign, planet: Jupiter, house: H5, sign: Pisces, status: strong_trikona}
+    marriage_verdict: "D9 Venus debilitated Virgo = marriage requires active conscious effort and investment"
+    career_peak_window: "Mars MD 2003-2010; Mars/Jupiter AD for career; Mars/Venus AD for relationship"
+    functional_warning: Venus is H7 plus H12 lord for Scorpio Lagna meaning Maraka plus Dusthana functional malefic despite natural benefic status

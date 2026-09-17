@@ -1,0 +1,3479 @@
+- id: PIS-SUN-01
+  title: Sun in Aries
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 1
+    description: Sun occupies Aries
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 1
+      sign_en: Aries
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Aries (Fire element, Cardinal quality). Dignity: exalted -- at its
+        classical peak here -- these themes express with maximum ease and confidence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-02
+  title: Sun in Taurus
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 2
+    description: Sun occupies Taurus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 2
+      sign_en: Taurus
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Taurus (Earth element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-03
+  title: Sun in Gemini
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 3
+    description: Sun occupies Gemini
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 3
+      sign_en: Gemini
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Gemini (Air element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-04
+  title: Sun in Cancer
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 4
+    description: Sun occupies Cancer
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 4
+      sign_en: Cancer
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Cancer (Water element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-05
+  title: Sun in Leo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 5
+    description: Sun occupies Leo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 5
+      sign_en: Leo
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Leo (Fire element, Fixed quality). Dignity: own-sign -- fully at home
+        here -- these themes express in an unforced, natural, sustainable way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-06
+  title: Sun in Virgo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 6
+    description: Sun occupies Virgo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 6
+      sign_en: Virgo
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Virgo (Earth element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-07
+  title: Sun in Libra
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 7
+    description: Sun occupies Libra
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 7
+      sign_en: Libra
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Libra (Air element, Cardinal quality). Dignity: debilitated -- under
+        classical strain here -- these themes express only with effort, delay, or
+        via a struggle that ultimately teaches the sign''s own lesson.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-08
+  title: Sun in Scorpio
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 8
+    description: Sun occupies Scorpio
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 8
+      sign_en: Scorpio
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Scorpio (Water element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-09
+  title: Sun in Sagittarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 9
+    description: Sun occupies Sagittarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 9
+      sign_en: Sagittarius
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Sagittarius (Fire element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-10
+  title: Sun in Capricorn
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 10
+    description: Sun occupies Capricorn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 10
+      sign_en: Capricorn
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Capricorn (Earth element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-11
+  title: Sun in Aquarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 11
+    description: Sun occupies Aquarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 11
+      sign_en: Aquarius
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Aquarius (Air element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SUN-12
+  title: Sun in Pisces
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Sun.sign
+    op: eq
+    value: 12
+    description: Sun occupies Pisces
+  outputs:
+  - kind: classification
+    payload:
+      planet: Sun
+      sign: 12
+      sign_en: Pisces
+      effect: 'Sun''s natural significations (father, authority, government) filtered
+        through Pisces (Water element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-01
+  title: Moon in Aries
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 1
+    description: Moon occupies Aries
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 1
+      sign_en: Aries
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Aries (Fire element, Cardinal quality). Dignity: neutral -- expressing in
+        a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-02
+  title: Moon in Taurus
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 2
+    description: Moon occupies Taurus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 2
+      sign_en: Taurus
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Taurus (Earth element, Fixed quality). Dignity: exalted -- at its classical
+        peak here -- these themes express with maximum ease and confidence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-03
+  title: Moon in Gemini
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 3
+    description: Moon occupies Gemini
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 3
+      sign_en: Gemini
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Gemini (Air element, Mutable quality). Dignity: neutral -- expressing in a
+        workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-04
+  title: Moon in Cancer
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 4
+    description: Moon occupies Cancer
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 4
+      sign_en: Cancer
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Cancer (Water element, Cardinal quality). Dignity: own-sign -- fully at home
+        here -- these themes express in an unforced, natural, sustainable way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-05
+  title: Moon in Leo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 5
+    description: Moon occupies Leo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 5
+      sign_en: Leo
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Leo (Fire element, Fixed quality). Dignity: neutral -- expressing in a workable,
+        ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-06
+  title: Moon in Virgo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 6
+    description: Moon occupies Virgo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 6
+      sign_en: Virgo
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Virgo (Earth element, Mutable quality). Dignity: neutral -- expressing in
+        a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-07
+  title: Moon in Libra
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 7
+    description: Moon occupies Libra
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 7
+      sign_en: Libra
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Libra (Air element, Cardinal quality). Dignity: neutral -- expressing in a
+        workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-08
+  title: Moon in Scorpio
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 8
+    description: Moon occupies Scorpio
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 8
+      sign_en: Scorpio
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Scorpio (Water element, Fixed quality). Dignity: debilitated -- under classical
+        strain here -- these themes express only with effort, delay, or via a struggle
+        that ultimately teaches the sign''s own lesson.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-09
+  title: Moon in Sagittarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 9
+    description: Moon occupies Sagittarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 9
+      sign_en: Sagittarius
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Sagittarius (Fire element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-10
+  title: Moon in Capricorn
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 10
+    description: Moon occupies Capricorn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 10
+      sign_en: Capricorn
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Capricorn (Earth element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-11
+  title: Moon in Aquarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 11
+    description: Moon occupies Aquarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 11
+      sign_en: Aquarius
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Aquarius (Air element, Fixed quality). Dignity: neutral -- expressing in a
+        workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MOO-12
+  title: Moon in Pisces
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Moon.sign
+    op: eq
+    value: 12
+    description: Moon occupies Pisces
+  outputs:
+  - kind: classification
+    payload:
+      planet: Moon
+      sign: 12
+      sign_en: Pisces
+      effect: 'Moon''s natural significations (mother, emotions, mind) filtered through
+        Pisces (Water element, Mutable quality). Dignity: neutral -- expressing in
+        a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-01
+  title: Mars in Aries
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 1
+    description: Mars occupies Aries
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 1
+      sign_en: Aries
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Aries (Fire element, Cardinal quality). Dignity: own-sign -- fully at home
+        here -- these themes express in an unforced, natural, sustainable way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-02
+  title: Mars in Taurus
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 2
+    description: Mars occupies Taurus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 2
+      sign_en: Taurus
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Taurus (Earth element, Fixed quality). Dignity: neutral -- expressing in a
+        workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-03
+  title: Mars in Gemini
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 3
+    description: Mars occupies Gemini
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 3
+      sign_en: Gemini
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Gemini (Air element, Mutable quality). Dignity: neutral -- expressing in a
+        workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-04
+  title: Mars in Cancer
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 4
+    description: Mars occupies Cancer
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 4
+      sign_en: Cancer
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Cancer (Water element, Cardinal quality). Dignity: debilitated -- under classical
+        strain here -- these themes express only with effort, delay, or via a struggle
+        that ultimately teaches the sign''s own lesson.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-05
+  title: Mars in Leo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 5
+    description: Mars occupies Leo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 5
+      sign_en: Leo
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Leo (Fire element, Fixed quality). Dignity: neutral -- expressing in a workable,
+        ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-06
+  title: Mars in Virgo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 6
+    description: Mars occupies Virgo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 6
+      sign_en: Virgo
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Virgo (Earth element, Mutable quality). Dignity: neutral -- expressing in
+        a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-07
+  title: Mars in Libra
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 7
+    description: Mars occupies Libra
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 7
+      sign_en: Libra
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Libra (Air element, Cardinal quality). Dignity: neutral -- expressing in a
+        workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-08
+  title: Mars in Scorpio
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 8
+    description: Mars occupies Scorpio
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 8
+      sign_en: Scorpio
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Scorpio (Water element, Fixed quality). Dignity: own-sign -- fully at home
+        here -- these themes express in an unforced, natural, sustainable way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-09
+  title: Mars in Sagittarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 9
+    description: Mars occupies Sagittarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 9
+      sign_en: Sagittarius
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Sagittarius (Fire element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-10
+  title: Mars in Capricorn
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 10
+    description: Mars occupies Capricorn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 10
+      sign_en: Capricorn
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Capricorn (Earth element, Cardinal quality). Dignity: exalted -- at its classical
+        peak here -- these themes express with maximum ease and confidence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-11
+  title: Mars in Aquarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 11
+    description: Mars occupies Aquarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 11
+      sign_en: Aquarius
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Aquarius (Air element, Fixed quality). Dignity: neutral -- expressing in a
+        workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MAR-12
+  title: Mars in Pisces
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mars.sign
+    op: eq
+    value: 12
+    description: Mars occupies Pisces
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mars
+      sign: 12
+      sign_en: Pisces
+      effect: 'Mars''s natural significations (brothers, courage, land) filtered through
+        Pisces (Water element, Mutable quality). Dignity: neutral -- expressing in
+        a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-01
+  title: Mercury in Aries
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 1
+    description: Mercury occupies Aries
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 1
+      sign_en: Aries
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Aries (Fire element, Cardinal quality). Dignity: neutral
+        -- expressing in a workable, ordinary register here -- neither maximally boosted
+        nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-02
+  title: Mercury in Taurus
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 2
+    description: Mercury occupies Taurus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 2
+      sign_en: Taurus
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Taurus (Earth element, Fixed quality). Dignity: neutral --
+        expressing in a workable, ordinary register here -- neither maximally boosted
+        nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-03
+  title: Mercury in Gemini
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 3
+    description: Mercury occupies Gemini
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 3
+      sign_en: Gemini
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Gemini (Air element, Mutable quality). Dignity: own-sign
+        -- fully at home here -- these themes express in an unforced, natural, sustainable
+        way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-04
+  title: Mercury in Cancer
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 4
+    description: Mercury occupies Cancer
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 4
+      sign_en: Cancer
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Cancer (Water element, Cardinal quality). Dignity: neutral
+        -- expressing in a workable, ordinary register here -- neither maximally boosted
+        nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-05
+  title: Mercury in Leo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 5
+    description: Mercury occupies Leo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 5
+      sign_en: Leo
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Leo (Fire element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-06
+  title: Mercury in Virgo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 6
+    description: Mercury occupies Virgo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 6
+      sign_en: Virgo
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Virgo (Earth element, Mutable quality). Dignity: exalted
+        -- at its classical peak here -- these themes express with maximum ease and
+        confidence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-07
+  title: Mercury in Libra
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 7
+    description: Mercury occupies Libra
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 7
+      sign_en: Libra
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Libra (Air element, Cardinal quality). Dignity: neutral --
+        expressing in a workable, ordinary register here -- neither maximally boosted
+        nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-08
+  title: Mercury in Scorpio
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 8
+    description: Mercury occupies Scorpio
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 8
+      sign_en: Scorpio
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Scorpio (Water element, Fixed quality). Dignity: neutral
+        -- expressing in a workable, ordinary register here -- neither maximally boosted
+        nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-09
+  title: Mercury in Sagittarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 9
+    description: Mercury occupies Sagittarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 9
+      sign_en: Sagittarius
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Sagittarius (Fire element, Mutable quality). Dignity: neutral
+        -- expressing in a workable, ordinary register here -- neither maximally boosted
+        nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-10
+  title: Mercury in Capricorn
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 10
+    description: Mercury occupies Capricorn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 10
+      sign_en: Capricorn
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Capricorn (Earth element, Cardinal quality). Dignity: neutral
+        -- expressing in a workable, ordinary register here -- neither maximally boosted
+        nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-11
+  title: Mercury in Aquarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 11
+    description: Mercury occupies Aquarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 11
+      sign_en: Aquarius
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Aquarius (Air element, Fixed quality). Dignity: neutral --
+        expressing in a workable, ordinary register here -- neither maximally boosted
+        nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-MER-12
+  title: Mercury in Pisces
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Mercury.sign
+    op: eq
+    value: 12
+    description: Mercury occupies Pisces
+  outputs:
+  - kind: classification
+    payload:
+      planet: Mercury
+      sign: 12
+      sign_en: Pisces
+      effect: 'Mercury''s natural significations (intellect, communication, business)
+        filtered through Pisces (Water element, Mutable quality). Dignity: debilitated
+        -- under classical strain here -- these themes express only with effort, delay,
+        or via a struggle that ultimately teaches the sign''s own lesson.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-01
+  title: Jupiter in Aries
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 1
+    description: Jupiter occupies Aries
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 1
+      sign_en: Aries
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Aries (Fire element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-02
+  title: Jupiter in Taurus
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 2
+    description: Jupiter occupies Taurus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 2
+      sign_en: Taurus
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Taurus (Earth element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-03
+  title: Jupiter in Gemini
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 3
+    description: Jupiter occupies Gemini
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 3
+      sign_en: Gemini
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Gemini (Air element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-04
+  title: Jupiter in Cancer
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 4
+    description: Jupiter occupies Cancer
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 4
+      sign_en: Cancer
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Cancer (Water element, Cardinal quality). Dignity: exalted -- at its
+        classical peak here -- these themes express with maximum ease and confidence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-05
+  title: Jupiter in Leo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 5
+    description: Jupiter occupies Leo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 5
+      sign_en: Leo
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Leo (Fire element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-06
+  title: Jupiter in Virgo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 6
+    description: Jupiter occupies Virgo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 6
+      sign_en: Virgo
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Virgo (Earth element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-07
+  title: Jupiter in Libra
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 7
+    description: Jupiter occupies Libra
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 7
+      sign_en: Libra
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Libra (Air element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-08
+  title: Jupiter in Scorpio
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 8
+    description: Jupiter occupies Scorpio
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 8
+      sign_en: Scorpio
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Scorpio (Water element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-09
+  title: Jupiter in Sagittarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 9
+    description: Jupiter occupies Sagittarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 9
+      sign_en: Sagittarius
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Sagittarius (Fire element, Mutable quality). Dignity: own-sign --
+        fully at home here -- these themes express in an unforced, natural, sustainable
+        way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-10
+  title: Jupiter in Capricorn
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 10
+    description: Jupiter occupies Capricorn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 10
+      sign_en: Capricorn
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Capricorn (Earth element, Cardinal quality). Dignity: debilitated
+        -- under classical strain here -- these themes express only with effort, delay,
+        or via a struggle that ultimately teaches the sign''s own lesson.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-11
+  title: Jupiter in Aquarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 11
+    description: Jupiter occupies Aquarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 11
+      sign_en: Aquarius
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Aquarius (Air element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-JUP-12
+  title: Jupiter in Pisces
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Jupiter.sign
+    op: eq
+    value: 12
+    description: Jupiter occupies Pisces
+  outputs:
+  - kind: classification
+    payload:
+      planet: Jupiter
+      sign: 12
+      sign_en: Pisces
+      effect: 'Jupiter''s natural significations (wisdom, children, religion) filtered
+        through Pisces (Water element, Mutable quality). Dignity: own-sign -- fully
+        at home here -- these themes express in an unforced, natural, sustainable
+        way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-01
+  title: Venus in Aries
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 1
+    description: Venus occupies Aries
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 1
+      sign_en: Aries
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Aries (Fire element, Cardinal quality). Dignity: neutral -- expressing in
+        a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-02
+  title: Venus in Taurus
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 2
+    description: Venus occupies Taurus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 2
+      sign_en: Taurus
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Taurus (Earth element, Fixed quality). Dignity: own-sign -- fully at home
+        here -- these themes express in an unforced, natural, sustainable way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-03
+  title: Venus in Gemini
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 3
+    description: Venus occupies Gemini
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 3
+      sign_en: Gemini
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Gemini (Air element, Mutable quality). Dignity: neutral -- expressing in a
+        workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-04
+  title: Venus in Cancer
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 4
+    description: Venus occupies Cancer
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 4
+      sign_en: Cancer
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Cancer (Water element, Cardinal quality). Dignity: neutral -- expressing in
+        a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-05
+  title: Venus in Leo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 5
+    description: Venus occupies Leo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 5
+      sign_en: Leo
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Leo (Fire element, Fixed quality). Dignity: neutral -- expressing in a workable,
+        ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-06
+  title: Venus in Virgo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 6
+    description: Venus occupies Virgo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 6
+      sign_en: Virgo
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Virgo (Earth element, Mutable quality). Dignity: debilitated -- under classical
+        strain here -- these themes express only with effort, delay, or via a struggle
+        that ultimately teaches the sign''s own lesson.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-07
+  title: Venus in Libra
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 7
+    description: Venus occupies Libra
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 7
+      sign_en: Libra
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Libra (Air element, Cardinal quality). Dignity: own-sign -- fully at home
+        here -- these themes express in an unforced, natural, sustainable way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-08
+  title: Venus in Scorpio
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 8
+    description: Venus occupies Scorpio
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 8
+      sign_en: Scorpio
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Scorpio (Water element, Fixed quality). Dignity: neutral -- expressing in
+        a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-09
+  title: Venus in Sagittarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 9
+    description: Venus occupies Sagittarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 9
+      sign_en: Sagittarius
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Sagittarius (Fire element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-10
+  title: Venus in Capricorn
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 10
+    description: Venus occupies Capricorn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 10
+      sign_en: Capricorn
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Capricorn (Earth element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-11
+  title: Venus in Aquarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 11
+    description: Venus occupies Aquarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 11
+      sign_en: Aquarius
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Aquarius (Air element, Fixed quality). Dignity: neutral -- expressing in a
+        workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-VEN-12
+  title: Venus in Pisces
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Venus.sign
+    op: eq
+    value: 12
+    description: Venus occupies Pisces
+  outputs:
+  - kind: classification
+    payload:
+      planet: Venus
+      sign: 12
+      sign_en: Pisces
+      effect: 'Venus''s natural significations (wife, love, beauty) filtered through
+        Pisces (Water element, Mutable quality). Dignity: exalted -- at its classical
+        peak here -- these themes express with maximum ease and confidence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-01
+  title: Saturn in Aries
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 1
+    description: Saturn occupies Aries
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 1
+      sign_en: Aries
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Aries (Fire element, Cardinal quality). Dignity: debilitated -- under
+        classical strain here -- these themes express only with effort, delay, or
+        via a struggle that ultimately teaches the sign''s own lesson.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-02
+  title: Saturn in Taurus
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 2
+    description: Saturn occupies Taurus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 2
+      sign_en: Taurus
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Taurus (Earth element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-03
+  title: Saturn in Gemini
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 3
+    description: Saturn occupies Gemini
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 3
+      sign_en: Gemini
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Gemini (Air element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-04
+  title: Saturn in Cancer
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 4
+    description: Saturn occupies Cancer
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 4
+      sign_en: Cancer
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Cancer (Water element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-05
+  title: Saturn in Leo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 5
+    description: Saturn occupies Leo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 5
+      sign_en: Leo
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Leo (Fire element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-06
+  title: Saturn in Virgo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 6
+    description: Saturn occupies Virgo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 6
+      sign_en: Virgo
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Virgo (Earth element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-07
+  title: Saturn in Libra
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 7
+    description: Saturn occupies Libra
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 7
+      sign_en: Libra
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Libra (Air element, Cardinal quality). Dignity: exalted -- at its
+        classical peak here -- these themes express with maximum ease and confidence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-08
+  title: Saturn in Scorpio
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 8
+    description: Saturn occupies Scorpio
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 8
+      sign_en: Scorpio
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Scorpio (Water element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-09
+  title: Saturn in Sagittarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 9
+    description: Saturn occupies Sagittarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 9
+      sign_en: Sagittarius
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Sagittarius (Fire element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-10
+  title: Saturn in Capricorn
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 10
+    description: Saturn occupies Capricorn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 10
+      sign_en: Capricorn
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Capricorn (Earth element, Cardinal quality). Dignity: own-sign --
+        fully at home here -- these themes express in an unforced, natural, sustainable
+        way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-11
+  title: Saturn in Aquarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 11
+    description: Saturn occupies Aquarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 11
+      sign_en: Aquarius
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Aquarius (Air element, Fixed quality). Dignity: own-sign -- fully
+        at home here -- these themes express in an unforced, natural, sustainable
+        way.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-SAT-12
+  title: Saturn in Pisces
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Saturn.sign
+    op: eq
+    value: 12
+    description: Saturn occupies Pisces
+  outputs:
+  - kind: classification
+    payload:
+      planet: Saturn
+      sign: 12
+      sign_en: Pisces
+      effect: 'Saturn''s natural significations (discipline, karma, delays) filtered
+        through Pisces (Water element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-01
+  title: Rahu in Aries
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 1
+    description: Rahu occupies Aries
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 1
+      sign_en: Aries
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Aries (Fire element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-02
+  title: Rahu in Taurus
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 2
+    description: Rahu occupies Taurus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 2
+      sign_en: Taurus
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Taurus (Earth element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-03
+  title: Rahu in Gemini
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 3
+    description: Rahu occupies Gemini
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 3
+      sign_en: Gemini
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Gemini (Air element, Mutable quality). Dignity: exalted -- at its
+        classical peak here -- these themes express with maximum ease and confidence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-04
+  title: Rahu in Cancer
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 4
+    description: Rahu occupies Cancer
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 4
+      sign_en: Cancer
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Cancer (Water element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-05
+  title: Rahu in Leo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 5
+    description: Rahu occupies Leo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 5
+      sign_en: Leo
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Leo (Fire element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-06
+  title: Rahu in Virgo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 6
+    description: Rahu occupies Virgo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 6
+      sign_en: Virgo
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Virgo (Earth element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-07
+  title: Rahu in Libra
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 7
+    description: Rahu occupies Libra
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 7
+      sign_en: Libra
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Libra (Air element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-08
+  title: Rahu in Scorpio
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 8
+    description: Rahu occupies Scorpio
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 8
+      sign_en: Scorpio
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Scorpio (Water element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-09
+  title: Rahu in Sagittarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 9
+    description: Rahu occupies Sagittarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 9
+      sign_en: Sagittarius
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Sagittarius (Fire element, Mutable quality). Dignity: debilitated
+        -- under classical strain here -- these themes express only with effort, delay,
+        or via a struggle that ultimately teaches the sign''s own lesson.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-10
+  title: Rahu in Capricorn
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 10
+    description: Rahu occupies Capricorn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 10
+      sign_en: Capricorn
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Capricorn (Earth element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-11
+  title: Rahu in Aquarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 11
+    description: Rahu occupies Aquarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 11
+      sign_en: Aquarius
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Aquarius (Air element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-RAH-12
+  title: Rahu in Pisces
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Rahu.sign
+    op: eq
+    value: 12
+    description: Rahu occupies Pisces
+  outputs:
+  - kind: classification
+    payload:
+      planet: Rahu
+      sign: 12
+      sign_en: Pisces
+      effect: 'Rahu''s natural significations (foreigners, technology, illusion) filtered
+        through Pisces (Water element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-01
+  title: Ketu in Aries
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 1
+    description: Ketu occupies Aries
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 1
+      sign_en: Aries
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Aries (Fire element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-02
+  title: Ketu in Taurus
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 2
+    description: Ketu occupies Taurus
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 2
+      sign_en: Taurus
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Taurus (Earth element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-03
+  title: Ketu in Gemini
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 3
+    description: Ketu occupies Gemini
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 3
+      sign_en: Gemini
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Gemini (Air element, Mutable quality). Dignity: debilitated -- under
+        classical strain here -- these themes express only with effort, delay, or
+        via a struggle that ultimately teaches the sign''s own lesson.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-04
+  title: Ketu in Cancer
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 4
+    description: Ketu occupies Cancer
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 4
+      sign_en: Cancer
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Cancer (Water element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-05
+  title: Ketu in Leo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 5
+    description: Ketu occupies Leo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 5
+      sign_en: Leo
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Leo (Fire element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-06
+  title: Ketu in Virgo
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 6
+    description: Ketu occupies Virgo
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 6
+      sign_en: Virgo
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Virgo (Earth element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-07
+  title: Ketu in Libra
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 7
+    description: Ketu occupies Libra
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 7
+      sign_en: Libra
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Libra (Air element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-08
+  title: Ketu in Scorpio
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 8
+    description: Ketu occupies Scorpio
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 8
+      sign_en: Scorpio
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Scorpio (Water element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-09
+  title: Ketu in Sagittarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 9
+    description: Ketu occupies Sagittarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 9
+      sign_en: Sagittarius
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Sagittarius (Fire element, Mutable quality). Dignity: exalted -- at
+        its classical peak here -- these themes express with maximum ease and confidence.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-10
+  title: Ketu in Capricorn
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 10
+    description: Ketu occupies Capricorn
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 10
+      sign_en: Capricorn
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Capricorn (Earth element, Cardinal quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-11
+  title: Ketu in Aquarius
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 11
+    description: Ketu occupies Aquarius
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 11
+      sign_en: Aquarius
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Aquarius (Air element, Fixed quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.
+- id: PIS-KET-12
+  title: Ketu in Pisces
+  category: dignity
+  source_tier: 3
+  source_ref: Compositional synthesis of BPHS Ch.10/Saravali Ch.2 karakatva (app.knowledge.planets.KARAKATVA)
+    + BPHS Ch.3 sign dignity (app.astro.constants.PLANET_STATES/SIGNS); not a per-sign
+    Brihat Jataka verse citation.
+  tradition: parasari
+  conditions:
+  - path: chart.Ketu.sign
+    op: eq
+    value: 12
+    description: Ketu occupies Pisces
+  outputs:
+  - kind: classification
+    payload:
+      planet: Ketu
+      sign: 12
+      sign_en: Pisces
+      effect: 'Ketu''s natural significations (moksha, spirituality, detachment) filtered
+        through Pisces (Water element, Mutable quality). Dignity: neutral -- expressing
+        in a workable, ordinary register here -- neither maximally boosted nor strained.'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - category=dignity is broader here than formal exalt/own/debil tiers alone -- this
+    rule set covers the full qualitative planet+sign combination, not just the 3-state
+    dignity table; no dedicated category exists for 'planet-in-sign' specifically
+    and force-fitting a brand-new enum entry for 108 mechanically-generated entries
+    was judged unwarranted (YAGNI) versus reusing 'dignity' with this note.
+  - computation_model=practical_proxy -> generic evaluator reports quality=computed_simplified.

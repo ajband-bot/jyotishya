@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gayathri — Part 4: Daśā, Bhukti, Transits & Life Timing</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-green:#2a8703;--wm-gray:#374151;--wm-light:#f8fafc}
+  body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+  .highlight{background:#fffbeb;border-left:4px solid var(--wm-gold);padding:1rem}
+  .verse{background:#f0f4ff;border-left:4px solid var(--wm-blue);padding:1rem;font-style:italic}
+  .warn{background:#fef2f2;border-left:4px solid var(--wm-red);padding:1rem}
+  .blessing{background:#f0fdf4;border-left:4px solid var(--wm-green);padding:1rem}
+  .spiritual{background:#faf5ff;border-left:4px solid #7c3aed;padding:1rem}
+  .caution{background:#fffbeb;border-left:4px solid #d97706;padding:1rem}
+  .golden{background:#fefce8;border-left:4px solid #ca8a04;padding:1rem}
+  .transit-box{background:#f5f3ff;border-left:4px solid #7c3aed;padding:1rem}
+  table{border-collapse:collapse;width:100%}
+  th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+  td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+  tr:hover{background:#f1f5f9}
+  h1{color:var(--wm-blue)}
+  h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+  h3{color:#1e3a5f}
+  h4{color:#374151}
+  .badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+  .b-green{background:#dcfce7;color:#166534}
+  .b-yellow{background:#fef3c7;color:#92400e}
+  .b-red{background:#fecaca;color:#991b1b}
+  .b-blue{background:#dbeafe;color:#1e40af}
+  .b-purple{background:#ede9fe;color:#5b21b6}
+  .b-gold{background:#fef3c7;color:#78350f}
+  .b-orange{background:#ffedd5;color:#9a3412}
+  .timeline-bar{height:28px;border-radius:4px;display:flex;align-items:center;padding:0 8px;font-size:0.75rem;font-weight:600;color:white;margin:2px 0}
+  .bar-mars{background:linear-gradient(90deg,#ef4444,#b91c1c)}
+  .bar-rahu{background:linear-gradient(90deg,#6366f1,#4338ca)}
+  .bar-jupiter{background:linear-gradient(90deg,#fbbf24,#d97706);color:#1a0a00}
+  .bar-saturn{background:linear-gradient(90deg,#6b7280,#374151)}
+  .bar-mercury{background:linear-gradient(90deg,#34d399,#059669)}
+  .bar-ketu{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+  .bar-venus{background:linear-gradient(90deg,#f472b6,#db2777)}
+  .bar-current{outline:3px solid #dc2626;outline-offset:2px}
+  .layer-box{border:2px solid;border-radius:8px;padding:1rem;margin-bottom:0.75rem}
+  .layer-1{border-color:#1e40af;background:#eff6ff}
+  .layer-2{border-color:#065f46;background:#ecfdf5}
+  .layer-3{border-color:#92400e;background:#fffbeb}
+  .layer-4{border-color:#7c3aed;background:#f5f3ff}
+  .layer-5{border-color:#9d174d;background:#fdf2f8}
+  .sade-phase{border:2px dashed #6b7280;border-radius:8px;padding:1rem;background:#f9fafb;margin-bottom:0.75rem}
+  .pillar{border:2px solid #0053e2;border-radius:8px;padding:0.85rem;margin-bottom:0.5rem;background:#f0f4ff}
+  .window-card{border:2px solid #ffc220;border-radius:8px;padding:1rem;margin-bottom:0.75rem;background:#fffbeb}
+  .prime-card{border:3px solid var(--wm-green);border-radius:8px;padding:1rem;margin-bottom:0.75rem;background:#f0fdf4}
+</style>
+</head>
+<body class="min-h-screen">
+
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- HEADER -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<header class="text-center mb-10">
+  <p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Gayathri | 28 December 1992, 10:15 IST | Andhra Pradesh</p>
+  <h1 class="text-3xl font-bold mb-2">Part 4 of 5 — Daśā, Bhukti, Transits & the Timing Engine</h1>
+  <p class="text-lg text-gray-500">When do the chart's promises ripen? A half-century of reading the cosmic clock.</p>
+  <div class="mt-4 verse">
+    <p><em>"Kālo hi paramā śaktir brahmaṇo'vyakta-janmanaḥ;<br>
+    so'nuvartati sarvāṇi bhūtāni ca calācalāḥ."</em><br>
+    — <strong>Viṣṇu Purāṇa, Kāla-māhātmya</strong></p>
+    <p class="mt-2 text-sm">(Time is the supreme power born of the unmanifest Brahman; it governs all beings, moving and unmoving alike.)</p>
+  </div>
+  <div class="mt-4 text-sm text-gray-500 bg-gray-50 rounded p-3">
+    <strong>Reading context:</strong> Vimśottarī Daśā maps karma onto linear time — each planetary period is a distinct chapter in the soul's curriculum. This Part traces Gayathri's life-arc from birth through 2049, with granular focus on the current daśā stack (Jupiter MD · Moon AD · Saturn PD, June 2026) and critical upcoming windows.
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- CURRENT DAŚĀ STACK AT A GLANCE -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">Where You Stand — 7 June 2026</h2>
+  <div class="highlight mb-4">
+    <table>
+      <thead><tr><th>Layer</th><th>Lord</th><th>Sign / House</th><th>Window</th><th>Functional Role</th></tr></thead>
+      <tbody>
+        <tr class="bg-yellow-50">
+          <td><strong>Mahādaśā (MD)</strong></td>
+          <td><strong>Jupiter</strong></td>
+          <td>Virgo / H8</td>
+          <td>14 Jul 2014 → 14 Jul 2030</td>
+          <td>H2+H11 lord in H8; GK; neutral dignity</td>
+        </tr>
+        <tr class="bg-blue-50">
+          <td><strong>Antardaśā (AD)</strong></td>
+          <td><strong>Moon</strong></td>
+          <td>Capricorn / H12</td>
+          <td>10 Nov 2025 → 12 Mar 2027</td>
+          <td>AK; H6 lord; functional malefic; Dhaniṣṭhā</td>
+        </tr>
+        <tr class="bg-green-50">
+          <td><strong>Pratyantardaśā (PD)</strong></td>
+          <td><strong>Saturn</strong></td>
+          <td>Capricorn / H12</td>
+          <td>3 Jun 2026 → 19 Aug 2026</td>
+          <td>Lagneśa; own-sign; Vimala VRY lord; PK</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td>Sade Sati Status</td>
+          <td>—</td>
+          <td>Saturn in Pisces (3rd from natal Moon)</td>
+          <td>Mar 2025 → present</td>
+          <td><strong class="text-green-700">FULLY COMPLETE ✓</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="blessing">
+    <p><strong>The headline for June 2026:</strong> The two most significant structural forces in Gayathri's chart are simultaneously active — the Ātmakāraka Moon (soul-significator) is the antardaśā lord, and the Lagneśa Saturn (self and identity) is the pratyantardaśā lord. The soul and the body are in direct dialogue. This is not a period for grand external theatre; it is a period of profound inner architecture. What is being built silently now will manifest visibly in 2027–2030.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 1: OPENING — KĀLA AS ASTROLOGER'S CANVAS -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Kāla — Time as the Supreme Astrologer</h2>
+  <div class="verse mb-4">
+    <p><em>"Dasha cha gocharam chaiva ubhayoḥ phala-niścayaḥ;<br>
+    naikā-pakṣa-balena cha, militā-balena niścitam."</em><br>
+    — <strong>Bṛhat Parāśara Horā Śāstra, Adhyāya 53</strong></p>
+    <p class="mt-2 text-sm">(The result is determined by daśā and transit together — not by one wing alone, but by their combined strength.)</p>
+  </div>
+
+  <p class="mb-4">In Vedic astrology, the horoscope is the map — but Vimśottarī Daśā is the compass needle, pointing to which territory is being traversed at any given moment in time. The birth chart shows <em>what</em> is present in the soul's arsenal; the daśā system reveals <em>when</em> each weapon is handed to the native. A planet in perfect exaltation may remain dormant for decades, then deliver its full promise in a single intense sub-period. Equally, a malefic hidden in a dusthāna can cause disruption precisely when its daśā arrives.</p>
+
+  <p class="mb-4">The Vimśottarī system assigns each nakṣatra a planetary ruler. Gayathri's Moon at 29°55' Capricorn falls in <strong>Dhaniṣṭhā Pāda 2</strong>, ruled by Mars — hence her Vimśottarī cycle begins with Mars and follows the fixed sequence: Mars → Rahu → Jupiter → Saturn → Mercury → Ketu → Venus. Each period is a distinct karmic chapter: Mars brings courage and initiation, Rahu expands into the unknown, Jupiter illuminates hidden depths, Saturn disciplines and consolidates, Mercury sharpens intelligence, Ketu dissolves and liberates, Venus blossoms in final material fruition.</p>
+
+  <p>Gayathri is currently 33 years old, deep in the <strong>Jupiter Mahādaśā (2014–2030)</strong> — the Great Immersion into H8's domain of transformation, hidden knowledge, and deep research. The next two planetary epochs after Jupiter — Saturn MD (2030–2049) and Mercury MD (2049–2066) — will be the decades of professional fruition and public recognition built on these inner foundations. This Part maps that entire arc.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 2: LIFE CHAPTERS — HISTORICAL DAŚĀ MAPPING -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Life Chapters — Historical Daśā Life-Map</h2>
+  <p class="mb-4">The Vimśottarī timeline for Gayathri spans from birth (28 Dec 1992) through the complete 120-year cycle. The visual bars below show relative durations (not to exact scale):</p>
+
+  <!-- Timeline bars -->
+  <div class="overflow-x-auto mb-6">
+    <div style="min-width:600px">
+      <div class="timeline-bar bar-mars" style="width:3%">Mars (3.5y)</div>
+      <div class="timeline-bar bar-rahu" style="width:15%">Rahu · 18 years (1996–2014)</div>
+      <div class="timeline-bar bar-jupiter bar-current" style="width:13.3%">♃ JUPITER · 16y (2014–2030) ← NOW</div>
+      <div class="timeline-bar bar-saturn" style="width:15.8%">Saturn · 19 years (2030–2049)</div>
+      <div class="timeline-bar bar-mercury" style="width:14.2%">Mercury · 17y (2049–2066)</div>
+      <div class="timeline-bar bar-ketu" style="width:5.8%">Ketu · 7y</div>
+      <div class="timeline-bar bar-venus" style="width:16.7%">Venus · 20y (2073–2093)</div>
+    </div>
+  </div>
+
+  <!-- Complete Daśā Table -->
+  <div class="overflow-x-auto mb-6">
+    <table>
+      <thead><tr><th>MD Lord</th><th>Start</th><th>End</th><th>Ages</th><th>Planet's Role in Chart</th><th>Chapter Theme</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Mars</strong></td><td>28 Dec 1992</td><td>14 Jul 1996</td><td>0–3.5</td>
+          <td>H3+H10 lord; Vargottama R; H5</td>
+          <td>The Warrior Imprint — courage, motor energy, first drives</td>
+        </tr>
+        <tr>
+          <td><strong>Rahu</strong></td><td>14 Jul 1996</td><td>14 Jul 2014</td><td>3.5–21.5</td>
+          <td>H10 (Gandānta); H10 career house</td>
+          <td>The Great Expansion — childhood through young adulthood</td>
+        </tr>
+        <tr class="bg-yellow-50 font-bold">
+          <td>Jupiter ← NOW</td><td>14 Jul 2014</td><td>14 Jul 2030</td><td>21.5–37.5</td>
+          <td>H2+H11 lord; GK; H8 Virgo</td>
+          <td>The Great Immersion — transformation, hidden knowledge</td>
+        </tr>
+        <tr>
+          <td>Saturn</td><td>14 Jul 2030</td><td>13 Jul 2049</td><td>37.5–56.5</td>
+          <td>Lagneśa; H12 lord; own-sign; Vimala VRY</td>
+          <td>The Great Activation — professional peak + spiritual summit</td>
+        </tr>
+        <tr>
+          <td>Mercury</td><td>13 Jul 2049</td><td>13 Jul 2066</td><td>56.5–73.5</td>
+          <td>H5+H8 lord; Parivartana w/ Mars; H10</td>
+          <td>The Great Communication — publishing, teaching, legacy</td>
+        </tr>
+        <tr>
+          <td>Ketu</td><td>13 Jul 2066</td><td>12 Jul 2073</td><td>73.5–80.5</td>
+          <td>H4; Mṛgaśīrā; past-life release</td>
+          <td>The Great Dissolution — mokṣa orientation</td>
+        </tr>
+        <tr>
+          <td>Venus</td><td>12 Jul 2073</td><td>12 Jul 2093</td><td>80.5–100.5</td>
+          <td>Yogakāraka; H12; Dhaniṣṭhā; H4+H9</td>
+          <td>The Final Flowering — Yogakāraka fruition</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MARS MD -->
+  <div class="layer-box layer-1 mb-4">
+    <h3 class="text-xl font-bold mb-2">Mars MD (28 Dec 1992 – 14 Jul 1996) — Ages 0 to 3.5</h3>
+    <p class="mb-2"><span class="badge b-red">Functional Benefic</span> <span class="badge b-blue">H10 Lord (Career)</span> <span class="badge b-purple">Vargottama</span> <span class="badge b-orange">Retrograde H5</span></p>
+    <p class="mb-2">Mars as H3+H10 lord sits Vargottama in H5 (Gemini) — the house of intelligence, creativity, and childhood expression. The native enters life with Mars as the first planetary imprint. In classical interpretation, the daśā active at birth shapes the constitutional template: Mars here gives physical energy, determined temperament, and a fundamental drive that runs like a current beneath all subsequent chapters.</p>
+    <p>The infancy years are Mars-flavoured: active, restless, possibly early in motor milestones. H5 Mars = curiosity about knowledge from the very beginning. The Rākṣasa gaṇa of the Janma Nakṣatra (Dhaniṣṭhā) amplifies this martial intensity — this is not a passive or gentle infant energy, but one of fierce engagement with the world. The retrograde quality of Mars even in infancy suggests the native processes experiences internally before expressing externally.</p>
+  </div>
+
+  <!-- RAHU MD -->
+  <div class="layer-box layer-3 mb-4">
+    <h3 class="text-xl font-bold mb-2">Rahu MD (14 Jul 1996 – 14 Jul 2014) — Ages 3.5 to 21.5</h3>
+    <p class="mb-2"><span class="badge b-purple">H10 Placement</span> <span class="badge b-red">Gandānta Zone</span> <span class="badge b-orange">Scorpio — Depth</span></p>
+    <p class="mb-2">Eighteen years through childhood, adolescence, and the doorstep of adult life. Rahu is in H10 (Scorpio) at 26°51' — deep within the Gandānta zone (Scorpio-Sagittarius junction, karmically sensitive degrees). This placement means the formative years are defined by unconventional, intense experiences — particularly around identity, education, and the first inklings of career purpose.</p>
+    <p class="mb-2">Scorpio Rahu in H10 gives a fascination with what lies beneath the surface: research, mystery, investigation, occult knowledge, psychological depth. The child/adolescent is likely perceived as intense, perceptive, perhaps secretive — someone who asks questions that adults find uncomfortable. Educational experiences may be non-linear or involve periods of deep specialization rather than broad generality.</p>
+    <p class="mb-2">The Gandānta energy means career identity undergoes disruption or major pivot at some point during this 18-year span — a moment when the conventional path is abandoned in favour of the deeper calling. The Rahu-Rahu antardaśā (approximately 2004–2007) would have been a particularly intense identity-formation period: extreme intellectual engagement, possibly isolation from peers, and a first encounter with the hidden/transformative domains that define the Jupiter MD.</p>
+
+    <div class="caution mt-3">
+      <strong>Validation echo:</strong> "During approximately 2004–2008, was there a significant educational or personal identity shift — perhaps a sudden change in interests, a move, or a sense of being profoundly different from your peers?" If yes — the Gandānta Rahu pattern is confirmed.
+    </div>
+
+    <p class="mt-3">The transition from Rahu MD to Jupiter MD in July 2014 represents one of the most significant life pivots in this chart. Rahu's 18-year outer seeking — exploring the world through the lens of desire, fascination, and unconventional experience — gives way to Jupiter's inward orientation: depth over breadth, wisdom over fascination, H8's transformative hidden knowledge over H10's public ambition. This transition likely coincided with education completion, first major career shift, or an early spiritual awakening.</p>
+  </div>
+
+  <!-- JUPITER MD — Historical context -->
+  <div class="layer-box layer-2 mb-4">
+    <h3 class="text-xl font-bold mb-2">Jupiter MD (14 Jul 2014 – 14 Jul 2030) — Ages 21.5 to 37.5 ← CURRENT</h3>
+    <p class="mb-2"><span class="badge b-gold">H2+H11 Lord</span> <span class="badge b-orange">H8 Placement</span> <span class="badge b-yellow">GK</span> <span class="badge b-blue">Neutral Dignity</span></p>
+
+    <p class="mb-3">Jupiter as MD lord for 16 years: this is <strong>The Great Immersion</strong>. The H2+H11 lord (wealth and gains) sits in H8 (transformation, research, hidden knowledge, longevity, inheritance). The cosmic instruction is explicit: gains (H11) and wealth (H2) will come through the domain of depth, research, healing, and transformation — not through conventional career climbing or overt ambition. H8 is the vault where hidden treasure is stored; Jupiter as MD lord holds the key for 16 years.</p>
+
+    <p class="mb-3"><strong>5-Layer Jupiter MD Reading:</strong></p>
+    <div class="layer-box layer-1 mb-2"><strong>Layer 1 — Houses Owned:</strong> H2 (wealth, speech, family) and H11 (gains, desires fulfilled, elder siblings, social networks). Both material domains are activated through Jupiter's placement in H8 — gains arrive through depth, research, inheritance channels, or the fruits of transformative work.</div>
+    <div class="layer-box layer-2 mb-2"><strong>Layer 2 — House Occupied:</strong> H8 Virgo — the house of research, healing, occult sciences, psychology, longevity, hidden assets, and fundamental transformation. Jupiter as GK (Gnātikāraka) in H8 = the native's extended-family/community karma is transformative and possibly involves hidden matters. The 16-year MD through H8 = a sustained education in what lies beneath the surface of visible reality.</div>
+    <div class="layer-box layer-3 mb-2"><strong>Layer 3 — Dignity:</strong> Neutral in Virgo. Jupiter delivers through effort, discrimination, and service — not automatically. This MD requires the native to work for its rewards. Virgo's analytical quality means the H8 themes are approached with precision and intelligence, not mystical vagueness.</div>
+    <div class="layer-box layer-4 mb-2"><strong>Layer 4 — Aspects Received:</strong> Mars Retrograde in H5 (Gemini) casts its 8th aspect onto H12 and is not directly on Jupiter in H8. Mars's 4th aspect from H5 falls on H8 (Gemini + 4 = Virgo) — YES. Retrograde Vargottama Mars's 4th aspect landing on Jupiter in H8 = powerful creative and intellectual pressure feeding into the MD lord. The native's intelligence and creativity (H5 Mars via Parivartana) continuously push and energize Jupiter's domain of depth research.</div>
+    <div class="layer-box layer-5 mb-2"><strong>Layer 5 — D9 Position:</strong> Jupiter in D9 Gemini H7 (from D9 Sagittarius Lagna) = neutral. D9 H7 placement means Jupiter delivers through communication, partnerships, and relationship-based wisdom. The Jupiter MD has a partnership/collaborative quality at the soul level — growth comes partly through significant relationships.</div>
+
+    <h4 class="font-bold mt-4 mb-2">Sade Sati Overlay Within Jupiter MD (2017–2025)</h4>
+    <div class="warn">
+      <p>The 7.5-year Sade Sati purification cycle ran <strong>simultaneously</strong> with the first half of Jupiter MD. This means Jupiter (trying to expand gains/wealth/wisdom) was constantly constrained by Saturn's transit through the H12 triple stellium zone — first Sagittarius, then Capricorn (where natal Moon, Venus, and Saturn all live), then Aquarius (the Lagna itself).</p>
+      <p class="mt-2">The combination of <strong>Jupiter MD + Sade Sati Peak (Jan 2020 – Jan 2023)</strong> = the most transformative period in Gayathri's life to date. The Jupiter MD lord in H8 (transformation/depth) + Saturn transiting natal Moon (AK, soul-significator) in H12 = dissolution of old structures at the deepest emotional and spiritual level. COVID (2020) coincided with this astronomical peak. Major life reorganization across career, residence, and relationships was likely.</p>
+    </div>
+    <div class="caution mt-3">
+      <strong>Validation question:</strong> "Were 2020–2023 particularly intense — involving major structural changes in your career, relationships, or living situation, possibly accompanied by both suffering and profound insight simultaneously?" If yes = chart's complex H12 stellium + Sade Sati signature confirmed.
+    </div>
+
+    <h4 class="font-bold mt-4 mb-2">Jupiter AD within Jupiter MD (approx. 2021–2023)</h4>
+    <p>The karmic double — Jupiter's own sub-period within Jupiter's main period — coincided with the Sade Sati Peak. Jupiter in H8 + Saturn transiting natal Moon = deep dissolution of old ego-structures. This is the period where the native's old identity framework was dismantled and the foundation for the next chapter was laid. Often the most difficult sub-period within Jupiter MD, but also the one that carries the greatest hidden gift: the seed of wisdom that blossoms in the Saturn MD era.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 3: CURRENT DAŚĀ STACK — DEEP ANALYSIS -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Current Daśā Stack — Deep Analysis (7 June 2026)</h2>
+
+  <!-- MD: Jupiter -->
+  <div class="layer-box layer-1 mb-5">
+    <h3 class="text-xl font-bold mb-2">MD: Jupiter (H2+H11 Lord in H8) — Ongoing Until 14 Jul 2030</h3>
+    <p class="mb-3">Jupiter's 16-year MD is now in its final four years (2026–2030). The intense purification of the Sade Sati era is complete. The Great Immersion enters its consolidation and harvest phase. The transformative learnings accumulated through H8's domain between 2014 and 2026 — in research, healing, psychology, spiritual inquiry, or investigative work — are now being integrated and prepared for external expression.</p>
+    <p class="mb-3">The remaining Jupiter MD arc (2026–2030) has three primary tasks: (1) Consolidating the hidden expertise and inner mastery built through H8's crucible; (2) Building the financial and professional foundations that will manifest under Saturn MD's 19-year activation; (3) Completing key relationship transitions indicated by the Moon AD (UL lord active) and Mars AD periods.</p>
+
+    <div class="highlight">
+      <strong>The Jupiter MD instruction for 2026–2030:</strong> Do not attempt to shift abruptly to conventional career-ladder modes. The H8 gains (H11 lord in H8) will continue to arrive through non-obvious channels — research recognition, healing practice, inheritance or behind-the-scenes institutional work, occult or spiritual consultation, psychological depth work. Trust the hidden channel. Saturn MD from 2030 will bring the overt professional recognition; Jupiter MD's final years are about earning it invisibly.
+    </div>
+  </div>
+
+  <!-- AD: Moon -->
+  <div class="layer-box layer-3 mb-5">
+    <h3 class="text-xl font-bold mb-2">AD: Moon (10 Nov 2025 – 12 Mar 2027) — AK in H12, H6 Lord</h3>
+    <p class="mb-2"><span class="badge b-blue">Ātmakāraka</span> <span class="badge b-red">H6 Lord (Functional Malefic)</span> <span class="badge b-purple">H12 Capricorn</span> <span class="badge b-gold">Dhaniṣṭhā P2</span></p>
+
+    <p class="mb-3"><strong>5-Layer Moon AD Reading:</strong></p>
+    <div class="layer-box layer-1 mb-2"><strong>Layer 1 — Houses Owned:</strong> H6 (disease, enemies, service, legal matters, obstacles). Moon activates H6 themes during this sub-period: health requires attention (especially psychosomatic/emotional patterns), service work increases in importance, and obstacles test patience before resolution.</div>
+    <div class="layer-box layer-2 mb-2"><strong>Layer 2 — House Occupied:</strong> H12 (Capricorn). The AK Moon in H12 = the soul's deepest immersion in the mokṣa house — spiritual retreat energy, solitude, processing of karmic residue, possibly foreign residence or significant time spent away from one's birth environment. During Moon AD, the native is drawn strongly toward withdrawal, contemplation, and inner work.</div>
+    <div class="layer-box layer-3 mb-2"><strong>Layer 3 — Dignity:</strong> Moon in Capricorn is neutral. The AK (highest-degree planet = soul-significator) delivering through H6/H12 functional malefic domain means the soul's curriculum for this 16-month period is service, obstacle-navigation, and emotional depth work. Not a period of outer glamour — a period of inner harvest.</div>
+    <div class="layer-box layer-4 mb-2"><strong>Layer 4 — Aspects Received:</strong> Mars Retrograde (H5 Gemini) casts its 8th aspect onto H12 (Gemini + 8 signs = Capricorn). Vargottama retrograde Mars's 8th aspect falling on the H12 stellium — including AK Moon — during Moon AD = powerful creative-spiritual tension. This aspect can manifest as urgency about spiritual practice, creative expression (Dhaniṣṭhā: music, rhythm, artistic discipline), or emotional intensity requiring structured outlet.</div>
+    <div class="layer-box layer-5 mb-2"><strong>Layer 5 — D9 Position:</strong> Moon in D9 Virgo H10 (from D9 Sagittarius Lagna) = the AK is prominently placed in the D9 career/vocation house. Despite the D1 H12 placement, at the soul level (D9) the Moon is activating the vocation house — meaning soul-level career awakening is occurring beneath the surface withdrawal orientation. The inner work of Moon AD is directly feeding the career breakthrough that Mars AD and Jupiter AD will manifest externally.</div>
+
+    <div class="warn mt-4">
+      <strong>Honest caution for Moon AD (to Nov 2025 – Mar 2027):</strong> Moon as functional malefic (H6 lord) being the active AD lord brings genuine challenges:
+      <ul class="list-disc ml-5 mt-2">
+        <li><strong>Health:</strong> Emotional and psychosomatic health require close attention. H6 activation = possible digestive issues, stress-related conditions, or old health patterns resurfacing. Prioritize sleep, routine, and Āyurvedic regulation.</li>
+        <li><strong>Emotional volatility:</strong> AK Moon in H12 AD = heightened emotional sensitivity. Old grief patterns, isolation tendencies, and the H12 stellium's accumulated karmic residue can surface for processing. This is not pathology — it is purification.</li>
+        <li><strong>Obstacles:</strong> H6 themes (opponents, legal matters, service burdens) may arise. Navigate with patience, not reactive force.</li>
+        <li><strong>Remedy for Moon AD:</strong> Channel Moon's H6 energy into healing service. The AK in H12 yearns for spiritual practice — honour that through structured sadhana. Do NOT try to strengthen Moon with Pearl (Moon is functional malefic for Aquarius Lagna — Pearl is contraindicated).</li>
+      </ul>
+    </div>
+
+    <div class="blessing mt-4">
+      <strong>The gift within Moon AD:</strong> The AK (soul-significator) is active. This means the next 16 months are among the most soul-rich of any antardaśā in the entire Jupiter MD. The depth of self-examination, spiritual growth, and emotional intelligence available during this period exceeds what most comfortable antardaśās offer. Dhaniṣṭhā's gifts — rhythm, music, structured beauty — become powerful healing tools. Daily practice of Āditya Hṛdayam, music as meditation, and service work will transform the Moon AD's challenges into foundational strength.
+    </div>
+  </div>
+
+  <!-- PD: Saturn -->
+  <div class="layer-box layer-2 mb-5">
+    <h3 class="text-xl font-bold mb-2">PD: Saturn (3 Jun 2026 – 19 Aug 2026) — Lagneśa, Vimala VRY, Own-Sign</h3>
+    <p class="mb-2"><span class="badge b-green">Lagneśa</span> <span class="badge b-green">Own-Sign Capricorn</span> <span class="badge b-gold">Vimala VRY Lord</span> <span class="badge b-blue">H12 Placement</span></p>
+
+    <p class="mb-3"><strong>5-Layer Saturn PD Reading:</strong></p>
+    <div class="layer-box layer-1 mb-2"><strong>Layer 1 — Houses Owned:</strong> H1 (Aquarius — self, body, identity) and H12 (Capricorn — mokṣa, spiritual liberation, hidden expenses). Saturn as Lagneśa simultaneously rules the self and the mokṣa house — the ultimate bridge between worldly identity and spiritual dissolution.</div>
+    <div class="layer-box layer-2 mb-2"><strong>Layer 2 — House Occupied:</strong> H12 (own-sign Capricorn). The Lagneśa in its own second sign within H12 = Vimala Vipareeta Rāja Yoga. This is not mere dusthāna placement — this is the yoga that converts the apparent "loss" of H12 into achievement through spiritual channels. Saturn PD activates this yoga in its purest form.</div>
+    <div class="layer-box layer-3 mb-2"><strong>Layer 3 — Dignity:</strong> OWN-SIGN = maximum delivery. Saturn in Capricorn is at its most potent. The PD lord is at peak dignity — even within a challenging Moon AD context, Saturn PD provides a window of structural clarity, grounding, and Lagneśa-quality self-possession.</div>
+    <div class="layer-box layer-4 mb-2"><strong>Layer 4 — Aspects Received:</strong> Mars Retrograde (H5 Gemini) casts its 8th aspect on H12 (Capricorn), energizing the entire stellium including Saturn. This creates dynamic tension between Mars's creative initiative energy (H5, Parivartana) and Saturn's disciplined consolidation in H12. The tension is productive: it pushes Saturn toward purposeful output rather than mere withdrawal.</div>
+    <div class="layer-box layer-5 mb-2"><strong>Layer 5 — D9 Position:</strong> Saturn in D9 Cancer H8 (from D9 Sagittarius Lagna). In D9, the Lagneśa is placed in H8 (transformation, depth). Even in the navāṁśa, Saturn delivers through depth and transformation rather than surface-level achievement. This reinforces the Vimala VRY's core instruction: the achievement comes through the hidden channel.</div>
+
+    <div class="prime-card mt-4">
+      <strong>Saturn PD window (3 Jun – 19 Aug 2026) is a rare opportunity within the Moon AD:</strong>
+      <ul class="list-disc ml-5 mt-2">
+        <li><strong>Career planning:</strong> Strategic career assessments, resume-building, professional network cultivation. The Lagneśa's clarity provides grounding for clear-eyed professional decisions.</li>
+        <li><strong>Health foundations:</strong> Medical check-ups, Āyurvedic protocols, beginning sustained wellness routines. Saturn in own-sign = structural health investments pay off.</li>
+        <li><strong>Spiritual commitments:</strong> Initiations (dīkṣā), vows, formalizing spiritual practice, beginning a sustained mantra japa commitment. The Vimala VRY energy is at its most accessible during Saturn PD.</li>
+        <li><strong>Administrative/legal:</strong> Contracts, institutional registrations, financial planning documents. Saturn's structural energy supports paperwork and formal arrangements.</li>
+        <li><strong>Do this before 19 Aug 2026:</strong> Whatever foundation-work needs doing — do it during Saturn PD. Mercury PD follows (Aug–Oct 2026), which brings Parivartana-yoga activation and intellectual surge but also Rahu-conjunction unpredictability.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 4: UPCOMING DAŚĀ WINDOWS -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. Upcoming Daśā Windows — What Follows</h2>
+
+  <!-- Jupiter AD Sub-period sequence table -->
+  <div class="overflow-x-auto mb-6">
+    <table>
+      <thead><tr><th>Antardaśā</th><th>From</th><th>To</th><th>Planet's Role</th><th>Key Themes</th><th>Intensity</th></tr></thead>
+      <tbody>
+        <tr class="bg-blue-50">
+          <td><strong>Moon AD ← CURRENT</strong></td><td>10 Nov 2025</td><td>12 Mar 2027</td>
+          <td>AK; H6 lord; H12</td>
+          <td>Soul work, emotional processing, service, spiritual deepening</td>
+          <td><span class="badge b-orange">Challenging</span></td>
+        </tr>
+        <tr class="bg-green-50">
+          <td><strong>Mars AD</strong></td><td>12 Mar 2027</td><td>17 Feb 2028</td>
+          <td>H10+H3 lord; Vargottama; H5</td>
+          <td>Career launch, courage, creative breakthrough, Parivartana activation</td>
+          <td><span class="badge b-green">Best of Jupiter MD</span></td>
+        </tr>
+        <tr class="bg-yellow-50">
+          <td><strong>Jupiter AD</strong></td><td>17 Feb 2028</td><td>14 Jul 2030</td>
+          <td>MD lord itself; H2+H11; H8</td>
+          <td>Financial recognition, wisdom fruition, possible inheritance/research award</td>
+          <td><span class="badge b-gold">Culmination</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Next PD: Mercury -->
+  <div class="window-card">
+    <h3 class="text-lg font-bold mb-2">Next PD: Mercury (~19 Aug 2026 – ~3 Oct 2026)</h3>
+    <p class="mb-2"><span class="badge b-green">H5+H8 Lord</span> <span class="badge b-orange">Rahu Conjunct</span> <span class="badge b-purple">H10 Placement</span> <span class="badge b-gold">Parivartana Partner</span></p>
+    <p>After Saturn PD's grounding period, Mercury PD brings an intellectual surge and creative output phase. Mercury as H5+H8 lord in H10 (conjunct Rahu) = career-related communication, technical work peak, and analytical activity. The Mahā Parivartana yoga between Mercury and Mars activates during Mercury's own sub-period — career and intelligence cross-pollinate in a compressed ~6-week burst. Watch for rapid decisions and communication intensity. <strong>Avoid signing major contracts impulsively</strong> — Rahu's conjunction means "more than meets the eye" in proposals received during this window.</p>
+  </div>
+
+  <!-- Mars AD -->
+  <div class="prime-card">
+    <h3 class="text-lg font-bold mb-2">Mars AD (12 Mar 2027 – 17 Feb 2028) — The Launch Window</h3>
+    <p class="mb-2"><span class="badge b-red">H10+H3 Lord</span> <span class="badge b-purple">Vargottama</span> <span class="badge b-blue">H5 Gemini</span> <span class="badge b-green">Parivartana with Mercury</span></p>
+    <p class="mb-3"><strong>5-Layer Mars AD Reading:</strong></p>
+    <div class="layer-box layer-1 mb-2"><strong>Layer 1 — Houses Owned:</strong> H10 (Scorpio — career/public role) and H3 (Aries — courage, communication, siblings, short travels). During Mars AD, the career house and the courage domain are simultaneously activated. This is fundamentally a career and initiative period.</div>
+    <div class="layer-box layer-2 mb-2"><strong>Layer 2 — House Occupied:</strong> H5 (Gemini). Mars in the house of creativity, intelligence, and children. Career (H10 lord) delivers through creative intelligence (H5) — the Mahā Parivartana between Mars and Mercury ensures that the intellectual/creative output from Moon AD's inner work now manifests in career-relevant form.</div>
+    <div class="layer-box layer-3 mb-2"><strong>Layer 3 — Dignity:</strong> Vargottama (D1 Gemini = D9 Gemini) — treated as own-sign strength despite retrograde. During Mars's own AD, Vargottama Mars = peak manifestation of Mars's qualities. Physical energy, courage, initiative, and professional drive are at their most potent in the entire Jupiter MD.</div>
+    <div class="layer-box layer-4 mb-2"><strong>Layer 4 — Aspects:</strong> Retrograde Mars's own AD = the internalized initiative energy finally turns outward. Mars casts its 4th aspect from H5 onto H8 (Jupiter, the MD lord) — the Mars AD energizes Jupiter directly. Additionally, Mars's 7th aspect from H5 falls on H11 (Sagittarius) = gains domain activated. Mars's 8th aspect from H5 falls on H12 (Capricorn) = activates the Vimala VRY stellium.</div>
+    <div class="layer-box layer-5 mb-2"><strong>Layer 5 — D9 Position:</strong> Mars in D9 Gemini H7 (from D9 Sagittarius Lagna). In D9, Mars is Vargottama AND in H7 = the soul-level partner domain. Mars AD carries significant relationship activation at the D9 soul level — this is one reason Mars AD is also a marriage-trigger period (detailed in Section 7).</div>
+
+    <div class="blessing mt-3">
+      <strong>Mars AD Prediction (Mar 2027 – Feb 2028):</strong> This is the most career-active sub-period of the entire Jupiter MD. New projects, roles, or ventures that combine Gayathri's deep research/healing expertise (built during H8 Jupiter MD) with creative intellectual output will launch or gain significant momentum. Physical energy returns after the introspective Moon AD. Courage to pursue long-deferred professional goals is at its maximum. The Mahā Parivartana yoga fully activates — career and intelligence work in perfect synchrony. This is a launch window. Use it.
+    </div>
+  </div>
+
+  <!-- Jupiter AD -->
+  <div class="window-card">
+    <h3 class="text-lg font-bold mb-2">Jupiter AD in Jupiter MD (17 Feb 2028 – 14 Jul 2030) — The Culmination</h3>
+    <p class="mb-2"><span class="badge b-gold">MD Lord's Own AD</span> <span class="badge b-orange">Karmic Double</span> <span class="badge b-blue">H2+H11 in H8</span></p>
+    <p class="mb-3">The MD lord activating its own sub-period creates a karmic doubling: Jupiter's full energy — as H2 lord (wealth, speech), H11 lord (gains, desires fulfilled), and GK in H8 (deep transformation) — runs simultaneously at both MD and AD levels. This is the culmination chapter of the entire 16-year Jupiter MD.</p>
+    <p class="mb-3">The D9 placement of Jupiter in H7 (partnerships, communication) adds a relational and communicative dimension. The 2.5-year Jupiter-Jupiter period (2028–2030) is likely to bring: <strong>financial recognition of the research/healing/transformative work built through the entire Jupiter MD</strong>; possible institutionalization of expertise (formal position, publication, teaching role, healing practice establishment); relationship deepening (partner/spouse if not already in marriage); and the seeds of the Saturn MD's professional identity.</p>
+    <div class="highlight mt-3">
+      <strong>Jupiter-Jupiter window (2028–2030):</strong> This period represents the bridge between the Great Immersion and the Great Activation. What was learned in darkness becomes visible. The hidden channel (H8) delivers its accumulated treasure to the H11 (gains) domain. This is when the "why" of the entire Jupiter MD era becomes clear.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 5: SATURN MD PREVIEW (2030–2049) -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">5. Saturn MD Preview (2030–2049) — The Vimala VRY Activation</h2>
+
+  <div class="spiritual mb-4">
+    <p class="text-lg font-bold">"The greatest chapter of Gayathri's professional and spiritual life begins in July 2030."</p>
+    <p class="mt-2">Saturn as Lagneśa + H12 lord in own-sign (Capricorn) with the Vimala Vipareeta Rāja Yoga: nineteen years under Saturn's rule. Ages 37.5 through 56.5 — the prime professional decades — shaped entirely by the Lagneśa's disciplined, structured, spiritually-oriented energy. What appeared during Jupiter MD as immersion in hidden depths will now emerge as recognized expertise, institutional leadership, and public-facing achievement through spiritual/healing channels.</p>
+  </div>
+
+  <p class="mb-3"><strong>5-Layer Saturn MD Reading:</strong></p>
+  <div class="layer-box layer-1 mb-2"><strong>Layer 1 — Houses Owned:</strong> H1 (Aquarius — self, body, identity, persona) and H12 (Capricorn — mokṣa, spiritual liberation, hidden channels, foreign domains). The 19-year MD activates both the self-domain and the mokṣa-domain simultaneously. This is profoundly identity-shaping at the deepest level.</div>
+  <div class="layer-box layer-2 mb-2"><strong>Layer 2 — House Occupied:</strong> H12 Capricorn (own-sign). The Vimala VRY in full activation. The "loss house" (H12) becomes the source of Saturn MD's achievement — through spiritual channels, foreign connections, institutional behind-the-scenes work, research publications, or healing-center leadership. The achievement pattern is non-conventional: gains come through the very domain that appears to represent withdrawal.</div>
+  <div class="layer-box layer-3 mb-2"><strong>Layer 3 — Dignity:</strong> OWN-SIGN = Saturn MD delivers at maximum potency. The 19-year MD lord is in its absolute strongest placement. This is the chart's master yoga activating its designated MD period. The Vimala VRY promise of "achievement through apparent renunciation" is at its fullest expression.</div>
+  <div class="layer-box layer-4 mb-2"><strong>Layer 4 — Aspects Received:</strong> Mars Retrograde (H5, Vargottama) casts its 8th aspect on H12 — energizing the Saturn MD lord throughout the 19-year period. This dynamic tension between creative initiative (Mars H5) and disciplined withdrawal-achievement (Saturn H12) is the defining creative polarity of Saturn MD: productive creative pressure driving Saturn toward purposeful, structured output.</div>
+  <div class="layer-box layer-5 mb-2"><strong>Layer 5 — D9 Position:</strong> Saturn in D9 Cancer H8 (from D9 Sagittarius Lagna). In the navāṁśa, the Lagneśa sits in H8 = transformation and depth as the soul-level mode even within Saturn MD. The D9 confirmation: even in Saturn's great era of achievement, the method remains depth, research, and transformation — not superficial public performance.</div>
+
+  <!-- Saturn MD Life Picture -->
+  <div class="overflow-x-auto mb-6">
+    <table>
+      <thead><tr><th>Saturn MD Sub-Period</th><th>Approx. Dates</th><th>Key Themes</th><th>Quality</th></tr></thead>
+      <tbody>
+        <tr class="bg-green-50">
+          <td><strong>Saturn–Saturn</strong></td><td>2030–2033</td>
+          <td>Identity reclamation, career reset/launch in spiritual-professional domain, foundational 3-year building phase</td>
+          <td><span class="badge b-blue">Foundation</span></td>
+        </tr>
+        <tr>
+          <td>Saturn–Mercury</td><td>2033–2036</td>
+          <td>Mahā Parivartana yoga activates — Mercury-Mars exchange working through Saturn MD. Intellectual achievements, writing, research publications, communication-based career advancement</td>
+          <td><span class="badge b-green">Intellectual Peak</span></td>
+        </tr>
+        <tr>
+          <td>Saturn–Ketu</td><td>2036–2037</td>
+          <td>Spiritual deepening, past-life karmic release, possible pilgrimage or formal renunciation practices</td>
+          <td><span class="badge b-purple">Spiritual</span></td>
+        </tr>
+        <tr>
+          <td>Saturn–Venus</td><td>2037–2041</td>
+          <td><strong>THE GOLD PERIOD.</strong> Yogakāraka Venus in Saturn MD = the most auspicious sub-period in the chart's entire timeline. Career + spiritual + financial all converge. Diamond therapy most effective here.</td>
+          <td><span class="badge b-gold">Supreme Auspicious</span></td>
+        </tr>
+        <tr>
+          <td>Saturn–Sun</td><td>2041–2042</td>
+          <td>Authority, public recognition, possible institutional leadership. Sun = DK, H7 lord — relationship themes, authority matters.</td>
+          <td><span class="badge b-yellow">Authority</span></td>
+        </tr>
+        <tr>
+          <td>Saturn–Moon</td><td>2042–2044</td>
+          <td>Emotional harvest. AK Moon activation = soul-level career peak. H12 Moon themes: foreign recognition, retreat-center work, spiritual teachings reaching wide audience.</td>
+          <td><span class="badge b-blue">Soul Harvest</span></td>
+        </tr>
+        <tr>
+          <td>Saturn–Mars</td><td>2044–2045</td>
+          <td>Career initiative peak, physical energy. Vargottama Mars + Lagneśa Saturn = maximum professional drive.</td>
+          <td><span class="badge b-red">Career Drive</span></td>
+        </tr>
+        <tr class="bg-yellow-50">
+          <td>Saturn–Rahu</td><td>2045–2048</td>
+          <td>⚠ Next Sade Sati begins near this period (Saturn transiting toward Capricorn ~2047–2050). Prepare spiritual foundations in advance.</td>
+          <td><span class="badge b-orange">Prepare Sade Sati</span></td>
+        </tr>
+        <tr>
+          <td>Saturn–Jupiter</td><td>2048–2049</td>
+          <td>Wisdom synthesis. H2+H11 Jupiter (gains, wealth speech) activated within Saturn MD close. Financial consolidation of the 19-year arc.</td>
+          <td><span class="badge b-gold">Consolidation</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="warn mb-4">
+    <strong>Health Note for Saturn MD:</strong> Saturn rules bones, joints, and the structural framework of the body. The 19-year Saturn MD beginning at age 37.5 means Vāta-type conditions (joints, arthritis, spine, teeth) should be proactively managed through Āyurvedic protocols from 2030 onward. Sesame oil massage (abhyaṅga), calcium-rich diet, regular physical movement, and Saturn's own remedy of service/discipline are both remedial and preventive. Begin Āyurvedic lifestyle consultation in the Jupiter MD's final years (2028–2030) to establish the protocol before Saturn MD begins.
+  </div>
+
+  <div class="blessing">
+    <strong>Saturn MD Life Picture Summary:</strong> Ages 37.5–56.5 represent Gayathri's prime professional and spiritual flowering. The H12 stellium's apparent burden — Moon, Venus, and Saturn all in the "loss house" — becomes the Vimala VRY's greatest gift. What the world perceives as withdrawal or renunciation is actually the channel through which recognition, spiritual authority, financial sustainability, and institutional leadership arrive. The Mystic Achiever archetype completes its arc in Saturn MD. This is the life's masterwork period.
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 6: TRANSIT ANALYSIS — 5-LAYER PROTOCOL -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">6. Transit Analysis — 5-Layer Protocol (June 2026)</h2>
+  <p class="mb-4">Transit analysis uses the 5-layer hierarchy: Saturn (karmic window) → Jupiter (opportunity window) → Rahu/Ketu (karmic catalyst) → Mars (acute trigger) → Mercury/Venus (micro-triggers). All transit effects must be interpreted through the natal house and running daśā.</p>
+
+  <!-- Layer 1: Saturn -->
+  <div class="layer-box layer-1 mb-4">
+    <h3 class="text-lg font-bold mb-2">Layer 1 — Saturn (Karmic Window): Pisces / H2 for Aquarius Lagna</h3>
+    <p class="mb-2"><strong>Saturn transiting H2 (Pisces)</strong> = the financial domain, speech, family, and accumulated resources come under Saturn's disciplined scrutiny. For Aquarius Lagna, Saturn is Lagneśa — its transit of H2 carries extra significance: the native's self-concept and identity are being filtered through the lens of resources and family foundation.</p>
+    <p class="mb-2">Pisces as H2 = spiritual/Jupiterian quality in the financial domain. Saturn in Pisces = a structured, disciplined approach to what is spiritually/emotionally valuable. Financial decisions during this transit benefit from careful, long-view planning rather than speculative action.</p>
+    <p><strong>Sade Sati check:</strong> Moon's natal sign = Capricorn. Saturn in Pisces = 3rd from Capricorn → <span class="text-green-700 font-bold">NOT Sade Sati</span>. From the Moon's perspective, Saturn in the 3rd (Upachaya house) is relatively favorable — courage, communication, and short-travel domains benefit. The worst of Sade Sati is definitively past.</p>
+  </div>
+
+  <!-- Layer 2: Jupiter -->
+  <div class="layer-box layer-2 mb-4">
+    <h3 class="text-lg font-bold mb-2">Layer 2 — Jupiter (Opportunity Window): Taurus / H4 for Aquarius Lagna</h3>
+    <p class="mb-2"><strong>Jupiter transiting H4 (Taurus)</strong> = blessings on the sukha bhāva — the house of home, property, mother, emotional security, vehicles, and domestic happiness. Jupiter in H4 brings expanded comfort and well-being in the domestic domain. Property matters (purchase, renovation, relocation) are favorably aspected.</p>
+    <p class="mb-2">Notably, <strong>natal Ketu is in Taurus H4</strong>. Jupiter transiting over natal Ketu = expansion and wisdom filtering through the past-life release point. This transit can bring sudden clarity about inherited patterns (Ketu = past-life) in the home domain — dissolving ancestral conditioning while simultaneously blessing the home environment.</p>
+    <p class="mb-2"><strong>Jupiter's transit aspects from Taurus (H4):</strong></p>
+    <ul class="list-disc ml-5 mb-2 text-sm">
+      <li>5th aspect from H4 → H8 (Virgo) = Jupiter transit aspects natal Jupiter (MD lord). MD lord receiving Jupiter transit aspect = the entire Jupiter MD period is being activated from outside through transit — beneficial for the MD's themes of research, hidden knowledge, and transformative work.</li>
+      <li>7th aspect from H4 → H10 (Scorpio) = Jupiter transit aspects natal Mercury+Rahu in H10 (career domain). Career house receiving Jupiter's 7th aspect = opportunity energy for career matters, possible expansion or new roles.</li>
+      <li>9th aspect from H4 → H12 (Capricorn) = Jupiter transit aspects the H12 triple stellium (Moon+Venus+Saturn). The H12 stellium — including AK Moon (antardaśā lord) and Saturn (PD lord) — receives Jupiter's expansive, wisdom-giving 9th aspect. This is spiritually significant: the MD lord (Jupiter) in transit blesses the stellium housing both the current AD and PD lords. Grace is flowing into the Moon AD and Saturn PD domains.</li>
+    </ul>
+    <div class="blessing">
+      <strong>Jupiter H4 transit verdict for June 2026:</strong> Domestic peace, property opportunity, mother's welfare, and emotional security are all aspected favorably. The 9th-aspect blessing on the H12 stellium means the difficult Moon AD is receiving Jupiter's protective wisdom gaze. This is the transit that softens the Moon AD's challenges.
+    </div>
+  </div>
+
+  <!-- Layer 3: Rahu/Ketu -->
+  <div class="layer-box layer-3 mb-4">
+    <h3 class="text-lg font-bold mb-2">Layer 3 — Rahu/Ketu (Karmic Catalyst): Rahu in Aquarius H1 / Ketu in Leo H7</h3>
+    <p class="mb-2"><span class="badge b-red">Rahu in Lagna</span> <span class="badge b-purple">Identity Transformation</span> <span class="badge b-orange">Ketu in H7</span></p>
+    <p class="mb-2"><strong>Rahu in H1 (Aquarius — the Lagna itself):</strong> This is a powerful and unsettling transit. Rahu transiting the Lagna brings identity destabilization and simultaneous magnetic expansion. The native is undergoing a fundamental questioning of self-concept, social role, and personal direction. Old definitions of "who I am" are being dissolved and rebuilt. This can feel like restlessness, dissatisfaction with the status quo, or a compelling pull toward reinvention.</p>
+    <p class="mb-2">The positive dimension: Rahu in H1 magnetizes new connections, unusual opportunities, and unexpected breakthroughs in self-presentation. The native may attract people and situations that reflect back a new, expanded identity. Social visibility can increase unexpectedly.</p>
+    <p class="mb-2"><strong>Ketu in H7 (Leo):</strong> The past-life release point active in the relationship domain. Ketu in H7 dissolves relationship attachments that are not karmically aligned. Partnerships and connections that have served their karmic purpose may naturally complete or distance. Existing deep partnerships (including the marriage prospect) are simultaneously purified — Ketu removes the inauthentic layers, leaving only what is genuinely resonant.</p>
+    <p>The Rahu H1 / Ketu H7 axis creates an interesting tension: identity expansion (H1) versus relationship dissolution/deepening (H7). The native is simultaneously becoming more distinctly themselves while their relationship landscape undergoes karmic sorting.</p>
+  </div>
+
+  <!-- Layer 4: Mars -->
+  <div class="layer-box layer-4 mb-4">
+    <h3 class="text-lg font-bold mb-2">Layer 4 — Mars (Acute Trigger): Current Transit (~Taurus-Gemini zone, Jun 2026)</h3>
+    <p class="mb-2">Mars transits every rāśi for approximately 45 days. The critical Mars transit to watch for Gayathri is when <strong>Mars enters Gemini (H5)</strong> — its natal Vargottama position. During this transit (~4–6 weeks), Mars's transit activates the Mahā Parivartana yoga (Mercury-Mars exchange) and the entire H5-H10 creative-career nexus. Career and creative surges tend to cluster around Mars-in-Gemini transits.</p>
+    <p>When Mars transits Scorpio (H10 — career house), it activates the natal Mercury+Rahu conjunction in the career domain, bringing career activity and possible tension/disruption requiring careful navigation (Gandānta Rahu remains sensitive to Mars activation).</p>
+  </div>
+
+  <!-- Layer 5: Micro-triggers -->
+  <div class="layer-box layer-5 mb-4">
+    <h3 class="text-lg font-bold mb-2">Layer 5 — Micro-Triggers: Mercury & Venus</h3>
+    <p class="mb-2"><strong>Mercury transits:</strong> Each time Mercury transits Scorpio (H10, natal position), career activities, communication peaks, and intellectual outputs are triggered. Mercury retrograde periods in Scorpio are particularly significant — they may cause temporary communication disruption but ultimately deepen career-related analysis.</p>
+    <p><strong>Venus transits:</strong> Each time Venus transits Capricorn (H12, Yogakāraka's natal position), there is a monthly blessing on the Yogakāraka's domain — spiritual growth, aesthetic experiences, and subtle financial opportunities. Venus transit over natal Venus (Capricorn H12) = monthly Yogakāraka boost.</p>
+  </div>
+
+  <!-- Transit Convergence Summary -->
+  <div class="golden mt-4">
+    <h3 class="text-lg font-bold mb-2">Transit Convergence Verdict — June 2026</h3>
+    <table class="mt-2">
+      <thead><tr><th>Planet</th><th>Transit House</th><th>Key Effects</th><th>Rating</th></tr></thead>
+      <tbody>
+        <tr><td>Saturn</td><td>H2 (Pisces)</td><td>Financial discipline; identity through resources; NOT Sade Sati</td><td><span class="badge b-blue">Neutral-Favorable</span></td></tr>
+        <tr><td>Jupiter</td><td>H4 (Taurus)</td><td>Domestic blessing; 9th-aspect on H12 stellium; career H10 activation</td><td><span class="badge b-green">Favorable</span></td></tr>
+        <tr><td>Rahu</td><td>H1 (Aquarius)</td><td>Identity transformation; magnetic but unsettling</td><td><span class="badge b-orange">Mixed</span></td></tr>
+        <tr><td>Ketu</td><td>H7 (Leo)</td><td>Relationship karmic sorting; past-life release</td><td><span class="badge b-purple">Karmic</span></td></tr>
+        <tr><td>MD Lord Jupiter</td><td>H4 (same as transit)</td><td>MD lord in transit blesses H8 (itself!), H10, H12</td><td><span class="badge b-gold">Significant</span></td></tr>
+      </tbody>
+    </table>
+    <p class="mt-3"><strong>Overall convergence verdict:</strong> June 2026 is a period of <em>Inner Build</em>. The transit configuration supports deep inner work, domestic stability, and spiritual foundation-laying. It is not a period for aggressive external expansion or public launches. The 2027–2030 window — particularly Mars AD (Mar 2027) when Jupiter transit moves into Gemini (H5, activating Parivartana) — is where the external manifestation will occur. June 2026 is about earning that manifestation silently.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 7: MARRIAGE TIMING — 5-PILLAR CONVERGENCE -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">7. Marriage Timing — 5-Pillar Convergence Analysis</h2>
+  <p class="mb-4">Marriage timing in Jyotisha requires the convergence of multiple indicators: house, lord, kāraka, navāṁśa, and Ārūḍha analysis. Gayathri's chart presents a nuanced marriage signature — the promise is real, but the method is non-linear (befitting H12 orientation and Mūla-nakṣatra DK Sun).</p>
+
+  <!-- 5 Pillars -->
+  <div class="pillar"><strong>Pillar 1 — H7 (Leo):</strong> The 7th house of marriage = Leo. Leo's natural ruler is the Sun. Sun is the DK (Darakāraka — significator of spouse). Sun sits in H11 (Sagittarius, Mūla P4). The spouse arrives through social networks, gains-circles, and shared dharmic/philosophical environments (H11 = gains, elder connections, community). The Sun in Mūla nakṣatra (Ketu-ruled) = marriage path has non-linear, dissolving quality — conventional courtship routes may not apply. Trust the unexpected encounter.</div>
+
+  <div class="pillar"><strong>Pillar 2 — 7th Lord (Sun) Placement:</strong> Sun in H11 Sagittarius / Mūla P4. H11 = desires fulfilled, social networks, gains. The 7th lord activating H11 = marriage desire is fulfilled through social/community circles and shared intellectual/philosophical interests. Mūla's Ketu rulership suggests some delay past conventional marriage age or an unusual path — the spouse may enter through unexpected circumstances.</div>
+
+  <div class="pillar"><strong>Pillar 3 — DK Sun (Darakāraka):</strong> DK Sun in D1 H11 (social/community) and D9 Cancer H8 (transformative/hidden). The D9 placement of the DK in H8 = the marriage will carry transformative, depth-oriented qualities. The spouse (DK qualities: solar, dignified, potentially authoritative or older) brings transformation through the relationship itself. This is a marriage of depth, not of surface compatibility. Cancer H8 DK = emotional intensity and hidden dimensions in the partnership.</div>
+
+  <div class="pillar"><strong>Pillar 4 — Venus (Natural Kāraka):</strong> Venus, the universal significator of marriage, is Yogakāraka (H4+H9 lord) — the most auspicious planet in the chart. However, Venus sits in H12 (surrender/withdrawal domain) and is DEBILITATED in D9 Virgo (with Neechābhaṅga: mitigated but requiring effort). The instruction is clear: marriage arrives through SURRENDER, not through seeking or pursuing. Attempting to force marriage through conventional strategies (matrimonial sites, arranged pressure) runs counter to Venus Yogakāraka H12's orientation. The marriage approaches when the native is deeply engaged in their own inner work — and the partner notices that depth.</div>
+
+  <div class="pillar"><strong>Pillar 5 — UL Cancer (Upapada Lagna):</strong> UL Cancer = spouse carries Cancer qualities — nurturing, home-building, emotionally rich, possibly moody. The partner is someone who creates a home-feeling of warmth and care. 2nd from UL = Leo (Sun's sign) = marriage stability linked to solar energy (authority, light, confidence). DK Sun in D9 Cancer H8 aligns coherently with UL Cancer → this is a strong, internally consistent marriage signature. When it arrives, it will be real and deeply resonant.</div>
+
+  <!-- Marriage Daśā Triggers -->
+  <h3 class="text-xl font-bold mt-6 mb-3">Marriage Daśā Triggers — Activation Windows</h3>
+
+  <div class="overflow-x-auto mb-4">
+    <table>
+      <thead><tr><th>Period</th><th>Dates</th><th>Marriage Activation Mechanism</th><th>Strength</th></tr></thead>
+      <tbody>
+        <tr class="bg-blue-50">
+          <td><strong>Moon AD ← CURRENT</strong></td><td>Nov 2025 – Mar 2027</td>
+          <td>Moon = UL lord (Cancer → Moon rules Cancer = UL sign). UL lord active in AD = primary marriage timing indicator. Soul-level readiness for partnership is at its highest during Moon AD.</td>
+          <td><span class="badge b-blue">PRIMARY TRIGGER ⭐</span></td>
+        </tr>
+        <tr class="bg-green-50">
+          <td><strong>Mars AD</strong></td><td>Mar 2027 – Feb 2028</td>
+          <td>Mars as BK (Bhrātṛkāraka) and Mars Vargottama in D9 H7 (D9 partnership house) = Mars AD activates the D9 relationship domain at soul level. Additionally, Mars's 7th aspect from H5 falls on H11 (Sagittarius) = activates DK Sun's natal house (H11) → marriage channel energized. Mars as H10 lord also activates the A10 (Karma Ārūḍha in Capricorn) which resonates with Venus and Saturn in H12 — partner may be from professional/career sphere.</td>
+          <td><span class="badge b-green">STRONG SECONDARY ⭐</span></td>
+        </tr>
+        <tr>
+          <td>Jupiter AD</td><td>Feb 2028 – Jul 2030</td>
+          <td>Jupiter in D9 H7 (Gemini from Sagittarius Lagna) = MD lord's own sub-period with D9 H7 placement activates relationship consciousness at peak. If marriage hasn't occurred, Jupiter AD in Jupiter MD creates the final Jupiter MD marriage window through wisdom/partnership connection.</td>
+          <td><span class="badge b-yellow">TERTIARY</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Transit support for marriage -->
+  <h3 class="text-lg font-bold mb-2">Transit Support for Marriage (June 2026 – 2027)</h3>
+  <div class="transit-box mb-4">
+    <p class="mb-2"><strong>Jupiter in H4 (Taurus) — 9th aspect on H12 stellium:</strong> Jupiter's 9th aspect from H4 reaches H12 (Capricorn), where Venus Yogakāraka resides. Jupiter's grace-energy on the natural marriage kāraka Venus during the Moon AD (UL lord period) = auspicious blessing on the marriage potential. Jupiter will transit into Gemini (H5) in mid-2026, then proceed forward — each major transit of Jupiter through H5 (Parivartana activation) and eventually H7 (direct transit of marriage house, around 2028–2029) will provide additional timing support.</p>
+    <p class="mb-2"><strong>Ketu in H7 (Leo) — Current Transit:</strong> Ketu is presently transiting the marriage house (H7 Leo), dissolving inauthentic relationship patterns and clearing karmic residue from the partnership domain. The nodes shift approximately every 18 months; as Ketu continues through Leo into late 2026, this karmic sorting completes. After Ketu clears Leo, the H7 domain is purified and ready for Jupiter's eventual direct transit through H7 Leo — which occurs approximately 2029–2030 (Jupiter progresses at roughly one sign per year from its current Taurus position: Gemini 2026–2027, Cancer 2027–2028, Leo 2028–2029, reaching H7 by late 2028–2029 and providing a direct marriage-house transit blessing during the Jupiter AD period).</p>
+    <p><strong>Rahu in H1 (Aquarius):</strong> While identity-disrupting, Rahu in H1 also magnetizes unusual, fated encounters. The native's expanded magnetic presence during this transit can attract the destined partner through unexpected channels — exactly befitting the DK Sun in Mūla (non-linear path) and Venus in H12 (arrives through surrender, not seeking).</p>
+  </div>
+
+  <!-- Marriage Window Assessment -->
+  <div class="prime-card">
+    <h3 class="text-lg font-bold mb-2">Marriage Window Assessment — Honest 5-Pillar Verdict</h3>
+    <p class="mb-2"><strong>PRIMARY WINDOW: Late 2025 – Early 2028</strong> (Moon AD + Mars AD combined period)</p>
+    <ul class="list-disc ml-5 mb-3">
+      <li>Moon AD (UL lord = Cancer's ruler) active: soul-level readiness for partnership at maximum</li>
+      <li>Mars AD following: BK (Bhrātṛkāraka) + D9 H7 Vargottama Mars = soul-level relationship activation; Mars 7th aspect activating DK Sun's natal H11</li>
+      <li>Jupiter's transit through H7 (Leo) around 2029–2030 provides a direct transit blessing on the marriage house during the Jupiter AD period</li>
+    </ul>
+    <p class="mb-2"><strong>Secondary Window: 2028–2030</strong> — Jupiter AD with Jupiter in D9 H7 = MD lord activating D9 relationship house. If not in primary window, Jupiter AD offers a second, depth-oriented marriage opportunity.</p>
+  </div>
+
+  <div class="warn mt-4">
+    <strong>Honest Counsel on Venus Yogakāraka H12:</strong> The most common mistake a native with Venus in H12 makes during marriage timing is either: (a) over-surrendering passively and waiting for marriage to arrive without any engagement with the world, or (b) aggressively pursuing marriage and finding that prospects dissolve mysteriously. The correct orientation: <em>engage deeply in your life's spiritual-professional work</em> — and consciously, gently, remain open to relationship. The partner will recognize the depth they have been seeking. H12 Venus means marriage arrives as a grace — but grace meets preparation. Be present in the social/spiritual environments relevant to your path (research communities, healing circles, spiritual retreats, educational institutes). The partner is likely from one of these domains.
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 8: CAREER TIMING — PEAK WINDOWS -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">8. Career Timing — Peak Windows &amp; Architecture</h2>
+
+  <!-- Career Framework -->
+  <div class="highlight mb-4">
+    <h3 class="text-lg font-bold mb-2">Career Architecture at a Glance</h3>
+    <table>
+      <thead><tr><th>Factor</th><th>Planet/Sign</th><th>House</th><th>Key Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>H10 (Career House)</td><td>Scorpio</td><td>H10</td><td>Mercury+Rahu — research, investigation, occult, technology, depth fields</td></tr>
+        <tr><td>H10 Lord (Mars)</td><td>Gemini (Vargottama)</td><td>H5</td><td>Career delivered through creative intelligence; Parivartana with H10 Mercury</td></tr>
+        <tr><td>A10 (Karma Ārūḍha)</td><td>Capricorn</td><td>H12</td><td>Moon+Venus+Saturn in A10 = career karma carries spiritual/transformative quality</td></tr>
+        <tr><td>D10 Indication</td><td>Mars rules Aries → D10 Lagna Aries (implied)</td><td>—</td><td>Mars Vargottama = D10 Lagna lord at peak strength</td></tr>
+        <tr><td>AL (Lagna Ārūḍha)</td><td>Sagittarius</td><td>—</td><td>Public image: philosophical, teaching-oriented, dharmic</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-4">The career architecture reveals a consistent pattern: success through depth (H10 Scorpio), intelligence (Mercury), unconventional methods (Rahu, Gandānta), and creative-intellectual output (Parivartana with H5 Mars). The A10 in Capricorn with Moon+Venus+Saturn = the career's external face carries the H12 stellium's spiritual/transformative quality. This is a career that <em>looks</em> service-oriented, healing-oriented, or research-oriented from the outside — and that is exactly its authentic expression.</p>
+
+  <!-- Career Periods Table -->
+  <div class="overflow-x-auto mb-6">
+    <table>
+      <thead><tr><th>Period</th><th>Dates</th><th>Career Mode</th><th>Key Actions</th><th>Quality</th></tr></thead>
+      <tbody>
+        <tr class="bg-blue-50">
+          <td><strong>Moon AD ← NOW</strong></td><td>Nov 2025 – Mar 2027</td>
+          <td>Inner career work; strategic planning; research deepening; emotional processing before next career launch</td>
+          <td>Publish internally, document expertise, build professional network quietly, complete certifications</td>
+          <td><span class="badge b-blue">Inner Build</span></td>
+        </tr>
+        <tr class="bg-green-50 font-bold">
+          <td><strong>Mars AD — LAUNCH</strong></td><td>Mar 2027 – Feb 2028</td>
+          <td>Career LAUNCH period. Vargottama Mars as H10 lord in Mars sub-period = Mahā Parivartana fully activates</td>
+          <td>Launch new projects, apply for key roles, initiate research publications, establish professional practice, increase public visibility</td>
+          <td><span class="badge b-green">Peak Launch ⭐</span></td>
+        </tr>
+        <tr class="bg-yellow-50">
+          <td><strong>Jupiter AD</strong></td><td>Feb 2028 – Jul 2030</td>
+          <td>Career recognition through research/wisdom channels. Teaching, publishing, institutionalization of expertise.</td>
+          <td>Teaching roles, book publication, research award, speaking platforms, formal institutional appointment</td>
+          <td><span class="badge b-gold">Recognition</span></td>
+        </tr>
+        <tr>
+          <td>Saturn MD begins</td><td>Jul 2030 +</td>
+          <td>19-year professional peak in healing/spiritual/research/administrative domain. Vimala VRY activation.</td>
+          <td>Institutional leadership, founding practice/center, formal authority in chosen domain</td>
+          <td><span class="badge b-purple">The Summit</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="caution mb-4">
+    <strong>Current Career Caution (Moon AD, to Mar 2027):</strong> Do not attempt to force external career breakthroughs during Moon AD. The AK Moon as H6 lord in H12 = any aggressive external push will likely encounter obstacles, delays, or emotional exhaustion. This is the preparation phase, not the launch phase. The farmer who plants in the wrong season — regardless of effort — harvests less than the farmer who waits. Plant now (research, skill-building, network cultivation, health foundation). Harvest begins March 2027.
+  </div>
+
+  <div class="blessing">
+    <strong>The 2026–2030 Career Arc:</strong> Moon AD = preparation; Saturn PD = foundation-laying; Mercury PD = intellectual surge; Mars AD = launch; Jupiter AD = recognition. These four sequential antardaśās within Jupiter MD create a precise staircase. Each step is necessary. Skipping any step (particularly Moon AD's inner work) weakens the subsequent launch. Trust the staircase.
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 9: SADE SATI RETROSPECTIVE — THE COMPLETED PURIFICATION -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">9. Sade Sati Retrospective — The Completed Purification (2017–2025)</h2>
+
+  <div class="verse mb-4">
+    <p><em>"Tapta-kāñcanam pāvakena viśodhitam;<br>
+    tathā duhkha-pariśuddhir ātmā virajyate."</em></p>
+    <p class="mt-2 text-sm">(As gold purified in fire emerges radiant, so the soul purified through suffering shines with clarity.)</p>
+  </div>
+
+  <p class="mb-4">The Sade Sati — Saturn's 7.5-year transit through the three signs centered on the natal Moon — is the Vedic tradition's most significant long-term karmic purification cycle. For Gayathri, Moon's natal sign is Capricorn; the Sade Sati therefore ran from approximately January 2017 (Saturn entering Sagittarius, 12th from Capricorn) through March 2025 (Saturn leaving Aquarius, 2nd from Capricorn). As of June 2026, Saturn is in Pisces — the cycle is fully, definitively complete.</p>
+
+  <!-- Sade Sati phases -->
+  <div class="sade-phase mb-3">
+    <h3 class="font-bold mb-2">Rising Phase (Jan 26, 2017 – Jan 23, 2020) — Saturn in Sagittarius (H11 for Aquarius Lagna)</h3>
+    <p class="mb-2">Saturn transited H11 (Sagittarius — the gains/fulfillment house) for this 3-year period. For a Dhaniṣṭhā Moon native, this is the 12th from the natal Moon — the Sade Sati's approaching wave. H11 = financial expectations, social connections, dharmic aspirations. Saturn in H11 = financial pressure, dharmic questioning, and the first inklings of the structural purification to come.</p>
+    <p>This period overlapped with the transition from <strong>Rahu MD (ended July 2014) into early Jupiter MD</strong> — already a major life pivot. Jupiter MD beginning + Sade Sati Rising = the new chapter arrived with both promise (Jupiter's 16-year wisdom arc) and immediate challenge (Saturn's approach). Career disruptions, identity questioning, and possibly a first significant spiritual awakening or crisis of meaning are the signatures of this phase.</p>
+    <div class="caution mt-2"><strong>Retrospective validation echo:</strong> "Between 2017 and 2020, did you experience significant questioning of your career direction, life purpose, or dharmic path — possibly accompanied by financial pressure or unexpected changes in your social/professional circle?" This is the Sade Sati Rising + Jupiter MD early-phase pattern.</div>
+  </div>
+
+  <div class="sade-phase mb-3">
+    <h3 class="font-bold mb-2">Peak Phase (Jan 23, 2020 – Jan 17, 2023) — Saturn in Capricorn (OVER Natal Moon in H12)</h3>
+    <p class="mb-2">The most intense Sade Sati phase: Saturn transiting natal Moon (29°55' Capricorn) directly, and simultaneously transiting Venus (28°39' Capricorn) and natal Saturn (22°11' Capricorn). The entire H12 triple stellium — Moon, Venus, Saturn — received Saturn's direct transit. This is a once-in-30-year event of extraordinary karmic intensity.</p>
+    <p class="mb-2">The COVID-19 pandemic (2020) coincided exactly with this peak. Isolation, global structural upheaval, and profound confrontation with impermanence were the collective backdrop against which Gayathri's personal stellium was being activated. The H12 themes — isolation, withdrawal, foreign/pandemic restrictions, emotional processing, karmic surrender — were lived literally and symbolically.</p>
+    <p class="mb-2"><strong>Significant mitigation factor:</strong> Saturn was in its OWN sign Capricorn during the transit of the natal Moon. The Lagneśa Saturn, while activating the H12 stellium under maximum pressure, was also "at home" in Capricorn — the purification was intense but efficient, targeted, and ultimately contained within Saturn's own structured framework. This prevented the kind of chaotic dissolution that would have resulted from a weaker planet's transit. Saturn knows what it is doing, even when it is difficult.</p>
+    <div class="warn mt-2"><strong>Retrospective validation echo:</strong> "Were 2020–2023 the most challenging years of your adult life — involving major disruptions to career, relationships, residence, or personal identity, but also moments of profound insight or spiritual depth that you couldn't have reached any other way?" If yes: the H12 triple stellium Sade Sati Peak pattern is fully confirmed, and the chart's accuracy is at its highest.</div>
+  </div>
+
+  <div class="sade-phase mb-3">
+    <h3 class="font-bold mb-2">Setting Phase (Jan 17, 2023 – Mar 29, 2025) — Saturn in Aquarius (H1 — the Lagna)</h3>
+    <p class="mb-2">Saturn transiting the Lagna (Aquarius) itself — the 2nd from natal Moon. This was the resolution phase: the structures that had been dissolved during the Peak were now being rebuilt. Saturn in Aquarius = Lagneśa transiting its own sign (Aquarius is Saturn's other sign) = profound self-definition and identity reformation.</p>
+    <p>The native's sense of self, professional identity, and relationship with the world underwent its final Sade Sati adjustment during this 2-year setting phase. Financial adjustments, new professional foundations, and a clarified sense of direction emerged from the ashes of the Peak phase's dissolution. The Setting phase of Sade Sati often delivers its gifts quietly — the exhausted traveler finally reaches the other side of the mountain range and discovers the valley that was invisible from the summit.</p>
+  </div>
+
+  <!-- What was achieved -->
+  <div class="blessing mt-4">
+    <h3 class="text-lg font-bold mb-3">What Was Achieved Through the Sade Sati (2017–2025)</h3>
+    <p class="mb-2">The Sade Sati does not merely test — it purifies and deposits. Seven and a half years of Saturn's focused transit through the H12 triple stellium has achieved the following at the soul level:</p>
+    <ul class="list-disc ml-5">
+      <li><strong>Moon (AK) purified:</strong> The Ātmakāraka's emotional patterns (H6 lord — service obligations, obstacle management, health) have been processed through direct experience. The emotional intelligence available post-Sade Sati exceeds what was possible before. The native now carries a tested AK Moon: knowing, rather than merely sensitive.</li>
+      <li><strong>Venus (Yogakāraka) seasoned:</strong> The Yogakāraka in H12 teaches fortune through surrender — and the Sade Sati delivered that lesson by direct experience. The refined aesthetic capacity, artistic sensitivity, and ability to receive grace rather than grab at it are now integrated rather than theoretical.</li>
+      <li><strong>Saturn (Vimala VRY) proven:</strong> The Lagneśa's Vimala Vipareeta Rāja Yoga was tested under the maximum possible pressure — Saturn's own transit through the native's natal Saturn, in H12. The yoga held. What appeared as loss (career disruption, isolation, health challenges) has been channelling toward eventual liberation and achievement through spiritual channels. The Vimala VRY is no longer a theoretical yoga; it is a lived experience.</li>
+    </ul>
+    <p class="mt-3"><strong>The gift of the completed Sade Sati:</strong> Gayathri enters the second half of Jupiter MD (2026–2030) carrying a fired, tested, and purified H12 stellium. The planets that burden H12 in conventional analysis — Moon, Venus, Saturn — have been refined in Saturn's kiln. What emerges: emotional maturity (Moon), refined artistic/spiritual capacity (Venus), and structural discipline (Saturn) — all channelled through the H12's mokṣa dimension. This is the foundation of Saturn MD's achievement. It was earned through the crucible of Sade Sati.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 10: CLOSING SYNTHESIS -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">10. Closing Synthesis — The Bridge Between Immersion and Activation</h2>
+
+  <div class="spiritual mb-4">
+    <p class="text-lg font-bold text-center mb-3">2026–2030: The Bridge Between the Great Immersion and the Great Activation</p>
+    <p>Gayathri stands at a particular threshold in June 2026. The Sade Sati is complete — the purification is done. The Jupiter MD continues for four more years, its final arc now entering the harvest phase after the long cultivation of the 2014–2026 inner journey. Saturn MD's 19-year flowering awaits from July 2030.</p>
+  </div>
+
+  <p class="mb-4">The next four years are not a waiting period. They are the bridge that must be consciously and purposefully constructed. The Moon AD (to Mar 2027) calls for inner work, spiritual deepening, and quiet preparation. Saturn PD (Jun–Aug 2026) provides the Lagneśa's grounding clarity for foundation-building. Mercury PD (Aug–Oct 2026) will ignite intellectual output. Mars AD (Mar 2027 – Feb 2028) will be the launch window — career, relationship, and public identity all reaching their Jupiter MD peak simultaneously. Jupiter AD (Feb 2028 – Jul 2030) will consolidate those launches into recognized, sustainable fruition.</p>
+
+  <div class="overflow-x-auto mb-6">
+    <table>
+      <thead><tr><th>Period</th><th>Dates</th><th>Primary Task</th><th>Key Action</th></tr></thead>
+      <tbody>
+        <tr><td>Now — Saturn PD end</td><td>Jun – 19 Aug 2026</td><td>Foundation-laying</td><td>Health protocols, professional planning, spiritual commitments</td></tr>
+        <tr><td>Mercury PD</td><td>19 Aug – ~3 Oct 2026</td><td>Intellectual surge</td><td>Write, research, communicate expertise; careful of Rahu-conjunction speed</td></tr>
+        <tr><td>Moon AD continued</td><td>Oct 2026 – Mar 2027</td><td>Inner harvest</td><td>Spiritual practice, emotional processing, relationship openness</td></tr>
+        <tr class="bg-green-50 font-bold"><td>MARS AD — Launch</td><td>Mar 2027 – Feb 2028</td><td>External activation</td><td>Career launch, relationship formation, creative output, public visibility</td></tr>
+        <tr class="bg-yellow-50"><td>Jupiter AD — Recognition</td><td>Feb 2028 – Jul 2030</td><td>Consolidation</td><td>Institutionalize expertise, deepen partnerships, prepare Saturn MD foundation</td></tr>
+        <tr class="bg-blue-50 font-bold"><td>SATURN MD begins</td><td>14 Jul 2030</td><td>The Great Activation</td><td>19-year professional and spiritual summit: Vimala VRY in full expression</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="golden mb-6">
+    <h3 class="text-lg font-bold mb-2">The Astrologer's Core Message for Gayathri at June 2026</h3>
+    <p class="mb-2">You are not behind schedule. You are not missing your moment. Every apparent setback of the 2017–2025 Sade Sati era was precisely calibrated — the H12 triple stellium that carries your Yogakāraka, your Lagneśa, and your Ātmakāraka needed to be purified before it could be deployed at full power.</p>
+    <p class="mb-2">The chart's deepest structure — Vimala Vipareeta Rāja Yoga — does not deliver its gift early or easily. It delivers it completely, in the right season, through the right channel. That season is approaching: Mars AD from March 2027 begins the harvest, and Saturn MD from July 2030 begins the summit.</p>
+    <p><strong>The instruction for today:</strong> Honor the Moon AD's call to inner work. Use Saturn PD's window (before 19 Aug 2026) to build foundations. Do not be deceived by the apparent quietness of this moment — it is the calm before the harvest's noise. The Dhaniṣṭhā nakṣatra's gift of rhythm and timing is available to you: trust the cosmic beat, plant in the right season, and the Vasus (the eight elemental deities of Dhaniṣṭhā) will ensure the abundance arrives.</p>
+  </div>
+
+  <!-- Closing śloka -->
+  <div class="verse text-center">
+    <p><em>"Kālaḥ sṛjati bhūtāni kālaḥ saṁharate prajāḥ;<br>
+    kālaḥ suptaṣu jāgarti, kālo hi duratikramaḥ."</em><br>
+    — <strong>Mahābhārata, Āraṇyaka Parva</strong></p>
+    <p class="mt-3 text-sm">(Time creates all beings; Time withdraws all creatures; Time remains awake when all are asleep — verily, Time is insurpassable. Work with Time, not against it — and even the most burdened chart becomes the vehicle of liberation.)</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- NAVIGATION -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-6 text-center">
+  <div class="bg-gray-100 rounded-lg p-4">
+    <p class="text-sm text-gray-500 mb-2">Gayathri's Complete Jyotisha Analysis — 5-Part Series</p>
+    <div class="flex flex-wrap justify-center gap-2 text-sm">
+      <span class="badge b-blue">Part 1: D1 Foundation</span>
+      <span class="badge b-blue">Part 2: D2–D10 Vargas</span>
+      <span class="badge b-blue">Part 3: Karmic Vargas</span>
+      <span class="badge b-gold">Part 4: Daśā · Transits ← HERE</span>
+      <span class="badge b-green">Part 5: Forecast · Remedies</span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center text-xs text-gray-400 py-6 border-t border-gray-200 mt-6">
+  <p><strong>Gayathri — Jyotisha Part 4 of 5: Daśā, Bhukti, Transits &amp; Life Timing</strong></p>
+  <p class="mt-1">Aquarius Lagna | Dhaniṣṭhā P2 Moon | Jupiter MD (2014–2030) | Generated: June 7, 2026</p>
+  <p class="mt-1">Engine: Vimśottarī Daśā (Lahiri Ayanāṁśa, Mean Nodes, Whole-Sign Houses)</p>
+  <p class="mt-2 italic">This reading is prepared for the native's personal reflection and spiritual guidance. It is not a substitute for professional counsel in medical, legal, or financial matters. Jyotisha illuminates the karmic map — the journey is always the native's free will.</p>
+  <p class="mt-2"><em>Śubham bhavatu — May it be auspicious. Oṁ Tat Sat.</em></p>
+</footer>
+
+</main>
+</body>
+</html>

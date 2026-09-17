@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Sai Nikita Part 3: D12 to D60 [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+.internal-note{background:#fef9c3;border-left:4px solid #ca8a04;padding:1rem;margin:0.5rem 0;font-size:0.9rem}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-low{background:#fecaca;color:#991b1b;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 3 of 5: D12-D60 (Practitioner Reference)</h1>
+  <p class="text-xl font-semibold mt-2" style="color:var(--wm-blue)">Itta Sai Nikita — Karmic Depth Verification</p>
+</header>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. D60 Methodology Caveat (Important)</h2>
+  <div class="internal-note">
+    <p>The <code>d60_scheme()</code> function in scripts/compute_nikita.py (cloned from compute_raghunandan.py/compute_sharan.py) uses the documented "BPHS shortcut": <code>D60_sign = (natal_sign-1 + portion) % 12 + 1</code>, where portion = floor(deg_in_sign / 0.5) + 1. This gives a SIGN-LEVEL result only. It does NOT implement the full classical Ṣaṣṭyāṁśa deity/lord table. Confidence in the D60 <em>sign</em> result: <span class="conf-med">MEDIUM-HIGH</span> (arithmetic correct per documented shortcut, cross-checked by hand for Sun and Moon specifically). Confidence in deeper D60 deity-level interpretation: <span class="conf-low">LOW / NOT ATTEMPTED</span> — the shareable copy correctly hedges this with the italicized methodology note in §6.</p>
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Repeated Sun-Debilitated-Libra Pattern — Verification</h2>
+  <div class="debug mb-4">
+D1  Sun: Sagittarius, deg_in_sign=4.5872 -> neutral (not debilitated in D1 itself; the D1 finding is the ASPECT-BASED Pitru Dosha, not a Sun debilitation)<br>
+D40 Sun: portion=7 -> Libra -> debilitated<br>
+D60 Sun: portion=10 -> Libra -> debilitated<br>
+<br>
+Cross-check: D40 uses odd/even-sign-from-Aries-or-Libra scheme (d40_scheme: Sagittarius=odd sign -> base=Aries(index0), portion=7 -> ((0+6)%12)+1=7=Libra).
+D60 uses portion=int(4.5872/0.5)+1=10; sign index for Sagittarius=9, D60_sign=((9-1+10)%12)+1=(18%12)+1=6+1=7=Libra. Both independently land on Libra. Verified by manual recomputation.<br>
+<br>
+IMPORTANT DISTINCTION for shareable copy accuracy: the D1 finding is NOT "Sun debilitated" (Sun is neutral in D1 Sagittarius) --
+it is the DOUBLE SPECIAL-ASPECT finding (Saturn 10th-aspect + Rahu 5th-aspect landing on Sun's house). The shareable Part 3 copy
+correctly frames the D40/D60 Sun debilitations as independent, ADDITIONAL confirmations of the same father-axis theme, not as
+"the same affliction repeating" -- these are two different classes of affliction (aspect-based in D1, dignity-based in D40/D60)
+converging on the same thematic domain. This distinction matters for intellectual honesty and was checked carefully before writing
+the shareable claim "third independent echo."
+  </div>
+  <p class="text-sm">Confidence: <span class="conf-high">HIGH</span> that this is a genuine, independently-arising thematic convergence rather than a restated single fact — the three findings (D1 aspect, D40 dignity, D60 dignity) use three structurally unrelated computation methods, so their thematic agreement (all pointing at father/authority/Sun) is meaningful even though they are not literally "the same fact three times."</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Ishta Devata — Confidence Breakdown</h2>
+  <p class="mb-3 text-sm">2-of-4 method convergence on Mars/Hanuman is <span class="conf-high">HIGH confidence</span> as a structural finding — both are directly computed, not inferred (9th lord from Lagna = Mars, exalted; 9th lord from Karakamsha = Mars, exalted, because Karakamsha sign (Pisces) happens to equal the D1 Lagna sign (Pisces) exactly, making these two methods mathematically non-independent in this specific chart — worth flagging honestly rather than presenting as two fully separate confirmations). <strong>Correction applied to shareable copy language:</strong> the two 9th-lord methods here are correlated, not independent, since Karakamsha=D1 Lagna sign. The shareable text was reviewed to ensure it doesn't overclaim "four independent methods" — it accurately says "two of four" and notes the Karakamsha/Lagna coincidence as a separate, honestly-labeled reinforcing signal rather than folding it silently into the convergence count.</p>
+  <p class="mb-3 text-sm">Mars's classical deity mapping (Hanuman/Kartikeya) is <span class="conf-med">MEDIUM confidence</span> as a choice between two valid traditions — Hanuman was selected as primary per the more widespread contemporary devotional convention (Tuesday Hanuman worship) and because it thematically resonates with the "strength held in reserve" motif already established via Lagna Nakshatra deity Ahirbudhnya (§10 of Part 1) — this is an intentional narrative coherence choice, disclosed here, not a forced or arbitrary pick.</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. Upapada — Formula Conflict, Restated for Part 3 Context</h2>
+  <p class="mb-3 text-sm">Same standing conflict as documented in Validation.md §13 and flagged again here for Part 3 continuity: canonical=Aries (RC-015 <code>computed_with_conflict</code>), guide-compatible=Aquarius. No new information here — restating per AGENTS.md requirement that conflicts be surfaced at every point of use, not just once in the Validation doc.</p>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>Companion shareable file: Itta_Sai_Nikita_Part3_D12_to_D60_Karmic.html</p>
+</footer>
+
+</main></body></html>

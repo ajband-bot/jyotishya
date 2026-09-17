@@ -1,0 +1,26 @@
+<section class="narrative-section yoga-section">
+  <h2>Yogas Identified</h2>
+  {% if records %}
+  <ul class="yoga-list">
+    {% for evaluation in records %}
+    <li class="rule-evidence" data-rule-id="{{ evaluation.rule_id }}" data-quality="{{ evaluation.quality }}">
+      <strong>{{ evaluation.title }}</strong>
+      {% set payload = evaluation.outputs[0].payload %}
+      {% if payload.get("effect") %}
+      <p>{{ payload.get("effect") }}</p>
+      {% elif payload.get("yoga") %}
+      <p>Yoga flag: {{ payload.get("yoga") }}</p>
+      {% endif %}
+      <p class="evidence-meta">
+        <span class="source-tier">source tier {{ evaluation.source_tier }}</span>
+        &middot; <span class="confidence">confidence: {{ evaluation.confidence }}</span>
+        &middot; <span class="quality">quality: {{ evaluation.quality }}</span>
+        &middot; <span class="rule-id">{{ evaluation.rule_id }}</span>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="narrative-empty">No yoga rules matched for this chart across the compiled registry -- see gap report (yoga rule content is still thin: build_plan.md Phase 4 is where the full 50+ yoga set gets compiled).</p>
+  {% endif %}
+</section>

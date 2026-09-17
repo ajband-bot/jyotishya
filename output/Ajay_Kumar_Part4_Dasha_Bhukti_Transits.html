@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ajay Kumar — Jyotish Part 4: Dasha · Bhukti · Transits</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-green:#2a8703;--wm-gray:#374151;--wm-light:#f8fafc}
+  body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+  .highlight{background:#fffbeb;border-left:4px solid var(--wm-gold);padding:1rem}
+  .verse{background:#f0f4ff;border-left:4px solid var(--wm-blue);padding:1rem;font-style:italic}
+  .warn{background:#fef2f2;border-left:4px solid var(--wm-red);padding:1rem}
+  .blessing{background:#f0fdf4;border-left:4px solid var(--wm-green);padding:1rem}
+  .transit{background:#f5f3ff;border-left:4px solid #7c3aed;padding:1rem}
+  .spiritual{background:#faf5ff;border-left:4px solid #7c3aed;padding:1rem}
+  .caution{background:#fffbeb;border-left:4px solid #d97706;padding:1rem}
+  .danger{background:#fef2f2;border-left:4px solid #dc2626;padding:1rem}
+  .golden{background:#fefce8;border-left:4px solid #ca8a04;padding:1rem}
+  table{border-collapse:collapse;width:100%}
+  th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+  td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+  tr:hover{background:#f1f5f9}
+  h1{color:var(--wm-blue)} h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+  h3{color:#1e3a5f} h4{color:#374151}
+  .badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+  .b-green{background:#dcfce7;color:#166534} .b-yellow{background:#fef3c7;color:#92400e}
+  .b-red{background:#fecaca;color:#991b1b} .b-blue{background:#dbeafe;color:#1e40af}
+  .b-purple{background:#ede9fe;color:#5b21b6} .b-gold{background:#fef3c7;color:#78350f}
+  .b-orange{background:#ffedd5;color:#9a3412}
+  .timeline-bar{height:28px;border-radius:4px;display:flex;align-items:center;padding:0 8px;font-size:0.75rem;font-weight:600;color:white;margin:2px 0}
+  .bar-sun{background:linear-gradient(90deg,#f59e0b,#d97706)} .bar-moon{background:linear-gradient(90deg,#93c5fd,#3b82f6)}
+  .bar-mars{background:linear-gradient(90deg,#ef4444,#b91c1c)} .bar-rahu{background:linear-gradient(90deg,#6366f1,#4338ca)}
+  .bar-jupiter{background:linear-gradient(90deg,#fbbf24,#f59e0b)} .bar-saturn{background:linear-gradient(90deg,#6b7280,#374151)}
+  .bar-mercury{background:linear-gradient(90deg,#34d399,#059669)} .bar-ketu{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+  .bar-venus{background:linear-gradient(90deg,#f472b6,#db2777)}
+  .layer-box{border:2px solid;border-radius:8px;padding:1rem;margin-bottom:0.75rem}
+  .layer-1{border-color:#1e40af;background:#eff6ff} .layer-2{border-color:#065f46;background:#ecfdf5}
+  .layer-3{border-color:#92400e;background:#fffbeb} .layer-4{border-color:#7c3aed;background:#f5f3ff}
+  .layer-5{border-color:#9d174d;background:#fdf2f8}
+  .sade-sati-phase{border:2px dashed #6b7280;border-radius:8px;padding:1rem;background:#f9fafb}
+</style>
+</head>
+<body class="min-h-screen">
+
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- HEADER -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<header class="text-center mb-10">
+  <p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Bandlapalli Ajay Kumar | 31 Dec 1987, 04:15 IST | Kalyandurg, AP</p>
+  <h1 class="text-3xl font-bold mb-2">Part 4 of 5 — Dasha, Bhukti, Transits, and the Timing Engine</h1>
+  <p class="text-lg text-gray-500">When do the chart's promises ripen? A 50-year scholar's reading of the temporal architecture.</p>
+  <div class="mt-4 verse">
+    <p>"Dasha cha gocharam chaiva ubhayoh phala-nishchayah;<br>
+    naika-paksha-balena cha, milita-balena nishchitam."<br>
+    — <strong>BPHS Adhyaya 53, Dasha-phala-prakarana</strong></p>
+    <p class="mt-2 text-sm">(The result is determined by dasha and transit <em>together</em> — not by one wing alone, but by their combined strength.)</p>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- CURRENT DASHA STACK AT A GLANCE -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">Where You Stand — 7 June 2026</h2>
+  <div class="highlight mb-4">
+    <table>
+      <thead><tr><th>Layer</th><th>Lord</th><th>Sign / House</th><th>Window</th><th>Functional Role</th></tr></thead>
+      <tbody>
+        <tr class="bg-indigo-50"><td><strong>Mahadasha</strong></td><td><strong>Rahu</strong></td><td>Pisces / H5</td><td>28 May 2010 &rarr; 27 May 2028</td><td>Co-ruler H4 (Aquarius); occupies H5</td></tr>
+        <tr class="bg-blue-50"><td><strong>Antardasha</strong></td><td><strong>Moon</strong></td><td>Aries / H6</td><td>04 Nov 2025 &rarr; 05 May 2027</td><td>H9 lord (Cancer) = bhagya; Atmakaraka</td></tr>
+        <tr class="bg-yellow-50"><td><strong>Pratyantardasha</strong></td><td><strong>Jupiter</strong></td><td>Pisces / H5 (own-sign)</td><td>11 Apr 2026 &rarr; 23 Jun 2026</td><td>H2+H5 lord = wealth + intellect</td></tr>
+        <tr class="bg-gray-100"><td>Sade Sati</td><td>Phase 1</td><td>Saturn in Pisces (12th from Moon)</td><td>Mar 2025 &rarr; mid 2027</td><td>Emotional purification wave</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-sm text-gray-500">The Rahu Mahadasha is in its <strong>final 24 months</strong>. This is the <em>sandhya-kala</em> (twilight phase) — the harvest-end of an 18-year arc and the seeding ground for the Jupiter Mahadasha that follows. Decisions made now determine the platform on which the next 16 years will build.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 1: LIFE-MAPPING — PAST DASHA RETROSPECTIVE -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Vimshottari Mahadasha Life-Map</h2>
+  <p class="mb-4">Moon in Krittika Pada 1 (Sun's nakshatra) at birth determines the starting dasha. Sun Mahadasha began with approximately 5.41 years remaining. The following timeline maps the planetary periods across the full 120-year Vimshottari cycle, with life-phase correlations.</p>
+
+  <!-- Visual Timeline Bars -->
+  <div class="overflow-x-auto mb-6">
+    <div class="timeline-bar bar-sun" style="width:4.5%">Sun</div>
+    <div class="timeline-bar bar-moon" style="width:8.3%">Moon</div>
+    <div class="timeline-bar bar-mars" style="width:5.8%">Mars</div>
+    <div class="timeline-bar bar-rahu" style="width:15%"><strong>RAHU (NOW)</strong></div>
+    <div class="timeline-bar bar-jupiter" style="width:13.3%">Jupiter</div>
+    <div class="timeline-bar bar-saturn" style="width:15.8%">Saturn</div>
+    <div class="timeline-bar bar-mercury" style="width:14.2%">Mercury</div>
+    <div class="timeline-bar bar-ketu" style="width:5.8%">Ketu</div>
+    <div class="timeline-bar bar-venus" style="width:16.7%">Venus</div>
+  </div>
+
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>#</th><th>Mahadasha</th><th>Period</th><th>Ages</th><th>Natal Position</th><th>Life Phase &amp; Expected Themes</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>1</td><td><strong>Sun</strong></td>
+        <td>Dec 1987 &ndash; May 1993</td><td>0&ndash;5.5</td>
+        <td>H2 Sagittarius, Purvashadha P1 <span class="badge b-yellow">H10 lord</span></td>
+        <td>Early formation. H10 lord period at birth = father's professional life shapes environment. Sun in H2 (Dhanus) = family wealth context, speech development under Jupiter's sign-lordship. Purvashadha's deity Apas (waters) = emotional nourishment in early years. Career seeds planted unconsciously through family's dharmic orientation.</td>
+        <td><span class="badge b-yellow">Mixed</span></td>
+      </tr>
+      <tr>
+        <td>2</td><td><strong>Moon</strong></td>
+        <td>May 1993 &ndash; May 2003</td><td>5.5&ndash;15.5</td>
+        <td>H6 Aries, Krittika P1 <span class="badge b-blue">H9 lord, AK</span></td>
+        <td>School years, formative education. H9 lord in H6 = fortune arrives through service and hardship. The Atmakaraka running its own dasha = the soul's lesson taught early: <em>effort precedes grace</em>. Krittika's Agni (fire deity) = intense emotional development, possible childhood health sensitivities, and fierce inner determination forged through adversity. Mother's influence paramount (Moon = matru-karaka). Possible family hardships shape resilience.</td>
+        <td><span class="badge b-yellow">Formative</span></td>
+      </tr>
+      <tr class="bg-green-50">
+        <td>3</td><td><strong>Mars</strong></td>
+        <td>May 2003 &ndash; May 2010</td><td>15.5&ndash;22.5</td>
+        <td>H1 Scorpio (own-sign) <span class="badge b-green">LAGNESHA + Ruchaka</span></td>
+        <td><strong>THE IDENTITY PERIOD.</strong> Lagnesha dasha = tremendous personal growth, physical vitality, self-assertion. College and early career years. Ruchaka Yoga fully activates &mdash; athletic build, courage, competitive success. Mars own-sign in H1 = defining who you are against the world. As H6 co-lord = overcoming obstacles through sheer will. The period that forged the adult identity, gave physical confidence, and set career direction. This was your "I arrived" era.</td>
+        <td><span class="badge b-green">EXCELLENT</span></td>
+      </tr>
+      <tr class="bg-indigo-50">
+        <td><strong>4</strong></td><td><strong>Rahu</strong></td>
+        <td>May 2010 &ndash; May 2028</td><td>22.5&ndash;40.5</td>
+        <td>H5 Pisces, Uttara Bhadrapada P1 <span class="badge b-purple">Conjunct Jupiter own-sign</span></td>
+        <td><strong>THE GREAT TRANSFORMER (CURRENT).</strong> 18-year arc of unconventional growth. Rahu in H5 = technology, innovation, foreign connections, speculative intellect. Conjunct Jupiter in own-sign = Guru Chandala with Jupiter dominant &mdash; the "sacred disruption" that bridges modern technology with traditional wisdom. Cross-cultural exposure, rapid intellectual leaps in non-traditional fields. Each antardasha has brought distinct chapters: early career building (Rahu-Rahu), wisdom encounters (Rahu-Jupiter), structural trials (Rahu-Saturn), communication expansions (Rahu-Mercury), sudden shifts (Rahu-Ketu), relationship depth (Rahu-Venus), authority moments (Rahu-Sun), and now emotional/bhagya activation (Rahu-Moon).</td>
+        <td><span class="badge b-purple">TRANSFORMATIVE</span></td>
+      </tr>
+      <tr class="bg-yellow-50">
+        <td>5</td><td><strong>Jupiter</strong></td>
+        <td>May 2028 &ndash; May 2044</td><td>40.5&ndash;56.5</td>
+        <td>H5 Pisces (own-sign), Revati P3 <span class="badge b-green">H2+H5 lord, Ultimate Dispositor</span></td>
+        <td><strong>THE GOLDEN ERA.</strong> Jupiter as H2+H5 lord in own-sign H5, as the chart's ultimate dispositor &mdash; ALL planetary energies channel through Jupiter. This 16-year period is predicted to be the <em>finest</em> of the lifetime. Career peak, wealth accumulation (H2), intellectual flowering (H5), children's milestones, spiritual deepening. Jupiter's Revati nakshatra (Pushan deity = the shepherd) = guiding others while being guided by grace. This is the platform everything before it has been building toward.</td>
+        <td><span class="badge b-green">THE PEAK</span></td>
+      </tr>
+      <tr class="bg-red-50">
+        <td>6</td><td><strong>Saturn</strong></td>
+        <td>May 2044 &ndash; May 2063</td><td>56.5&ndash;75.5</td>
+        <td>H2 Sagittarius, Purvashadha P4 <span class="badge b-red">Combust + D9 Debilitated + Gandanta</span></td>
+        <td><strong>THE TESTING ERA.</strong> Saturn as H3+H4 lord is a functional malefic for Scorpio lagna. Combust in D1 = weakened delivery of its promises. Debilitated in D9 (Aries) = soul-level challenge in partnerships, dharmic commitments. Gandanta position = karmic destabilization of H3 (siblings, courage, communication) and H4 (home, mother, inner peace) themes. This 19-year period demands preparation during Jupiter MD: build financial reserves, secure property, strengthen family bonds. <em>Not a disaster, but a sustained exam.</em></td>
+        <td><span class="badge b-red">CHALLENGING</span></td>
+      </tr>
+      <tr>
+        <td>7</td><td><strong>Mercury</strong></td>
+        <td>May 2063 &ndash; May 2080</td><td>75.5&ndash;92.5</td>
+        <td>H3 Capricorn, Shravana P3 <span class="badge b-yellow">H8+H11 lord</span></td>
+        <td>Mercury as H8+H11 lord is functionally malefic. Mixed period: H11 brings gains through networks; H8 brings transformations, occult interest, longevity challenges. Mercury in Shravana = listening-wisdom in elder years. Teaching and mentoring remain active.</td>
+        <td><span class="badge b-yellow">Mixed</span></td>
+      </tr>
+      <tr>
+        <td>8</td><td><strong>Ketu</strong></td>
+        <td>May 2080 &ndash; May 2087</td><td>92.5&ndash;99.5</td>
+        <td>H11 Virgo, Chitra P2</td>
+        <td>Spiritual deepening, detachment from worldly pursuits, moksha-orientation. Ketu in H11 = liberation from desires. Inner contemplation era.</td>
+        <td><span class="badge b-purple">Spiritual</span></td>
+      </tr>
+      <tr>
+        <td>9</td><td><strong>Venus</strong></td>
+        <td>May 2087 &ndash; May 2107</td><td>99.5&ndash;119.5</td>
+        <td>H3 Capricorn, Shravana P3 <span class="badge b-orange">H7+H12 lord</span></td>
+        <td>Venus as H7+H12 lord = primary maraka + vyaya. At Pushkara Bhaga = protected, but the period carries natural conclusion energy. If still embodied, comfort and ease.</td>
+        <td><span class="badge b-yellow">Completion</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="verse mt-6">
+    <p>"Dasha-natha grahasya sthiti-bala-vashah kala-phalam udbhavati."<br>
+    — <strong>Brihat Parashara Hora Shastra, Adhyaya 46</strong></p>
+    <p class="mt-1 text-sm">The fruit of time arises according to the strength and placement of the dasha lord.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 2: RAHU MD ANTARDASHA MAP -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Rahu Mahadasha — Complete Antardasha Map (2010&ndash;2028)</h2>
+  <p class="mb-4">Each antardasha within the 18-year Rahu period carries a distinct karmic theme. The interaction between Rahu (H5 Pisces, innovation-amplifier) and each sub-lord determines the chapter's flavour.</p>
+
+  <div class="overflow-x-auto mb-6">
+  <table>
+    <thead><tr><th>AD Planet</th><th>Period</th><th>Duration</th><th>AD Lord's Position</th><th>Theme</th><th>Rating</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Rahu-Rahu</td><td>May 2010 &ndash; Feb 2013</td><td>2.7 yrs</td>
+        <td>H5 Pisces (self-activating)</td>
+        <td>Career launch, technology immersion, foreign exposure begins. Rahu's own AD = maximum amplification of H5 themes. Sudden opportunities, unconventional paths chosen.</td>
+        <td><span class="badge b-purple">Intense</span></td>
+      </tr>
+      <tr>
+        <td>Rahu-Jupiter</td><td>Feb 2013 &ndash; Jul 2015</td><td>2.4 yrs</td>
+        <td>H5 Pisces (conjunct Rahu, own-sign)</td>
+        <td>Wisdom encounters, educational leaps, mentorship received. Jupiter's own-sign dignity guides Rahu toward dharma. Guru Chandala expressed as "sacred disruption" — learning that transforms worldview.</td>
+        <td><span class="badge b-green">Favorable</span></td>
+      </tr>
+      <tr>
+        <td>Rahu-Saturn</td><td>Jul 2015 &ndash; May 2018</td><td>2.85 yrs</td>
+        <td>H2 Sagittarius (combust, gandanta)</td>
+        <td>Structural trials: career restructuring, financial discipline required. Saturn combust = delayed rewards that arrive after persistence. Home/vehicle matters (H3+H4 lord) tested. Patience was the currency.</td>
+        <td><span class="badge b-red">Challenging</span></td>
+      </tr>
+      <tr>
+        <td>Rahu-Mercury</td><td>May 2018 &ndash; Nov 2020</td><td>2.55 yrs</td>
+        <td>H3 Capricorn, Shravana P3</td>
+        <td>Communication expansion, skill acquisition, networking. Mercury as H8+H11 lord = gains through transformation of skills. Technology mastery deepened. Possible role changes driven by new expertise.</td>
+        <td><span class="badge b-yellow">Mixed</span></td>
+      </tr>
+      <tr>
+        <td>Rahu-Ketu</td><td>Nov 2020 &ndash; Dec 2021</td><td>1.05 yrs</td>
+        <td>H11 Virgo, Chitra P2</td>
+        <td>Axis of desire (H5 Rahu) vs. liberation (H11 Ketu) fully engaged. Sudden shifts, unexpected gains or losses, spiritual awakening moments. COVID-era disruption as karmic catalyst.</td>
+        <td><span class="badge b-purple">Volatile</span></td>
+      </tr>
+      <tr>
+        <td>Rahu-Venus</td><td>Dec 2021 &ndash; Dec 2024</td><td>3.0 yrs</td>
+        <td>H3 Capricorn, Shravana P3 (Pushkara Bhaga)</td>
+        <td>Relationship deepening, partnership themes, comfort and pleasure. Venus as H7 lord = marriage/partnership activation. H12 co-lordship = foreign residence possible. Pushkara Bhaga protects relationship outcomes despite Venus being primary maraka.</td>
+        <td><span class="badge b-green">Favorable</span></td>
+      </tr>
+      <tr>
+        <td>Rahu-Sun</td><td>Dec 2024 &ndash; Nov 2025</td><td>0.9 yrs</td>
+        <td>H2 Sagittarius, Purvashadha P1</td>
+        <td>Brief authority spotlight. Sun as H10 lord = career recognition moment. Sun in H2 = income and family matters in focus. Short but impactful — professional visibility surge.</td>
+        <td><span class="badge b-yellow">Brief but bright</span></td>
+      </tr>
+      <tr class="bg-blue-50">
+        <td><strong>Rahu-Moon</strong></td><td><strong>Nov 2025 &ndash; May 2027</strong></td><td><strong>1.5 yrs</strong></td>
+        <td>H6 Aries, Krittika P1 <span class="badge b-blue">H9 lord, AK, CURRENT</span></td>
+        <td><strong>CURRENT.</strong> Bhagya activation through service. Moon as H9 lord in H6 = fortune arrives precisely when you serve hardest. Atmakaraka period = the soul's lesson intensifies. Emotional depth, mother-care, health vigilance. Sade Sati Phase 1 coincides = double pressure on emotional axis. The paradox: do not chase fortune; serve, and fortune chases you.</td>
+        <td><span class="badge b-blue">Active now</span></td>
+      </tr>
+      <tr>
+        <td>Rahu-Mars</td><td>May 2027 &ndash; May 2028</td><td>1.05 yrs</td>
+        <td>H1 Scorpio (own-sign) <span class="badge b-green">Lagnesha</span></td>
+        <td><strong>FINAL AD.</strong> Lagnesha activation as the culmination of 18-year Rahu MD. Mars own-sign H1 = powerful personal transformation. Ruchaka Yoga fires one last time under Rahu's amplification. Bold career moves, geographic shifts possible. The "launch pad" AD for Jupiter MD.</td>
+        <td><span class="badge b-green">Powerful</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 3: 5-LAYER DASHA READING — CURRENT STACK -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Five-Layer Dasha Reading — Current Stack</h2>
+  <p class="mb-4">The classical method examines each dasha lord through five lenses: (1) houses owned, (2) house occupied, (3) dignity and strength, (4) aspects received, and (5) divisional placement. This multi-layered reading prevents the common error of single-factor analysis.</p>
+
+  <!-- RAHU MD — 5 Layers -->
+  <h3 class="text-xl mt-6 mb-3">3.1 Rahu Mahadasha — Five Layers</h3>
+
+  <div class="layer-box layer-1">
+    <h4 class="font-bold mb-2">Layer 1 — Houses Ruled</h4>
+    <p>Rahu does not own signs in the classical Parashara system. Under the co-lordship model (Uttara Kalamrita), Rahu co-rules <strong>Aquarius = H4</strong> (home, mother, inner peace, vehicles, education). This gives Rahu a structural connection to domestic foundations and emotional security. The H4 theme runs as an undercurrent throughout the 18-year period: questions of <em>where to live, how to establish roots, what "home" means</em> have been continuous.</p>
+  </div>
+
+  <div class="layer-box layer-2">
+    <h4 class="font-bold mb-2">Layer 2 — House Occupied</h4>
+    <p>Rahu sits in <strong>H5 (Pisces)</strong> — the house of intellect, children, purva-punya (past-life merit), creativity, mantra, and speculation. Rahu in H5 amplifies these themes with an unconventional, boundary-crossing signature: technology meets tradition, foreign meets indigenous, innovation meets scripture. The conjunction with Jupiter (H5 lord in own-sign) means Rahu borrows Jupiter's supreme dignity — a well-disposed Rahu that delivers expansion rather than chaos.</p>
+  </div>
+
+  <div class="layer-box layer-3">
+    <h4 class="font-bold mb-2">Layer 3 — Dignity and Strength</h4>
+    <p>Rahu in Pisces with Jupiter (dispositor) in own-sign and conjunct = <strong>exceptionally well-disposed</strong>. The dispositor is the strongest planet in the chart. Rahu's nakshatra is Uttara Bhadrapada Pada 1 (Saturn as nakshatra lord, Aja Ekapada as deity — the one-footed cosmic goat of fierce yogic intensity). The Saturn nakshatra lordship means Rahu delivers results with <em>delay but durability</em> — benefits that take time to manifest but last.</p>
+  </div>
+
+  <div class="layer-box layer-4">
+    <h4 class="font-bold mb-2">Layer 4 — Aspects Received</h4>
+    <p>Ketu from H11 (Virgo) casts its 5th-house-style aspect on H5, directly onto Rahu. This Rahu-Ketu mutual aspect through the 5-11 axis creates a tension between <em>desire for creative expression</em> (H5) and <em>detachment from material gains</em> (H11 Ketu). The MD has likely carried this inner dialogue: ambition vs. renunciation, worldly success vs. spiritual calling. No other major planetary aspect falls directly on H5.</p>
+  </div>
+
+  <div class="layer-box layer-5">
+    <h4 class="font-bold mb-2">Layer 5 — Navamsha (D9) Placement</h4>
+    <p>Rahu in D9 occupies <strong>Leo (H10 from D9 Scorpio lagna = career/karma)</strong>. D9 Leo = the soul-level expression of Rahu's desire is for <em>authority, recognition, leadership, and creative visibility</em>. This is a solar sign — Rahu wants to shine in the public domain. The D9 H10 placement confirms that the 18-year Rahu period has been fundamentally about <em>building a career identity that carries public weight</em>.</p>
+  </div>
+
+  <div class="verse mt-4 mb-6">
+    <p>"Rahu panchame Guru-yutah — Guru-Chandala yogo ekatmena, atha sva-kshetre Guruh —<br>
+    vidya-Mleccha-bhasha-sangah, deshantaratah labhah, gudha-vidya-pravinah."<br>
+    — <strong>Uttara Kalamrita Kanda 5, Rahu-prakarana</strong></p>
+    <p class="mt-1 text-sm">Rahu in the 5th with Jupiter in own-sign: proficiency in hidden knowledge, gains from foreign lands, mastery of non-native languages and cross-cultural fields.</p>
+  </div>
+
+  <!-- MOON AD — 5 Layers -->
+  <h3 class="text-xl mt-8 mb-3">3.2 Rahu-Moon Antardasha — Five Layers</h3>
+
+  <div class="layer-box layer-1">
+    <h4 class="font-bold mb-2">Layer 1 — Houses Ruled</h4>
+    <p>Moon owns <strong>H9 (Cancer)</strong> — the house of bhagya (fortune), dharma, father, guru, long journeys, higher learning, and divine grace. This single lordship is auspicious: the 9th house is the greatest trikona, and its lord running a sub-period within the creative-intellectual Rahu MD means <em>fortune actively seeks expression through this AD</em>. Every opportunity in this 18-month window carries a bhagya quotient — even (especially) the ones that arrive disguised as hard work.</p>
+  </div>
+
+  <div class="layer-box layer-2">
+    <h4 class="font-bold mb-2">Layer 2 — House Occupied</h4>
+    <p>Moon sits in <strong>H6 (Aries)</strong> — the house of service, health, enemies, debts, and daily labour. The classical paradox is alive: the <em>fortune-lord placed in the service-house</em>. This means bhagya does not arrive as a gift dropped from the sky; it arrives as an opportunity to serve more, work harder, solve a problem no one else will touch. Accept the additional workload in this AD — it is the delivery vehicle for H9 blessings.</p>
+  </div>
+
+  <div class="layer-box layer-3">
+    <h4 class="font-bold mb-2">Layer 3 — Dignity and Strength</h4>
+    <p>Moon in Aries is neither exalted nor debilitated — <strong>neutral dignity</strong>. Not weak, not peak. In Krittika Pada 1 (Sun's nakshatra, Agni deity = fire), the Moon carries <em>intense emotional heat</em>: sharp perception, quick reactions, transformative emotions. As Atmakaraka (the soul-significator at highest degree), this Moon is the chart's karmic anchor — its AD period intensifies the soul's deepest lessons around service, emotional resilience, and the relationship between effort and grace.</p>
+    <p class="mt-2">Moon is waxing at birth (Shukla Paksha, approximately Krishna Chaturthi &mdash; actually past full moon, so waning side). Brightness is moderate. The Krittika fire gives Moon more "heat" than typical — emotionally sharp but potentially irritable under pressure.</p>
+  </div>
+
+  <div class="layer-box layer-4">
+    <h4 class="font-bold mb-2">Layer 4 — Aspects Received</h4>
+    <p>Checking aspects to H6 (Aries): Mars from H1 (Scorpio) casts its 4th aspect (counting inclusively: Scorpio to Aries = houses 1,2,3,4,5,6 — actually Mars in H1 aspects H4, H7, H8 by special aspect; its 7th aspect falls on H7 Taurus, not H6). Jupiter from H5 aspects H9, H11, H1 (5th, 7th, 9th aspects) — does not aspect H6. Saturn from H2 aspects H4, H8, H11 — does not aspect H6. <strong>Result: Moon in H6 receives no direct graha-drishti from major planets</strong>, making it <em>relatively independent</em> — its results are self-determined, neither boosted nor suppressed by other planetary gazes. This independence means the AD outcomes depend heavily on <em>your own choices and effort</em> rather than external forces.</p>
+  </div>
+
+  <div class="layer-box layer-5">
+    <h4 class="font-bold mb-2">Layer 5 — Navamsha (D9) Placement</h4>
+    <p>Moon in D9 occupies <strong>Sagittarius (H2 from D9 lagna)</strong>. Sagittarius is Jupiter's sign — the Moon at the soul-level is supported by Jupiterian wisdom, optimism, and dharmic grounding. D9 H2 = emotional security comes through <em>speech, family, accumulated knowledge, and values</em>. This AD activates a deeper connection to one's value system and family wisdom. Practically: conversations with elders, family rituals, and articulating one's beliefs will bring emotional nourishment.</p>
+  </div>
+
+  <div class="caution mt-4 mb-6">
+    <p><strong>Rahu-Moon AD Cautions (from Uttara Kalamrita, Rahu-Chandra prakarana):</strong></p>
+    <p class="mt-1">"Rahu-dashayam Chandrantare — mano-vikshepah, matri-chinta, yatra-labhah, nava-sambandhah; pitha-cyutih kvachid api, parivartanam api cha."</p>
+    <ul class="list-disc pl-6 mt-2 space-y-1">
+      <li>Mental restlessness (<em>mano-vikshepa</em>) — manage through daily meditation</li>
+      <li>Mother's well-being needs explicit attention (<em>matri-chinta</em>)</li>
+      <li>Gains through travel (<em>yatra-labha</em>) — embrace mobility</li>
+      <li>New connections (<em>nava-sambandha</em>) — quality over quantity</li>
+      <li>Possible change of position or residence (<em>parivartana</em>)</li>
+    </ul>
+  </div>
+
+  <!-- JUPITER PD — 5 Layers -->
+  <h3 class="text-xl mt-8 mb-3">3.3 Rahu-Moon-Jupiter Pratyantardasha — Five Layers (ACTIVE NOW: 11 Apr &ndash; 23 Jun 2026)</h3>
+
+  <div class="golden mb-4">
+    <p><strong>This is the single sweetest pratyantardasha window of the entire Rahu Mahadasha.</strong></p>
+  </div>
+
+  <div class="layer-box layer-1">
+    <h4 class="font-bold mb-2">Layer 1 — Houses Ruled</h4>
+    <p>Jupiter owns <strong>H2 (Sagittarius, wealth, speech, family, values)</strong> and <strong>H5 (Pisces, intellect, children, purva-punya, creativity)</strong>. Both are benefic houses — H2 is a dhana-sthana, H5 is a trikona. Jupiter's dual lordship of a wealth house and a trikona makes it a <strong>functional benefic of the highest order</strong> for Scorpio lagna (with the caveat that H2 lordship carries a secondary maraka quality, manageable given Jupiter's overall strength).</p>
+  </div>
+
+  <div class="layer-box layer-2">
+    <h4 class="font-bold mb-2">Layer 2 — House Occupied</h4>
+    <p>Jupiter sits in <strong>H5 Pisces — its own sign</strong>. A planet in its own house delivers its promises with authority and reliability. H5 is the house of <em>purva-punya</em> (past-life merit). Jupiter in H5 own-sign means the chart carries a deep reservoir of accumulated merit that activates during Jupiter's periods. In this PD, that reservoir opens specifically for: wisdom-events, children-related blessings, creative breakthroughs, and dignified financial inflows.</p>
+  </div>
+
+  <div class="layer-box layer-3">
+    <h4 class="font-bold mb-2">Layer 3 — Dignity and Strength</h4>
+    <p>Jupiter is <strong>sva-kshetra (own-sign)</strong> — one of the highest dignity states. In Revati Pada 3 (Mercury as nakshatra lord, Pushan as deity = the divine shepherd who guides journeys and protects travellers). Jupiter is the chart's <strong>ultimate dispositor</strong>: every other planet's dispositor chain eventually terminates at Jupiter. This makes Jupiter the <em>karmic fulcrum</em> of the entire chart. When Jupiter's pratyantardasha runs, <strong>all planetary energies briefly align through their ultimate master</strong>. The conjunction with Rahu (the MD lord) means the PD lord and MD lord are natal companions — they cooperate naturally in this window.</p>
+  </div>
+
+  <div class="layer-box layer-4">
+    <h4 class="font-bold mb-2">Layer 4 — Aspects Received</h4>
+    <p>Same as Rahu's analysis: Ketu from H11 aspects H5 where Jupiter sits. This imparts a <em>spiritual dimension</em> to Jupiter's material gifts — wealth that arrives carries a teaching, creativity that emerges has depth beyond surface. No malefic planetary gaze otherwise, which is protective.</p>
+  </div>
+
+  <div class="layer-box layer-5">
+    <h4 class="font-bold mb-2">Layer 5 — Navamsha (D9) Placement</h4>
+    <p>Jupiter in D9 occupies <strong>Capricorn (H3 from D9 lagna)</strong>. In D9 Capricorn, Jupiter is in Saturn's sign — at the soul level, Jupiter's wisdom requires <em>discipline, structure, and effort</em> to manifest. D9 H3 = courage in communication, sibling karma, writing/teaching as soul-purpose. This confirms that Jupiter's blessings in this PD come through <em>active engagement</em> — teaching, writing, publishing, communicating — not passive waiting.</p>
+  </div>
+
+  <div class="blessing mt-4 mb-6">
+    <p><strong>Synthesised reading (from Uttara Kalamrita Kanda 5 + BPHS Adhyaya 49):</strong></p>
+    <p class="mt-1 italic">"Rahu-dashayam Chandra-antare Guru-pratyantare — Raja-bhagya-yogah, dharma-pravrittih, shastra-sammanah, putra-saukhyam. Purva-punya-phala-prabhava-utpanna-sampat."</p>
+    <p class="mt-2"><strong>Why this PD is exceptional:</strong></p>
+    <ul class="list-disc pl-6 mt-1 space-y-1">
+      <li>Jupiter is sva-kshetra in the 5th — pratyantara of an own-sign great benefic in trikona</li>
+      <li>Jupiter casts 9th-aspect on the Lagna (H1) — direct blessing on the self during this PD</li>
+      <li>Jupiter is conjunct natal Rahu — the MD lord and PD lord are same-sign companions natally, so they cooperate</li>
+      <li>Moon (AD lord) is H9 (bhagya) lord; Jupiter (PD lord) aspects H9 (Cancer) — <strong>double bhagya activation</strong></li>
+    </ul>
+    <p class="mt-2"><strong>Specific gifts to expect (11 Apr &rarr; 23 Jun 2026):</strong></p>
+    <ul class="list-disc pl-6 mt-1 space-y-1">
+      <li>A recognition, publication, or public presentation moment with weight</li>
+      <li>Deepening of a teacher/mentor/guide relationship</li>
+      <li>A breakthrough in a long-held intellectual or creative project</li>
+      <li>Health recovery if anything had been off</li>
+      <li>Domestic or family blessing — possible news related to progeny/family expansion</li>
+      <li>Financial inflow with dignified origin (professional, settled, not speculative)</li>
+    </ul>
+    <p class="mt-2"><strong>The single most important instruction:</strong> In this window, <em>say yes</em> to opportunities that align with dharma even if they look "more than I'm ready for." Jupiter pratyantaras grade upward — they stretch you, they do not crash you.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 4: PRATYANTARDASHA MAP WITHIN RAHU-MOON -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. Pratyantardasha Map — Rahu-Moon AD (Nov 2025 &ndash; May 2027)</h2>
+  <p class="mb-4">Each pratyantardasha within the Moon AD carries the bhagya-undercurrent of Moon's H9 lordship, coloured by the PD lord's own nature. Total AD duration: approximately 540 days.</p>
+
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>PD Lord</th><th>Window</th><th>Duration</th><th>Theme</th><th>Rating</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Moon-Moon</td><td>04 Nov &ndash; 19 Dec 2025</td><td>~45 days</td>
+        <td>Re-grounding, emotional recalibration. The AD opens with its own lord — setting the emotional tone. Internal weather may be turbulent but productive.</td>
+        <td><span class="badge b-blue">Neutral</span></td>
+      </tr>
+      <tr>
+        <td>Moon-Mars</td><td>19 Dec 2025 &ndash; 19 Jan 2026</td><td>~31 days</td>
+        <td>Action burst. Mars as Lagnesha = tactical wins, personal initiative. Minor friction possible (Mars as H6 co-lord). Quick results, short cycle. Exercise and physical activity recommended.</td>
+        <td><span class="badge b-green">Good</span></td>
+      </tr>
+      <tr>
+        <td>Moon-Rahu</td><td>19 Jan &ndash; 11 Apr 2026</td><td>~81 days</td>
+        <td>Big-picture strategic moves. Rahu PD within Rahu MD = strong Rahu echo. Foreign/technology acceleration. Unconventional doors open. Watch for illusions — verify before trusting shiny opportunities.</td>
+        <td><span class="badge b-purple">Intense</span></td>
+      </tr>
+      <tr class="bg-yellow-50">
+        <td><strong>Moon-Jupiter</strong></td><td><strong>11 Apr &ndash; 23 Jun 2026</strong></td><td><strong>~72 days</strong></td>
+        <td><strong>CURRENT. The wisdom-blessing window. Jupiter as H2+H5 lord, own-sign, ultimate dispositor = the chart's own Guru speaks. Wealth + intellect activation within the emotional-service framework of Moon AD. The single best PD of the entire Rahu MD.</strong></td>
+        <td><span class="badge b-green">BEST</span></td>
+      </tr>
+      <tr>
+        <td>Moon-Saturn</td><td>23 Jun &ndash; 17 Sep 2026</td><td>~86 days</td>
+        <td>Structural consolidation. Saturn as H3+H4 lord (combust, gandanta) tests what Jupiter built. Workload increases; recognition demands delivery. Bureaucratic matters, paperwork, regulations. Family/parental health attention. Transit Saturn in Pisces sitting on natal Jupiter = peak Sade Sati Phase 1 intensity. <em>Do not begin large new initiatives; complete and consolidate.</em></td>
+        <td><span class="badge b-red">Testing</span></td>
+      </tr>
+      <tr>
+        <td>Moon-Mercury</td><td>17 Sep &ndash; 03 Dec 2026</td><td>~77 days</td>
+        <td>Communication and contract season. Mercury as H8+H11 lord = gains through transformative communication. Writing, publication, agreements. Mercury "recovers" here — the H8 transformation theme turns analytical and articulate.</td>
+        <td><span class="badge b-yellow">Mixed+</span></td>
+      </tr>
+      <tr>
+        <td>Moon-Ketu</td><td>03 Dec 2026 &ndash; 03 Jan 2027</td><td>~31 days</td>
+        <td>Sudden detachments, unexpected resolutions. Ketu in H11 = letting go of old desires, networks. Brief but spiritually potent. Avoid major commitments; complete loose ends.</td>
+        <td><span class="badge b-purple">Volatile</span></td>
+      </tr>
+      <tr>
+        <td>Moon-Venus</td><td>03 Jan &ndash; 04 Apr 2027</td><td>~90 days</td>
+        <td>Relationships season. Venus as H7+H12 lord = marriage/partnership activation. Pleasure, beauty, creative arts. Jupiter still transiting Cancer (exalted) = partnership matters blessed. Pushkara Bhaga Venus delivers protected relationship outcomes. The strongest marriage-timing window within the current AD.</td>
+        <td><span class="badge b-green">Favorable</span></td>
+      </tr>
+      <tr>
+        <td>Moon-Sun</td><td>04 Apr &ndash; 01 May 2027</td><td>~27 days</td>
+        <td>Brief authority moment. Sun as H10 lord = career recognition. Short but bright — then AD closes. A fitting conclusion to the Rahu-Moon chapter.</td>
+        <td><span class="badge b-yellow">Brief</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 5: SUKSHMA DASHA MAP WITHIN JUPITER PD -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">5. Sukshma Dasha Map — Within Jupiter PD (11 Apr &ndash; 23 Jun 2026)</h2>
+  <p class="mb-4">The pratyantardasha of Jupiter (~72 days) subdivides into nine sukshma periods. These form the week-by-week scaffolding for Part 5's forecast.</p>
+
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Sukshma Lord</th><th>Approx. Days</th><th>Window</th><th>Theme</th><th>Rating</th></tr></thead>
+    <tbody>
+      <tr class="bg-yellow-50">
+        <td>Jupiter</td><td>~9.6</td><td>11 Apr &ndash; 21 Apr 2026</td>
+        <td>Wisdom-opening, optimism, Guru's own sukshma within own PD = maximum benevolence</td>
+        <td><span class="badge b-green">Excellent</span></td>
+      </tr>
+      <tr>
+        <td>Saturn</td><td>~11.4</td><td>21 Apr &ndash; 2 May 2026</td>
+        <td>Discipline + structuring of the new. Saturn tests early; rewards follow. Focus on building systems.</td>
+        <td><span class="badge b-yellow">Disciplined</span></td>
+      </tr>
+      <tr>
+        <td>Mercury</td><td>~10.2</td><td>2 May &ndash; 12 May 2026</td>
+        <td>Communication, writing, contracts. Good for documentation and agreements.</td>
+        <td><span class="badge b-yellow">Productive</span></td>
+      </tr>
+      <tr>
+        <td>Ketu</td><td>~4.2</td><td>12 May &ndash; 17 May 2026</td>
+        <td>Sudden insight, brief detachment. Short but spiritually sharp.</td>
+        <td><span class="badge b-purple">Brief</span></td>
+      </tr>
+      <tr class="bg-green-50">
+        <td>Venus</td><td>~12.0</td><td>17 May &ndash; 29 May 2026</td>
+        <td>Relationships, beauty, harmony. Venus at Pushkara Bhaga = partnership sweetness. Excellent for social connections and creative expression.</td>
+        <td><span class="badge b-green">Harmonious</span></td>
+      </tr>
+      <tr>
+        <td>Sun</td><td>~3.6</td><td>29 May &ndash; 1 Jun 2026</td>
+        <td>Brief authority spotlight. H10 lord Sun = flash of career recognition.</td>
+        <td><span class="badge b-yellow">Bright</span></td>
+      </tr>
+      <tr>
+        <td>Moon</td><td>~6.0</td><td>1 Jun &ndash; 7 Jun 2026</td>
+        <td>Emotional clarity, intuition. AD lord running sukshma = emotional alignment with the broader period.</td>
+        <td><span class="badge b-blue">Intuitive</span></td>
+      </tr>
+      <tr>
+        <td>Mars</td><td>~4.2</td><td>7 Jun &ndash; 12 Jun 2026</td>
+        <td>Decisive action, courage. Lagnesha sukshma = execute boldly but precisely.</td>
+        <td><span class="badge b-green">Decisive</span></td>
+      </tr>
+      <tr>
+        <td>Rahu</td><td>~10.8</td><td>12 Jun &ndash; 23 Jun 2026</td>
+        <td>Final amplification. MD lord running sukshma at PD close = integration of the entire Jupiter PD's gifts. Strong culmination energy. Then PD hands over to Saturn.</td>
+        <td><span class="badge b-purple">Culmination</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="highlight mt-4">
+    <p><strong>Key timing note:</strong> Jupiter's transit ingress into Cancer (exaltation, your H9 bhagya-bhava) falls around <strong>9 June 2026</strong> — right in the Mars-to-Rahu sukshma transition within this Jupiter PD. The exalted transit Jupiter activating your 9th house while the PD lord <em>is</em> Jupiter is a <strong>rare double activation</strong>. The window of 9&ndash;23 June 2026 is the convergence point where dasha and gochara (transit) align in maximum blessing configuration.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 6: UPCOMING DASHA TRANSITIONS -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">6. Upcoming Dasha Transitions — The Next 18 Years</h2>
+
+  <!-- Rahu-Mars AD -->
+  <h3 class="text-xl mt-6 mb-3">6.1 Rahu-Mars AD (May 2027 &ndash; May 2028) — The Final Push</h3>
+  <div class="highlight mb-4">
+    <p>Mars is the <strong>Lagnesha</strong> — ruler of H1 (Scorpio, self-identity) and co-ruler of H6 (service, competition). Mars sits in <strong>own-sign H1</strong> forming <strong>Ruchaka Mahapurusha Yoga</strong>. This is the final antardasha of the 18-year Rahu Mahadasha.</p>
+    <ul class="list-disc pl-6 mt-2 space-y-1">
+      <li><strong>Personal transformation at its peak</strong> — the identity forged over 18 years of Rahu crystallises</li>
+      <li><strong>Career boldness</strong> — Mars Lagnesha in own-sign = courage to make defining moves</li>
+      <li><strong>Physical vitality surge</strong> — Ruchaka Yoga gives athletic energy, competitive edge</li>
+      <li><strong>Geographic or role-level shift possible</strong> — the "launch pad" for Jupiter MD</li>
+      <li><strong>Caution</strong>: Mars as H6 co-lord = competition intensifies, health needs monitoring (especially around blood pressure, inflammation, surgical matters)</li>
+    </ul>
+    <p class="mt-2"><strong>Strategic reading:</strong> Use this 12-month AD to <em>complete unfinished Rahu business</em> and <em>build the infrastructure</em> (physical, financial, relational, spiritual) for the Jupiter MD that follows. What you plant in this AD blooms for 16 years.</p>
+  </div>
+
+  <!-- Jupiter MD -->
+  <h3 class="text-xl mt-8 mb-3">6.2 Jupiter Mahadasha (May 2028 &ndash; May 2044) — THE GOLDEN ERA</h3>
+  <div class="blessing mb-4">
+    <p><strong>This 16-year period (ages 40.5 to 56.5) is predicted to be the finest era of the lifetime.</strong></p>
+    <p class="mt-2">Jupiter's credentials for this chart are unmatched:</p>
+    <table class="mt-2">
+      <thead><tr><th>Factor</th><th>Assessment</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td>Houses Owned</td><td>H2 (wealth) + H5 (intellect, children)</td><td>Both benefic; dhana + trikona = Dhana Yoga potential</td></tr>
+        <tr><td>House Occupied</td><td>H5 Pisces (own-sign)</td><td>Maximum delivery capacity in the trikona</td></tr>
+        <tr><td>Dignity</td><td>Sva-kshetra (own-sign)</td><td>Authority and reliability in results</td></tr>
+        <tr><td>Ultimate Dispositor</td><td>Yes — all planets ultimately report to Jupiter</td><td>All chart energies channel through Jupiter</td></tr>
+        <tr><td>Nakshatra</td><td>Revati P3 (Mercury lord, Pushan deity)</td><td>The divine shepherd guides journeys</td></tr>
+        <tr><td>D9 Position</td><td>Capricorn H3</td><td>Soul-level emphasis on courage, communication, writing</td></tr>
+        <tr><td>Aspects Cast</td><td>H9 (bhagya), H11 (gains), H1 (self)</td><td>Triple blessing: fortune + wealth + health</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="golden mb-4">
+    <p><strong>What Jupiter MD is predicted to deliver (2028&ndash;2044):</strong></p>
+    <ul class="list-disc pl-6 mt-2 space-y-2">
+      <li><strong>Career Peak</strong>: Professional recognition at the highest level of your field. Leadership roles. Institutional building. The career authority you have been developing through Rahu MD now receives <em>legitimacy, structure, and permanence</em> under Jupiter.</li>
+      <li><strong>Wealth Accumulation</strong>: H2 lord in H5 = wealth through intellect, education, creative enterprises. Systematic financial growth, not speculative windfalls. Property acquisition, retirement planning, generational wealth-building.</li>
+      <li><strong>Children's Milestones</strong>: H5 lord in H5 own-sign = children thrive. If children exist, their education and achievements peak. If children are yet to arrive, Jupiter MD is the most favorable period for parenthood.</li>
+      <li><strong>Spiritual Deepening</strong>: Jupiter's H9 aspect + Pushan's guidance = the seeker becomes a teacher. Dharmic practice matures from personal discipline to community service. Scriptural study bears visible fruit.</li>
+      <li><strong>Health</strong>: Jupiter aspecting H1 = protective influence on the body. Overall vitality should improve compared to the Rahu MD's transformative turbulence.</li>
+    </ul>
+    <p class="mt-3"><strong>Classical authority:</strong></p>
+    <p class="italic mt-1">"Guru-dashayam sva-kshetra-gatah — dhana-vriddhi, vidya-vistarah, putra-saukhyam, dharma-pravrittih, raja-sammanah."<br>
+    — <strong>Brihat Parashara Hora Shastra, Adhyaya 49</strong></p>
+    <p class="text-sm mt-1">In the dasha of Jupiter placed in own-sign: wealth increase, knowledge expansion, happiness through children, dharmic activity, and royal honours.</p>
+  </div>
+
+  <div class="warn mb-4">
+    <p><strong>Jupiter MD — what could go wrong:</strong></p>
+    <ul class="list-disc pl-6 mt-1 space-y-1">
+      <li>Jupiter is H2 lord = secondary maraka. Health vigilance around ages 45-50 (Saturn and Mercury ADs within Jupiter MD)</li>
+      <li>Jupiter conjunct Rahu = Guru Chandala residue. Over-confidence, ethical shortcuts, or "guru-ego" are the shadow risks</li>
+      <li>D9 Capricorn = Jupiter must earn its rewards through discipline. Laziness or entitlement will block the flow</li>
+    </ul>
+    <p class="mt-2"><strong>Mitigation:</strong> Maintain the Thursday observance (vrata) established during Rahu MD. The spiritual discipline built <em>before</em> Jupiter MD prevents the shadow from manifesting.</p>
+  </div>
+
+  <!-- Saturn MD -->
+  <h3 class="text-xl mt-8 mb-3">6.3 Saturn Mahadasha (May 2044 &ndash; May 2063) — THE TESTING ERA</h3>
+  <div class="danger mb-4">
+    <p><strong>This section is written with full honesty because preparation is kindness.</strong></p>
+    <p class="mt-2">Saturn's profile for Scorpio lagna is difficult. Let us examine each factor without sugarcoating:</p>
+    <table class="mt-2">
+      <thead><tr><th>Factor</th><th>Assessment</th><th>Severity</th></tr></thead>
+      <tbody>
+        <tr><td>Houses Owned</td><td>H3 (siblings, courage) + H4 (home, mother, inner peace)</td><td><span class="badge b-yellow">Functional malefic</span> — neither house is a trikona; H3 is an upachaya but Saturn owns only dusthana-adjacent houses for Scorpio</td></tr>
+        <tr><td>House Occupied</td><td>H2 (Sagittarius) — a neutral house, but Saturn here = speech becomes heavy, family dynamics strained</td><td><span class="badge b-yellow">Mixed</span></td></tr>
+        <tr><td>Combustion</td><td>Saturn is <strong>combust</strong> (close to Sun in D1) — the Sun's heat burns Saturn's ability to deliver</td><td><span class="badge b-red">Significant</span></td></tr>
+        <tr><td>D9 Position</td><td>Saturn in D9 <strong>Aries (debilitated)</strong></td><td><span class="badge b-red">Severe</span></td></tr>
+        <tr><td>Gandanta</td><td>Saturn at the Scorpio-Sagittarius junction = water-fire gandanta</td><td><span class="badge b-red">Karmic knot</span></td></tr>
+        <tr><td>Nakshatra</td><td>Purvashadha P4 (Venus lord, Apas deity = waters)</td><td><span class="badge b-yellow">Vulnerable</span> — the fire-water tension of gandanta is encoded in the nakshatra itself</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="warn mb-4">
+    <p><strong>What Saturn MD threatens (2044&ndash;2063, ages 56.5&ndash;75.5):</strong></p>
+    <ul class="list-disc pl-6 mt-2 space-y-2">
+      <li><strong>Home and Property</strong>: H4 lord combust + D9 debilitated = housing instability, renovation burdens, possible forced relocations. <em>Secure property and complete major home investments during Jupiter MD.</em></li>
+      <li><strong>Mother's Health</strong>: H4 = matru-bhava. Saturn's weakness here signals increased concern for mother's wellbeing (or, given the age, processing of maternal karma). <em>Build strong family-care infrastructure during Jupiter MD.</em></li>
+      <li><strong>Inner Peace</strong>: H4 also governs <em>sukha</em> (inner contentment). Saturn's gandanta position means periodic existential restlessness — the sense that contentment keeps slipping away. <em>The spiritual practice established in Rahu and Jupiter MDs becomes the anchor.</em></li>
+      <li><strong>Communication and Courage</strong>: H3 lord combust = self-expression becomes effortful. Writer's block, hesitation in public speaking, sibling friction. <em>Build writing and teaching habits during Jupiter MD so they carry through on momentum.</em></li>
+      <li><strong>Health</strong>: Saturn in H2 (combust) = dental, throat, neck, and jaw vulnerabilities. Combined with natural age-related decline. <em>Establish robust health monitoring protocols by age 55.</em></li>
+    </ul>
+  </div>
+
+  <div class="spiritual mb-4">
+    <p><strong>Saturn MD — the dharmic perspective:</strong></p>
+    <p class="mt-1">Saturn is the planet of karma, discipline, and spiritual maturation. A difficult Saturn MD is not a punishment — it is a <em>post-graduate examination</em>. The soul that prepared during Jupiter MD passes this exam with deepened wisdom. The soul that grew complacent during Jupiter's abundance will find Saturn's corrections painful.</p>
+    <p class="mt-2"><strong>Preparation strategy (to execute during Jupiter MD, 2028&ndash;2044):</strong></p>
+    <ul class="list-disc pl-6 mt-1 space-y-1">
+      <li>Complete all major property transactions by 2040</li>
+      <li>Build a financial reserve specifically for ages 57&ndash;65</li>
+      <li>Deepen Hanuman/Shani devotional practice — Saturday tila-daan (sesame charity) and Hanuman Chalisa</li>
+      <li>Strengthen relationships with siblings proactively</li>
+      <li>Establish a daily meditation practice that does not depend on external circumstances</li>
+      <li>Complete a comprehensive health baseline at age 55 (just before Saturn MD begins)</li>
+    </ul>
+    <p class="mt-2 italic">"Shanaishchara-dashayam asta-gatah — kleshadah, griha-viparyayah, matri-kashthah; kintu tapasya-balena shubha-phalam api."<br>
+    — <strong>Phaladeepika Adhyaya 20</strong></p>
+    <p class="text-sm mt-1">In the dasha of a combust Saturn: difficulties arise in home, mother, and comfort. But through the power of tapasya (disciplined practice), auspicious results can still manifest.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 7: TRANSIT ANALYSIS — 5-LAYER PROTOCOL -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">7. Transit Cosmology — Five-Layer Gochara Analysis</h2>
+  <p class="mb-4">Dasha determines <em>what</em> ripens; transit (gochara) determines <em>when and how intensely</em>. The five-layer transit protocol examines Saturn (karmic window), Jupiter (opportunity window), Rahu-Ketu (karmic catalyst), Mars (acute trigger), and micro-triggers (Sun/Venus/Mercury) for precise event timing.</p>
+
+  <!-- Layer 1: Saturn -->
+  <h3 class="text-xl mt-6 mb-3">Layer 1 — Saturn Transit (Karmic Window)</h3>
+  <div class="sade-sati-phase mb-4">
+    <h4 class="font-bold mb-2">Saturn in Pisces (March 2025 &ndash; early 2028)</h4>
+    <table>
+      <thead><tr><th>Transit Factor</th><th>Assessment</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td>From Lagna</td><td>H5 (Pisces) = transit through natal Jupiter-Rahu conjunction</td><td>Tests commitments to children, students, creative projects. Intellectual disciplines become "show-your-work" exams.</td></tr>
+        <tr><td>From Moon</td><td>12th from Aries Moon = <strong>Sade Sati Phase 1 (Rising)</strong></td><td>Hidden expenses, sleep disruption, solitude needs. Emotional purification wave.</td></tr>
+        <tr><td>Over Natal Rahu (~3 deg Pisces)</td><td>Saturn passed over natal Rahu ~Apr&ndash;Jun 2025; revisits on retrograde</td><td>Karmic restructuring of Rahu's desires completed or in progress</td></tr>
+        <tr><td>Approaching Natal Jupiter (~26 deg Pisces)</td><td>Saturn reaches natal Jupiter ~late 2026 to mid 2027</td><td>The Guru-Chandala yoga receives a "purification pass" — maturation of guru-relationships, testing of knowledge claims</td></tr>
+      </tbody>
+    </table>
+    <p class="mt-2"><strong>Saturn's message for 2026&ndash;2027:</strong> Your creativity, intellectual output, and relationships with students/children are being <em>audited by karma</em>. What is genuine survives and strengthens. What was inflated by Rahu's amplification gets trimmed. Accept the trimming — the post-transit result is cleaner and more durable.</p>
+  </div>
+
+  <!-- Layer 2: Jupiter -->
+  <h3 class="text-xl mt-6 mb-3">Layer 2 — Jupiter Transit (Opportunity Window)</h3>
+  <div class="blessing mb-4">
+    <h4 class="font-bold mb-2">Jupiter Ingress into Cancer — approximately 9 June 2026</h4>
+    <p><strong>This is one of the most important transits of the next decade for this chart.</strong></p>
+    <p class="mt-2">Jupiter has been transiting Gemini (H8 from Lagna) since June 2025 — mixed results: transformative learning, research depth, but surface delays and hidden obstacles. On approximately 9 June 2026, Jupiter enters Cancer (sidereal Lahiri), beginning a transit that lasts until approximately July 2027 (with a possible retrograde dip back to Gemini in late 2026).</p>
+    <table class="mt-2">
+      <thead><tr><th>Factor</th><th>Assessment</th><th>Significance</th></tr></thead>
+      <tbody>
+        <tr><td>Sign Dignity</td><td><strong>Cancer = Jupiter's exaltation (uccha)</strong></td><td>Highest possible transit dignity. Jupiter at maximum power.</td></tr>
+        <tr><td>From Lagna</td><td><strong>H9 (Cancer) = bhagya-bhava</strong></td><td>The very house Jupiter most loves to bless. Fortune, dharma, guru, higher learning all activated.</td></tr>
+        <tr><td>5th Aspect</td><td>On H1 (Scorpio Lagna)</td><td>Direct blessing on the self — health, vitality, identity</td></tr>
+        <tr><td>7th Aspect</td><td>On H3 (Capricorn)</td><td>Energising communication, courage, siblings — where natal Mercury and Venus sit</td></tr>
+        <tr><td>9th Aspect</td><td>On H5 (Pisces)</td><td>Blessing the natal Jupiter-Rahu conjunction itself — "self-aspect amplification"</td></tr>
+        <tr><td>From Moon</td><td>H4 from Aries Moon</td><td>Domestic happiness, inner peace, property auspiciousness</td></tr>
+      </tbody>
+    </table>
+    <p class="mt-3 italic">"Gochare Gurur navame ucchastho — bhagya-vriddhih, dharma-sammanah, putra-labhah, pitri-tulya-manyo, vidya-yasho-vardhakah."<br>
+    — <strong>Phaladeepika Adhyaya 26, Gochara-prakarana</strong></p>
+    <p class="text-sm mt-1">When Jupiter transits the 9th in exaltation: fortune increases, dharmic recognition comes, children prosper, one is respected like a father, and knowledge and fame expand.</p>
+  </div>
+
+  <div class="golden mb-4">
+    <p><strong>Practical reading of Jupiter-Cancer transit (Jun 2026 &ndash; Jul 2027):</strong></p>
+    <p class="mt-1">This is the <strong>single best yearly window</strong> for:</p>
+    <ul class="list-disc pl-6 mt-1 space-y-1">
+      <li>Marriage or partnership crystallisation</li>
+      <li>Child-related blessings</li>
+      <li>Major dharmic vows or spiritual commitments</li>
+      <li>Foreign travel for noble or professional purpose</li>
+      <li>Large educational or teaching commitments</li>
+      <li>Family property purchases</li>
+      <li>Public speaking platforms, publications, or institutional affiliations</li>
+    </ul>
+    <p class="mt-2">The <strong>peak intensity</strong> of this transit falls in two windows:<br>
+    (1) <strong>August&ndash;November 2026</strong>, when Jupiter is in early Cancer degrees and aspects natal Jupiter directly, and<br>
+    (2) <strong>March&ndash;May 2027</strong>, when Jupiter retrogrades and re-energises the Cancer position.</p>
+  </div>
+
+  <!-- Layer 3: Rahu-Ketu -->
+  <h3 class="text-xl mt-6 mb-3">Layer 3 — Rahu-Ketu Transit (Karmic Catalyst)</h3>
+  <div class="transit mb-4">
+    <h4 class="font-bold mb-2">Current Position (June 2026): Rahu in Pisces (H5), Ketu in Virgo (H11)</h4>
+    <p>Transit Rahu is currently passing through <strong>Pisces (H5)</strong>, directly over the natal Rahu-Jupiter conjunction. This is a <strong>Rahu Nodal Return</strong> — one of the most significant transit events in Vedic astrology, occurring approximately every 18 years.</p>
+    <ul class="list-disc pl-6 mt-2 space-y-1">
+      <li><strong>Nodal Return in H5:</strong> Identity crisis + rebirth in the domain of intellect, creativity, and children. Old patterns of thinking are disrupted to make way for new paradigms.</li>
+      <li><strong>Transit Rahu over natal Jupiter:</strong> The Guru Chandala pattern is temporarily re-activated at the transit level. Guard against intellectual arrogance or taking unconventional paths without grounding.</li>
+      <li><strong>Ketu transiting H11 (Virgo):</strong> Detachment from old networks, friend groups, or income sources. Spiritualisation of desires. What you <em>thought</em> you wanted begins to feel less important than what you <em>actually need</em>.</li>
+    </ul>
+
+    <h4 class="font-bold mt-4 mb-2">Upcoming Shift (~November 2026): Rahu enters Aquarius (H4), Ketu enters Leo (H10)</h4>
+    <ul class="list-disc pl-6 mt-1 space-y-1">
+      <li><strong>Rahu in H4 (Aquarius):</strong> Restlessness around home, mother, comfort zones. Possible relocation impulse. Unconventional domestic arrangements.</li>
+      <li><strong>Ketu in H10 (Leo):</strong> Spiritual detachment from career-as-identity. The ego-attachment to professional titles weakens — this is <em>preparation</em> for the Jupiter MD where career finds its dharmic grounding.</li>
+    </ul>
+
+    <p class="mt-3"><strong>Note:</strong> Around late November 2026, when the nodes shift to Aquarius-Leo, <strong>Ketu enters Cancer (H9)</strong> would happen later (~mid 2028). The Rahu-Ketu in Aquarius-Leo phase will coincide with the exalted Jupiter in Cancer — meaning the period combines career-detachment (Ketu-H10) with fortune-blessing (Jupiter exalted in H9). A powerful spiritual maturation signature.</p>
+  </div>
+
+  <!-- Layer 4: Mars -->
+  <h3 class="text-xl mt-6 mb-3">Layer 4 — Mars Transit (Acute Trigger)</h3>
+  <div class="caution mb-4">
+    <p>Mars moves through signs approximately every 45 days, creating acute event-triggers when it touches sensitive chart points.</p>
+    <table class="mt-2">
+      <thead><tr><th>Mars Transit</th><th>Approximate Period</th><th>From Lagna</th><th>Significance</th><th>Alert Level</th></tr></thead>
+      <tbody>
+        <tr class="bg-red-50">
+          <td>Cancer (debilitated)</td><td>mid-Apr &ndash; end-May 2026</td><td>H9</td>
+          <td>Mars neecha in your bhagya house = anger-impulse disrupts fortune. <strong>Major caution window</strong> for accidents, sharp objects, impulsive decisions.</td>
+          <td><span class="badge b-red">HIGH</span></td>
+        </tr>
+        <tr>
+          <td>Leo</td><td>end-May &ndash; mid-Jul 2026</td><td>H10</td>
+          <td>Mars energises career and visibility. Competitive drive beneficial. Action-oriented career moves favored.</td>
+          <td><span class="badge b-green">Favorable</span></td>
+        </tr>
+        <tr>
+          <td>Virgo</td><td>mid-Jul &ndash; end-Aug 2026</td><td>H11</td>
+          <td>Mars in gains house = financial initiative rewarded. Network expansion through assertive action.</td>
+          <td><span class="badge b-green">Good</span></td>
+        </tr>
+        <tr>
+          <td>Scorpio (own-sign)</td><td>~late 2026</td><td>H1</td>
+          <td><strong>Mars transiting Lagna in own-sign = Ruchaka transit activation.</strong> Physical energy at peak. Identity-asserting events. Exercise vigorously but safely.</td>
+          <td><span class="badge b-green">Powerful</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mt-2"><strong>Specific Mars caution:</strong> Through May 2026, Mars is debilitated in Cancer (H9). Tuesdays are especially volatile. Keep impulse-decisions small; revisit on Wednesday. Avoid sharp-tool activities on Sunday evenings before Tuesdays. Driving carefulness elevated. This period ends when Mars enters Leo (around end of May), bringing immediate relief.</p>
+  </div>
+
+  <!-- Layer 5: Micro-triggers -->
+  <h3 class="text-xl mt-6 mb-3">Layer 5 — Micro-Triggers (Sun, Venus, Mercury)</h3>
+  <div class="highlight mb-4">
+    <table>
+      <thead><tr><th>Planet</th><th>Transit June&ndash;Aug 2026</th><th>Key Event Timing</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Sun</strong></td>
+          <td>Taurus (H7) &rarr; Gemini (H8) ~14 Jun &rarr; Cancer (H9) ~16 Jul</td>
+          <td>Sun in H7 through mid-June = partnership spotlight, some interpersonal heat. Sun enters Cancer (H9) mid-July = brief but powerful authority + fortune activation.</td>
+        </tr>
+        <tr>
+          <td><strong>Venus</strong></td>
+          <td>Taurus (own-sign, H7) &rarr; Gemini (H8) ~early Jun &rarr; Cancer (H9) later</td>
+          <td>Venus in own-sign Taurus = positive for partnerships, finances, harmony. Venus entering H9 Cancer later = relationship + fortune convergence.</td>
+        </tr>
+        <tr>
+          <td><strong>Mercury</strong></td>
+          <td>Rapid movement through Taurus &rarr; Gemini &rarr; Cancer</td>
+          <td>Watch for Mercury combustion window in May 2026 — avoid signing major contracts on those specific days. Best contract-signing windows: when Mercury is direct and unafflicted, preferably on Wednesdays in Jupiter-transiting signs.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="transit mb-4">
+    <h4 class="font-bold mb-2">Eclipse Backdrop</h4>
+    <p>The next significant eclipse pair falls in <strong>late August / early September 2026</strong> (approximate: lunar eclipse ~28 August, solar eclipse ~12 September). These eclipses will activate the Saturn PD window (which begins 23 June 2026), adding intensity to the Saturn-testing themes. Eclipse-adjacent dates (3 days before and after each eclipse) are not suitable for initiating major ventures — use them for reflection, release, and recalibration.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 8: MARRIAGE TIMING — 5-PILLAR FRAMEWORK -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">8. Marriage Timing — Five-Pillar Analysis</h2>
+  <p class="mb-4">Marriage in Vedic astrology is assessed through five independent lenses. When multiple pillars converge in a single dasha-transit window, the probability of marriage-related events rises dramatically.</p>
+
+  <div class="overflow-x-auto mb-6">
+  <table>
+    <thead><tr><th>Pillar</th><th>Factor</th><th>Assessment</th><th>Marriage Implication</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>1. H7 Status</strong></td>
+        <td>Taurus (H7) — empty, no occupants</td>
+        <td>Venus (H7 lord) aspects from H3 (benefic gaze). No malefic occupation or aspect on H7.</td>
+        <td><span class="badge b-green">Protected</span> — the marriage house is clean, waiting for activation through dasha/transit.</td>
+      </tr>
+      <tr>
+        <td><strong>2. H7 Lord</strong></td>
+        <td>Venus in H3 Capricorn, Shravana P3, <strong>Pushkara Bhaga</strong></td>
+        <td>Venus is the primary maraka (H7+H12), but Pushkara Bhaga = divinely protected position. Venus in Shravana = listening-wisdom in partnerships. H3 placement = partner connected to communication, siblings' sphere, or short journeys.</td>
+        <td><span class="badge b-green">Protected promise</span> — marriage is promised and protected by Pushkara Bhaga.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Venus (Karaka)</strong></td>
+        <td>Same as H7 lord — double significance</td>
+        <td>Venus functioning as both karaka and bhava-lord intensifies the marriage signification. Venus in Saturn's sign (Capricorn) = marriage involves responsibility, maturity, age-appropriate choices.</td>
+        <td><span class="badge b-yellow">Deliberate</span> — marriage comes through mature, deliberate process, not impulsive romance.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Darakaraka (DK)</strong></td>
+        <td>Mars (DK) — H1 Scorpio own-sign</td>
+        <td>DK in Lagna own-sign = partner is intimately connected to your identity transformation. <strong>BUT D9 Mars in Cancer (debilitated)</strong> = marriage requires effort at the soul level. The partner may be strong externally but the <em>relationship</em> itself demands conscious nurturing.</td>
+        <td><span class="badge b-yellow">Effort required</span> — the marriage works, but not on autopilot.</td>
+      </tr>
+      <tr>
+        <td><strong>5. Upapada (UL)</strong></td>
+        <td>Aries (UL) — Mars-ruled, connected to the H1 Scorpio identity</td>
+        <td>Upapada in Aries = the public face of marriage is energetic, assertive, pioneer-spirited. Conflict with the 7th-from-UL (Libra, H12) introduces a tension between the marriage's outward face and its inner dynamics. Marriage timing linked to Mars/Aries activation in dasha + transit.</td>
+        <td><span class="badge b-yellow">Dynamic</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-6 mb-3">Marriage Window Analysis</h3>
+  <div class="golden mb-4">
+    <p><strong>Most likely marriage or major partnership windows:</strong></p>
+    <table class="mt-2">
+      <thead><tr><th>Window</th><th>Dasha Factor</th><th>Transit Factor</th><th>Convergence Score</th></tr></thead>
+      <tbody>
+        <tr class="bg-green-50">
+          <td><strong>Jun 2026 &ndash; Apr 2027</strong></td>
+          <td>Rahu-Moon AD (H9 lord = bhagya), with Venus PD (Jan&ndash;Apr 2027) = H7 lord running PD</td>
+          <td>Jupiter exalted in H9 (Cancer) aspects H7 (7th aspect on H3 where Venus sits). Most powerful transit support.</td>
+          <td><span class="badge b-green">HIGHEST</span></td>
+        </tr>
+        <tr class="bg-yellow-50">
+          <td><strong>May 2027 &ndash; May 2028</strong></td>
+          <td>Rahu-Mars AD — Mars is DK (Darakaraka). Lagnesha activation connects identity to partnership.</td>
+          <td>Jupiter still in Cancer or early Leo. Nodal return completing. Mars own-sign adds boldness to commitment.</td>
+          <td><span class="badge b-yellow">HIGH</span></td>
+        </tr>
+        <tr>
+          <td>2028&ndash;2030</td>
+          <td>Jupiter MD begins — Jupiter aspects H9 (bhagya) and H1 (self). Jupiter-Jupiter or Jupiter-Saturn AD windows.</td>
+          <td>Varies by year</td>
+          <td><span class="badge b-yellow">GOOD</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mt-3"><strong>Single most probable window for marriage crystallisation:</strong> The <strong>Moon-Venus PD (January &ndash; April 2027)</strong> within the current Rahu-Moon AD. This window sees: (1) Venus as H7 lord running PD, (2) Jupiter exalted in H9 aspecting H3 where Venus sits, (3) Moon AD = bhagya activation, (4) Rahu MD in final harvest phase. If relationship exists, this is the deepening/formalisation window. If seeking, this is the meeting/commitment window.</p>
+    <p class="mt-2"><strong>Specific auspicious muhurta guidance:</strong> Within the Jan&ndash;Apr 2027 window, prefer Fridays (Venus day) or Thursdays (Jupiter day) in Shukla Paksha (waxing moon), ideally when transit Moon is in Cancer, Taurus, or Pisces. Avoid Krittika or Ashlesha nakshatras for marriage muhurta.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 9: CAREER TIMING -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">9. Career Timing — Dasha-Transit Convergence Map</h2>
+
+  <div class="highlight mb-4">
+    <h4 class="font-bold mb-2">Career Architecture of this Chart</h4>
+    <table>
+      <thead><tr><th>Factor</th><th>Position</th><th>Career Implication</th></tr></thead>
+      <tbody>
+        <tr><td>H10 (Leo)</td><td>Empty — no occupants</td><td>Career activated through lord (Sun) and aspects, not direct occupation</td></tr>
+        <tr><td>H10 Lord Sun</td><td>H2 Sagittarius, Purvashadha P1</td><td>Career authority expressed through wealth-building, speech/communication, family enterprise. Sun in Jupiter's sign = career in wisdom/education/advisory fields or fields requiring broad vision.</td></tr>
+        <tr><td>Ruchaka Yoga</td><td>Mars own-sign H1</td><td>Physical/competitive/engineering/military/surgical career potential. But H1 placement means career is inseparable from personal identity.</td></tr>
+        <tr><td>Rahu H5</td><td>Technology + innovation in intellect house</td><td>Technology career, unconventional intellectual pursuits, cross-cultural work</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Period</th><th>Dasha Stack</th><th>Career Signal</th><th>Action Recommended</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Now &ndash; Jun 2026</td><td>Rahu-Moon-Jupiter PD</td>
+        <td><span class="badge b-green">Recognition window</span></td>
+        <td>A dignified opportunity surfaces — teaching, advising, leadership, or recognition vector. Treat it seriously. Say yes to stretch assignments.</td>
+      </tr>
+      <tr>
+        <td>Jun &ndash; Sep 2026</td><td>Rahu-Moon-Saturn PD</td>
+        <td><span class="badge b-yellow">Heads-down execution</span></td>
+        <td>Bureaucratic finish-work. Reviews and confirmations. Complete what Jupiter PD started. Do not launch new initiatives.</td>
+      </tr>
+      <tr>
+        <td>Sep &ndash; Dec 2026</td><td>Rahu-Moon-Mercury PD</td>
+        <td><span class="badge b-yellow">Communication push</span></td>
+        <td>Major writing, publishing, or codifying push. Your "teach what you know" karmic syllabus expressing. Contracts and agreements favorable.</td>
+      </tr>
+      <tr>
+        <td>Jan &ndash; Apr 2027</td><td>Rahu-Moon-Venus PD</td>
+        <td><span class="badge b-green">Partnership career shift</span></td>
+        <td>Partnership-style career opportunities. Joint ventures, alliances, collaborative projects. Venus as H7 lord = career through relationships.</td>
+      </tr>
+      <tr class="bg-yellow-50">
+        <td>May 2027 &ndash; May 2028</td><td>Rahu-Mars AD</td>
+        <td><span class="badge b-green">Bold move</span></td>
+        <td><strong>A defining career move.</strong> Geographic shift, role-level jump, entrepreneurial initiative. Be strategic, not impulsive. This is the launch pad for Jupiter MD.</td>
+      </tr>
+      <tr class="bg-green-50">
+        <td><strong>May 2028 &ndash; 2044</strong></td><td><strong>Jupiter MD</strong></td>
+        <td><span class="badge b-green">THE CAREER ERA</span></td>
+        <td><strong>Career peak. Honours, scholarship, leadership, institutional building.</strong> The 16 years you were built for. Authority comes naturally. Teach, guide, build institutions.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="verse mt-4">
+    <p>"Dashadhipateh karma-sthana-sambandhe, karmani unnatiḥ; trikona-sambandhe, dharma-karma-raja-yoga-phalam."<br>
+    — <strong>BPHS, Adhyaya 41</strong></p>
+    <p class="text-sm mt-1">When the dasha lord connects to the 10th house or trikona lords, career elevation and dharma-karma-raja yoga results manifest.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 10: SADE SATI DETAILED ANALYSIS -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">10. Sade Sati — Comprehensive Analysis</h2>
+  <p class="mb-4">Sade Sati ("seven and a half years") occurs when transit Saturn passes through the 12th, 1st, and 2nd houses from natal Moon. For Moon in Aries, Sade Sati occurs when Saturn transits Pisces (12th), Aries (1st), and Taurus (2nd). Each transit phase lasts approximately 2.5 years.</p>
+
+  <h3 class="text-xl mt-6 mb-3">10.1 Lifetime Sade Sati Cycles</h3>
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Cycle</th><th>Phase 1 (12th - Pisces)</th><th>Phase 2 (1st - Aries)</th><th>Phase 3 (2nd - Taurus)</th><th>Ages</th><th>Life Context</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>1st Cycle</strong></td>
+        <td>~1996&ndash;1998</td><td>~1998&ndash;2000</td><td>~2000&ndash;2003</td>
+        <td>8&ndash;15</td>
+        <td>Childhood/adolescent Sade Sati during Moon MD. Formative hardships, emotional resilience forged. Father/family trials likely. School-related challenges overcome through effort.</td>
+      </tr>
+      <tr class="bg-yellow-50">
+        <td><strong>2nd Cycle (CURRENT)</strong></td>
+        <td><strong>~Mar 2025 &ndash; mid 2027</strong></td><td><strong>~mid 2027 &ndash; 2029</strong></td><td><strong>~2029 &ndash; 2032</strong></td>
+        <td><strong>37&ndash;44</strong></td>
+        <td><strong>The career-age Sade Sati. Coincides with final Rahu MD and early Jupiter MD. This is the one that matters most for present life trajectory.</strong></td>
+      </tr>
+      <tr>
+        <td><strong>3rd Cycle</strong></td>
+        <td>~2054&ndash;2057</td><td>~2057&ndash;2059</td><td>~2059&ndash;2062</td>
+        <td>67&ndash;74</td>
+        <td>Elder-age Sade Sati during Saturn MD. Combined with Saturn MD's own difficulties = the most challenging overlap. Spiritual practice from earlier decades becomes essential refuge.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-6 mb-3">10.2 Current Sade Sati — Phase 1 (Rising): Detailed Analysis</h3>
+  <div class="sade-sati-phase mb-4">
+    <h4 class="font-bold mb-2">Saturn transiting Pisces (12th from Aries Moon) — March 2025 to mid 2027</h4>
+    <p>Phase 1 is called the "rising" phase — Saturn is approaching Moon from behind, like a wave building before it crests. The effects are <em>subtle and cumulative</em> rather than acute.</p>
+
+    <table class="mt-3">
+      <thead><tr><th>Symptom</th><th>Mechanism</th><th>Precaution</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Hidden expenses</strong></td>
+          <td>12th house = vyaya (expenditure). Saturn here creates steady, dripping outflow — not catastrophic, but persistent. Dharma/family/health/travel expenses accumulate.</td>
+          <td>Maintain a monthly expense tracking discipline. Budget 15% above expected baseline for "invisible costs." Avoid lending money during this phase.</td>
+        </tr>
+        <tr>
+          <td><strong>Sleep disruption</strong></td>
+          <td>12th house = sleep. Saturn disrupts sleep quality — vivid dreams, early waking, restless nights. Moon's Krittika fire nature adds emotional intensity to dream-life.</td>
+          <td>Strict sleep hygiene: in bed by 22:30, phone outside bedroom, window open if possible. No screen time 1 hour before sleep. Warm milk with turmeric (haldi-doodh) before bed.</td>
+        </tr>
+        <tr>
+          <td><strong>Emotional heaviness</strong></td>
+          <td>Saturn depresses Moon's natural fluidity. The Atmakaraka Moon under Saturn's gaze = the soul feels <em>weight</em>. This is not depression — it is karmic processing.</td>
+          <td>Daily meditation (minimum 12 minutes). Do not medicate normal sadness — feel it, process it, release it through prayer and physical movement.</td>
+        </tr>
+        <tr>
+          <td><strong>Solitude needs</strong></td>
+          <td>12th house = isolation. You will need more quiet time than usual. This is not antisocial — it is Saturn's recalibration of your inner space.</td>
+          <td>Honour solitude needs. Do not force socialisation. Schedule weekly alone-time (Saturday afternoon is ideal — Saturn's day).</td>
+        </tr>
+        <tr>
+          <td><strong>Mother's wellbeing</strong></td>
+          <td>Moon = matru-karaka. Saturn's pressure on Moon (from 12th) creates concern about mother's health or emotional state.</td>
+          <td>Explicit attention to mother's health. Arrange medical check-up if not done in 12 months. Regular contact — even brief daily calls.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="text-xl mt-6 mb-3">10.3 Moon's Resilience Assessment for Sade Sati</h3>
+  <div class="highlight mb-4">
+    <p>How well a chart handles Sade Sati depends significantly on Moon's natal strength. Assessment for this chart:</p>
+    <table class="mt-2">
+      <thead><tr><th>Factor</th><th>Status</th><th>Impact on Sade Sati</th></tr></thead>
+      <tbody>
+        <tr><td>Moon's sign</td><td>Aries (neutral — neither exalted nor debilitated)</td><td><span class="badge b-yellow">Moderate resilience</span></td></tr>
+        <tr><td>Moon's house</td><td>H6 (upachaya — improves with time)</td><td><span class="badge b-green">Favorable</span> — H6 Moon builds endurance</td></tr>
+        <tr><td>Moon's nakshatra</td><td>Krittika P1 (Sun lord, Agni deity)</td><td><span class="badge b-yellow">Fire under water</span> — emotional intensity but transformative potential</td></tr>
+        <tr><td>Moon as AK</td><td>Atmakaraka = soul-significator</td><td><span class="badge b-yellow">Deeper processing</span> — Sade Sati lessons hit at soul level</td></tr>
+        <tr><td>Aspects on Moon</td><td>No direct planetary aspects</td><td><span class="badge b-yellow">Self-reliant</span> — must manage emotions independently</td></tr>
+        <tr><td>Jupiter's protection</td><td>Jupiter from H5 casts 9th aspect on H1 (Lagna)</td><td><span class="badge b-green">Significant protection</span> — Jupiter protects the self even if Moon is pressured</td></tr>
+        <tr><td>Mars (Lagnesha)</td><td>Own-sign H1 = strong identity anchor</td><td><span class="badge b-green">Strong</span> — Mars provides structural resilience</td></tr>
+      </tbody>
+    </table>
+    <p class="mt-3"><strong>Overall Sade Sati resilience: MODERATE TO GOOD.</strong> The Moon is not weak enough to be overwhelmed, and Jupiter's protective aspect on the Lagna provides a significant buffer. The Ruchaka Yoga (Mars own-sign H1) gives the personality enough Mars-steel to endure Saturn's grinding pressure. The primary vulnerability is emotional — Moon as AK in Krittika means Saturn's pressure hits the <em>deepest emotional layer</em>. The remedy is conscious emotional processing, not suppression.</p>
+  </div>
+
+  <h3 class="text-xl mt-6 mb-3">10.4 Upcoming Phases 2 and 3</h3>
+  <div class="caution mb-4">
+    <p><strong>Phase 2 — Saturn in Aries (directly on Moon) — approximately mid 2027 to 2029:</strong></p>
+    <p class="mt-1">This is the <em>peak</em> of Sade Sati — Saturn transiting directly over the natal Moon. For Aries Moon, this is especially significant because Saturn is <em>debilitated</em> in Aries. A debilitated Saturn on the Moon creates a peculiar dynamic: Saturn <em>wants</em> to grind but lacks the structural authority to do so efficiently. The result is <strong>frustration</strong> — obstacles that seem pointless, delays that lack clear logic, emotional heaviness without clear cause.</p>
+    <p class="mt-2"><strong>Silver lining:</strong> Phase 2 coincides with the <strong>final year of Rahu MD (Rahu-Mars AD) and the beginning of Jupiter MD</strong>. The Jupiter MD's supreme dignity provides a powerful counterbalance. Saturn's debilitation in Aries weakens its ability to cause severe damage. This is a "weatherable storm" — uncomfortable but not destructive if the preparation protocols are followed.</p>
+    <p class="mt-3"><strong>Phase 3 — Saturn in Taurus (2nd from Moon) — approximately 2029 to 2032:</strong></p>
+    <p class="mt-1">The final phase, transiting the 2nd from Moon (wealth, family, speech). Financial caution needed, family dynamics may feel heavy. Saturn is neutral in Taurus — neither strong nor weak. This phase occurs entirely within the Jupiter MD, which provides sustained protection. Focus: <em>fiscal discipline, family communication improvement, dental/throat health monitoring.</em></p>
+  </div>
+
+  <h3 class="text-xl mt-6 mb-3">10.5 Sade Sati Remedial Protocol</h3>
+  <div class="spiritual mb-4">
+    <p><strong>These remedies are specific to Aries Moon with Scorpio Lagna under the current Sade Sati cycle:</strong></p>
+    <ul class="list-disc pl-6 mt-2 space-y-2">
+      <li><strong>Saturday sesame oil abhyanga (self-massage)</strong>: Saturn responds to seva of the body. Warm sesame oil on the feet and head every Saturday morning before bathing. This is the single most effective physical remedy for Sade Sati.</li>
+      <li><strong>Hanuman Chalisa at sunset</strong>: Hanuman is the remover of Saturn's afflictions (per Sundara Kanda lore). Daily recitation at sunset — even once — creates a protective shield.</li>
+      <li><strong>Tila-daan (sesame donation)</strong>: Every Saturday, donate a small quantity of black sesame seeds to a temple or to someone in need. The act itself is the remedy; quantity is irrelevant.</li>
+      <li><strong>Blue sapphire (Neelam) — DO NOT wear without specific muhurta consultation.</strong> For this chart, the safer alternative is <strong>Amethyst on the middle finger of the right hand, set in iron/silver, consecrated on a Saturday</strong>. Consult a qualified jyotishi before any gemstone commitment.</li>
+      <li><strong>Shani Gayatri or Dasharatha Shani Stotra</strong>: Recited 11 times every Saturday. Begin on a Saturday in Shukla Paksha.</li>
+      <li><strong>Avoid alcohol on Saturdays</strong>: Saturn governs intoxication patterns. Saturday alcohol consumption during Sade Sati specifically worsens Phase 1 symptoms (sleep, expenses, emotional weight).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 11: FORWARD MAP — 24 MONTHS -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">11. Forward Sketch — November 2025 to May 2028 (Rahu MD Remainder)</h2>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Window</th><th>Dasha Stack</th><th>Key Transit</th><th>Texture</th><th>Best For</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Nov 2025 &ndash; Apr 2026</td>
+        <td>Rahu-Moon (Moon &rarr; Rahu PDs)</td>
+        <td>Saturn entering Pisces; Mars various</td>
+        <td>Re-grounding + strategic moves</td>
+        <td>Internal restructuring, foundation-laying</td>
+      </tr>
+      <tr class="bg-green-50">
+        <td><strong>11 Apr &ndash; 23 Jun 2026</strong></td>
+        <td><strong>Rahu-Moon-Jupiter PD</strong></td>
+        <td><strong>Jupiter ingress Cancer ~9 Jun</strong></td>
+        <td><strong>Wisdom-blessing window</strong></td>
+        <td><strong>Major commitments, public moves, dharma-vows, marriage steps</strong></td>
+      </tr>
+      <tr>
+        <td>23 Jun &ndash; 17 Sep 2026</td>
+        <td>Rahu-Moon-Saturn PD</td>
+        <td>Saturn over natal Jupiter; eclipses Aug-Sep</td>
+        <td>Discipline, testing, consolidation</td>
+        <td>Structural completions, bureaucratic close-outs</td>
+      </tr>
+      <tr>
+        <td>17 Sep &ndash; 3 Dec 2026</td>
+        <td>Rahu-Moon-Mercury PD</td>
+        <td>Mercury direct most of period</td>
+        <td>Communication + contract season</td>
+        <td>Writing, publication, agreements, teaching</td>
+      </tr>
+      <tr>
+        <td>3 Dec 2026 &ndash; 3 Jan 2027</td>
+        <td>Rahu-Moon-Ketu PD</td>
+        <td>Nodes transitioning</td>
+        <td>Detachment, inner reset</td>
+        <td>Brief retreats, completing loose ends</td>
+      </tr>
+      <tr class="bg-green-50">
+        <td><strong>3 Jan &ndash; 4 Apr 2027</strong></td>
+        <td><strong>Rahu-Moon-Venus PD</strong></td>
+        <td><strong>Jupiter exalted in Cancer (still strong)</strong></td>
+        <td><strong>Relationships season</strong></td>
+        <td><strong>Marital deepening, creative income, partnerships, art</strong></td>
+      </tr>
+      <tr>
+        <td>4 Apr &ndash; 1 May 2027</td>
+        <td>Rahu-Moon-Sun PD</td>
+        <td>Rahu-Sun: subtle health watch</td>
+        <td>Brief authority moment</td>
+        <td>Recognition, then AD handover</td>
+      </tr>
+      <tr class="bg-yellow-50">
+        <td><strong>May 2027 &ndash; May 2028</strong></td>
+        <td><strong>Rahu-Mars AD</strong></td>
+        <td><strong>Mars-Rahu intensities; Sade Sati Phase 2 begins</strong></td>
+        <td><strong>Final Rahu push: ambition + risk</strong></td>
+        <td><strong>Career-leap, possibly significant move, identity-crystallisation</strong></td>
+      </tr>
+      <tr class="bg-green-50">
+        <td><strong>27 May 2028</strong></td>
+        <td><strong>Jupiter MD begins</strong></td>
+        <td><strong>Era change: 16 years of Jupiter</strong></td>
+        <td><strong>Long-arc dharmic crystallisation</strong></td>
+        <td><strong>Build the life you've been preparing for</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 12: DOMAIN-BY-DOMAIN FORWARD MAP -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">12. Domain-by-Domain Forward Map</h2>
+
+  <!-- Career -->
+  <h3 class="text-xl mt-6 mb-3">12.1 Career</h3>
+  <div class="highlight mb-4">
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Now &ndash; Jun 2026 (Jupiter PD)</strong>: A dignified opportunity surfaces — a teaching, advising, leadership, or recognition vector. Treat it seriously. This is not a routine promotion; it is a directional shift.</li>
+      <li><strong>Jul &ndash; Sep 2026 (Saturn PD)</strong>: Heads-down execution. Bureaucratic finish-work. Reviews and confirmations. Do not chase new horizons; harvest what Jupiter PD planted.</li>
+      <li><strong>Sep &ndash; Dec 2026 (Mercury PD)</strong>: Major writing, publishing, or codifying push. Your "teach what you know" karmic syllabus expressing. This is the communication-harvest window.</li>
+      <li><strong>2027 (Venus + Sun PDs, then Mars AD)</strong>: Partnership-style career shifts, then a bold defining move. The Mars AD is the "before-the-leap" period.</li>
+      <li><strong>2028 onwards</strong>: Jupiter MD = <em>the career era you were built for</em>. Honours, scholarship, leadership, institutional influence. Build the infrastructure now.</li>
+    </ul>
+  </div>
+
+  <!-- Finances -->
+  <h3 class="text-xl mt-6 mb-3">12.2 Finances</h3>
+  <div class="highlight mb-4">
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Inflow during Jupiter PD</strong>: Opportunity-tied income, possibly with bonus/honour/gift component. Financial paperwork should be clean by mid-June 2026.</li>
+      <li><strong>Outflow during Saturn PD (Jul&ndash;Sep 2026)</strong>: Expect structural expenses — home repair, vehicle service, bureaucratic fees. Budget now so it does not bite later.</li>
+      <li><strong>Investment philosophy</strong>: Jupiter-Cancer transit blesses long-arc, dignified instruments — index funds, real estate for long-term hold, retirement instruments, educational ventures. <em>Avoid speculation and short-term trading May&ndash;Sep 2026.</em></li>
+      <li><strong>Contract signing</strong>: Avoid Mercury combustion days. Best signing windows: Wednesdays when Mercury is direct and unafflicted, Thursdays for Jupiter-blessed agreements.</li>
+      <li><strong>Jupiter MD (2028&ndash;2044)</strong>: Systematic wealth-building. H2 lord running MD = the 16-year wealth-accumulation arc. Property, savings, investments — all peak.</li>
+    </ul>
+  </div>
+
+  <!-- Health -->
+  <h3 class="text-xl mt-6 mb-3">12.3 Health</h3>
+  <div class="warn mb-4">
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Mars debilitated in Cancer through May 2026</strong>: Avoid risky physical activity, careful driving, no elective surgery. This lifts when Mars enters Leo.</li>
+      <li><strong>Sade Sati Phase 1 ongoing</strong>: Sleep discipline is critical. Digestion needs monitoring — Moon in H6 + Saturn transit 12th = gastric sensitivities.</li>
+      <li><strong>Dental/throat cluster</strong>: Saturn in H2 transit approaching natal Jupiter = throat, dental, neck area attention. Schedule routine dental review in 2026.</li>
+      <li><strong>Mother's health</strong>: Explicit attention needed. Arrange comprehensive check-up if not done in the past 12 months.</li>
+      <li><strong>Diet</strong>: Reduce dairy in evenings. Prefer warm, cooked meals. Limit caffeine after 15:00. Evening walk (20 minutes minimum) for digestion and emotional processing.</li>
+      <li><strong>Sleep protocol</strong>: In bed by 22:30. Phone outside bedroom. Window open if possible. Warm turmeric milk (haldi-doodh) 30 minutes before sleep.</li>
+    </ul>
+  </div>
+
+  <!-- Mental Wellbeing -->
+  <h3 class="text-xl mt-6 mb-3">12.4 Inner Peace and Mental Wellbeing</h3>
+  <div class="spiritual mb-4">
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Sade Sati Phase 1 is the emotional weather system</strong>: Daily sandhya-vandana or meditation is non-negotiable. Even 12 minutes creates a buffer against Saturn's cumulative pressure.</li>
+      <li><strong>Jupiter PD (now)</strong>: This is the <em>easiest</em> meditation period of the next 2 years. Build the habit now so Saturn PD does not break it.</li>
+      <li><strong>Avoid</strong>: Late-night information consumption (Krittika Moon irritation amplified). Afternoon sugar crashes. Saturday overwork.</li>
+      <li><strong>Cultivate</strong>: Hanuman Chalisa at sunset. One walk outdoors weekly in natural settings. Thursday lamp at home shrine. Journaling on Fridays for emotional processing.</li>
+    </ul>
+  </div>
+
+  <!-- Spiritual Practice -->
+  <h3 class="text-xl mt-6 mb-3">12.5 Devotional and Spiritual Practice</h3>
+  <div class="spiritual mb-4">
+    <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Jupiter PD = Begin a new vrata (vow)</strong>: Suggested — Thursday observance through Jupiter MD (yellow cloth at altar, moderate food, one act of dana). Begin during this PD; carry it into the 16-year Jupiter MD that follows.</li>
+      <li><strong>Ishta-mantra</strong>: As identified in Part 3. Minimum 28 repetitions daily. The PD of Jupiter amplifies mantra-siddhi.</li>
+      <li><strong>Bhagavad Gita vrata</strong>: Read one chapter each Thursday. Complete 18 chapters in 18 weeks. This single practice, if maintained, shifts the karmic baseline measurably. Begin now — the Jupiter PD is the ideal launchpad.</li>
+      <li><strong>D60 Jupiter exalted activation</strong>: The chart carries exceptional D60 merit. The Gita-vrata and Thursday observance are the practical keys to accessing it.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 13: CRITICAL DATE ANCHORS -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">13. Critical Date Anchors — Next 8 Weeks and Beyond</h2>
+  <p class="mb-4">These dates ground Part 5's week-by-week forecast. Each represents a dasha-transit convergence point of significance.</p>
+
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Date</th><th>Event</th><th>Why It Matters</th></tr></thead>
+    <tbody>
+      <tr class="bg-green-50">
+        <td><strong>~9 Jun 2026</strong></td>
+        <td>Jupiter ingresses Cancer (exaltation, H9)</td>
+        <td><strong>The single most important transit of the year.</strong> Exalted Jupiter in bhagya-bhava begins a 13-month blessing arc. Dasha (Jupiter PD) + transit (Jupiter exalted H9) converge.</td>
+      </tr>
+      <tr>
+        <td>~12 Jun 2026</td>
+        <td>Rahu sukshma begins within Jupiter PD</td>
+        <td>MD lord running sukshma at PD close = culmination of Jupiter PD gifts. Integration window.</td>
+      </tr>
+      <tr>
+        <td>~14 Jun 2026</td>
+        <td>Sun ingresses Gemini (H8)</td>
+        <td>Transformation themes surface. Emotional depth. Research and introspection favored.</td>
+      </tr>
+      <tr class="bg-yellow-50">
+        <td><strong>23 Jun 2026</strong></td>
+        <td>Jupiter PD ends; Saturn PD begins</td>
+        <td><em>Window of highest grace closes; consolidation begins.</em> Discipline replaces ease. Adjust expectations accordingly.</td>
+      </tr>
+      <tr>
+        <td>~28 Aug 2026</td>
+        <td>Lunar eclipse (approximate)</td>
+        <td>Eclipse in Saturn PD = testing intensity peaks. No major launches 3 days before/after.</td>
+      </tr>
+      <tr>
+        <td>~12 Sep 2026</td>
+        <td>Solar eclipse (approximate)</td>
+        <td>Career/authority themes tested. Reflection, not action, around this date.</td>
+      </tr>
+      <tr>
+        <td>17 Sep 2026</td>
+        <td>Mercury PD begins</td>
+        <td>Communication channel fully opens. Writing, teaching, publishing window.</td>
+      </tr>
+      <tr class="bg-green-50">
+        <td><strong>3 Jan 2027</strong></td>
+        <td>Venus PD begins</td>
+        <td><strong>H7 lord running PD + Jupiter exalted in H9 = strongest marriage/partnership window.</strong></td>
+      </tr>
+      <tr>
+        <td>5 May 2027</td>
+        <td>Rahu-Mars AD begins</td>
+        <td>Final Rahu AD. Lagnesha activation. Bold career moves. The launch pad for Jupiter MD.</td>
+      </tr>
+      <tr class="bg-green-50">
+        <td><strong>27 May 2028</strong></td>
+        <td>Jupiter Mahadasha begins</td>
+        <td><strong>ERA CHANGE.</strong> The 16-year Golden Period commences. Everything built before this date serves as foundation.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 14: INTEGRATED ASSESSMENT -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">14. Integrated Assessment — The Navigational Summary</h2>
+
+  <div class="highlight mb-6">
+    <h3 class="text-xl mb-3">The Three Pillars of Navigation (June 2026 &ndash; May 2028)</h3>
+    <ol class="list-decimal pl-6 space-y-4">
+      <li>
+        <strong>CAREER: Ride the Jupiter-exaltation wave (Jun 2026 &ndash; Jul 2027)</strong>
+        <ul class="list-disc pl-6 mt-1 space-y-1">
+          <li>Jupiter exalted in H9 = fortune-blessing for 13 months</li>
+          <li>Jupiter PD (now) is the highest-grace window — say yes to dharmic stretch assignments</li>
+          <li>After Jupiter PD: Saturn PD demands consolidation, Mercury PD enables communication, Mars AD enables bold moves</li>
+          <li>Jupiter MD (May 2028) = build toward this era in everything you do now</li>
+        </ul>
+      </li>
+      <li>
+        <strong>RELATIONSHIPS: The marriage/partnership window is open</strong>
+        <ul class="list-disc pl-6 mt-1 space-y-1">
+          <li>Venus PD (Jan&ndash;Apr 2027) = H7 lord running PD under exalted Jupiter transit = strongest window</li>
+          <li>Mars AD (May 2027&ndash;May 2028) = DK period adds identity-level commitment energy</li>
+          <li>Approach relationships with the maturity Saturn demands (Sade Sati) and the openness Jupiter offers</li>
+        </ul>
+      </li>
+      <li>
+        <strong>SPIRITUAL: Establish the daily practice NOW</strong>
+        <ul class="list-disc pl-6 mt-1 space-y-1">
+          <li>Jupiter PD = the easiest window for spiritual habit-formation</li>
+          <li>The practice established now carries through Sade Sati Phases 2&ndash;3, Saturn PD, and into Jupiter MD</li>
+          <li>Thursday Gita-vrata: one chapter per week for 18 weeks</li>
+          <li>Hanuman Chalisa at sunset: daily, non-negotiable</li>
+          <li>Saturday sesame-oil abhyanga: Sade Sati's physical remedy</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="golden mb-6">
+    <h3 class="text-xl mb-3">The Architect's Summary</h3>
+    <p>The next 24 months are the <strong>harvest-end of Rahu MD and the seeding of Jupiter MD</strong>. The most important practical truth:</p>
+    <p class="mt-2 font-bold text-lg" style="color:#78350f">Commitments made and structures built between April 2026 and May 2028 — particularly during the Jupiter pratyantardasha (now through June 23) — become the platform on which the 16-year Jupiter Mahadasha builds.</p>
+    <p class="mt-3">Within this 24-month frame, the next few weeks (through 23 June 2026) are the <em>single most graceful window</em>. They host:</p>
+    <ul class="list-disc pl-6 mt-2 space-y-1">
+      <li>The Jupiter PD — the chart's own Guru speaking at maximum volume</li>
+      <li>The exalted Jupiter ingress to bhagya-house (around 9 June)</li>
+      <li>The Rahu nodal return — identity rebirth potential</li>
+      <li>The closing of Mars-debilitation transit — the anger-burden lifts</li>
+    </ul>
+    <p class="mt-3">These are not commonplace alignments — they are a <strong>convergence</strong>. Honour them with attention, vow, and offering.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SECTION 15: THE BRUTAL HONESTY TABLE -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">15. The Honest Table — Life Era Ratings</h2>
+  <p class="mb-4">A consolidated view of each major life era's expected quality, rated without diplomacy but paired with dharmic guidance.</p>
+
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Era</th><th>Period</th><th>Ages</th><th>Quality</th><th>Primary Theme</th><th>Dharmic Response</th></tr></thead>
+    <tbody>
+      <tr><td>Sun MD</td><td>1987&ndash;1993</td><td>0&ndash;5.5</td><td style="background:#fef3c7">Mixed</td><td>Formation under father's shadow</td><td>Was beyond your control; shaped by family karma</td></tr>
+      <tr><td>Moon MD</td><td>1993&ndash;2003</td><td>5.5&ndash;15.5</td><td style="background:#fef3c7">Formative hardship</td><td>Soul-lesson through service</td><td>The resilience forged here is your greatest asset</td></tr>
+      <tr><td>Mars MD</td><td>2003&ndash;2010</td><td>15.5&ndash;22.5</td><td style="background:#dcfce7">Excellent</td><td>Identity crystallisation</td><td>The body and will were forged; maintain them</td></tr>
+      <tr><td>Rahu MD (now)</td><td>2010&ndash;2028</td><td>22.5&ndash;40.5</td><td style="background:#dbeafe">Transformative</td><td>Technology, innovation, unconventional growth</td><td>Harvest the final 2 years deliberately</td></tr>
+      <tr style="background:#dcfce7"><td><strong>Jupiter MD</strong></td><td><strong>2028&ndash;2044</strong></td><td><strong>40.5&ndash;56.5</strong></td><td style="background:#bbf7d0"><strong>THE PEAK</strong></td><td><strong>Career, wealth, children, dharma</strong></td><td><strong>Prepare now; this is the era of maximum harvest</strong></td></tr>
+      <tr style="background:#fef2f2"><td><strong>Saturn MD</strong></td><td><strong>2044&ndash;2063</strong></td><td><strong>56.5&ndash;75.5</strong></td><td style="background:#fecaca"><strong>Challenging</strong></td><td><strong>Home, mother, inner peace tested</strong></td><td><strong>Build reserves in Jupiter MD; deepen spiritual practice before 2044</strong></td></tr>
+      <tr><td>Mercury MD</td><td>2063&ndash;2080</td><td>75.5&ndash;92.5</td><td style="background:#fef3c7">Mixed</td><td>Gains through communication; H8 transformation</td><td>Teaching and mentoring as elder-purpose</td></tr>
+      <tr><td>Ketu MD</td><td>2080&ndash;2087</td><td>92.5&ndash;99.5</td><td style="background:#ede9fe">Spiritual</td><td>Moksha-orientation, detachment</td><td>The inner life becomes the entire life</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- CLOSING -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<section class="mb-10">
+  <div class="verse mb-4">
+    <p>"Phala-mulam arabhya kala-vidhanam ayati."</p>
+    <p class="text-sm mt-1">From the root of fruit, the architecture of time arrives.</p>
+  </div>
+
+  <div class="highlight">
+    <h3 class="text-xl mb-3">Bridge to Part 5</h3>
+    <p>This Part 4 has established the temporal architecture — <em>which dashas carry which promises, and which transits trigger which events</em>. Part 5 will translate this architecture into a <strong>week-by-week, day-sensitive 8-week forecast</strong> covering 7 June through 23 June 2026 (Jupiter PD conclusion) and extending through the Saturn PD (June&ndash;September 2026).</p>
+    <p class="mt-2">Part 5 will include: specific auspicious dates, remedial muhurtas, career action-windows, relationship timing, health precautions by week, and the practical daily protocols that transform jyotish knowledge into lived dharmic action.</p>
+  </div>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-12 pb-8 border-t pt-4">
+  <p><strong>|| Iti Chaturtho Bhagah ||</strong></p>
+  <p class="mt-2">Part 4 of 5 — Dasha, Bhukti, Transit Cosmology</p>
+  <p class="mt-1">Bandlapalli Ajay Kumar | Scorpio Lagna | Anuradha P2</p>
+  <p class="mt-1 text-xs text-gray-400">Generated 7 June 2026 | Swiss Ephemeris computation base | Lahiri ayanamsha</p>
+</footer>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🪐 Vedic Birth Chart — Karthik Agasthya</title>
+<style>
+  /* ── Reset & Base ─────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:        #0a0a1a;
+    --surface:   #111127;
+    --card:      #16163a;
+    --border:    #2a2a5a;
+    --gold:      #d4a853;
+    --gold-dim:  #9a7a3a;
+    --amber:     #f0b040;
+    --orange:    #e88030;
+    --red:       #e05050;
+    --green:     #50c878;
+    --teal:      #40b0a0;
+    --blue:      #5090d0;
+    --purple:    #9060d0;
+    --text:      #e0dcd0;
+    --text-dim:  #9090a8;
+    --text-bright: #fff;
+    --font:      'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --radius:    12px;
+    --shadow:    0 4px 24px rgba(0,0,0,0.5);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { color: var(--amber); text-decoration: underline; }
+
+  /* ── Starfield Background ─────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(1.5px 1.5px at 20% 30%, rgba(255,255,255,0.3) 50%, transparent 100%),
+      radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.2) 50%, transparent 100%),
+      radial-gradient(1.2px 1.2px at 60% 20%, rgba(255,255,255,0.25) 50%, transparent 100%),
+      radial-gradient(1px 1px at 80% 50%, rgba(255,255,255,0.15) 50%, transparent 100%),
+      radial-gradient(0.8px 0.8px at 15% 80%, rgba(255,255,255,0.2) 50%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 90% 10%, rgba(255,255,255,0.3) 50%, transparent 100%),
+      radial-gradient(1px 1px at 50% 90%, rgba(255,255,255,0.15) 50%, transparent 100%);
+    background-size: 200px 200px, 300px 300px, 250px 250px, 350px 350px, 180px 180px, 400px 400px, 220px 220px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Container ────────────────────────────────────── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; }
+
+  /* ── Hero / Header ────────────────────────────────── */
+  .hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(180deg, rgba(212,168,83,0.08) 0%, transparent 100%);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  .hero-symbol { font-size: 64px; margin-bottom: 10px; display: block; }
+  .hero h1 {
+    font-family: var(--font-serif);
+    font-size: 2.6em;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 20px rgba(212,168,83,0.3);
+  }
+  .hero .subtitle {
+    font-size: 1.1em;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  .hero .system-badge {
+    display: inline-block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 0.82em;
+    color: var(--text-dim);
+  }
+
+  /* ── Birth Info Bar ──────────────────────────────── */
+  .birth-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .birth-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    text-align: center;
+  }
+  .birth-item .label { font-size: 0.78em; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px; }
+  .birth-item .value { font-size: 1.15em; color: var(--text-bright); font-weight: 600; }
+  .birth-item .value.gold { color: var(--gold); }
+
+  /* ── Section ──────────────────────────────────────── */
+  .section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-header .icon { font-size: 1.6em; }
+  .section-header h2 {
+    font-family: var(--font-serif);
+    font-size: 1.5em;
+    color: var(--gold);
+  }
+
+  /* ── Rashi Chart Grid (South Indian) ─────────────── */
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .rashi-chart {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 600px;
+    height: 600px;
+    border: 2px solid var(--gold);
+    background: rgba(0,0,0,0.3);
+    border-radius: 4px;
+  }
+  .rashi-chart .cell {
+    border: 1px solid var(--border);
+    padding: 8px;
+    font-size: 0.75em;
+    line-height: 1.4;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  .rashi-chart .cell:hover { background: rgba(212,168,83,0.08); }
+  .rashi-chart .cell .sign-name {
+    font-size: 0.85em;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .rashi-chart .cell .house-num {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    font-size: 0.7em;
+    color: var(--gold-dim);
+    font-weight: 700;
+  }
+  .rashi-chart .cell .planet-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin: 1px;
+    font-weight: 600;
+    font-size: 0.82em;
+  }
+  .rashi-chart .center-block {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(212,168,83,0.06), rgba(212,168,83,0.02));
+    border: 1px solid var(--border);
+    padding: 16px;
+  }
+  .center-block .name-label { font-family: var(--font-serif); font-size: 1.3em; color: var(--gold); font-weight: 700; }
+  .center-block .sub-label { font-size: 0.82em; color: var(--text-dim); margin-top: 4px; }
+
+  .pb-own      { background: rgba(80,200,120,0.15); color: #70e898; }
+  .pb-exalted  { background: rgba(212,168,83,0.2);  color: var(--gold); }
+  .pb-debil    { background: rgba(224,80,80,0.15);  color: #f08080; }
+  .pb-combust  { background: rgba(240,176,64,0.15); color: var(--amber); }
+  .pb-neutral  { background: rgba(144,144,168,0.12); color: var(--text); }
+  .pb-retro    { background: rgba(144,96,208,0.15); color: #b090e0; }
+  .pb-lagna    { background: rgba(80,144,208,0.2); color: #80c0f0; }
+  .pb-vargo    { background: rgba(212,168,83,0.25); color: var(--gold); border: 1px solid var(--gold-dim); }
+
+  /* ── Tables ──────────────────────────────────────── */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(42,42,90,0.6); }
+  th { color: var(--gold); font-size: 0.82em; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+  td { font-size: 0.92em; }
+  tr:hover td { background: rgba(212,168,83,0.04); }
+  .highlight-row td { background: rgba(212,168,83,0.08); font-weight: 600; }
+
+  /* ── Yoga Cards ──────────────────────────────────── */
+  .yoga-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .yoga-card {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .yoga-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .yoga-card.yoga-5::before { background: linear-gradient(90deg, var(--gold), var(--amber)); }
+  .yoga-card.yoga-4::before { background: linear-gradient(90deg, var(--teal), var(--green)); }
+  .yoga-card.yoga-3::before { background: linear-gradient(90deg, var(--blue), var(--purple)); }
+  .yoga-card.yoga-2::before { background: linear-gradient(90deg, var(--orange), var(--amber)); }
+  .yoga-card.yoga-warn::before { background: linear-gradient(90deg, var(--red), var(--orange)); }
+  .yoga-card .yoga-title { font-weight: 700; font-size: 1.05em; color: var(--text-bright); margin-bottom: 4px; }
+  .yoga-card .yoga-stars { color: var(--gold); margin-bottom: 8px; letter-spacing: 2px; }
+  .yoga-card .yoga-desc { font-size: 0.88em; color: var(--text-dim); line-height: 1.6; }
+
+  /* ── Dasha Timeline ──────────────────────────────── */
+  .dasha-timeline { position: relative; padding-left: 36px; margin: 20px 0; }
+  .dasha-timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--gold), var(--border));
+  }
+  .dasha-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .dasha-item.active {
+    background: rgba(212,168,83,0.08);
+    border-color: var(--gold-dim);
+  }
+  .dasha-item::before {
+    content: '';
+    position: absolute;
+    left: -28px; top: 22px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 2px solid var(--card);
+  }
+  .dasha-item.active::before { background: var(--gold); box-shadow: 0 0 10px rgba(212,168,83,0.5); }
+  .dasha-item.past::before { background: var(--text-dim); }
+  .dasha-item .dasha-label { font-weight: 700; color: var(--text-bright); font-size: 1.02em; }
+  .dasha-item.active .dasha-label { color: var(--gold); }
+  .dasha-item .dasha-dates { font-size: 0.82em; color: var(--text-dim); margin-top: 2px; }
+  .dasha-item .dasha-desc { font-size: 0.88em; color: var(--text); margin-top: 8px; line-height: 1.6; }
+
+  /* ── Prediction Cards ────────────────────────────── */
+  .pred-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .pred-card {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .pred-card .pred-icon { font-size: 2.2em; margin-bottom: 10px; display: block; }
+  .pred-card .pred-title { font-weight: 700; color: var(--text-bright); margin-bottom: 6px; }
+  .pred-card .pred-detail { font-size: 0.88em; color: var(--text-dim); line-height: 1.6; }
+  .pred-card .pred-window {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78em;
+    font-weight: 600;
+  }
+  .pw-peak { background: rgba(212,168,83,0.2); color: var(--gold); border: 1px solid var(--gold-dim); }
+  .pw-good { background: rgba(80,200,120,0.15); color: var(--green); }
+  .pw-caution { background: rgba(224,80,80,0.1); color: #f08080; }
+
+  /* ── Remedy Cards ────────────────────────────────── */
+  .remedy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .remedy-card {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .remedy-card .remedy-day { font-weight: 700; color: var(--amber); margin-bottom: 4px; }
+  .remedy-card .remedy-planet { font-size: 0.82em; color: var(--text-dim); margin-bottom: 8px; }
+  .remedy-card .remedy-text { font-size: 0.88em; color: var(--text); line-height: 1.6; }
+
+  /* ── Status Badges ───────────────────────────────── */
+  .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.78em;
+    font-weight: 600;
+  }
+  .badge-active { background: rgba(80,200,120,0.15); color: var(--green); }
+  .badge-past   { background: rgba(144,144,168,0.1); color: var(--text-dim); }
+  .badge-coming { background: rgba(80,144,208,0.15); color: var(--blue); }
+  .badge-peak   { background: rgba(212,168,83,0.2); color: var(--gold); }
+
+  /* ── Meter / Progress ────────────────────────────── */
+  .strength-meter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .meter-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .meter-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.8s ease;
+  }
+  .mf-gold   { background: linear-gradient(90deg, var(--gold-dim), var(--gold)); }
+  .mf-green  { background: linear-gradient(90deg, #308050, var(--green)); }
+  .mf-blue   { background: linear-gradient(90deg, #3060a0, var(--blue)); }
+  .mf-orange { background: linear-gradient(90deg, #a05020, var(--orange)); }
+
+  /* ── Blockquote ──────────────────────────────────── */
+  .vedic-quote {
+    border-left: 3px solid var(--gold-dim);
+    padding: 16px 20px;
+    margin: 20px 0;
+    background: rgba(212,168,83,0.04);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: var(--text-dim);
+    font-family: var(--font-serif);
+    line-height: 1.8;
+  }
+  .vedic-quote .source { display: block; margin-top: 8px; font-size: 0.85em; color: var(--gold-dim); font-style: normal; }
+
+  /* ── Navamsha Grid ──────────────────────────────── */
+  .d9-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 16px 0; }
+  .d9-item {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+  .d9-item .d9-planet { font-weight: 700; color: var(--text-bright); }
+  .d9-item .d9-sign   { font-size: 0.88em; color: var(--text-dim); }
+  .d9-item .d9-note   { font-size: 0.82em; color: var(--gold); margin-top: 4px; }
+
+  /* ── Key Outcome Box ─────────────────────────────── */
+  .outcome-box {
+    background: linear-gradient(135deg, rgba(212,168,83,0.08), rgba(212,168,83,0.02));
+    border: 1px solid var(--gold-dim);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .outcome-box h3 { color: var(--gold); margin-bottom: 12px; font-family: var(--font-serif); font-size: 1.2em; }
+  .outcome-box p { font-size: 0.95em; color: var(--text); line-height: 1.7; }
+
+  /* ── Nav Tabs ────────────────────────────────────── */
+  .nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 32px;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 14px 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-tabs a {
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.82em;
+    font-weight: 600;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    transition: all 0.2s;
+  }
+  .nav-tabs a:hover { background: rgba(212,168,83,0.1); color: var(--gold); border-color: var(--gold-dim); text-decoration: none; }
+
+  /* ── Footer ──────────────────────────────────────── */
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+    color: var(--text-dim);
+    font-size: 0.85em;
+  }
+  .footer .logo { font-size: 2em; display: block; margin-bottom: 8px; }
+
+  /* ── House Chart Annotations ─────────────────────── */
+  .chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin: 16px 0 8px;
+    font-size: 0.78em;
+  }
+  .chart-legend .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .chart-legend .dot {
+    width: 10px; height: 10px;
+    border-radius: 3px;
+  }
+
+  /* ── Responsive ──────────────────────────────────── */
+  @media (max-width: 700px) {
+    .hero h1 { font-size: 1.8em; }
+    .section { padding: 20px; }
+    .rashi-chart { width: 100%; height: auto; aspect-ratio: 1; }
+    .rashi-chart .cell { font-size: 0.6em; padding: 4px; }
+    .nav-tabs a { padding: 6px 12px; font-size: 0.75em; }
+  }
+
+  /* ── Print ───────────────────────────────────────── */
+  @media print {
+    body { background: #fff; color: #111; }
+    body::before { display: none; }
+    .nav-tabs { display: none; }
+    .section { break-inside: avoid; border-color: #ddd; box-shadow: none; background: #fafaf8; }
+    .hero { border-bottom-color: #ccc; }
+    .hero h1 { color: #8a6a2a; }
+    .section-header h2 { color: #8a6a2a; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ HERO ═══ -->
+<div class="hero">
+  <span class="hero-symbol">🪐</span>
+  <h1>Karthik Agasthya</h1>
+  <p class="subtitle">Vedic Birth Chart (Jātaka) — Complete Horoscope Reading</p>
+  <span class="system-badge">Parāśarī Jyotiṣa · Sidereal Zodiac · Lahiri Ayanāṁśa · Swiss Ephemeris DE431</span>
+</div>
+
+<div class="container">
+
+  <!-- ═══════ NAV ═══════ -->
+  <nav class="nav-tabs">
+    <a href="#birth">Birth Data</a>
+    <a href="#chart">Rāśi Chart</a>
+    <a href="#planets">Planets</a>
+    <a href="#yogas">Yogas</a>
+    <a href="#navamsha">Navāṁśa D9</a>
+    <a href="#dasha">Daśā Timeline</a>
+    <a href="#current">Current Period</a>
+    <a href="#predictions">Predictions</a>
+    <a href="#marriage">Marriage</a>
+    <a href="#health">Health</a>
+    <a href="#remedies">Remedies</a>
+    <a href="#synthesis">Synthesis</a>
+  </nav>
+
+  <!-- ═══════ BIRTH DATA ═══════ -->
+  <section id="birth">
+    <div class="birth-bar">
+      <div class="birth-item">
+        <div class="label">Date of Birth</div>
+        <div class="value">29 December 1986</div>
+      </div>
+      <div class="birth-item">
+        <div class="label">Time of Birth</div>
+        <div class="value">11:45 PM IST</div>
+      </div>
+      <div class="birth-item">
+        <div class="label">Place</div>
+        <div class="value">Bengaluru, India</div>
+      </div>
+      <div class="birth-item">
+        <div class="label">Lagna (Ascendant)</div>
+        <div class="value gold">Kanyā (Virgo)</div>
+      </div>
+      <div class="birth-item">
+        <div class="label">Moon Sign</div>
+        <div class="value">Vṛścika (Scorpio)</div>
+      </div>
+      <div class="birth-item">
+        <div class="label">Nakṣatra</div>
+        <div class="value gold">Jyeṣṭhā Pada 3</div>
+      </div>
+      <div class="birth-item">
+        <div class="label">Current Mahādaśā</div>
+        <div class="value gold">☉ Sun (2021–2027)</div>
+      </div>
+      <div class="birth-item">
+        <div class="label">Age Today</div>
+        <div class="value">39 yrs</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="icon">📋</span>
+        <h2>Pañcāṅga at Birth</h2>
+      </div>
+      <table>
+        <tr><th style="width:180px;">Element</th><th>Detail</th></tr>
+        <tr><td>Tithi</td><td>Kṛṣṇa Paksha Caturthī (Waning 4th) — Gaṇeśa's tithi of obstacle-removal</td></tr>
+        <tr><td>Vāra (Day)</td><td>Somavāra (Monday) — Moon's day; day lord = Moon</td></tr>
+        <tr><td>Nakṣatra</td><td>Jyeṣṭhā Pada 3 (Mercury-ruled · Deity: Indra · Gana: Rākṣasa)</td></tr>
+        <tr><td>Lagna Nakṣatra</td><td>Uttara Phalguṇī Pada 3 (Sun-ruled · Deity: Aryamā)</td></tr>
+        <tr><td>Ayanāṁśa</td><td>Lahiri — 23° 40′ 31.5″ (23.675407°)</td></tr>
+        <tr><td>Julian Day</td><td>2,446,794.260417</td></tr>
+        <tr><td>Coordinates</td><td>12.9629°N, 77.5775°E (Bengaluru, ~920m ASL)</td></tr>
+      </table>
+      <div class="vedic-quote">
+        "Soma-vāre samutpannaḥ — su-śīlaḥ priya-darśanaḥ; Komala-hṛdayo mānī — saumya-vāk priya-bhāṣaṇaḥ. Yadi Soma-vyathā tasya — gambhīraḥ kāla-vit kavi."
+        <span class="source">— BPHS Ch.7, Vāra Phala</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ RASHI CHART ═══════ -->
+  <section id="chart" class="section">
+    <div class="section-header">
+      <span class="icon">🏠</span>
+      <h2>Rāśi Chart — Whole Sign Houses</h2>
+    </div>
+
+    <div class="chart-legend">
+      <div class="legend-item"><span class="dot" style="background:#70e898"></span> Own Sign</div>
+      <div class="legend-item"><span class="dot" style="background:var(--gold)"></span> Vargottama</div>
+      <div class="legend-item"><span class="dot" style="background:#f08080"></span> Debilitated</div>
+      <div class="legend-item"><span class="dot" style="background:var(--amber)"></span> Combust</div>
+      <div class="legend-item"><span class="dot" style="background:#b090e0"></span> Retrograde</div>
+      <div class="legend-item"><span class="dot" style="background:#80c0f0"></span> Lagna</div>
+    </div>
+
+    <div class="chart-container">
+      <div class="rashi-chart">
+        <!-- Row 1: H12, H1, H2, H3 -->
+        <div class="cell">
+          <span class="house-num">H12</span>
+          <span class="sign-name">Siṃha (Leo)</span>
+          <span style="color:var(--text-dim);font-size:0.82em">Empty</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">Lord: Sun</span>
+        </div>
+        <div class="cell" style="background:rgba(80,144,208,0.06)">
+          <span class="house-num" style="color:var(--blue)">H1</span>
+          <span class="sign-name" style="color:var(--blue)">Kanyā (Virgo)</span>
+          <span class="planet-badge pb-lagna">🏛 ASC 05°34′</span>
+          <span class="planet-badge pb-retro">☋ Ketu (R)</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">Hastā P4</span>
+        </div>
+        <div class="cell">
+          <span class="house-num">H2</span>
+          <span class="sign-name">Tulā (Libra)</span>
+          <span class="planet-badge pb-own">♀ Venus ⭐</span>
+          <span style="font-size:0.72em;color:#70e898">OWN SIGN 28°27′</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">Viśākhā P3</span>
+        </div>
+        <div class="cell">
+          <span class="house-num">H3</span>
+          <span class="sign-name">Vṛścika (Scorpio)</span>
+          <span class="planet-badge pb-debil">☽ Moon ⚠️</span>
+          <span class="planet-badge pb-neutral">♄ Saturn</span>
+          <span style="font-size:0.72em;color:#f08080">Debil. 24°26′</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">Jyeṣṭhā P2-P3</span>
+        </div>
+
+        <!-- Row 2: H11, CENTER, CENTER, H4 -->
+        <div class="cell">
+          <span class="house-num">H11</span>
+          <span class="sign-name">Karka (Cancer)</span>
+          <span style="color:var(--text-dim);font-size:0.82em">Empty</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">Lord: Moon</span>
+        </div>
+        <div class="center-block">
+          <span class="name-label">Karthik Agasthya</span>
+          <span class="sub-label">Kanyā (Virgo) Lagna</span>
+          <span class="sub-label">29 Dec 1986 · 11:45 PM IST</span>
+          <span class="sub-label">Bengaluru, Karnataka, India</span>
+          <span class="sub-label" style="margin-top:8px;color:var(--gold)">☉ Sun Mahādaśā · ♀ Venus Antardaśā</span>
+        </div>
+        <div class="cell">
+          <span class="house-num">H4</span>
+          <span class="sign-name">Dhanus (Sagittarius)</span>
+          <span class="planet-badge pb-vargo">☉ Sun 🌟</span>
+          <span class="planet-badge pb-combust">☿ Mercury 🔥</span>
+          <span style="font-size:0.72em;color:var(--gold)">Vargottama Sun</span>
+          <span style="font-size:0.72em;color:var(--amber)">Combust 8.06°</span>
+        </div>
+
+        <!-- Row 3: H10, CENTER(cont), CENTER(cont), H5 -->
+        <div class="cell">
+          <span class="house-num">H10</span>
+          <span class="sign-name">Mithuna (Gemini)</span>
+          <span style="color:var(--text-dim);font-size:0.82em">Empty</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">Lord: Mercury</span>
+        </div>
+        <!-- center block spans 2x2 -->
+        <div class="cell">
+          <span class="house-num">H5</span>
+          <span class="sign-name">Makara (Capricorn)</span>
+          <span style="color:var(--text-dim);font-size:0.82em">Empty</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">Lord: Saturn</span>
+        </div>
+
+        <!-- Row 4: H9, H8, H7, H6 -->
+        <div class="cell">
+          <span class="house-num">H9</span>
+          <span class="sign-name">Vṛṣabha (Taurus)</span>
+          <span style="color:var(--text-dim);font-size:0.82em">Empty</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">Lord: Venus</span>
+        </div>
+        <div class="cell">
+          <span class="house-num">H8</span>
+          <span class="sign-name">Meṣa (Aries)</span>
+          <span style="color:var(--text-dim);font-size:0.82em">Empty</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">Lord: Mars</span>
+        </div>
+        <div class="cell">
+          <span class="house-num">H7</span>
+          <span class="sign-name">Mīna (Pisces)</span>
+          <span class="planet-badge pb-retro">☊ Rahu (R)</span>
+          <span style="font-size:0.72em;color:#b090e0">22°56′ Revatī P2</span>
+        </div>
+        <div class="cell">
+          <span class="house-num">H6</span>
+          <span class="sign-name">Kumbha (Aquarius)</span>
+          <span class="planet-badge pb-neutral">♂ Mars</span>
+          <span class="planet-badge pb-neutral">♃ Jupiter</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">29°30′ + 23°29′</span>
+          <span style="font-size:0.72em;color:var(--text-dim)">P.Bhādra P2-P3</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ PLANETARY POSITIONS ═══════ -->
+  <section id="planets" class="section">
+    <div class="section-header">
+      <span class="icon">🔭</span>
+      <h2>Planetary Positions — Graha Sthāna</h2>
+    </div>
+    <div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th>Graha</th>
+        <th>Sign</th>
+        <th>Deg in Sign</th>
+        <th>Nakṣatra / Pāda</th>
+        <th>House</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>🏛 <strong>Lagna</strong></td>
+        <td>Kanyā (Virgo)</td>
+        <td>05° 33′ 57″</td>
+        <td>Uttara Phalguṇī P3</td>
+        <td>H1</td>
+        <td><span class="badge badge-active">Ascendant</span></td>
+      </tr>
+      <tr>
+        <td>☉ <strong>Sun</strong></td>
+        <td>Dhanus (Sagittarius)</td>
+        <td>14° 03′ 45″</td>
+        <td>Pūrvāṣāḍhā P1</td>
+        <td><strong>H4</strong></td>
+        <td><span class="planet-badge pb-vargo">Vargottama 🌟</span></td>
+      </tr>
+      <tr>
+        <td>☽ <strong>Moon</strong></td>
+        <td>Vṛścika (Scorpio)</td>
+        <td>24° 26′ 28″</td>
+        <td>Jyeṣṭhā P3</td>
+        <td><strong>H3</strong></td>
+        <td><span class="planet-badge pb-debil">Debilitated ⚠️</span> <span class="badge badge-active" style="font-size:0.7em">Neecha Bhanga ✅</span></td>
+      </tr>
+      <tr>
+        <td>♂ <strong>Mars</strong></td>
+        <td>Kumbha (Aquarius)</td>
+        <td>29° 30′ 43″</td>
+        <td>P. Bhādrapadā P3</td>
+        <td><strong>H6</strong></td>
+        <td><span class="badge badge-coming">Sandhi (end-deg)</span></td>
+      </tr>
+      <tr>
+        <td>☿ <strong>Mercury</strong></td>
+        <td>Dhanus (Sagittarius)</td>
+        <td>06° 00′ 27″</td>
+        <td>Mūla P2</td>
+        <td><strong>H4</strong></td>
+        <td><span class="planet-badge pb-combust">Combust 🔥 (8.06°)</span></td>
+      </tr>
+      <tr>
+        <td>♃ <strong>Jupiter</strong></td>
+        <td>Kumbha (Aquarius)</td>
+        <td>23° 29′ 16″</td>
+        <td>P. Bhādrapadā P2</td>
+        <td><strong>H6</strong></td>
+        <td><span class="badge badge-coming">Neutral</span></td>
+      </tr>
+      <tr>
+        <td>♀ <strong>Venus</strong></td>
+        <td>Tulā (Libra)</td>
+        <td>28° 27′ 27″</td>
+        <td>Viśākhā P3</td>
+        <td><strong>H2</strong></td>
+        <td><span class="planet-badge pb-own">Own Sign ⭐</span></td>
+      </tr>
+      <tr>
+        <td>♄ <strong>Saturn</strong></td>
+        <td>Vṛścika (Scorpio)</td>
+        <td>21° 27′ 26″</td>
+        <td>Jyeṣṭhā P2</td>
+        <td><strong>H3</strong></td>
+        <td><span class="badge badge-coming">Neutral</span></td>
+      </tr>
+      <tr>
+        <td>☊ <strong>Rahu</strong></td>
+        <td>Mīna (Pisces)</td>
+        <td>22° 56′ 19″</td>
+        <td>Revatī P2</td>
+        <td><strong>H7</strong></td>
+        <td><span class="planet-badge pb-retro">Retrograde (R)</span></td>
+      </tr>
+      <tr>
+        <td>☋ <strong>Ketu</strong></td>
+        <td>Kanyā (Virgo)</td>
+        <td>22° 56′ 19″</td>
+        <td>Hastā P4</td>
+        <td><strong>H1</strong></td>
+        <td><span class="planet-badge pb-retro">Retrograde (R)</span></td>
+      </tr>
+    </table>
+    </div>
+
+    <div class="vedic-quote">
+      All seven classical planets are DIRECT — a chart strength. The native's energies push outward into the world rather than turning inward in retrograde contemplation. Combined with Ketu in Lagna (which pulls inward), this creates a beautiful "doer who is not the doer" karma-yogī axis.
+      <span class="source">— BPHS Ch.3, Bhagavad Gītā resonance</span>
+    </div>
+
+    <!-- Planet Strength Meters -->
+    <h3 style="color:var(--gold);margin:24px 0 14px;font-family:var(--font-serif);">Planetary Strength Ranking</h3>
+    <div style="display:grid;gap:10px;max-width:600px;">
+      <div class="strength-meter">
+        <span style="width:100px;font-size:0.88em;font-weight:600;">♀ Venus</span>
+        <div class="meter-bar"><div class="meter-fill mf-gold" style="width:95%"></div></div>
+        <span style="font-size:0.78em;color:var(--gold)">95%</span>
+      </div>
+      <div class="strength-meter">
+        <span style="width:100px;font-size:0.88em;font-weight:600;">☉ Sun</span>
+        <div class="meter-bar"><div class="meter-fill mf-gold" style="width:85%"></div></div>
+        <span style="font-size:0.78em;color:var(--gold)">85%</span>
+      </div>
+      <div class="strength-meter">
+        <span style="width:100px;font-size:0.88em;font-weight:600;">☿ Mercury</span>
+        <div class="meter-bar"><div class="meter-fill mf-green" style="width:72%"></div></div>
+        <span style="font-size:0.78em;color:var(--green)">72%</span>
+      </div>
+      <div class="strength-meter">
+        <span style="width:100px;font-size:0.88em;font-weight:600;">♄ Saturn</span>
+        <div class="meter-bar"><div class="meter-fill mf-blue" style="width:68%"></div></div>
+        <span style="font-size:0.78em;color:var(--blue)">68%</span>
+      </div>
+      <div class="strength-meter">
+        <span style="width:100px;font-size:0.88em;font-weight:600;">♃ Jupiter</span>
+        <div class="meter-bar"><div class="meter-fill mf-blue" style="width:62%"></div></div>
+        <span style="font-size:0.78em;color:var(--blue)">62%</span>
+      </div>
+      <div class="strength-meter">
+        <span style="width:100px;font-size:0.88em;font-weight:600;">♂ Mars</span>
+        <div class="meter-bar"><div class="meter-fill mf-orange" style="width:55%"></div></div>
+        <span style="font-size:0.78em;color:var(--orange)">55%</span>
+      </div>
+      <div class="strength-meter">
+        <span style="width:100px;font-size:0.88em;font-weight:600;">☽ Moon</span>
+        <div class="meter-bar"><div class="meter-fill mf-orange" style="width:42%"></div></div>
+        <span style="font-size:0.78em;color:var(--orange)">42%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ YOGAS ═══════ -->
+  <section id="yogas" class="section">
+    <div class="section-header">
+      <span class="icon">🌟</span>
+      <h2>Yoga Analysis — Planetary Combinations</h2>
+    </div>
+    <div class="yoga-grid">
+      <div class="yoga-card yoga-5">
+        <div class="yoga-title">Dhana-Yoga Complex</div>
+        <div class="yoga-stars">⭐⭐⭐⭐⭐</div>
+        <div class="yoga-desc">
+          <strong>The chart's most powerful blessing.</strong> Venus = 2nd lord (wealth) = 9th lord (fortune) in <strong>own sign Libra in H2</strong> with Jupiter's 9th aspect amplifying it. Multiple stacking Dhana-Yogas produce lifelong "compound interest" wealth — steady, accumulating, permanent. This is one of the strongest Dhana-Yoga signatures available in the entire BPHS framework.
+        </div>
+      </div>
+      <div class="yoga-card yoga-4">
+        <div class="yoga-title">Budha-Āditya Yoga</div>
+        <div class="yoga-stars">⭐⭐⭐⭐</div>
+        <div class="yoga-desc">
+          Sun + Mercury conjunct in Sagittarius (H4). Scholarly intellect, eloquent speech, fame through knowledge. Mercury combust paradoxically <em>gains</em> the Sun's force — the native's intellect speaks for a higher authority rather than for himself alone. The chart of a <strong>scholar-spokesperson</strong>.
+        </div>
+      </div>
+      <div class="yoga-card yoga-3">
+        <div class="yoga-title">Sarala Yoga (Vipareeta Rāja)</div>
+        <div class="yoga-stars">⭐⭐⭐</div>
+        <div class="yoga-desc">
+          8th lord Mars in 6th house — a dusthāna lord in a dusthāna. Paradoxical good results: <strong>protection from enemies, gains through crisis</strong>. The worse it looks, the better it turns out. Lifelong shield against those who try to harm him — chronic enemies defeat themselves.
+        </div>
+      </div>
+      <div class="yoga-card yoga-3">
+        <div class="yoga-title">Gajakesari Yoga</div>
+        <div class="yoga-stars">⭐⭐⭐</div>
+        <div class="yoga-desc">
+          Jupiter in 4th from Moon (Kendra). Confers wealth, reputation, kingly honours, lifelong dignity. On the 3-6 axis — <strong>honour through service, courage, and structured work</strong>. Must be earned, but once earned, it sticks.
+        </div>
+      </div>
+      <div class="yoga-card yoga-3">
+        <div class="yoga-title">Sunaphā + Anaphā + Durudhura</div>
+        <div class="yoga-stars">⭐⭐⭐</div>
+        <div class="yoga-desc">
+          <strong>All three lunar yogas simultaneously active</strong> — extraordinarily rare. Moon flanked by Sun+Mercury on one side and Venus on the other. The triple Moon-protection completely counters the debilitation: the mind is <em>never isolated</em>. Confers lifelong sufficiency and refined personality.
+        </div>
+      </div>
+      <div class="yoga-card yoga-2">
+        <div class="yoga-title">Neecha Bhanga Rāja Yoga (Moon)</div>
+        <div class="yoga-stars">⭐⭐</div>
+        <div class="yoga-desc">
+          Moon debilitated in Scorpio, but Mars (lord of Scorpio) is in Kendra from Moon → <strong>debilitation cancelled</strong>. Emotional suffering transforms into emotional wisdom. Extraordinary psychological depth, hard-won mental endurance, and crisis-management instinct.
+        </div>
+      </div>
+      <div class="yoga-card yoga-warn">
+        <div class="yoga-title">Viṣa Yoga (Saturn-Moon) ⚠️</div>
+        <div class="yoga-stars">⚠️</div>
+        <div class="yoga-desc">
+          Saturn conjunct Moon within 3° in H3. Until age ~30-36: melancholy phases, over-thinking, slow emotional expression. <strong>After Saturn's maturity (~36)</strong>: transforms into exceptional emotional steadiness — the "old soul" presence, the friend everyone confides in. In D9 the conjunction separates — the poison clears at the soul level.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ NAVAMSHA D9 ═══════ -->
+  <section id="navamsha" class="section">
+    <div class="section-header">
+      <span class="icon">🔮</span>
+      <h2>Navāṁśa (D9) — The Soul Chart</h2>
+    </div>
+    <p style="color:var(--text-dim);margin-bottom:20px;">The D9 shows the inner reality, marriage karma, and what each planet <em>truly delivers</em> over the long arc of life. BPHS Ch.6 declares it "equal in importance to the D1."</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;">
+      <div class="outcome-box" style="margin:0;">
+        <h3>D1 Lagna → D9 Lagna</h3>
+        <p><strong style="color:var(--text-bright)">Kanyā (Virgo)</strong> → <strong style="color:var(--gold)">Kumbha (Aquarius)</strong><br>
+        The outer Virgo serves the inner Aquarius. Analytical precision in service of system-reform.</p>
+      </div>
+      <div class="outcome-box" style="margin:0;">
+        <h3>D9 Lagna Lord</h3>
+        <p><strong style="color:var(--gold)">Saturn in Capricorn (Own Sign)</strong> in D9 H12<br>
+        Soul's ruler doubly dignified in the mokṣa house — deep spiritual maturity across lifetimes.</p>
+      </div>
+    </div>
+
+    <h3 style="color:var(--gold);margin-bottom:14px;font-family:var(--font-serif);">D9 Planet Positions & Dignity Trajectory</h3>
+    <div style="overflow-x:auto;">
+    <table>
+      <tr><th>Planet</th><th>D1 State</th><th>→</th><th>D9 Sign / House</th><th>D9 State</th><th>Trajectory</th></tr>
+      <tr><td>☉ Sun</td><td>Friend's sign</td><td>→</td><td>Leo / D9 H7</td><td><span class="planet-badge pb-own">Own Sign ⭐</span></td><td style="color:var(--green)">▲ PROMOTED</td></tr>
+      <tr><td>☽ Moon</td><td><span style="color:#f08080">Debilitated</span></td><td>→</td><td>Aquarius / D9 H1</td><td><span class="planet-badge pb-lagna">= D9 Lagna!</span></td><td style="color:var(--green)">▲ MAJOR PROMOTION</td></tr>
+      <tr><td>♂ Mars</td><td>Neutral</td><td>→</td><td>Gemini / D9 H5</td><td>Neutral</td><td style="color:var(--text-dim)">— Stable</td></tr>
+      <tr><td>☿ Mercury</td><td><span style="color:var(--amber)">Combust</span></td><td>→</td><td>Taurus / D9 H4</td><td>Neutral (free)</td><td style="color:var(--green)">▲ PROMOTED</td></tr>
+      <tr><td>♃ Jupiter</td><td>Neutral</td><td>→</td><td>Taurus / D9 H4</td><td>Neutral</td><td style="color:var(--text-dim)">— Stable</td></tr>
+      <tr><td>♀ Venus</td><td><span style="color:#70e898">Own Sign</span></td><td>→</td><td>Gemini / D9 H5</td><td>Neutral</td><td style="color:var(--orange)">▼ Demoted</td></tr>
+      <tr><td>♄ Saturn</td><td>Neutral</td><td>→</td><td>Capricorn / D9 H12</td><td><span class="planet-badge pb-own">Own Sign ⭐</span></td><td style="color:var(--green)">▲ PROMOTED</td></tr>
+    </table>
+    </div>
+
+    <div class="outcome-box">
+      <h3>D9 Synthesis</h3>
+      <p><strong>5 planets promoted at the soul level.</strong> This is a chart whose soul is significantly more elevated than its outer face suggests. As the inner D9 "comes online" after age 32-36, a quiet inner expansion occurs that others find magnetic. The wounded early-life outer chart <strong>heals into the dignified inner chart</strong> — the core growth-arc of this jātaka.</p>
+    </div>
+
+    <h3 style="color:var(--gold);margin:24px 0 14px;font-family:var(--font-serif);">Darakāraka (Jaimini Spouse Indicator)</h3>
+    <div style="background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:10px;padding:20px;">
+      <p><strong style="color:var(--gold);font-size:1.1em;">☿ Mercury = Darakāraka</strong> (lowest degree at 6°00′)</p>
+      <p style="margin-top:10px;color:var(--text-dim);">Mercury in D9 Taurus (H4) with Jupiter — spouse is intellectually quick, communicative, earthy, beauty-loving, and patient at the soul level. Partner becomes co-creator of the home and emotional sanctuary. Mercury is also the D1 Lagna lord — <strong>the spouse mirrors the native's own intellectual identity</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ═══════ DASHA TIMELINE ═══════ -->
+  <section id="dasha" class="section">
+    <div class="section-header">
+      <span class="icon">⏱️</span>
+      <h2>Vimśottarī Daśā — Life Timeline</h2>
+    </div>
+    <p style="color:var(--text-dim);margin-bottom:20px;">Starting Daśā from Janma Nakṣatra <strong>Jyeṣṭhā (Mercury)</strong>. Moon at 234.44° → 41.7% of Mercury's 17 years remaining at birth.</p>
+
+    <div class="dasha-timeline">
+      <div class="dasha-item past">
+        <div class="dasha-label">☿ Mercury Mahādaśā <span class="badge badge-past">Past</span></div>
+        <div class="dasha-dates">Dec 1986 → Jan 1994 · Age 0–7 · 7.09 years</div>
+        <div class="dasha-desc">Childhood / early schooling. Lagna lord's own period — core personality crystallised. Bright, observant child shaped by mother's influence.</div>
+      </div>
+      <div class="dasha-item past">
+        <div class="dasha-label">☋ Ketu Mahādaśā <span class="badge badge-past">Past</span></div>
+        <div class="dasha-dates">Jan 1994 → Jan 2001 · Age 7–14 · 7 years</div>
+        <div class="dasha-desc">Late school years. Introverted, reflective, hands-on. "Old soul" emerging early. Quiet observer; inner compassion beyond age.</div>
+      </div>
+      <div class="dasha-item past">
+        <div class="dasha-label">♀ Venus Mahādaśā ★ THE BIG 20 <span class="badge badge-past">Past</span></div>
+        <div class="dasha-dates">Jan 2001 → Jan 2021 · Age 14–34 · 20 years</div>
+        <div class="dasha-desc"><strong>The foundational mahādaśā.</strong> College → career launch → Dhana-Yoga activation. Entire outer life-architecture built during this period. Financial base set. Aesthetic taste formed. Relationship patterns established.</div>
+      </div>
+      <div class="dasha-item active">
+        <div class="dasha-label">☉ Sun Mahādaśā ★ CURRENT <span class="badge badge-active">Active</span></div>
+        <div class="dasha-dates">Jan 2021 → Jan 2027 · Age 34–40 · 6 years</div>
+        <div class="dasha-desc"><strong>THE RECOGNITION DAŚĀ.</strong> Career visibility crystallises. Dharmic identity sharpens. What was built quietly in Venus MD now shows up publicly. Authority through learning. Foreign/distant work activation.</div>
+      </div>
+      <div class="dasha-item">
+        <div class="dasha-label">☽ Moon Mahādaśā <span class="badge badge-coming">Coming</span></div>
+        <div class="dasha-dates">Jan 2027 → Jan 2037 · Age 40–50 · 10 years</div>
+        <div class="dasha-desc">The great transition decade. Inner D9 Aquarian Lagna takes the wheel. Family centrality, children's growth, contemplative deepening. <strong>Living from the inside out.</strong></div>
+      </div>
+      <div class="dasha-item">
+        <div class="dasha-label">♂ Mars Mahādaśā <span class="badge badge-coming">Coming</span></div>
+        <div class="dasha-dates">Jan 2037 → Jan 2044 · Age 50–57 · 7 years</div>
+        <div class="dasha-desc">Transformation pivot. Sarala Yoga fires at full strength. Major career pivot or life-restructuring. Hidden wealth surfaces. Health vigilance period.</div>
+      </div>
+      <div class="dasha-item">
+        <div class="dasha-label">☊ Rahu Mahādaśā <span class="badge badge-coming">Coming</span></div>
+        <div class="dasha-dates">Jan 2044 → Jan 2062 · Age 57–75 · 18 years</div>
+        <div class="dasha-desc">Largest expansion phase. Cross-border reach, elder-authority identity, unconventional scaling through partnership. Rahu matures into Saturnine duty at soul level.</div>
+      </div>
+      <div class="dasha-item">
+        <div class="dasha-label">♃ Jupiter Mahādaśā <span class="badge badge-coming">Coming</span></div>
+        <div class="dasha-dates">Jan 2062 → Jan 2078 · Age 75–91 · 16 years</div>
+        <div class="dasha-desc">Wisdom-elder phase. Mentor, teacher, dharmic public figure. What he once received from Jupiter, he now delivers to others.</div>
+      </div>
+      <div class="dasha-item">
+        <div class="dasha-label">♄ Saturn Mahādaśā <span class="badge badge-coming">Coming</span></div>
+        <div class="dasha-dates">Jan 2078 → Jan 2097 · Age 91–110 · 19 years</div>
+        <div class="dasha-desc">Long dignified completion. Saturn in own sign in D9 = most dignified soul-level placement. Full faculties retained well into the 90s. Legacy lock-in.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ CURRENT PERIOD ═══════ -->
+  <section id="current" class="section">
+    <div class="section-header">
+      <span class="icon">🔴</span>
+      <h2>Current Daśā Period — Live Status</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;">
+      <div class="outcome-box" style="margin:0;">
+        <h3>Mahādaśā</h3>
+        <p style="font-size:1.3em;color:var(--gold);font-weight:700;">☉ SUN</p>
+        <p>Jan 2021 → Jan 2027<br><span style="color:var(--amber);font-weight:600;">~9 months remaining</span></p>
+      </div>
+      <div class="outcome-box" style="margin:0;">
+        <h3>Antardaśā</h3>
+        <p style="font-size:1.3em;color:var(--gold);font-weight:700;">♀ VENUS</p>
+        <p>Jan 2026 → Jan 2027<br><span style="color:var(--green);font-weight:600;">Final AD of Sun MD</span></p>
+      </div>
+      <div class="outcome-box" style="margin:0;">
+        <h3>Pratyantaradaśā</h3>
+        <p style="font-size:1.3em;color:var(--gold);font-weight:700;">☽ MOON</p>
+        <p>11 Apr → 11 May 2026<br><span style="color:var(--green);font-weight:600;">Active right now</span></p>
+      </div>
+    </div>
+
+    <h3 style="color:var(--gold);margin:20px 0 14px;font-family:var(--font-serif);">Sun-Venus Antardaśā — Sub-period Walk (Jan 2026 – Jan 2027)</h3>
+    <table>
+      <tr><th>Pratyantara</th><th>Window</th><th>Status</th><th>Prediction</th></tr>
+      <tr><td>Su-Ve-<strong>Venus</strong></td><td>23 Jan – 24 Mar</td><td><span class="badge badge-past">Past</span></td><td>Setting the tone — wealth/aesthetic event</td></tr>
+      <tr><td>Su-Ve-<strong>Sun</strong></td><td>24 Mar – 11 Apr</td><td><span class="badge badge-past">Past</span></td><td>Visibility spike — public recognition moment</td></tr>
+      <tr class="highlight-row"><td>Su-Ve-<strong>Moon</strong></td><td>11 Apr – 11 May</td><td><span class="badge badge-active">NOW ★</span></td><td>Emotional high; family/home event; mother prominent</td></tr>
+      <tr><td>Su-Ve-<strong>Mars</strong></td><td>11 May – 1 Jun</td><td><span class="badge badge-coming">Next</span></td><td>Action burst — travel, decisive movement</td></tr>
+      <tr><td>Su-Ve-<strong>Rahu</strong></td><td>1 Jun – 25 Jul</td><td><span class="badge badge-coming">Coming</span></td><td>Foreign / unconventional opportunity; partnership activation</td></tr>
+      <tr style="background:rgba(212,168,83,0.08)">
+        <td><strong>Su-Ve-Jupiter ★★★</strong></td>
+        <td><strong>25 Jul – 11 Sep</strong></td>
+        <td><span class="badge badge-peak">★ PEAK</span></td>
+        <td><strong style="color:var(--gold)">THE highest-probability major event window — Guru's grace on Sun-Venus</strong></td>
+      </tr>
+      <tr><td>Su-Ve-<strong>Saturn</strong></td><td>11 Sep – 7 Nov</td><td><span class="badge badge-coming">Coming</span></td><td>Consolidation; structure on what was won</td></tr>
+      <tr><td>Su-Ve-<strong>Mercury</strong></td><td>7 Nov – 28 Dec</td><td><span class="badge badge-coming">Coming</span></td><td>Lagna lord on birthday — communication/signing/closure</td></tr>
+      <tr><td>Su-Ve-<strong>Ketu</strong></td><td>28 Dec – 18 Jan 2027</td><td><span class="badge badge-coming">Coming</span></td><td>Quiet wrap-up; introspective close to Sun MD</td></tr>
+    </table>
+
+    <div class="outcome-box" style="border-color:var(--gold);">
+      <h3>🌟 Peak Event Window: 25 July – 11 September 2026</h3>
+      <p>Sun (recognition) + Venus (wealth/refinement) + Jupiter (grace/expansion) all simultaneously active. Jupiter's 9th aspect on Venus in H2 is daśā-activated <em>and</em> structurally present. <strong>Career moves, financial decisions, marriage discussions, public commitments — anything needing Guru's blessing — should be timed inside this 7-week window.</strong></p>
+    </div>
+  </section>
+
+  <!-- ═══════ KEY PREDICTIONS ═══════ -->
+  <section id="predictions" class="section">
+    <div class="section-header">
+      <span class="icon">🔮</span>
+      <h2>Key Predictions & Outcomes</h2>
+    </div>
+
+    <h3 style="color:var(--gold);margin-bottom:16px;font-family:var(--font-serif);">Sun-Venus AD Year (Jan 2026 – Jan 2027)</h3>
+    <div class="pred-grid">
+      <div class="pred-card">
+        <span class="pred-icon">💼</span>
+        <div class="pred-title">Career Recognition</div>
+        <div class="pred-detail">Major career-recognition opportunity — visible promotion, award, public-facing role, or new title. Sun-Venus delivers "recognition that comes with money attached."</div>
+        <span class="pred-window pw-peak">★ Peak: Jul–Sep 2026</span>
+      </div>
+      <div class="pred-card">
+        <span class="pred-icon">💰</span>
+        <div class="pred-title">Wealth Event</div>
+        <div class="pred-detail">Significant Dhana-Yoga activation — salary jump, bonus/equity event, property acquisition, or business windfall. Venus's aspect on H8 activates hidden-wealth domain.</div>
+        <span class="pred-window pw-peak">★ Peak: Jul–Sep 2026</span>
+      </div>
+      <div class="pred-card">
+        <span class="pred-icon">🏠</span>
+        <div class="pred-title">Home / Property</div>
+        <div class="pred-detail">Strong pull toward acquiring or upgrading home/vehicle. Sun in H4 + Venus's grace = if a house-buying decision is on the table, close it before late 2026.</div>
+        <span class="pred-window pw-good">Favorable: Full Year</span>
+      </div>
+      <div class="pred-card">
+        <span class="pred-icon">💞</span>
+        <div class="pred-title">Relationship Clarity</div>
+        <div class="pred-detail">If unmarried — this AD strongly catalyses the marriage decision. If married — deepening partnership; major joint decision (relocation, child, joint assets).</div>
+        <span class="pred-window pw-peak">★ Jul–Sep 2026</span>
+      </div>
+      <div class="pred-card">
+        <span class="pred-icon">✨</span>
+        <div class="pred-title">Creative Expression</div>
+        <div class="pred-detail">Strong urge to put refined work into the world — writing, public talks, content, art. Sun + Venus = visibility of refined output. The scholar finds his stage.</div>
+        <span class="pred-window pw-good">Active All Year</span>
+      </div>
+      <div class="pred-card">
+        <span class="pred-icon">🌍</span>
+        <div class="pred-title">Foreign / Distant Scope</div>
+        <div class="pred-detail">12th lord Sun MD brings foreign travel, foreign clients, cross-border partnerships. Saturn transiting H7 (Pisces) amplifies the international axis through Jun 2027.</div>
+        <span class="pred-window pw-good">Ongoing</span>
+      </div>
+    </div>
+
+    <h3 style="color:var(--gold);margin:32px 0 16px;font-family:var(--font-serif);">Life-Phase Outcomes</h3>
+    <table>
+      <tr><th>Phase</th><th>Age</th><th>Daśā</th><th>Outcome</th></tr>
+      <tr><td>🧒 Childhood</td><td>0–7</td><td>Mercury</td><td>Bright, observant; mother-shaped; quiet brilliance within</td></tr>
+      <tr><td>📚 Late School</td><td>7–14</td><td>Ketu</td><td>Introverted "old soul"; hands-on learner; compassionate observer</td></tr>
+      <tr><td>🏗️ The Big Build</td><td>14–34</td><td>Venus ★</td><td>Education → career → Dhana-Yoga foundation. Wealth structure set.</td></tr>
+      <tr class="highlight-row"><td>🌟 Recognition</td><td>34–40</td><td>Sun (NOW)</td><td>Public visibility; promotions; foreign scope; dharmic identity sharpens</td></tr>
+      <tr><td>🏡 Settled Life</td><td>40–50</td><td>Moon</td><td>Family centrality; inner Aquarian online; deeper self-living</td></tr>
+      <tr><td>🔄 Transformation</td><td>50–57</td><td>Mars</td><td>Major restructuring; hidden wealth; Sarala Yoga fires</td></tr>
+      <tr><td>🌐 Scale Phase</td><td>57–75</td><td>Rahu ★</td><td>Cross-border expansion; elder authority; unconventional influence</td></tr>
+      <tr><td>🧘 Wisdom Elder</td><td>75–91</td><td>Jupiter</td><td>Mentor, teacher, dharmic public figure</td></tr>
+      <tr><td>🕊️ Completion</td><td>91+</td><td>Saturn</td><td>Dignified longevity; legacy; full faculties into 90s</td></tr>
+    </table>
+  </section>
+
+  <!-- ═══════ TRANSIT ANALYSIS ═══════ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="icon">🌍</span>
+      <h2>Current Transit Analysis (Gochara)</h2>
+    </div>
+    <div class="pred-grid" style="margin-bottom:20px;">
+      <div class="pred-card">
+        <span class="pred-icon">♄</span>
+        <div class="pred-title">Saturn in Pisces (H7)</div>
+        <div class="pred-detail">Mar 2025 – Jun 2027. Sitting on natal Rahu. Partnership axis fully activated. Marriage decisions crystallise. Saturn's 10th aspect restructures H4 (home/mind).</div>
+        <span class="pred-window pw-peak">Major Transit</span>
+      </div>
+      <div class="pred-card">
+        <span class="pred-icon">♃</span>
+        <div class="pred-title">Jupiter in Gemini → Cancer</div>
+        <div class="pred-detail">Jupiter on H10 (career) until Jun 2026, then H11 (gains). Direct Guru-blessing on career house → textbook "promotion/recognition" transit. Peak career visibility window.</div>
+        <span class="pred-window pw-good">Blessing Active</span>
+      </div>
+      <div class="pred-card">
+        <span class="pred-icon">🌙</span>
+        <div class="pred-title">Sade Sati Status</div>
+        <div class="pred-detail">✅ Sade Sati FULLY OFF. Next begins ~2029/2030. Current Saturn-Rahu conjunction in H7 is the partnership-crystallisation transit, not a Sade-Sati stress.</div>
+        <span class="pred-window pw-good">Clear ✅</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ MARRIAGE ═══════ -->
+  <section id="marriage" class="section">
+    <div class="section-header">
+      <span class="icon">💍</span>
+      <h2>Marriage & Partnership Analysis</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;">
+      <div>
+        <h3 style="color:var(--gold);margin-bottom:12px;font-family:var(--font-serif);">Marriage Indicators</h3>
+        <table>
+          <tr><td style="color:var(--text-dim)">7th House</td><td>Pisces — with Rahu (karmic, possibly delayed)</td></tr>
+          <tr><td style="color:var(--text-dim)">7th Lord</td><td>Jupiter in H6 (effort-based marriage; Guru-protected)</td></tr>
+          <tr><td style="color:var(--text-dim)">Venus (Kāraka)</td><td>Own sign Libra in H2 — strong marriage promise ✅</td></tr>
+          <tr><td style="color:var(--text-dim)">D9 7th House</td><td>Leo — Sun in own sign ⭐ — royally dharmic</td></tr>
+          <tr><td style="color:var(--text-dim)">Darakāraka</td><td>Mercury in D9 H4 (Taurus) with Jupiter</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3 style="color:var(--gold);margin-bottom:12px;font-family:var(--font-serif);">Spouse Profile</h3>
+        <ul style="list-style:none;font-size:0.92em;">
+          <li style="margin-bottom:8px;">🧠 <strong>Intellectually quick & communicative</strong> — Mercury-related profession</li>
+          <li style="margin-bottom:8px;">🌿 <strong>Earthy, beauty-loving, patient</strong> — grounded soul-level presence</li>
+          <li style="margin-bottom:8px;">🌏 <strong>Possibly cross-cultural</strong> — different background or region</li>
+          <li style="margin-bottom:8px;">🏠 <strong>Co-creator of home</strong> — marriage centres on building together</li>
+          <li style="margin-bottom:8px;">🤝 <strong>Intellectual equal</strong> — like recognises like; mutual growth</li>
+          <li style="margin-bottom:8px;">🙏 <strong>Compassionate, slightly otherworldly</strong> — Pisces 7H quality</li>
+        </ul>
+      </div>
+    </div>
+    <div class="outcome-box">
+      <h3>Marriage Timing Windows</h3>
+      <p>Rahu in H7 delays past ~28-30. Strongest windows: <strong>Venus-Mercury AD (2020-2023)</strong> — highest probability. If still unmarried: <strong>Sun-Venus AD (Jan 2026 – Jan 2027)</strong> — current peak window, especially <strong>Jul–Sep 2026</strong> (Jupiter PD). If already married: this window = major joint-life event (child, property, relocation).</p>
+    </div>
+  </section>
+
+  <!-- ═══════ HEALTH ═══════ -->
+  <section id="health" class="section">
+    <div class="section-header">
+      <span class="icon">🏥</span>
+      <h2>Health & Longevity</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div>
+        <h3 style="color:var(--gold);margin-bottom:12px;font-family:var(--font-serif);">Constitutional Type</h3>
+        <p style="font-size:0.92em;"><strong>Vāta-Pitta dominant.</strong> Virgo Lagna + Ketu = sensitive nervous system & digestion. Moon-Scorpio + Saturn = intensified mind-body interface. Sun Vargottama = strong inner Pitta fire supporting immunity.</p>
+        <h3 style="color:var(--gold);margin:20px 0 12px;font-family:var(--font-serif);">Longevity Estimate</h3>
+        <div class="outcome-box" style="margin:0;text-align:left;">
+          <p><strong style="color:var(--gold);font-size:1.1em;">Madhya–Dīrgha Āyuṣ: 88-95 years</strong></p>
+          <p style="margin-top:6px;">Sarala Yoga (8L in 6H) + Lagna lord in Kendra + Venus own-sign Maraka softened + Saturn own sign D9. <strong>Strong indications of full faculties retained well into 90s.</strong></p>
+        </div>
+      </div>
+      <div>
+        <h3 style="color:var(--gold);margin-bottom:12px;font-family:var(--font-serif);">Lifelong Health Watchpoints</h3>
+        <table>
+          <tr><td style="color:var(--text-dim)">🫁 Digestive</td><td>Acidity, IBS sensitivity, food intolerances (Virgo + Ketu)</td></tr>
+          <tr><td style="color:var(--text-dim)">🧠 Nervous</td><td>Overthinking, sleep quality, anxiety phases (Saturn-Moon)</td></tr>
+          <tr><td style="color:var(--text-dim)">❤️ Cardio</td><td>Monitor after 45 (Sun in H4, Mars in H6)</td></tr>
+          <tr><td style="color:var(--text-dim)">🦴 Joints</td><td>Knees/ankles after 50 (Saturn-Capricorn-Aquarius)</td></tr>
+          <tr><td style="color:var(--text-dim)">👁️ Eyes</td><td>Screen fatigue (Sun-Mercury combust)</td></tr>
+          <tr><td style="color:var(--text-dim)">🌡️ Skin</td><td>Periodic allergic flare-ups (Mercury + Ketu)</td></tr>
+        </table>
+        <p style="margin-top:12px;font-size:0.88em;color:var(--text-dim);"><strong>Peak vigilance:</strong> Mars MD (2037-2044) — annual checkups, cardio + inflammation markers essential starting age 50.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ REMEDIES ═══════ -->
+  <section id="remedies" class="section">
+    <div class="section-header">
+      <span class="icon">🙏</span>
+      <h2>Upāyas (Remedies)</h2>
+    </div>
+    <div class="vedic-quote">
+      Remedies in Jyotiṣa are not magical interventions — they are <em>resonance instruments</em> that align the native with the planetary forces already operating in the chart. Apply consistently or not at all.
+    </div>
+
+    <h3 style="color:var(--gold);margin:20px 0 14px;font-family:var(--font-serif);">Daily & Weekly Practices</h3>
+    <div class="remedy-grid">
+      <div class="remedy-card">
+        <div class="remedy-day">☽ Monday — Moon</div>
+        <div class="remedy-planet">For debilitated Moon & Saturn-Moon Viṣa Yoga</div>
+        <div class="remedy-text">Light a ghee lamp before sunrise. Offer water at a Śiva temple. <strong>Chant Mahāmṛtyuñjaya Mantra 11×</strong> — the single most important mantra for this chart.</div>
+      </div>
+      <div class="remedy-card">
+        <div class="remedy-day">☿ Wednesday — Mercury</div>
+        <div class="remedy-planet">For combust Lagna lord Mercury</div>
+        <div class="remedy-text">Recite <strong>Viṣṇu Sahasranāma</strong> or Mercury bīja "Oṁ Brāṁ Brīṁ Brauṁ Saḥ Budhāya Namaḥ" 108×. Strengthens the Lagna lord and 10th lord.</div>
+      </div>
+      <div class="remedy-card">
+        <div class="remedy-day">♀ Friday — Venus</div>
+        <div class="remedy-planet">For active Dhana-Yoga lord & current AD lord</div>
+        <div class="remedy-text">Offer white flowers / curd-rice to Lakṣmī. <strong>Śrī Sūktam recitation.</strong> Donate to women/girls' education. Activates the chart's wealth engine.</div>
+      </div>
+      <div class="remedy-card">
+        <div class="remedy-day">☉ Sunday — Sun</div>
+        <div class="remedy-planet">For current Mahādaśā lord & Budha-Āditya activation</div>
+        <div class="remedy-text"><strong>Sūrya Namaskāra at sunrise.</strong> Āditya Hṛdaya Stotra recitation. Strengthens the recognition and dharmic authority axis.</div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--gold);margin:28px 0 14px;font-family:var(--font-serif);">Gemstone Recommendations</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div class="outcome-box" style="margin:0;text-align:left;">
+        <h3 style="text-align:left;">💎 Emerald (Markata-maṇi)</h3>
+        <p><strong>For Mercury</strong> — Lagna lord, combust, needs strengthening.<br>
+        4-6 carats, gold ring, little finger of right hand. Wear on Wednesday after invoking Budha. <span style="color:var(--green);font-weight:600;">✅ Recommended</span></p>
+      </div>
+      <div class="outcome-box" style="margin:0;text-align:left;">
+        <h3 style="text-align:left;">💎 Diamond / White Sapphire</h3>
+        <p><strong>For Venus</strong> — Dhana-Yoga lord, kāraka of marriage, active AD.<br>
+        Diamond preferred; white sapphire if budget-limited. Ring or pendant. <span style="color:var(--green);font-weight:600;">✅ Recommended</span></p>
+      </div>
+    </div>
+    <div style="margin-top:16px;padding:16px;background:rgba(224,80,80,0.06);border:1px solid rgba(224,80,80,0.15);border-radius:8px;">
+      <p style="font-size:0.88em;color:#f08080;"><strong>⚠️ AVOID for this chart:</strong> Yellow Sapphire (Jupiter = Kendrādhipati malefic) · Red Coral (Mars = 8th lord) · Blue Sapphire (Saturn = mixed 5L+6L, high-risk)</p>
+    </div>
+
+    <h3 style="color:var(--gold);margin:28px 0 14px;font-family:var(--font-serif);">Lifestyle Remedies — Most Important</h3>
+    <div style="display:grid;gap:10px;">
+      <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;gap:14px;align-items:flex-start;">
+        <span style="font-size:1.5em;">🧘</span>
+        <div>
+          <div style="font-weight:700;color:var(--text-bright);">Daily Silent Contemplation (15-20 min)</div>
+          <div style="font-size:0.88em;color:var(--text-dim);">Non-negotiable for Ketu-in-Lagna. Without it the native feels "not himself." With it, the chart's full intelligence comes online.</div>
+        </div>
+      </div>
+      <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;gap:14px;align-items:flex-start;">
+        <span style="font-size:1.5em;">✍️</span>
+        <div>
+          <div style="font-weight:700;color:var(--text-bright);">Daily Writing / Journaling</div>
+          <div style="font-size:0.88em;color:var(--text-dim);">Saturn-Moon in H3 in Mercury's nakshatra MUST externalise inner pressure through writing. Suppression creates psychological pressure with nowhere to go.</div>
+        </div>
+      </div>
+      <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;gap:14px;align-items:flex-start;">
+        <span style="font-size:1.5em;">😴</span>
+        <div>
+          <div style="font-weight:700;color:var(--text-bright);">Strict Sleep Hygiene</div>
+          <div style="font-size:0.88em;color:var(--text-dim);">Moon-Saturn conjunction makes sleep quality crucial. Same bedtime, no screens 60 min before, dark room. Medical-grade importance for this chart.</div>
+        </div>
+      </div>
+      <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;gap:14px;align-items:flex-start;">
+        <span style="font-size:1.5em;">🙏</span>
+        <div>
+          <div style="font-weight:700;color:var(--text-bright);">Active Service Component</div>
+          <div style="font-size:0.88em;color:var(--text-dim);">H6 heavy with Mars + Jupiter = karma-yogī chart. Always maintain some unpaid service — teaching, mentoring, charity work. Without it, H6 energy turns into friction.</div>
+        </div>
+      </div>
+      <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;gap:14px;align-items:flex-start;">
+        <span style="font-size:1.5em;">🕊️</span>
+        <div>
+          <div style="font-weight:700;color:var(--text-bright);">Annual Pilgrimage / Sacred Travel</div>
+          <div style="font-size:0.88em;color:var(--text-dim);">Sun (12L) in H4 + Rahu in H7 = the soul needs periodic geography change. One inner-renewal trip per year to a sacred/traditional location.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ SYNTHESIS ═══════ -->
+  <section id="synthesis" class="section">
+    <div class="section-header">
+      <span class="icon">🪐</span>
+      <h2>Closing Synthesis — The Karthik Archetype</h2>
+    </div>
+
+    <div class="vedic-quote" style="font-size:1.05em;border-left-color:var(--gold);">
+      Karthik Agasthya's chart is the chart of a <strong>scholar-builder who wears Virgo's analytical robe over an Aquarian reformer's body</strong>. He came in carrying a debilitated Moon and a Saturn-Moon poison conjunction — a wounded mind from day one — and was simultaneously gifted with the <strong>single most powerful Dhana-Yoga structure available in BPHS</strong>, a <strong>Budha-Āditya Yoga</strong> in the heart-house, a <strong>Sarala Vipareeta Rāja Yoga</strong>, and <strong>all three lunar yogas simultaneously active</strong>.
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;">
+      <div class="outcome-box" style="margin:0;">
+        <h3>The Core Tension</h3>
+        <p>An early-life mind that had to <em>fight to find peace</em> — paired with a wealth-and-recognition architecture that <em>unfolds steadily over decades and never breaks</em>.</p>
+      </div>
+      <div class="outcome-box" style="margin:0;">
+        <h3>The Core Purpose</h3>
+        <p>Use Virgo's analytical precision in service of Aquarian system-reform, through knowledge-work, in cross-cultural arenas, sustained by Venus's wealth and Jupiter's grace.</p>
+      </div>
+    </div>
+
+    <div style="background:rgba(0,0,0,0.3);border:1px solid var(--gold-dim);border-radius:var(--radius);padding:24px;margin:20px 0;">
+      <h3 style="color:var(--gold);margin-bottom:16px;font-family:var(--font-serif);text-align:center;">The Chart's Deepest Secret</h3>
+      <p style="text-align:center;font-size:0.95em;line-height:1.8;">
+        <strong>Saturn — in own sign in D9 H12</strong> — the same planet that wounds the outer Moon is the <em>most dignified placement of the entire jātaka</em> at the soul level. The very pressure that hurts in this lifetime is the same pressure that has been <strong>polishing the soul for many lifetimes prior</strong>, and will continue to polish it into a long, dignified, completion-oriented old age.
+      </p>
+    </div>
+
+    <div class="vedic-quote">
+      "Yathā vidyā ca vidvān ca — tathā jñānaṁ jñānavān naraḥ; Tathā Karṇa-tulā-rāśiḥ — vidyāyāṁ vāso bhavet sa hi."<br><br>
+      <em>[As learning is held by the learned, as knowledge is held by the wise, so does the Virgo-Libra axis hold within itself the very dwelling of knowledge and refinement.]</em>
+      <span class="source">— Classical verse on the Virgo-Libra dharma axis</span>
+    </div>
+
+    <p style="text-align:center;margin-top:24px;font-style:italic;color:var(--gold-dim);">
+      <em>Janma-pradīpaṃ saubhāgyaṁ — vidyā-buddhi-yaśo-balam.</em>
+    </p>
+  </section>
+
+  <!-- ═══════ REFERENCES ═══════ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="icon">📖</span>
+      <h2>Classical References Used</h2>
+    </div>
+    <div style="overflow-x:auto;">
+    <table>
+      <tr><th>Source</th><th>Chapters</th><th>Used For</th></tr>
+      <tr><td>BPHS (Brihat Parāśara Hora Śāstra)</td><td>Ch.2, 3, 6, 7, 11, 21, 24, 27, 28, 34-36, 46, 94</td><td>Core structural framework</td></tr>
+      <tr><td>Phaladeepika (Mantreswara)</td><td>Ch.5, 6, 7</td><td>House results, wealth combos, Neecha Bhanga</td></tr>
+      <tr><td>Saravali (Kalyāṇa Varma)</td><td>Ch.18, 37</td><td>Planet-in-house effects</td></tr>
+      <tr><td>Sarvārtha Cintāmaṇi</td><td>Ch.5, 6</td><td>House lord placements</td></tr>
+      <tr><td>Jātaka Pārijāta</td><td>Ch.15</td><td>Vipareeta Yoga definitions</td></tr>
+      <tr><td>Uttara Kālāmṛita</td><td>Khaṇḍa 4-5</td><td>Yoga validation, Daśā nuance</td></tr>
+      <tr><td>Brihat Jātaka (Varāhamihira)</td><td>Ch.3</td><td>Lagna character</td></tr>
+      <tr><td>Jaimini Sūtra</td><td>Adhyāya 1</td><td>Darakāraka identification</td></tr>
+    </table>
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<!-- ═══════ FOOTER ═══════ -->
+<div class="footer">
+  <span class="logo">🪐</span>
+  <strong>Vedic Birth Chart — Karthik Agasthya</strong><br>
+  Swiss Ephemeris DE431 · Lahiri Ayanāṁśa 23.675407° · JD 2,446,794.260417<br>
+  Birth: 29 December 1986 · 11:45 PM IST · Bengaluru, Karnataka (12.9629°N, 77.5775°E)<br>
+  <span style="color:var(--gold-dim);">Reading prepared: May 2026 · Jyotisha Engine powered by Parāśarī tradition</span><br>
+  <br>
+  <span style="font-size:0.8em;">🌀 Magic applied with Wibey JetBrains Plugin 🪄</span>
+</div>
+
+</body>
+</html>

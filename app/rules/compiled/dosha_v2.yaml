@@ -1,0 +1,361 @@
+- id: DSH-001
+  title: Mangal Dosha (Kuja Dosha) present
+  category: dosha
+  source_tier: 1
+  source_ref: BPHS Ch.77
+  tradition: parasari
+  conditions:
+  - path: doshas.mangal_dosha.present
+    op: eq
+    value: true
+    description: Mangal Dosha (Kuja Dosha) present
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-001
+      effect: Mars occupies a Mangal Dosha house (1/2/4/7/8/12) from at least one
+        of Lagna, Moon, or Venus.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-002
+  title: 'Mangal Dosha severity: severe (all 3 references afflicted, uncancelled)'
+  category: dosha
+  source_tier: 1
+  source_ref: BPHS Ch.77
+  tradition: parasari
+  conditions:
+  - path: doshas.mangal_dosha.severity
+    op: eq
+    value: severe
+    description: 'Mangal Dosha severity: severe (all 3 references afflicted, uncancelled)'
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-002
+      effect: Mars afflicts the Mangal Dosha houses from Lagna, Moon, AND Venus simultaneously,
+        with no cancellation.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-003
+  title: Mangal Dosha cancelled
+  category: dosha
+  source_tier: 1
+  source_ref: BPHS Ch.77
+  tradition: parasari
+  conditions:
+  - path: doshas.mangal_dosha.severity
+    op: eq
+    value: cancelled
+    description: Mangal Dosha cancelled
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-003
+      effect: A cancellation condition (Jupiter/Venus aspect or conjunction with Mars)
+        neutralizes the Dosha.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-004
+  title: Chandra-Mangala Yoga concurrent with Mangal Dosha check
+  category: yoga
+  source_tier: 1
+  source_ref: BPHS Ch.77 (noted alongside Mangal Dosha check)
+  tradition: parasari
+  conditions:
+  - path: doshas.mangal_dosha.chandra_mangala_yoga_present
+    op: eq
+    value: true
+    description: Chandra-Mangala Yoga concurrent with Mangal Dosha check
+  outputs:
+  - kind: yoga_flag
+    payload:
+      verdict: DSH-004
+      effect: Moon and Mars conjunct -- a wealth-through-real-estate yoga classically
+        noted alongside the Mangal Dosha check.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-005
+  title: Kala Sarpa Dosha -- full
+  category: dosha
+  source_tier: 4
+  source_ref: Classical Kala Sarpa doctrine (not in core BPHS; widely-used convention)
+  tradition: parasari
+  conditions:
+  - path: doshas.kala_sarpa.type
+    op: eq
+    value: full
+    description: Kala Sarpa Dosha -- full
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-005
+      effect: All 7 classical planets are hemmed on one side of the Rahu-Ketu axis,
+        with none conjunct either node.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-006
+  title: Kala Sarpa Dosha -- partial
+  category: dosha
+  source_tier: 4
+  source_ref: Classical Kala Sarpa doctrine (not in core BPHS; widely-used convention)
+  tradition: parasari
+  conditions:
+  - path: doshas.kala_sarpa.type
+    op: eq
+    value: partial
+    description: Kala Sarpa Dosha -- partial
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-006
+      effect: All 7 classical planets are hemmed on one side of the axis, but one
+        or more sit conjunct Rahu/Ketu, partially breaking the Dosha.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-007
+  title: Pitru Dosha present
+  category: dosha
+  source_tier: 1
+  source_ref: BPHS Ch.80
+  tradition: parasari
+  conditions:
+  - path: doshas.pitru_dosha.present
+    op: eq
+    value: true
+    description: Pitru Dosha present
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-007
+      effect: Sun in H9 afflicted by Rahu/Saturn, or the 9th lord is afflicted --
+        karmic debt to father/ancestors indicated.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-008
+  title: Pitru Dosha via afflicted 9th lord specifically
+  category: dosha
+  source_tier: 1
+  source_ref: BPHS Ch.80
+  tradition: parasari
+  conditions:
+  - path: doshas.pitru_dosha.ninth_lord_afflicted
+    op: eq
+    value: true
+    description: Pitru Dosha via afflicted 9th lord specifically
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-008
+      effect: The 9th lord itself (not the Sun-in-H9 condition) is conjunct or aspected
+        by Rahu/Saturn.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-009
+  title: Guru Chandala Yoga present
+  category: dosha
+  source_tier: 4
+  source_ref: Saravali / common Parashari convention
+  tradition: parasari
+  conditions:
+  - path: doshas.guru_chandala.present
+    op: eq
+    value: true
+    description: Guru Chandala Yoga present
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-009
+      effect: Jupiter conjunct Rahu within a 15-degree orb in the same sign -- corrupts
+        Jupiter's wisdom/judgment.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-010
+  title: Kemadruma Dosha -- raw condition met (before cancellation check)
+  category: dosha
+  source_tier: 1
+  source_ref: BPHS Ch.24
+  tradition: parasari
+  conditions:
+  - path: doshas.kemadruma.raw_condition_met
+    op: eq
+    value: true
+    description: Kemadruma Dosha -- raw condition met (before cancellation check)
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-010
+      effect: No planet occupies the 2nd or 12th house from Moon -- the Kemadruma
+        condition, prior to any cancellation check.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-011
+  title: Kemadruma Dosha cancelled
+  category: dosha
+  source_tier: 1
+  source_ref: BPHS Ch.24
+  tradition: parasari
+  conditions:
+  - path: doshas.kemadruma.cancelled
+    op: eq
+    value: true
+    description: Kemadruma Dosha cancelled
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-011
+      effect: Moon in kendra, another planet in kendra from Lagna, or Jupiter/Venus
+        aspecting Moon -- cancels the raw Kemadruma condition.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-012
+  title: Kemadruma Dosha present (net verdict, cancellation-aware)
+  category: dosha
+  source_tier: 1
+  source_ref: BPHS Ch.24
+  tradition: parasari
+  conditions:
+  - path: doshas.kemadruma.present
+    op: eq
+    value: true
+    description: Kemadruma Dosha present (net verdict, cancellation-aware)
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-012
+      effect: Kemadruma's raw condition is met AND no cancellation applies -- the
+        Dosha is genuinely active.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-013
+  title: Papakartari Yoga present (at least one house hemmed by malefics)
+  category: dosha
+  source_tier: 4
+  source_ref: General Parashari principle (papa-kartari-yoga)
+  tradition: parasari
+  conditions:
+  - path: doshas.papakartari.present
+    op: eq
+    value: true
+    description: Papakartari Yoga present (at least one house hemmed by malefics)
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-013
+      effect: At least one of the 12 houses is hemmed between two malefics (one immediately
+        before, one immediately after) -- that house's affairs are constricted.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-014
+  title: Mangal Dosha cancelled via Lagna-house own-sign/exaltation dignity
+  category: dosha
+  source_tier: 1
+  source_ref: BPHS Ch.77 (house-specific full-cancellation table)
+  tradition: parasari
+  conditions:
+  - path: doshas.mangal_dosha.references.lagna.house_dignity_cancellation
+    op: eq
+    value: true
+    description: Mangal Dosha cancelled via Lagna-house own-sign/exaltation dignity
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-014
+      effect: Mars occupies its own Dosha house in a sign where Mars itself is dignified
+        (e.g. Aries Lagna H1, Aries/Scorpio H4) -- BPHS treats this as no Dosha at
+        all, not merely a mitigated one.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.
+- id: DSH-015
+  title: Sade Sati currently active
+  category: transit
+  source_tier: 1
+  source_ref: Classical Sade Sati doctrine (Saturn gochara relative to natal Moon)
+  tradition: parasari
+  conditions:
+  - path: transits.saturn_assessment.sade_sati.active
+    op: eq
+    value: true
+    description: Sade Sati currently active
+  outputs:
+  - kind: classification
+    payload:
+      verdict: DSH-015
+      effect: Transit Saturn is in the 12th, 1st (over Moon), or 2nd house from natal
+        Moon -- one of the three Sade Sati phases is currently running.
+  confidence: high
+  status: ACTIVE
+  computation_model: classical
+  notes:
+  - Wraps already-computed, already-tested logic in app.derived.doshas / app.astro.transits
+    (tests/unit/test_doshas.py) -- this generator adds no new astrological logic,
+    only v2 schema exposure, per build_plan.md §3.2.

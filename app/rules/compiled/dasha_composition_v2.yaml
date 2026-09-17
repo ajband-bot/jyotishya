@@ -1,0 +1,3137 @@
+- id: DASHA-SUN-SUN
+  title: Sun Mahadasha / Sun Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Sun
+    description: Mahadasha lord is Sun
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Sun
+    description: Antardasha lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SUN-SUN
+      mahadasha_signif: father, authority, government, royalty
+      antardasha_signif: father, authority, government, royalty
+      effect: 'Sun Mahadasha (father, authority, government, royalty) running Sun
+        Antardasha (father, authority, government, royalty): the same planet governs
+        both Mahadasha and Antardasha -- its own themes intensify without external
+        modulation. This rule flags WHICH combination is currently running, not a
+        canned outcome -- chart-specific composed evidence (functional nature, owned-house
+        Bhava Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SUN-MOON
+  title: Sun Mahadasha / Moon Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Sun
+    description: Mahadasha lord is Sun
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Moon
+    description: Antardasha lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SUN-MOON
+      mahadasha_signif: father, authority, government, royalty
+      antardasha_signif: mother, emotions, mind, public
+      effect: 'Sun Mahadasha (father, authority, government, royalty) running Moon
+        Antardasha (mother, emotions, mind, public): the two lords are mutual natural
+        friends -- their themes generally cooperate through the period. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SUN-MARS
+  title: Sun Mahadasha / Mars Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Sun
+    description: Mahadasha lord is Sun
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mars
+    description: Antardasha lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SUN-MARS
+      mahadasha_signif: father, authority, government, royalty
+      antardasha_signif: brothers, courage, land, property
+      effect: 'Sun Mahadasha (father, authority, government, royalty) running Mars
+        Antardasha (brothers, courage, land, property): the two lords are mutual natural
+        friends -- their themes generally cooperate through the period. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SUN-MERCURY
+  title: Sun Mahadasha / Mercury Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Sun
+    description: Mahadasha lord is Sun
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mercury
+    description: Antardasha lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SUN-MERCURY
+      mahadasha_signif: father, authority, government, royalty
+      antardasha_signif: intellect, communication, business, writing
+      effect: 'Sun Mahadasha (father, authority, government, royalty) running Mercury
+        Antardasha (intellect, communication, business, writing): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SUN-JUPITER
+  title: Sun Mahadasha / Jupiter Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Sun
+    description: Mahadasha lord is Sun
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Jupiter
+    description: Antardasha lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SUN-JUPITER
+      mahadasha_signif: father, authority, government, royalty
+      antardasha_signif: wisdom, children, religion, fortune
+      effect: 'Sun Mahadasha (father, authority, government, royalty) running Jupiter
+        Antardasha (wisdom, children, religion, fortune): the two lords are mutual
+        natural friends -- their themes generally cooperate through the period. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SUN-VENUS
+  title: Sun Mahadasha / Venus Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Sun
+    description: Mahadasha lord is Sun
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Venus
+    description: Antardasha lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SUN-VENUS
+      mahadasha_signif: father, authority, government, royalty
+      antardasha_signif: wife, love, beauty, arts
+      effect: 'Sun Mahadasha (father, authority, government, royalty) running Venus
+        Antardasha (wife, love, beauty, arts): the two lords are mutual natural enemies
+        -- expect friction between their themes before results mature. This rule flags
+        WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SUN-SATURN
+  title: Sun Mahadasha / Saturn Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Sun
+    description: Mahadasha lord is Sun
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Saturn
+    description: Antardasha lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SUN-SATURN
+      mahadasha_signif: father, authority, government, royalty
+      antardasha_signif: discipline, karma, delays, servants
+      effect: 'Sun Mahadasha (father, authority, government, royalty) running Saturn
+        Antardasha (discipline, karma, delays, servants): the two lords are mutual
+        natural enemies -- expect friction between their themes before results mature.
+        This rule flags WHICH combination is currently running, not a canned outcome
+        -- chart-specific composed evidence (functional nature, owned-house Bhava
+        Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SUN-RAHU
+  title: Sun Mahadasha / Rahu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Sun
+    description: Mahadasha lord is Sun
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Rahu
+    description: Antardasha lord is Rahu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SUN-RAHU
+      mahadasha_signif: father, authority, government, royalty
+      antardasha_signif: foreigners, technology, illusion, ambition
+      effect: 'Sun Mahadasha (father, authority, government, royalty) running Rahu
+        Antardasha (foreigners, technology, illusion, ambition): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SUN-KETU
+  title: Sun Mahadasha / Ketu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Sun
+    description: Mahadasha lord is Sun
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Ketu
+    description: Antardasha lord is Ketu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SUN-KETU
+      mahadasha_signif: father, authority, government, royalty
+      antardasha_signif: moksha, spirituality, detachment, past life
+      effect: 'Sun Mahadasha (father, authority, government, royalty) running Ketu
+        Antardasha (moksha, spirituality, detachment, past life): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MOON-SUN
+  title: Moon Mahadasha / Sun Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Moon
+    description: Mahadasha lord is Moon
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Sun
+    description: Antardasha lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MOON-SUN
+      mahadasha_signif: mother, emotions, mind, public
+      antardasha_signif: father, authority, government, royalty
+      effect: 'Moon Mahadasha (mother, emotions, mind, public) running Sun Antardasha
+        (father, authority, government, royalty): the two lords are mutual natural
+        friends -- their themes generally cooperate through the period. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MOON-MOON
+  title: Moon Mahadasha / Moon Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Moon
+    description: Mahadasha lord is Moon
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Moon
+    description: Antardasha lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MOON-MOON
+      mahadasha_signif: mother, emotions, mind, public
+      antardasha_signif: mother, emotions, mind, public
+      effect: 'Moon Mahadasha (mother, emotions, mind, public) running Moon Antardasha
+        (mother, emotions, mind, public): the same planet governs both Mahadasha and
+        Antardasha -- its own themes intensify without external modulation. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MOON-MARS
+  title: Moon Mahadasha / Mars Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Moon
+    description: Mahadasha lord is Moon
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mars
+    description: Antardasha lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MOON-MARS
+      mahadasha_signif: mother, emotions, mind, public
+      antardasha_signif: brothers, courage, land, property
+      effect: 'Moon Mahadasha (mother, emotions, mind, public) running Mars Antardasha
+        (brothers, courage, land, property): the two lords have a mixed natural relationship
+        -- how the period actually unfolds leans heavily on each lord''s own strength
+        and house-lordship in this specific chart. This rule flags WHICH combination
+        is currently running, not a canned outcome -- chart-specific composed evidence
+        (functional nature, owned-house Bhava Bala, dispositor terminus for both lords)
+        already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MOON-MERCURY
+  title: Moon Mahadasha / Mercury Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Moon
+    description: Mahadasha lord is Moon
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mercury
+    description: Antardasha lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MOON-MERCURY
+      mahadasha_signif: mother, emotions, mind, public
+      antardasha_signif: intellect, communication, business, writing
+      effect: 'Moon Mahadasha (mother, emotions, mind, public) running Mercury Antardasha
+        (intellect, communication, business, writing): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MOON-JUPITER
+  title: Moon Mahadasha / Jupiter Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Moon
+    description: Mahadasha lord is Moon
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Jupiter
+    description: Antardasha lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MOON-JUPITER
+      mahadasha_signif: mother, emotions, mind, public
+      antardasha_signif: wisdom, children, religion, fortune
+      effect: 'Moon Mahadasha (mother, emotions, mind, public) running Jupiter Antardasha
+        (wisdom, children, religion, fortune): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MOON-VENUS
+  title: Moon Mahadasha / Venus Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Moon
+    description: Mahadasha lord is Moon
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Venus
+    description: Antardasha lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MOON-VENUS
+      mahadasha_signif: mother, emotions, mind, public
+      antardasha_signif: wife, love, beauty, arts
+      effect: 'Moon Mahadasha (mother, emotions, mind, public) running Venus Antardasha
+        (wife, love, beauty, arts): the two lords have a mixed natural relationship
+        -- how the period actually unfolds leans heavily on each lord''s own strength
+        and house-lordship in this specific chart. This rule flags WHICH combination
+        is currently running, not a canned outcome -- chart-specific composed evidence
+        (functional nature, owned-house Bhava Bala, dispositor terminus for both lords)
+        already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MOON-SATURN
+  title: Moon Mahadasha / Saturn Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Moon
+    description: Mahadasha lord is Moon
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Saturn
+    description: Antardasha lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MOON-SATURN
+      mahadasha_signif: mother, emotions, mind, public
+      antardasha_signif: discipline, karma, delays, servants
+      effect: 'Moon Mahadasha (mother, emotions, mind, public) running Saturn Antardasha
+        (discipline, karma, delays, servants): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MOON-RAHU
+  title: Moon Mahadasha / Rahu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Moon
+    description: Mahadasha lord is Moon
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Rahu
+    description: Antardasha lord is Rahu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MOON-RAHU
+      mahadasha_signif: mother, emotions, mind, public
+      antardasha_signif: foreigners, technology, illusion, ambition
+      effect: 'Moon Mahadasha (mother, emotions, mind, public) running Rahu Antardasha
+        (foreigners, technology, illusion, ambition): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MOON-KETU
+  title: Moon Mahadasha / Ketu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Moon
+    description: Mahadasha lord is Moon
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Ketu
+    description: Antardasha lord is Ketu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MOON-KETU
+      mahadasha_signif: mother, emotions, mind, public
+      antardasha_signif: moksha, spirituality, detachment, past life
+      effect: 'Moon Mahadasha (mother, emotions, mind, public) running Ketu Antardasha
+        (moksha, spirituality, detachment, past life): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MARS-SUN
+  title: Mars Mahadasha / Sun Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mars
+    description: Mahadasha lord is Mars
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Sun
+    description: Antardasha lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MARS-SUN
+      mahadasha_signif: brothers, courage, land, property
+      antardasha_signif: father, authority, government, royalty
+      effect: 'Mars Mahadasha (brothers, courage, land, property) running Sun Antardasha
+        (father, authority, government, royalty): the two lords are mutual natural
+        friends -- their themes generally cooperate through the period. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MARS-MOON
+  title: Mars Mahadasha / Moon Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mars
+    description: Mahadasha lord is Mars
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Moon
+    description: Antardasha lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MARS-MOON
+      mahadasha_signif: brothers, courage, land, property
+      antardasha_signif: mother, emotions, mind, public
+      effect: 'Mars Mahadasha (brothers, courage, land, property) running Moon Antardasha
+        (mother, emotions, mind, public): the two lords have a mixed natural relationship
+        -- how the period actually unfolds leans heavily on each lord''s own strength
+        and house-lordship in this specific chart. This rule flags WHICH combination
+        is currently running, not a canned outcome -- chart-specific composed evidence
+        (functional nature, owned-house Bhava Bala, dispositor terminus for both lords)
+        already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MARS-MARS
+  title: Mars Mahadasha / Mars Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mars
+    description: Mahadasha lord is Mars
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mars
+    description: Antardasha lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MARS-MARS
+      mahadasha_signif: brothers, courage, land, property
+      antardasha_signif: brothers, courage, land, property
+      effect: 'Mars Mahadasha (brothers, courage, land, property) running Mars Antardasha
+        (brothers, courage, land, property): the same planet governs both Mahadasha
+        and Antardasha -- its own themes intensify without external modulation. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MARS-MERCURY
+  title: Mars Mahadasha / Mercury Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mars
+    description: Mahadasha lord is Mars
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mercury
+    description: Antardasha lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MARS-MERCURY
+      mahadasha_signif: brothers, courage, land, property
+      antardasha_signif: intellect, communication, business, writing
+      effect: 'Mars Mahadasha (brothers, courage, land, property) running Mercury
+        Antardasha (intellect, communication, business, writing): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MARS-JUPITER
+  title: Mars Mahadasha / Jupiter Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mars
+    description: Mahadasha lord is Mars
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Jupiter
+    description: Antardasha lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MARS-JUPITER
+      mahadasha_signif: brothers, courage, land, property
+      antardasha_signif: wisdom, children, religion, fortune
+      effect: 'Mars Mahadasha (brothers, courage, land, property) running Jupiter
+        Antardasha (wisdom, children, religion, fortune): the two lords are mutual
+        natural friends -- their themes generally cooperate through the period. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MARS-VENUS
+  title: Mars Mahadasha / Venus Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mars
+    description: Mahadasha lord is Mars
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Venus
+    description: Antardasha lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MARS-VENUS
+      mahadasha_signif: brothers, courage, land, property
+      antardasha_signif: wife, love, beauty, arts
+      effect: 'Mars Mahadasha (brothers, courage, land, property) running Venus Antardasha
+        (wife, love, beauty, arts): the two lords have a mixed natural relationship
+        -- how the period actually unfolds leans heavily on each lord''s own strength
+        and house-lordship in this specific chart. This rule flags WHICH combination
+        is currently running, not a canned outcome -- chart-specific composed evidence
+        (functional nature, owned-house Bhava Bala, dispositor terminus for both lords)
+        already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MARS-SATURN
+  title: Mars Mahadasha / Saturn Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mars
+    description: Mahadasha lord is Mars
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Saturn
+    description: Antardasha lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MARS-SATURN
+      mahadasha_signif: brothers, courage, land, property
+      antardasha_signif: discipline, karma, delays, servants
+      effect: 'Mars Mahadasha (brothers, courage, land, property) running Saturn Antardasha
+        (discipline, karma, delays, servants): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MARS-RAHU
+  title: Mars Mahadasha / Rahu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mars
+    description: Mahadasha lord is Mars
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Rahu
+    description: Antardasha lord is Rahu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MARS-RAHU
+      mahadasha_signif: brothers, courage, land, property
+      antardasha_signif: foreigners, technology, illusion, ambition
+      effect: 'Mars Mahadasha (brothers, courage, land, property) running Rahu Antardasha
+        (foreigners, technology, illusion, ambition): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MARS-KETU
+  title: Mars Mahadasha / Ketu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mars
+    description: Mahadasha lord is Mars
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Ketu
+    description: Antardasha lord is Ketu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MARS-KETU
+      mahadasha_signif: brothers, courage, land, property
+      antardasha_signif: moksha, spirituality, detachment, past life
+      effect: 'Mars Mahadasha (brothers, courage, land, property) running Ketu Antardasha
+        (moksha, spirituality, detachment, past life): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MERCURY-SUN
+  title: Mercury Mahadasha / Sun Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mercury
+    description: Mahadasha lord is Mercury
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Sun
+    description: Antardasha lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MERCURY-SUN
+      mahadasha_signif: intellect, communication, business, writing
+      antardasha_signif: father, authority, government, royalty
+      effect: 'Mercury Mahadasha (intellect, communication, business, writing) running
+        Sun Antardasha (father, authority, government, royalty): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MERCURY-MOON
+  title: Mercury Mahadasha / Moon Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mercury
+    description: Mahadasha lord is Mercury
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Moon
+    description: Antardasha lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MERCURY-MOON
+      mahadasha_signif: intellect, communication, business, writing
+      antardasha_signif: mother, emotions, mind, public
+      effect: 'Mercury Mahadasha (intellect, communication, business, writing) running
+        Moon Antardasha (mother, emotions, mind, public): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MERCURY-MARS
+  title: Mercury Mahadasha / Mars Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mercury
+    description: Mahadasha lord is Mercury
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mars
+    description: Antardasha lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MERCURY-MARS
+      mahadasha_signif: intellect, communication, business, writing
+      antardasha_signif: brothers, courage, land, property
+      effect: 'Mercury Mahadasha (intellect, communication, business, writing) running
+        Mars Antardasha (brothers, courage, land, property): the two lords have a
+        mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MERCURY-MERCURY
+  title: Mercury Mahadasha / Mercury Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mercury
+    description: Mahadasha lord is Mercury
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mercury
+    description: Antardasha lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MERCURY-MERCURY
+      mahadasha_signif: intellect, communication, business, writing
+      antardasha_signif: intellect, communication, business, writing
+      effect: 'Mercury Mahadasha (intellect, communication, business, writing) running
+        Mercury Antardasha (intellect, communication, business, writing): the same
+        planet governs both Mahadasha and Antardasha -- its own themes intensify without
+        external modulation. This rule flags WHICH combination is currently running,
+        not a canned outcome -- chart-specific composed evidence (functional nature,
+        owned-house Bhava Bala, dispositor terminus for both lords) already lives
+        in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MERCURY-JUPITER
+  title: Mercury Mahadasha / Jupiter Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mercury
+    description: Mahadasha lord is Mercury
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Jupiter
+    description: Antardasha lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MERCURY-JUPITER
+      mahadasha_signif: intellect, communication, business, writing
+      antardasha_signif: wisdom, children, religion, fortune
+      effect: 'Mercury Mahadasha (intellect, communication, business, writing) running
+        Jupiter Antardasha (wisdom, children, religion, fortune): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MERCURY-VENUS
+  title: Mercury Mahadasha / Venus Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mercury
+    description: Mahadasha lord is Mercury
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Venus
+    description: Antardasha lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MERCURY-VENUS
+      mahadasha_signif: intellect, communication, business, writing
+      antardasha_signif: wife, love, beauty, arts
+      effect: 'Mercury Mahadasha (intellect, communication, business, writing) running
+        Venus Antardasha (wife, love, beauty, arts): the two lords are mutual natural
+        friends -- their themes generally cooperate through the period. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MERCURY-SATURN
+  title: Mercury Mahadasha / Saturn Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mercury
+    description: Mahadasha lord is Mercury
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Saturn
+    description: Antardasha lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MERCURY-SATURN
+      mahadasha_signif: intellect, communication, business, writing
+      antardasha_signif: discipline, karma, delays, servants
+      effect: 'Mercury Mahadasha (intellect, communication, business, writing) running
+        Saturn Antardasha (discipline, karma, delays, servants): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MERCURY-RAHU
+  title: Mercury Mahadasha / Rahu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mercury
+    description: Mahadasha lord is Mercury
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Rahu
+    description: Antardasha lord is Rahu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MERCURY-RAHU
+      mahadasha_signif: intellect, communication, business, writing
+      antardasha_signif: foreigners, technology, illusion, ambition
+      effect: 'Mercury Mahadasha (intellect, communication, business, writing) running
+        Rahu Antardasha (foreigners, technology, illusion, ambition): the two lords
+        have a mixed natural relationship -- how the period actually unfolds leans
+        heavily on each lord''s own strength and house-lordship in this specific chart.
+        This rule flags WHICH combination is currently running, not a canned outcome
+        -- chart-specific composed evidence (functional nature, owned-house Bhava
+        Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-MERCURY-KETU
+  title: Mercury Mahadasha / Ketu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Mercury
+    description: Mahadasha lord is Mercury
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Ketu
+    description: Antardasha lord is Ketu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-MERCURY-KETU
+      mahadasha_signif: intellect, communication, business, writing
+      antardasha_signif: moksha, spirituality, detachment, past life
+      effect: 'Mercury Mahadasha (intellect, communication, business, writing) running
+        Ketu Antardasha (moksha, spirituality, detachment, past life): the two lords
+        have a mixed natural relationship -- how the period actually unfolds leans
+        heavily on each lord''s own strength and house-lordship in this specific chart.
+        This rule flags WHICH combination is currently running, not a canned outcome
+        -- chart-specific composed evidence (functional nature, owned-house Bhava
+        Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-JUPITER-SUN
+  title: Jupiter Mahadasha / Sun Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Jupiter
+    description: Mahadasha lord is Jupiter
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Sun
+    description: Antardasha lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-JUPITER-SUN
+      mahadasha_signif: wisdom, children, religion, fortune
+      antardasha_signif: father, authority, government, royalty
+      effect: 'Jupiter Mahadasha (wisdom, children, religion, fortune) running Sun
+        Antardasha (father, authority, government, royalty): the two lords are mutual
+        natural friends -- their themes generally cooperate through the period. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-JUPITER-MOON
+  title: Jupiter Mahadasha / Moon Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Jupiter
+    description: Mahadasha lord is Jupiter
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Moon
+    description: Antardasha lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-JUPITER-MOON
+      mahadasha_signif: wisdom, children, religion, fortune
+      antardasha_signif: mother, emotions, mind, public
+      effect: 'Jupiter Mahadasha (wisdom, children, religion, fortune) running Moon
+        Antardasha (mother, emotions, mind, public): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-JUPITER-MARS
+  title: Jupiter Mahadasha / Mars Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Jupiter
+    description: Mahadasha lord is Jupiter
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mars
+    description: Antardasha lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-JUPITER-MARS
+      mahadasha_signif: wisdom, children, religion, fortune
+      antardasha_signif: brothers, courage, land, property
+      effect: 'Jupiter Mahadasha (wisdom, children, religion, fortune) running Mars
+        Antardasha (brothers, courage, land, property): the two lords are mutual natural
+        friends -- their themes generally cooperate through the period. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-JUPITER-MERCURY
+  title: Jupiter Mahadasha / Mercury Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Jupiter
+    description: Mahadasha lord is Jupiter
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mercury
+    description: Antardasha lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-JUPITER-MERCURY
+      mahadasha_signif: wisdom, children, religion, fortune
+      antardasha_signif: intellect, communication, business, writing
+      effect: 'Jupiter Mahadasha (wisdom, children, religion, fortune) running Mercury
+        Antardasha (intellect, communication, business, writing): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-JUPITER-JUPITER
+  title: Jupiter Mahadasha / Jupiter Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Jupiter
+    description: Mahadasha lord is Jupiter
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Jupiter
+    description: Antardasha lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-JUPITER-JUPITER
+      mahadasha_signif: wisdom, children, religion, fortune
+      antardasha_signif: wisdom, children, religion, fortune
+      effect: 'Jupiter Mahadasha (wisdom, children, religion, fortune) running Jupiter
+        Antardasha (wisdom, children, religion, fortune): the same planet governs
+        both Mahadasha and Antardasha -- its own themes intensify without external
+        modulation. This rule flags WHICH combination is currently running, not a
+        canned outcome -- chart-specific composed evidence (functional nature, owned-house
+        Bhava Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-JUPITER-VENUS
+  title: Jupiter Mahadasha / Venus Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Jupiter
+    description: Mahadasha lord is Jupiter
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Venus
+    description: Antardasha lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-JUPITER-VENUS
+      mahadasha_signif: wisdom, children, religion, fortune
+      antardasha_signif: wife, love, beauty, arts
+      effect: 'Jupiter Mahadasha (wisdom, children, religion, fortune) running Venus
+        Antardasha (wife, love, beauty, arts): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-JUPITER-SATURN
+  title: Jupiter Mahadasha / Saturn Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Jupiter
+    description: Mahadasha lord is Jupiter
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Saturn
+    description: Antardasha lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-JUPITER-SATURN
+      mahadasha_signif: wisdom, children, religion, fortune
+      antardasha_signif: discipline, karma, delays, servants
+      effect: 'Jupiter Mahadasha (wisdom, children, religion, fortune) running Saturn
+        Antardasha (discipline, karma, delays, servants): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-JUPITER-RAHU
+  title: Jupiter Mahadasha / Rahu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Jupiter
+    description: Mahadasha lord is Jupiter
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Rahu
+    description: Antardasha lord is Rahu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-JUPITER-RAHU
+      mahadasha_signif: wisdom, children, religion, fortune
+      antardasha_signif: foreigners, technology, illusion, ambition
+      effect: 'Jupiter Mahadasha (wisdom, children, religion, fortune) running Rahu
+        Antardasha (foreigners, technology, illusion, ambition): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-JUPITER-KETU
+  title: Jupiter Mahadasha / Ketu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Jupiter
+    description: Mahadasha lord is Jupiter
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Ketu
+    description: Antardasha lord is Ketu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-JUPITER-KETU
+      mahadasha_signif: wisdom, children, religion, fortune
+      antardasha_signif: moksha, spirituality, detachment, past life
+      effect: 'Jupiter Mahadasha (wisdom, children, religion, fortune) running Ketu
+        Antardasha (moksha, spirituality, detachment, past life): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-VENUS-SUN
+  title: Venus Mahadasha / Sun Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Venus
+    description: Mahadasha lord is Venus
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Sun
+    description: Antardasha lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-VENUS-SUN
+      mahadasha_signif: wife, love, beauty, arts
+      antardasha_signif: father, authority, government, royalty
+      effect: 'Venus Mahadasha (wife, love, beauty, arts) running Sun Antardasha (father,
+        authority, government, royalty): the two lords are mutual natural enemies
+        -- expect friction between their themes before results mature. This rule flags
+        WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-VENUS-MOON
+  title: Venus Mahadasha / Moon Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Venus
+    description: Mahadasha lord is Venus
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Moon
+    description: Antardasha lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-VENUS-MOON
+      mahadasha_signif: wife, love, beauty, arts
+      antardasha_signif: mother, emotions, mind, public
+      effect: 'Venus Mahadasha (wife, love, beauty, arts) running Moon Antardasha
+        (mother, emotions, mind, public): the two lords have a mixed natural relationship
+        -- how the period actually unfolds leans heavily on each lord''s own strength
+        and house-lordship in this specific chart. This rule flags WHICH combination
+        is currently running, not a canned outcome -- chart-specific composed evidence
+        (functional nature, owned-house Bhava Bala, dispositor terminus for both lords)
+        already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-VENUS-MARS
+  title: Venus Mahadasha / Mars Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Venus
+    description: Mahadasha lord is Venus
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mars
+    description: Antardasha lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-VENUS-MARS
+      mahadasha_signif: wife, love, beauty, arts
+      antardasha_signif: brothers, courage, land, property
+      effect: 'Venus Mahadasha (wife, love, beauty, arts) running Mars Antardasha
+        (brothers, courage, land, property): the two lords have a mixed natural relationship
+        -- how the period actually unfolds leans heavily on each lord''s own strength
+        and house-lordship in this specific chart. This rule flags WHICH combination
+        is currently running, not a canned outcome -- chart-specific composed evidence
+        (functional nature, owned-house Bhava Bala, dispositor terminus for both lords)
+        already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-VENUS-MERCURY
+  title: Venus Mahadasha / Mercury Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Venus
+    description: Mahadasha lord is Venus
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mercury
+    description: Antardasha lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-VENUS-MERCURY
+      mahadasha_signif: wife, love, beauty, arts
+      antardasha_signif: intellect, communication, business, writing
+      effect: 'Venus Mahadasha (wife, love, beauty, arts) running Mercury Antardasha
+        (intellect, communication, business, writing): the two lords are mutual natural
+        friends -- their themes generally cooperate through the period. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-VENUS-JUPITER
+  title: Venus Mahadasha / Jupiter Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Venus
+    description: Mahadasha lord is Venus
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Jupiter
+    description: Antardasha lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-VENUS-JUPITER
+      mahadasha_signif: wife, love, beauty, arts
+      antardasha_signif: wisdom, children, religion, fortune
+      effect: 'Venus Mahadasha (wife, love, beauty, arts) running Jupiter Antardasha
+        (wisdom, children, religion, fortune): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-VENUS-VENUS
+  title: Venus Mahadasha / Venus Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Venus
+    description: Mahadasha lord is Venus
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Venus
+    description: Antardasha lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-VENUS-VENUS
+      mahadasha_signif: wife, love, beauty, arts
+      antardasha_signif: wife, love, beauty, arts
+      effect: 'Venus Mahadasha (wife, love, beauty, arts) running Venus Antardasha
+        (wife, love, beauty, arts): the same planet governs both Mahadasha and Antardasha
+        -- its own themes intensify without external modulation. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-VENUS-SATURN
+  title: Venus Mahadasha / Saturn Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Venus
+    description: Mahadasha lord is Venus
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Saturn
+    description: Antardasha lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-VENUS-SATURN
+      mahadasha_signif: wife, love, beauty, arts
+      antardasha_signif: discipline, karma, delays, servants
+      effect: 'Venus Mahadasha (wife, love, beauty, arts) running Saturn Antardasha
+        (discipline, karma, delays, servants): the two lords are mutual natural friends
+        -- their themes generally cooperate through the period. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-VENUS-RAHU
+  title: Venus Mahadasha / Rahu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Venus
+    description: Mahadasha lord is Venus
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Rahu
+    description: Antardasha lord is Rahu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-VENUS-RAHU
+      mahadasha_signif: wife, love, beauty, arts
+      antardasha_signif: foreigners, technology, illusion, ambition
+      effect: 'Venus Mahadasha (wife, love, beauty, arts) running Rahu Antardasha
+        (foreigners, technology, illusion, ambition): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-VENUS-KETU
+  title: Venus Mahadasha / Ketu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Venus
+    description: Mahadasha lord is Venus
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Ketu
+    description: Antardasha lord is Ketu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-VENUS-KETU
+      mahadasha_signif: wife, love, beauty, arts
+      antardasha_signif: moksha, spirituality, detachment, past life
+      effect: 'Venus Mahadasha (wife, love, beauty, arts) running Ketu Antardasha
+        (moksha, spirituality, detachment, past life): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SATURN-SUN
+  title: Saturn Mahadasha / Sun Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Saturn
+    description: Mahadasha lord is Saturn
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Sun
+    description: Antardasha lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SATURN-SUN
+      mahadasha_signif: discipline, karma, delays, servants
+      antardasha_signif: father, authority, government, royalty
+      effect: 'Saturn Mahadasha (discipline, karma, delays, servants) running Sun
+        Antardasha (father, authority, government, royalty): the two lords are mutual
+        natural enemies -- expect friction between their themes before results mature.
+        This rule flags WHICH combination is currently running, not a canned outcome
+        -- chart-specific composed evidence (functional nature, owned-house Bhava
+        Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SATURN-MOON
+  title: Saturn Mahadasha / Moon Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Saturn
+    description: Mahadasha lord is Saturn
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Moon
+    description: Antardasha lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SATURN-MOON
+      mahadasha_signif: discipline, karma, delays, servants
+      antardasha_signif: mother, emotions, mind, public
+      effect: 'Saturn Mahadasha (discipline, karma, delays, servants) running Moon
+        Antardasha (mother, emotions, mind, public): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SATURN-MARS
+  title: Saturn Mahadasha / Mars Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Saturn
+    description: Mahadasha lord is Saturn
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mars
+    description: Antardasha lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SATURN-MARS
+      mahadasha_signif: discipline, karma, delays, servants
+      antardasha_signif: brothers, courage, land, property
+      effect: 'Saturn Mahadasha (discipline, karma, delays, servants) running Mars
+        Antardasha (brothers, courage, land, property): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SATURN-MERCURY
+  title: Saturn Mahadasha / Mercury Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Saturn
+    description: Mahadasha lord is Saturn
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mercury
+    description: Antardasha lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SATURN-MERCURY
+      mahadasha_signif: discipline, karma, delays, servants
+      antardasha_signif: intellect, communication, business, writing
+      effect: 'Saturn Mahadasha (discipline, karma, delays, servants) running Mercury
+        Antardasha (intellect, communication, business, writing): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SATURN-JUPITER
+  title: Saturn Mahadasha / Jupiter Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Saturn
+    description: Mahadasha lord is Saturn
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Jupiter
+    description: Antardasha lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SATURN-JUPITER
+      mahadasha_signif: discipline, karma, delays, servants
+      antardasha_signif: wisdom, children, religion, fortune
+      effect: 'Saturn Mahadasha (discipline, karma, delays, servants) running Jupiter
+        Antardasha (wisdom, children, religion, fortune): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SATURN-VENUS
+  title: Saturn Mahadasha / Venus Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Saturn
+    description: Mahadasha lord is Saturn
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Venus
+    description: Antardasha lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SATURN-VENUS
+      mahadasha_signif: discipline, karma, delays, servants
+      antardasha_signif: wife, love, beauty, arts
+      effect: 'Saturn Mahadasha (discipline, karma, delays, servants) running Venus
+        Antardasha (wife, love, beauty, arts): the two lords are mutual natural friends
+        -- their themes generally cooperate through the period. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SATURN-SATURN
+  title: Saturn Mahadasha / Saturn Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Saturn
+    description: Mahadasha lord is Saturn
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Saturn
+    description: Antardasha lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SATURN-SATURN
+      mahadasha_signif: discipline, karma, delays, servants
+      antardasha_signif: discipline, karma, delays, servants
+      effect: 'Saturn Mahadasha (discipline, karma, delays, servants) running Saturn
+        Antardasha (discipline, karma, delays, servants): the same planet governs
+        both Mahadasha and Antardasha -- its own themes intensify without external
+        modulation. This rule flags WHICH combination is currently running, not a
+        canned outcome -- chart-specific composed evidence (functional nature, owned-house
+        Bhava Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SATURN-RAHU
+  title: Saturn Mahadasha / Rahu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Saturn
+    description: Mahadasha lord is Saturn
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Rahu
+    description: Antardasha lord is Rahu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SATURN-RAHU
+      mahadasha_signif: discipline, karma, delays, servants
+      antardasha_signif: foreigners, technology, illusion, ambition
+      effect: 'Saturn Mahadasha (discipline, karma, delays, servants) running Rahu
+        Antardasha (foreigners, technology, illusion, ambition): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-SATURN-KETU
+  title: Saturn Mahadasha / Ketu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Saturn
+    description: Mahadasha lord is Saturn
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Ketu
+    description: Antardasha lord is Ketu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-SATURN-KETU
+      mahadasha_signif: discipline, karma, delays, servants
+      antardasha_signif: moksha, spirituality, detachment, past life
+      effect: 'Saturn Mahadasha (discipline, karma, delays, servants) running Ketu
+        Antardasha (moksha, spirituality, detachment, past life): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-RAHU-SUN
+  title: Rahu Mahadasha / Sun Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Rahu
+    description: Mahadasha lord is Rahu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Sun
+    description: Antardasha lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-RAHU-SUN
+      mahadasha_signif: foreigners, technology, illusion, ambition
+      antardasha_signif: father, authority, government, royalty
+      effect: 'Rahu Mahadasha (foreigners, technology, illusion, ambition) running
+        Sun Antardasha (father, authority, government, royalty): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-RAHU-MOON
+  title: Rahu Mahadasha / Moon Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Rahu
+    description: Mahadasha lord is Rahu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Moon
+    description: Antardasha lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-RAHU-MOON
+      mahadasha_signif: foreigners, technology, illusion, ambition
+      antardasha_signif: mother, emotions, mind, public
+      effect: 'Rahu Mahadasha (foreigners, technology, illusion, ambition) running
+        Moon Antardasha (mother, emotions, mind, public): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-RAHU-MARS
+  title: Rahu Mahadasha / Mars Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Rahu
+    description: Mahadasha lord is Rahu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mars
+    description: Antardasha lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-RAHU-MARS
+      mahadasha_signif: foreigners, technology, illusion, ambition
+      antardasha_signif: brothers, courage, land, property
+      effect: 'Rahu Mahadasha (foreigners, technology, illusion, ambition) running
+        Mars Antardasha (brothers, courage, land, property): the two lords have a
+        mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-RAHU-MERCURY
+  title: Rahu Mahadasha / Mercury Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Rahu
+    description: Mahadasha lord is Rahu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mercury
+    description: Antardasha lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-RAHU-MERCURY
+      mahadasha_signif: foreigners, technology, illusion, ambition
+      antardasha_signif: intellect, communication, business, writing
+      effect: 'Rahu Mahadasha (foreigners, technology, illusion, ambition) running
+        Mercury Antardasha (intellect, communication, business, writing): the two
+        lords have a mixed natural relationship -- how the period actually unfolds
+        leans heavily on each lord''s own strength and house-lordship in this specific
+        chart. This rule flags WHICH combination is currently running, not a canned
+        outcome -- chart-specific composed evidence (functional nature, owned-house
+        Bhava Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-RAHU-JUPITER
+  title: Rahu Mahadasha / Jupiter Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Rahu
+    description: Mahadasha lord is Rahu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Jupiter
+    description: Antardasha lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-RAHU-JUPITER
+      mahadasha_signif: foreigners, technology, illusion, ambition
+      antardasha_signif: wisdom, children, religion, fortune
+      effect: 'Rahu Mahadasha (foreigners, technology, illusion, ambition) running
+        Jupiter Antardasha (wisdom, children, religion, fortune): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-RAHU-VENUS
+  title: Rahu Mahadasha / Venus Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Rahu
+    description: Mahadasha lord is Rahu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Venus
+    description: Antardasha lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-RAHU-VENUS
+      mahadasha_signif: foreigners, technology, illusion, ambition
+      antardasha_signif: wife, love, beauty, arts
+      effect: 'Rahu Mahadasha (foreigners, technology, illusion, ambition) running
+        Venus Antardasha (wife, love, beauty, arts): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-RAHU-SATURN
+  title: Rahu Mahadasha / Saturn Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Rahu
+    description: Mahadasha lord is Rahu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Saturn
+    description: Antardasha lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-RAHU-SATURN
+      mahadasha_signif: foreigners, technology, illusion, ambition
+      antardasha_signif: discipline, karma, delays, servants
+      effect: 'Rahu Mahadasha (foreigners, technology, illusion, ambition) running
+        Saturn Antardasha (discipline, karma, delays, servants): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-RAHU-RAHU
+  title: Rahu Mahadasha / Rahu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Rahu
+    description: Mahadasha lord is Rahu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Rahu
+    description: Antardasha lord is Rahu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-RAHU-RAHU
+      mahadasha_signif: foreigners, technology, illusion, ambition
+      antardasha_signif: foreigners, technology, illusion, ambition
+      effect: 'Rahu Mahadasha (foreigners, technology, illusion, ambition) running
+        Rahu Antardasha (foreigners, technology, illusion, ambition): the same planet
+        governs both Mahadasha and Antardasha -- its own themes intensify without
+        external modulation. This rule flags WHICH combination is currently running,
+        not a canned outcome -- chart-specific composed evidence (functional nature,
+        owned-house Bhava Bala, dispositor terminus for both lords) already lives
+        in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-RAHU-KETU
+  title: Rahu Mahadasha / Ketu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Rahu
+    description: Mahadasha lord is Rahu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Ketu
+    description: Antardasha lord is Ketu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-RAHU-KETU
+      mahadasha_signif: foreigners, technology, illusion, ambition
+      antardasha_signif: moksha, spirituality, detachment, past life
+      effect: 'Rahu Mahadasha (foreigners, technology, illusion, ambition) running
+        Ketu Antardasha (moksha, spirituality, detachment, past life): the two lords
+        have a mixed natural relationship -- how the period actually unfolds leans
+        heavily on each lord''s own strength and house-lordship in this specific chart.
+        This rule flags WHICH combination is currently running, not a canned outcome
+        -- chart-specific composed evidence (functional nature, owned-house Bhava
+        Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-KETU-SUN
+  title: Ketu Mahadasha / Sun Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Ketu
+    description: Mahadasha lord is Ketu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Sun
+    description: Antardasha lord is Sun
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-KETU-SUN
+      mahadasha_signif: moksha, spirituality, detachment, past life
+      antardasha_signif: father, authority, government, royalty
+      effect: 'Ketu Mahadasha (moksha, spirituality, detachment, past life) running
+        Sun Antardasha (father, authority, government, royalty): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-KETU-MOON
+  title: Ketu Mahadasha / Moon Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Ketu
+    description: Mahadasha lord is Ketu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Moon
+    description: Antardasha lord is Moon
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-KETU-MOON
+      mahadasha_signif: moksha, spirituality, detachment, past life
+      antardasha_signif: mother, emotions, mind, public
+      effect: 'Ketu Mahadasha (moksha, spirituality, detachment, past life) running
+        Moon Antardasha (mother, emotions, mind, public): the two lords have a mixed
+        natural relationship -- how the period actually unfolds leans heavily on each
+        lord''s own strength and house-lordship in this specific chart. This rule
+        flags WHICH combination is currently running, not a canned outcome -- chart-specific
+        composed evidence (functional nature, owned-house Bhava Bala, dispositor terminus
+        for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-KETU-MARS
+  title: Ketu Mahadasha / Mars Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Ketu
+    description: Mahadasha lord is Ketu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mars
+    description: Antardasha lord is Mars
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-KETU-MARS
+      mahadasha_signif: moksha, spirituality, detachment, past life
+      antardasha_signif: brothers, courage, land, property
+      effect: 'Ketu Mahadasha (moksha, spirituality, detachment, past life) running
+        Mars Antardasha (brothers, courage, land, property): the two lords have a
+        mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-KETU-MERCURY
+  title: Ketu Mahadasha / Mercury Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Ketu
+    description: Mahadasha lord is Ketu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Mercury
+    description: Antardasha lord is Mercury
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-KETU-MERCURY
+      mahadasha_signif: moksha, spirituality, detachment, past life
+      antardasha_signif: intellect, communication, business, writing
+      effect: 'Ketu Mahadasha (moksha, spirituality, detachment, past life) running
+        Mercury Antardasha (intellect, communication, business, writing): the two
+        lords have a mixed natural relationship -- how the period actually unfolds
+        leans heavily on each lord''s own strength and house-lordship in this specific
+        chart. This rule flags WHICH combination is currently running, not a canned
+        outcome -- chart-specific composed evidence (functional nature, owned-house
+        Bhava Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-KETU-JUPITER
+  title: Ketu Mahadasha / Jupiter Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Ketu
+    description: Mahadasha lord is Ketu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Jupiter
+    description: Antardasha lord is Jupiter
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-KETU-JUPITER
+      mahadasha_signif: moksha, spirituality, detachment, past life
+      antardasha_signif: wisdom, children, religion, fortune
+      effect: 'Ketu Mahadasha (moksha, spirituality, detachment, past life) running
+        Jupiter Antardasha (wisdom, children, religion, fortune): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-KETU-VENUS
+  title: Ketu Mahadasha / Venus Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Ketu
+    description: Mahadasha lord is Ketu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Venus
+    description: Antardasha lord is Venus
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-KETU-VENUS
+      mahadasha_signif: moksha, spirituality, detachment, past life
+      antardasha_signif: wife, love, beauty, arts
+      effect: 'Ketu Mahadasha (moksha, spirituality, detachment, past life) running
+        Venus Antardasha (wife, love, beauty, arts): the two lords have a mixed natural
+        relationship -- how the period actually unfolds leans heavily on each lord''s
+        own strength and house-lordship in this specific chart. This rule flags WHICH
+        combination is currently running, not a canned outcome -- chart-specific composed
+        evidence (functional nature, owned-house Bhava Bala, dispositor terminus for
+        both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-KETU-SATURN
+  title: Ketu Mahadasha / Saturn Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Ketu
+    description: Mahadasha lord is Ketu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Saturn
+    description: Antardasha lord is Saturn
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-KETU-SATURN
+      mahadasha_signif: moksha, spirituality, detachment, past life
+      antardasha_signif: discipline, karma, delays, servants
+      effect: 'Ketu Mahadasha (moksha, spirituality, detachment, past life) running
+        Saturn Antardasha (discipline, karma, delays, servants): the two lords have
+        a mixed natural relationship -- how the period actually unfolds leans heavily
+        on each lord''s own strength and house-lordship in this specific chart. This
+        rule flags WHICH combination is currently running, not a canned outcome --
+        chart-specific composed evidence (functional nature, owned-house Bhava Bala,
+        dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-KETU-RAHU
+  title: Ketu Mahadasha / Rahu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Ketu
+    description: Mahadasha lord is Ketu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Rahu
+    description: Antardasha lord is Rahu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-KETU-RAHU
+      mahadasha_signif: moksha, spirituality, detachment, past life
+      antardasha_signif: foreigners, technology, illusion, ambition
+      effect: 'Ketu Mahadasha (moksha, spirituality, detachment, past life) running
+        Rahu Antardasha (foreigners, technology, illusion, ambition): the two lords
+        have a mixed natural relationship -- how the period actually unfolds leans
+        heavily on each lord''s own strength and house-lordship in this specific chart.
+        This rule flags WHICH combination is currently running, not a canned outcome
+        -- chart-specific composed evidence (functional nature, owned-house Bhava
+        Bala, dispositor terminus for both lords) already lives in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.
+- id: DASHA-KETU-KETU
+  title: Ketu Mahadasha / Ketu Antardasha running
+  category: dasha
+  source_tier: 1
+  source_ref: BPHS Ch.10 (Karakatva) + Ch.4 (Graha Maitri) -- composed MD/AD combination,
+    per build_plan.md Phase 5's compilation directive
+  tradition: parasari
+  conditions:
+  - path: current_dasha.mahadasha.planet
+    op: eq
+    value: Ketu
+    description: Mahadasha lord is Ketu
+  - path: current_dasha.antardasha.planet
+    op: eq
+    value: Ketu
+    description: Antardasha lord is Ketu
+  outputs:
+  - kind: classification
+    payload:
+      dasha_combination: DASHA-KETU-KETU
+      mahadasha_signif: moksha, spirituality, detachment, past life
+      antardasha_signif: moksha, spirituality, detachment, past life
+      effect: 'Ketu Mahadasha (moksha, spirituality, detachment, past life) running
+        Ketu Antardasha (moksha, spirituality, detachment, past life): the same planet
+        governs both Mahadasha and Antardasha -- its own themes intensify without
+        external modulation. This rule flags WHICH combination is currently running,
+        not a canned outcome -- chart-specific composed evidence (functional nature,
+        owned-house Bhava Bala, dispositor terminus for both lords) already lives
+        in ctx[''dasha_synthesis''][''stack''].'
+  confidence: medium
+  status: ACTIVE
+  computation_model: practical_proxy
+  notes:
+  - Composed cross-product of app.knowledge.planets.KARAKATVA (9 rows) and app.derived.dignities.naisargika_relationship
+    (already Phase-1-verified) -- not 81 independently authored blurbs, per this generator's
+    own module docstring.
+  - computation_model=practical_proxy (quality downgrades to computed_simplified)
+    because this rule states a GENERAL combination principle, not a verse-by-verse
+    citation for this exact 81st pairing -- honest per Cardinal Rule 5/9.

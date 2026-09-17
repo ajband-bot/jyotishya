@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Sai Shivani Part 4: Daśā, Bhukti &amp; Transits [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 4 of 5: Daśā, Bhukti &amp; Transits (Practitioner Reference)</h1>
+  <p class="text-sm text-gray-500">Itta Sai Shivani | Generated: 2026-08-21</p>
+</header>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Transit Computation Log</h2>
+  <p class="text-sm mb-3">Sade Sati windows and the Jupiter/Saturn transit-sign snapshots used in Shareable §3-4 were computed by direct sign-change scanning of app.astro.engine.all_planets_sidereal() at 3-5 day resolution across the relevant windows, not estimated from tables. Raw scan log:</p>
+  <div class="debug mb-4">
+Saturn sign-change scan (5-day step, 1998-2047): confirmed Virgo entry 2009-09-10, Libra entry 2011-11-19
+  (retrograde dip to Virgo 2012-05-17 to 2012-08-05), Scorpio entry 2014-11-03, Sagittarius exit 2017-10-28
+  (with retrograde oscillation earlier in 2017). Cycle 2: Virgo 2038-10-23 (retrograde dip to Leo Apr-Jul 2039),
+  Libra 2041-01-30 (brief retrograde wobble), Scorpio 2043-12-16 (retrograde dip to Libra Jun-Sep 2044),
+  final exit to Sagittarius 2046-12-08.
+<br><br>
+Jupiter/Saturn snapshot scan (2026-08-21, 2026-09-01, 2027-01-01, 2027-10-01, 2028-02-05):
+  Jupiter: Cancer -> Cancer -> Leo -> Leo -> Virgo
+  Saturn: Pisces -> Pisces -> Pisces -> Aries -> Pisces (confirms the 2027-06-03 Pisces->Aries transit and
+  2027-10-21 retrograde dip back to Pisces already documented in the Validation doc's Sade Sati table)
+  </div>
+  <p class="text-sm">Confidence: <span class="conf-high">HIGH</span> on all sign-change dates (direct engine computation, not almanac lookup). <span class="conf-med">MEDIUM</span> on exact-day precision for retrograde boundary dates specifically (5-day/3-day step resolution means true boundary could be off by up to that many days — immaterial for MD/AD-level daśā-timing work, but flag if a client ever asks for muhūrta-precision dates).</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Marriage Timing — Confidence Calibration</h2>
+  <table>
+    <thead><tr><th>Claim</th><th>Confidence</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr><td>Mercury AD (2028-2030) as strongest near-term marriage window</td><td class="conf-med">MEDIUM</td><td>Genuine convergence of 2 of 4 Five-Layer Transit Timing factors (daśā activation + Jupiter transit support) — but the Karmic Window (Saturn) layer already fired years ago (2017-2020) and no fast-trigger (Mars/Sun/Venus) transit check was performed for the specific 2028-2030 window since that requires date-specific computation closer to the time. Presented in Shareable copy as "strongest candidate, not a certainty" — deliberately hedged language, do not let this get upgraded to a firm prediction without re-running the fast-trigger check nearer the actual window.</td></tr>
+      <tr><td>Jupiter retrograde correlating with "later/reconnected" partner meeting</td><td class="conf-med">MEDIUM</td><td>A reasonable, widely-used classical interpretive convention for retrograde kāraka planets, but not a single hard citation-backed rule — presented as an interpretive tendency, not fact</td></tr>
+      <tr><td>UL = Virgo/H4 "settled household" reading</td><td class="conf-high">HIGH</td><td>Direct computation from canonical Ārūḍha formula, cross-verified against app.derived.factors.upapada_lagna() function call — the house-signification reading (H4=home/domestic) is standard classical convention with no ambiguity</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. Career/Marriage "Twinning" Observation</h2>
+  <p class="text-sm">Flagged in Shareable §5 that career (10th lord) and marriage (7th lord) are both ruled by the same planet, Jupiter — this is a direct, mechanical consequence of Jupiter owning both H7 and H10 (the Kendrādhipati Doṣa condition itself, see Validation §6), not a separate independent finding. Worth stating plainly to the practitioner: don't present this in Shareable copy as if it were a third, additional discovery — it is the same underlying fact (Jupiter's dual kendra lordship) viewed from two angles, and should be framed that way if a follow-up question probes deeper.</p>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>Companion shareable file: Itta_Sai_Shivani_Part4_Dasha_Bhukti_Transits.html</p>
+</footer>
+
+</main></body></html>

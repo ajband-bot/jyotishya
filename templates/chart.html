@@ -1,0 +1,402 @@
+{% extends "base.html" %}
+{% block title %}జన్మ కుండలి — {{ birth_date }}{% endblock %}
+{% block content %}
+
+{% if error %}
+<div class="card-red p-6 mb-6">
+  <h2 class="text-red-400 font-bold">⚠️ Error</h2>
+  <pre class="text-red-300 text-xs mt-2 overflow-auto">{{ error }}</pre>
+  {% if tb %}<details><summary class="text-gray-500 text-xs cursor-pointer mt-2">Traceback</summary><pre class="text-gray-600 text-xs mt-1">{{ tb }}</pre></details>{% endif %}
+</div>
+<a href="/" class="btn-primary inline-block text-center">← Back</a>
+{% else %}
+
+<!-- Header -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+  <div>
+    <h1 class="text-2xl font-black text-yellow-300 tel">జన్మ కుండలి</h1>
+    <div class="text-gray-400 text-sm mt-1">
+      📅 {{ birth_date }} &nbsp; ⏰ {{ birth_time }} &nbsp; 📍 {{ place_name }} &nbsp; JD: {{ jd }}
+    </div>
+  </div>
+  <a href="/" class="badge badge-blue text-sm px-4 py-2">← నూతన కుండలి</a>
+</div>
+
+<!-- TOP: Lagna + Moon summary -->
+<div class="grid md:grid-cols-3 gap-4 mb-6">
+  <div class="card-gold p-4">
+    <div class="text-xs text-yellow-500 font-bold mb-1">⭐ లగ్నం (Lagna)</div>
+    <div class="text-xl font-black tel text-yellow-200">{{ analysis.lagna.lagna_name }}</div>
+    <div class="text-sm text-gray-300 mt-1">{{ analysis.lagna.sign_en }} · {{ analysis.lagna.degree }}°</div>
+    <div class="text-xs text-gray-400 mt-2">Lord: <strong class="text-yellow-300">{{ analysis.lagna.lord }}</strong> · {{ analysis.lagna.element }} · {{ analysis.lagna.quality }}</div>
+    <div class="text-xs text-gray-300 mt-2 leading-relaxed">{{ analysis.lagna.tel_desc }}</div>
+  </div>
+  <div class="card-blue p-4">
+    <div class="text-xs text-blue-400 font-bold mb-1">🌙 చంద్రుడు (Moon/Rashi)</div>
+    <div class="text-xl font-black tel text-blue-200">{{ analysis.moon.rashi_name }}</div>
+    <div class="text-sm text-gray-300 mt-1 tel">నక్షత్రం: {{ analysis.moon.nakshatra }}</div>
+    <div class="text-xs text-gray-400 mt-1">{{ analysis.moon.nakshatra_en }} · Pada {{ analysis.moon.pada }} · Lord: {{ analysis.moon.nakshatra_lord }}</div>
+    <div class="text-xs text-gray-300 mt-2">{{ analysis.moon.tel_desc }}</div>
+  </div>
+  <div class="card-green p-4">
+    <div class="text-xs text-green-400 font-bold mb-1">⏳ నడుస్తున్న దశ (Current Dasha)</div>
+    {% if dasha_now.mahadasha %}
+    <div class="text-xl font-black text-green-200">{{ dasha_now.mahadasha.planet }} Dasha</div>
+    <div class="text-sm text-gray-300 mt-1 tel">మహాదశ: {{ dasha_now.mahadasha.start }} → {{ dasha_now.mahadasha.end }}</div>
+    {% if dasha_now.antardasha %}
+    <div class="text-xs text-gray-300 mt-2">అంతర్దశ: <strong class="text-green-300">{{ dasha_now.antardasha.planet }}</strong> ({{ dasha_now.antardasha.start }} → {{ dasha_now.antardasha.end }})</div>
+    {% endif %}
+    {% else %}
+    <div class="text-gray-500 text-sm">—</div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="flex flex-wrap gap-2 mb-6">
+  {% for t in [("chart","🏠 కుండలి"),("planets","🪐 గ్రహాలు"),("yogas","✨ యోగాలు"),("dasha","⏳ దశలు"),("analysis","🧠 విశ్లేషణ"),("career","💼 వృత్తి"),("kg","🕸 జ్ఞాన గ్రాఫ్")] %}
+  <button class="tab-btn {% if loop.first %}active{% endif %}" data-group="main" data-tab="{{ t[0] }}" onclick="switchTab('main','{{ t[0] }}')">{{ t[1] }}</button>
+  {% endfor %}
+</div>
+
+<!-- TAB: South Indian Chart -->
+<div class="tab-panel active" data-group="main" data-target="chart">
+  <section>
+    <h2>🏠 దక్షిణ భారత జన్మ కుండలి</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <div class="si-grid">
+          {% for row in si_grid %}
+            {% for cell in row %}
+              {% if cell.type == "center" %}
+                <div class="si-cell center-cell flex items-center justify-center">
+                  <span class="text-yellow-800 text-xs font-bold text-center leading-tight tel">జన్మ<br>కుండలి</span>
+                </div>
+              {% else %}
+                <div class="si-cell {% if cell.is_lagna %}is-lagna{% endif %}">
+                  <span class="si-sign tel">{{ cell.sign_name }}</span>
+                  {% if cell.is_lagna %}<span class="si-lagna-mark">Lg</span>{% endif %}
+                  <div class="si-planets">
+                    {% for p in cell.planets %}
+                      <span class="si-planet">{{ p }}</span>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+        <div class="mt-3 text-xs text-gray-500 text-center">
+          Gold border = Lagna | Su=Sun Mo=Moon Ma=Mars Me=Mercury Ju=Jupiter Ve=Venus Sa=Saturn Ra=Rahu Ke=Ketu
+        </div>
+      </div>
+      <div class="space-y-3">
+        <div class="card p-4">
+          <div class="font-bold text-yellow-300 text-sm mb-2">Ayanamsa</div>
+          <div class="text-gray-300 text-sm">Lahiri (Chitrapaksha): <strong>{{ analysis.ayanamsa }}°</strong></div>
+          <div class="text-gray-500 text-xs mt-1">Applied to all planetary longitudes</div>
+        </div>
+        {% for p in analysis.planets %}
+        <div class="card p-3 flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,194,32,.15);color:#fcd34d">{{ p.planet[:2] }}</div>
+          <div class="flex-1">
+            <span class="tel text-sm font-bold">{{ p.tel }}</span>
+            <span class="text-gray-500 text-xs ml-2">{{ p.sign_en }} H{{ p.house }} · {{ p.degree }}°</span>
+          </div>
+          <span class="badge {% if p.state=='exalted' %}badge-green{% elif p.state=='debilitated' %}badge-red{% elif p.state=='own-sign' %}badge-gold{% else %}badge-blue{% endif %}">{{ p.state }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TAB: Planets Detail -->
+<div class="tab-panel" data-group="main" data-target="planets">
+  <section>
+    <h2>🪐 గ్రహ వివరణ — Planet Analysis (Saravali + BPHS)</h2>
+    <div class="overflow-x-auto">
+      <table class="ptable w-full">
+        <thead><tr>
+          <th>గ్రహం</th><th>రాశి</th><th>భావం</th><th>డిగ్రీ</th><th>స్థితి</th><th>కారకత్వం</th><th>భావ ఫలం (House Effect)</th>
+        </tr></thead>
+        <tbody>
+        {% for p in analysis.planets %}
+        <tr>
+          <td><span class="font-bold tel">{{ p.tel }}</span><br><span class="text-gray-500 text-xs">{{ p.planet }}</span></td>
+          <td><span class="tel">{{ p.sign }}</span><br><span class="text-gray-500 text-xs">{{ p.sign_en }}</span></td>
+          <td><span class="tel text-xs">{{ p.house_name }}</span><br><span class="text-gray-500 text-xs">H{{ p.house }} · {{ p.house_nature }}</span></td>
+          <td class="font-mono text-xs">{{ p.degree }}°</td>
+          <td><span class="state-{{ p.state.replace('-','_') }}">{{ p.state }}</span></td>
+          <td class="text-xs tel text-gray-400">{{ p.karakatva }}</td>
+          <td class="text-xs text-gray-300 max-w-xs">{{ p.house_effect }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<!-- TAB: Yogas -->
+<div class="tab-panel" data-group="main" data-target="yogas">
+  <section>
+    <h2>✨ యోగ విశ్లేషణ — Yoga Analysis</h2>
+    {% if analysis.yogas %}
+      {% for yoga in analysis.yogas %}
+      <div class="card-gold p-4 mb-3">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-xl">⭐</span>
+          <span class="font-black tel text-yellow-200 text-lg">{{ yoga.name }}</span>
+          <span class="badge {% if yoga.strength=='very strong' %}badge-green{% elif yoga.strength=='strong' %}badge-gold{% else %}badge-blue{% endif %}">{{ yoga.strength }}</span>
+        </div>
+        <div class="text-sm text-gray-200 mb-1">{{ yoga.effect }}</div>
+        <div class="text-sm tel text-yellow-300">{{ yoga.tel }}</div>
+      </div>
+      {% endfor %}
+    {% else %}
+      <div class="card p-6 text-center text-gray-500">No major yogas detected in this chart. Minor yogas may exist.</div>
+    {% endif %}
+    <div class="card p-4 mt-4">
+      <div class="font-bold text-yellow-300 mb-2 text-sm">📚 Sources</div>
+      <div class="text-xs text-gray-400">
+        Gajakesari — BPHS Ch.36 | Budha-Aditya — Saravali Ch.37 | Pancha Mahapurusha — BPHS Ch.27 |
+        Neechabhanga — Phaladeepika Ch.7 | Chandra-Mangala — Brihat Jataka
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TAB: Dashas -->
+<div class="tab-panel" data-group="main" data-target="dasha">
+  <section>
+    <h2>⏳ వింశోత్తరి దశ — Vimshottari Dasha Timeline</h2>
+    {% if dasha_now.mahadasha %}
+    <div class="card-green p-4 mb-4">
+      <div class="font-bold text-green-300 mb-1">🔴 నడుస్తున్న దశ (Running Now)</div>
+      <div class="text-lg text-green-200">Mahadasha: <strong>{{ dasha_now.mahadasha.planet }}</strong> ({{ dasha_now.mahadasha.start }} → {{ dasha_now.mahadasha.end }})</div>
+      {% if dasha_now.antardasha %}
+      <div class="text-sm text-gray-300 mt-1">Antardasha: <strong>{{ dasha_now.antardasha.planet }}</strong> ({{ dasha_now.antardasha.start }} → {{ dasha_now.antardasha.end }})</div>
+      {% endif %}
+    </div>
+    {% endif %}
+    <div class="space-y-1 mb-4">
+      {% set colors = {"Sun":"#FF8C00","Moon":"#C0C0C0","Mars":"#FF2400","Mercury":"#32CD32","Jupiter":"#FFD700","Venus":"#FF69B4","Saturn":"#708090","Rahu":"#4B0082","Ketu":"#8B0000"} %}
+      {% for d in dashas %}
+      {% set is_active = dasha_now.mahadasha and d.planet == dasha_now.mahadasha.planet and d.start == dasha_now.mahadasha.start %}
+      <div class="dasha-bar {% if is_active %}dasha-active{% endif %}" style="background:{{ colors.get(d.planet,'#444') }}22;border-left:4px solid {{ colors.get(d.planet,'#444') }}">
+        <span class="font-bold" style="color:{{ colors.get(d.planet,'#ccc') }}">{{ d.planet }}</span>
+        <span class="text-gray-400 ml-3 text-xs">{{ d.start }} → {{ d.end }}</span>
+        <span class="text-gray-500 ml-auto text-xs">{{ d.years }}y</span>
+        {% if is_active %}<span class="ml-2 text-yellow-300 text-xs font-bold">← NOW</span>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% if dasha_now.all_antars %}
+    <div class="card p-4">
+      <div class="font-bold text-yellow-300 mb-3 text-sm">Antardashas in {{ dasha_now.mahadasha.planet }} Mahadasha</div>
+      <div class="space-y-1">
+        {% for a in dasha_now.all_antars %}
+        {% set is_cur = dasha_now.antardasha and a.planet == dasha_now.antardasha.planet %}
+        <div class="flex items-center gap-3 py-1 border-b border-white border-opacity-5">
+          <span class="font-bold text-xs w-16" style="color:{{ colors.get(a.planet,'#ccc') }}">{{ a.planet }}</span>
+          <span class="text-gray-500 text-xs">{{ a.start }} → {{ a.end }}</span>
+          {% if is_cur %}<span class="badge badge-green ml-auto">NOW</span>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </section>
+</div>
+
+<!-- TAB: Character Analysis -->
+<div class="tab-panel" data-group="main" data-target="analysis">
+  <section>
+    <h2>🧠 వ్యక్తిత్వ విశ్లేషణ — Character Analysis</h2>
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+      <div class="card p-5">
+        <div class="font-bold text-yellow-300 mb-3">🌟 లగ్న లక్షణాలు (Lagna Traits)</div>
+        <div class="text-sm text-gray-200 leading-relaxed">{{ analysis.lagna.character }}</div>
+        <div class="text-sm tel text-yellow-200 mt-3 leading-relaxed">{{ analysis.lagna.tel_desc }}</div>
+        <div class="flex gap-2 mt-3 flex-wrap">
+          <span class="badge badge-gold">{{ analysis.character.lagna_element }}</span>
+          <span class="badge badge-blue">{{ analysis.character.lagna_quality }}</span>
+        </div>
+      </div>
+      <div class="card p-5">
+        <div class="font-bold text-blue-300 mb-3">🌙 మనస్తత్వం (Mind — Moon)</div>
+        <div class="text-sm tel text-blue-200">రాశి: {{ analysis.moon.sign }}</div>
+        <div class="text-sm text-gray-300 mt-1">నక్షత్రం: {{ analysis.moon.nakshatra }} ({{ analysis.moon.nakshatra_en }})</div>
+        <div class="text-sm text-gray-400 mt-1">Nakshatra Lord: {{ analysis.moon.nakshatra_lord }}</div>
+        <div class="text-xs text-gray-400 mt-3">{{ analysis.moon.tel_desc }}</div>
+      </div>
+    </div>
+    <div class="card p-5">
+      <div class="font-bold text-green-300 mb-3">📋 వ్యక్తిత్వ విశేషాలు</div>
+      <div class="space-y-2">
+        {% for trait in analysis.character.traits %}
+        <div class="flex gap-2 items-start">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span class="text-sm text-gray-300">{{ trait }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TAB: Career -->
+<div class="tab-panel" data-group="main" data-target="career">
+  <section>
+    <h2>💼 వృత్తి విశ్లేషణ — Career Analysis</h2>
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+      <div class="card p-5">
+        <div class="font-bold text-yellow-300 mb-3">10వ భావం (Karma Bhava)</div>
+        <div class="text-sm text-gray-300 mb-1">10th Sign: <span class="tel font-bold text-yellow-200">{{ analysis.career["10th_sign"] }}</span></div>
+        <div class="text-sm text-gray-300 mb-1">10th Lord: <strong class="text-yellow-300">{{ analysis.career["10th_lord"] }}</strong> in H{{ analysis.career["10th_lord_house"] }}</div>
+        <div class="text-sm text-gray-300 mb-1">10th Lord State: <span class="state-{{ analysis.career['10th_lord_state'].replace('-','_') }}">{{ analysis.career["10th_lord_state"] }}</span></div>
+        {% if analysis.career.planets_in_10th %}
+        <div class="text-sm text-gray-300 mt-2">Planets in 10th: <strong class="text-yellow-200">{{ analysis.career.planets_in_10th | join(", ") }}</strong></div>
+        {% endif %}
+        <div class="text-xs tel text-gray-400 mt-3">{{ analysis.career.tel_desc }}</div>
+      </div>
+      <div class="card p-5">
+        <div class="font-bold text-green-300 mb-3">💡 సూచించే వృత్తులు</div>
+        {% for prof in analysis.career.suggested_professions %}
+        <div class="flex gap-2 items-center mb-1">
+          <span class="text-green-400">✓</span>
+          <span class="text-sm text-gray-300">{{ prof }}</span>
+        </div>
+        {% endfor %}
+        {% for hint in analysis.career.career_hints %}
+        <div class="card-blue p-2 mt-2 text-xs">{{ hint }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TAB: Knowledge Graph -->
+<div class="tab-panel" data-group="main" data-target="kg">
+  <section>
+    <h2>🕸 జ్ఞాన గ్రాఫ్ — Knowledge Graph</h2>
+    <p class="text-gray-400 text-sm mb-3">Interactive graph connecting your planets to classical Vedic text principles. Click nodes to explore.</p>
+    <canvas id="kg-canvas"></canvas>
+    <div id="kg-detail" class="card p-4 mt-4 hidden">
+      <div id="kg-detail-content"></div>
+    </div>
+  </section>
+</div>
+
+{% endif %}
+
+{% block scripts %}
+<script>
+// Build knowledge graph on canvas
+const planets = {{ analysis.planets | tojson if analysis else '[]' }};
+const yogas   = {{ analysis.yogas  | tojson if analysis else '[]' }};
+
+const canvas = document.getElementById('kg-canvas');
+if (!canvas) return;
+const ctx = canvas.getContext('2d');
+canvas.width  = canvas.offsetWidth;
+canvas.height = 500;
+
+const W = canvas.width, H = canvas.height;
+const cx = W/2, cy = H/2;
+
+const planetColors = {
+  Sun:"#FF8C00",Moon:"#C0C0C0",Mars:"#FF4444",Mercury:"#32CD32",
+  Jupiter:"#FFD700",Venus:"#FF69B4",Saturn:"#aabbcc",Rahu:"#9966ff",Ketu:"#cc4444"
+};
+
+// Place planets in circle
+const nodes = [];
+const n = planets.length;
+planets.forEach((p,i)=>{
+  const angle = (2*Math.PI*i/n) - Math.PI/2;
+  const r = Math.min(W,H)*0.32;
+  nodes.push({
+    x: cx + r*Math.cos(angle),
+    y: cy + r*Math.sin(angle),
+    label: p.planet.substring(0,2),
+    fullLabel: p.planet,
+    color: planetColors[p.planet]||'#888',
+    info: p,
+    radius: 22
+  });
+});
+
+// Lagna node center
+nodes.push({x:cx,y:cy,label:"Lg",fullLabel:"Lagna",color:"#ffc220",info:{house_name:"లగ్నం",karakatva:"Self/Body"},radius:28});
+
+function drawGraph(){
+  ctx.clearRect(0,0,W,H);
+  // Draw edges (planet → lagna)
+  nodes.forEach(n=>{
+    if(n.fullLabel==="Lagna") return;
+    ctx.beginPath();
+    ctx.moveTo(n.x,n.y);
+    ctx.lineTo(cx,cy);
+    ctx.strokeStyle = n.color+'44';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  });
+  // Draw yoga connections between planets
+  yogas.forEach(y=>{
+    // Try to draw a glow between planet pairs
+  });
+  // Draw nodes
+  nodes.forEach(node=>{
+    ctx.beginPath();
+    ctx.arc(node.x,node.y,node.radius,0,2*Math.PI);
+    ctx.fillStyle = node.color+'33';
+    ctx.fill();
+    ctx.strokeStyle = node.color;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    // Label
+    ctx.fillStyle = node.color;
+    ctx.font = `bold ${node.radius>22?13:11}px Inter,sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(node.label,node.x,node.y);
+    // House below
+    if(node.info && node.info.house){
+      ctx.font = '9px Inter';
+      ctx.fillStyle = '#666';
+      ctx.fillText('H'+node.info.house, node.x, node.y+node.radius+10);
+    }
+  });
+}
+
+canvas.addEventListener('click',(e)=>{
+  const rect = canvas.getBoundingClientRect();
+  const mx = (e.clientX-rect.left)*(canvas.width/rect.width);
+  const my = (e.clientY-rect.top)*(canvas.height/rect.height);
+  nodes.forEach(node=>{
+    const dx=mx-node.x, dy=my-node.y;
+    if(Math.sqrt(dx*dx+dy*dy)<node.radius+5){
+      const d = document.getElementById('kg-detail');
+      const dc = document.getElementById('kg-detail-content');
+      d.classList.remove('hidden');
+      const p = node.info;
+      dc.innerHTML = `<div class="flex items-center gap-3 mb-2">
+        <div style="width:14px;height:14px;border-radius:50%;background:${node.color}"></div>
+        <strong style="color:${node.color}">${node.fullLabel}</strong>
+        ${p.state?`<span class="badge badge-${p.state==='exalted'?'green':p.state==='debilitated'?'red':'gold'}">${p.state}</span>`:''}
+      </div>
+      ${p.sign?`<div class="text-sm text-gray-300">రాశి: <strong>${p.sign}</strong> (${p.sign_en}) · H${p.house} · ${p.degree}°</div>`:''}
+      ${p.karakatva?`<div class="text-sm text-yellow-200 mt-2">${p.karakatva}</div>`:''}
+      ${p.house_effect?`<div class="text-sm text-gray-300 mt-2 border-t border-white border-opacity-10 pt-2">${p.house_effect}</div>`:''}
+      ${p.character_trait?`<div class="text-xs text-gray-400 mt-2">${p.character_trait}</div>`:''}`;
+    }
+  });
+});
+
+drawGraph();
+window.addEventListener('resize',()=>{canvas.width=canvas.offsetWidth;drawGraph();});
+</script>
+{% endblock %}
+{% endblock %}

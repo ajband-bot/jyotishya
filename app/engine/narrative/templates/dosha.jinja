@@ -1,0 +1,21 @@
+<section class="narrative-section dosha-section">
+  <h2>Doṣa Register</h2>
+  {% if records %}
+  <ul class="dosha-list">
+    {% for evaluation in records %}
+    <li class="rule-evidence" data-rule-id="{{ evaluation.rule_id }}" data-quality="{{ evaluation.quality }}">
+      <strong>{{ evaluation.title }}</strong>
+      <p>{{ evaluation.outputs[0].payload.get("effect", "") }}</p>
+      <p class="evidence-meta">
+        <span class="source-tier">source tier {{ evaluation.source_tier }}</span>
+        &middot; <span class="confidence">confidence: {{ evaluation.confidence }}</span>
+        &middot; <span class="quality">quality: {{ evaluation.quality }}</span>
+        &middot; <span class="rule-id">{{ evaluation.rule_id }}</span>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="narrative-empty">No doṣa conditions matched for this chart across the compiled registry.</p>
+  {% endif %}
+</section>

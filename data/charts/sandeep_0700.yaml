@@ -1,0 +1,17 @@
+chart_id: sandeep_0700
+name: Sandeep
+dob: 1984-02-05
+time_local: "07:00:00"
+timezone: IST
+utc_offset: 5.5
+location:
+  place: Khammam AP
+  latitude: 17.2473
+  longitude: 80.1514
+settings:
+  ayanamsha: lahiri
+  node_type: mean
+  house_system: whole_sign
+notes:
+- Locked to the 07:00 IST Swiss-verified version used in the 07h00 report set.
+- Corpus contains an older 05:56 IST variant; keep this fixture separate to avoid silent rectification drift.

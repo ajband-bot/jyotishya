@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "date_anchor": "2026-04-11",
+    "fixtures": [
+      "ajay_kumar",
+      "sandeep_0700"
+    ],
+    "generated_at": "2026-04-11T09:01:51Z",
+    "mode": "baseline"
+  },
+  "snapshots": {
+    "ajay_kumar": {
+      "aspects": {
+        "jupiter_to_h1": true,
+        "mars_to_h7": true
+      },
+      "chart_id": "ajay_kumar",
+      "combustion": {
+        "Mercury": true,
+        "Saturn": true
+      },
+      "dasha": {
+        "antardasha": "Moon",
+        "mahadasha": "Rahu",
+        "pratyantardasha": "Rahu"
+      },
+      "date": "2026-04-11",
+      "quality_counts": {
+        "computed": 13,
+        "computed_simplified": 5,
+        "computed_with_conflict": 1,
+        "data_gap": 1
+      },
+      "rule_qualities": {
+        "RC-013": "computed_simplified",
+        "RC-015": "computed_with_conflict",
+        "RC-018": "data_gap",
+        "RC-020": "computed_simplified"
+      },
+      "transits": {
+        "jupiter_from_moon": 3,
+        "saturn_from_moon": 12
+      },
+      "upapada": {
+        "canonical": "Aries",
+        "guide_formula": "Sagittarius",
+        "matches": false
+      }
+    },
+    "sandeep_0700": {
+      "aspects": {
+        "jupiter_to_h1": false,
+        "mars_to_h7": false
+      },
+      "chart_id": "sandeep_0700",
+      "combustion": {
+        "Mercury": false,
+        "Saturn": false
+      },
+      "dasha": {
+        "antardasha": "Jupiter",
+        "mahadasha": "Mercury",
+        "pratyantardasha": "Venus"
+      },
+      "date": "2026-04-11",
+      "quality_counts": {
+        "computed": 13,
+        "computed_simplified": 5,
+        "computed_with_conflict": 1,
+        "data_gap": 1
+      },
+      "rule_qualities": {
+        "RC-013": "computed_simplified",
+        "RC-015": "computed_with_conflict",
+        "RC-018": "data_gap",
+        "RC-020": "computed_simplified"
+      },
+      "transits": {
+        "jupiter_from_moon": 5,
+        "saturn_from_moon": 2
+      },
+      "upapada": {
+        "canonical": "Virgo",
+        "guide_formula": "Scorpio",
+        "matches": false
+      }
+    }
+  }
+}

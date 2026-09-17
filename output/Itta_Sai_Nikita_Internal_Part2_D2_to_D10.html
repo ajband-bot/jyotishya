@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INTERNAL — Itta Sai Nikita Part 2: D2 to D10 [Practitioner Use Only]</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-green:#2a8703;--wm-gray:#374151;--wm-light:#f8fafc}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+table{border-collapse:collapse;width:100%}
+th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+tr:hover{background:#f1f5f9}
+h1{color:var(--wm-blue)}h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+h3{color:#1e3a5f}
+.internal-note{background:#fef9c3;border-left:4px solid #ca8a04;padding:1rem;margin:0.5rem 0;font-size:0.9rem}
+.conf-high{background:#dcfce7;color:#166534;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.conf-med{background:#fef9c3;color:#854d0e;display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.75rem;font-weight:bold}
+.banner{background:#dc2626;color:white;padding:1rem 2rem;text-align:center;font-weight:bold;font-size:1.1rem;letter-spacing:0.05em;border-radius:0.5rem;margin-bottom:1.5rem}
+.debug{background:#f1f5f9;border:1px solid #94a3b8;padding:0.75rem;font-family:monospace;font-size:0.8rem;border-radius:4px}
+</style></head>
+<body class="min-h-screen">
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<div class="banner">
+  WARNING - INTERNAL PRACTITIONER DOCUMENT - NOT FOR SHARING WITH NATIVE
+</div>
+
+<header class="text-center mb-8">
+  <h1 class="text-3xl font-bold mb-2">INTERNAL - Part 2 of 5: D2-D10 (Practitioner Reference)</h1>
+  <p class="text-xl font-semibold mt-2" style="color:var(--wm-blue)">Itta Sai Nikita — Divisional Chart Computation Notes</p>
+</header>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. Computation Method &amp; Source</h2>
+  <div class="internal-note">
+    <p><strong>Method:</strong> The core engine (app/astro/) does not yet implement divisional charts beyond D9 (documented gap in docs/migration-plan.md). Per Cardinal Rule 2 (never fabricate), I computed D2-D10 (and D12-D60, used in Part 3) using the same classical varga-scheme formulas already implemented and used for the Sharan/Raghunandan charts — cloned as scripts/compute_nikita.py with only birth-data constants changed. This is a DRY reuse of existing, already-reviewed logic rather than writing new formulas from scratch.</p>
+    <p class="mt-2"><strong>Formulas used</strong> (all standard Parashari, cited per scheme): D2 Hora (odd/even sign Sun-Moon split), D3 Drekkana (same/5th/9th offsets), D4 Caturthamsa (same/4th/7th/10th), D7 Saptamsa (odd from same sign, even from 7th), D10 Dasamsa (odd from same sign, even from 9th).</p>
+    <p class="mt-2">Full raw output archived at /tmp/nikita_vargas.txt for audit trail.</p>
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. Raw D2/D3/D4/D7/D10 Tables (Full)</h2>
+  <div class="debug mb-4">
+D2: Lagna=Cancer | Sun=Leo(own) Moon=Cancer(own) Mars=Cancer(debil) Mercury=Leo Jupiter=Leo Venus=Cancer Saturn=Leo Rahu=Cancer Ketu=Cancer<br>
+D3: Lagna=Pisces | Sun=Sagittarius Moon=Sagittarius Mars=Capricorn(exalted) Mercury=Cancer Jupiter=Virgo Venus=Capricorn Saturn=Cancer Rahu=Aries Ketu=Libra<br>
+D4: Lagna=Pisces | Sun=Sagittarius Moon=Aquarius Mars=Aries(own) Mercury=Leo Jupiter=Libra Venus=Aries Saturn=Virgo Rahu=Aquarius Ketu=Leo<br>
+D7: Lagna=Virgo | Sun=Capricorn Moon=Scorpio(debil) Mars=Leo Mercury=Scorpio Jupiter=Capricorn(debil) Venus=Virgo(debil) Saturn=Capricorn(own) Rahu=Sagittarius(debil) Ketu=Gemini(debil)<br>
+D10: Lagna=Sagittarius | Sun=Capricorn Moon=Capricorn Mars=Scorpio(own) Mercury=Aries Jupiter=Taurus Venus=Sagittarius Saturn=Taurus Rahu=Aquarius Ketu=Leo
+  </div>
+  <p class="text-sm">Confidence: <span class="conf-high">HIGH</span> for the arithmetic (deterministic formula application, cross-checked by hand for D2, D7, and D10 specifically since those carry the most interpretive weight in this part — D7's multiple-debilitation pattern was re-verified twice given its sensitivity).</p>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. D7 Severity Assessment — Confidence Notes</h2>
+  <div class="internal-note">
+    <p><strong>D7 finding (Moon, Jupiter, Venus, Rahu all debilitated)</strong> is <span class="conf-high">HIGH confidence</span> as raw fact — four independent debilitations in a single divisional chart is unusual and was re-verified against the raw output twice given the sensitivity of the topic (children/progeny). Only Saturn (own-sign) and neutral placements (Sun, Mars, Mercury) balance this.</p>
+    <p class="mt-2">Per Cardinal Rule 9 (never sugarcoat, but never leave despair as the destination) and the Purpose statement in AGENTS.md §1, the shareable copy names this plainly ("genuinely calls for honest attention") while immediately pairing it with a concrete dharmic/devotional path forward (Santana Gopala Krishna worship, Putrada Ekadashi). This is the mandated pattern for every negative finding — do not omit the caution, do not leave it unresolved.</p>
+    <p class="mt-2 text-sm">Note for Part 5: this D7 finding should directly inform the remedy selection — prioritize Jupiter-strengthening and Saturn-honoring practices (both are the domain's structural anchors: Saturn own-sign here, Jupiter is the chart's overall yogakaraka) over generic fertility remedies.</p>
+  </div>
+</section>
+
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. D9 Cross-Chart Pattern — Confidence Assessment</h2>
+  <p class="mb-3 text-sm">The "Jupiter lands in the D9 Lagna itself" observation (Shareable §5) is <span class="conf-high">HIGH confidence</span> as a factual placement match — directly confirmed against the compute_nikita.py D9 output (D9 Lagna=Leo, Jupiter D9 sign=Leo, D9 house=1). This is a stronger and more literal echo than the "7th-from-lagna" pattern found in the Raghunandan chart (that was an analogous-house match; this is an exact Lagna-sign match). The INTERPRETIVE weight given ("doubles confidence that the Neechabhanga is not fragile") is reasonable synthesis per the Three Lenses framework (§4A) but should be labeled as synthesis, not raw fact, if challenged.</p>
+  <p class="mb-3 text-sm">The D9 H8 stellium (Mars+Mercury+Venus in Pisces) is <span class="conf-high">HIGH confidence</span> raw fact, directly read from engine output. Framing it as a "structural, recurring pattern" for depth/transformation themes is a reasonable cross-house synthesis (D1 also shows a Mars-Jupiter-Venus H11 cluster, a different but structurally analogous concentration) — flagged as interpretive layering, not overclaimed as identical houses.</p>
+</section>
+
+<footer class="text-center text-sm text-gray-500 mt-10 pt-6 border-t">
+  <p>Companion shareable file: Itta_Sai_Nikita_Part2_D2_to_D10.html</p>
+</footer>
+
+</main></body></html>

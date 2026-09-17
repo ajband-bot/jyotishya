@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}జ్యోతిష — Vedic Astrology{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#0053e2;--gold:#ffc220;--red:#ea1100;--green:#2a8703;--dark:#0a0a1a}
+    body{font-family:'Inter',sans-serif;background:var(--dark);color:#e2e8f0;min-height:100vh}
+    .tel{font-family:'Noto Sans Telugu',sans-serif}
+    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px}
+    .card-gold{background:rgba(255,194,32,.06);border:1px solid rgba(255,194,32,.2);border-radius:14px}
+    .card-blue{background:rgba(0,83,226,.08);border:1px solid rgba(0,83,226,.25);border-radius:14px}
+    .card-red{background:rgba(234,17,0,.06);border:1px solid rgba(234,17,0,.2);border-radius:14px}
+    .card-green{background:rgba(42,135,3,.07);border:1px solid rgba(42,135,3,.25);border-radius:14px}
+    .badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:.72rem;font-weight:700}
+    .badge-gold{background:rgba(255,194,32,.2);color:#fcd34d;border:1px solid rgba(255,194,32,.4)}
+    .badge-blue{background:rgba(0,83,226,.25);color:#93c5fd;border:1px solid rgba(0,83,226,.4)}
+    .badge-red{background:rgba(234,17,0,.2);color:#fca5a5;border:1px solid rgba(234,17,0,.3)}
+    .badge-green{background:rgba(42,135,3,.2);color:#86efac;border:1px solid rgba(42,135,3,.35)}
+    .badge-purple{background:rgba(139,92,246,.2);color:#c4b5fd;border:1px solid rgba(139,92,246,.4)}
+    /* SI Chart */
+    .si-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;width:100%;aspect-ratio:1}
+    .si-cell{border:1px solid rgba(255,194,32,.3);padding:6px;min-height:80px;position:relative;background:rgba(255,255,255,.02);transition:background .2s}
+    .si-cell:hover{background:rgba(255,194,32,.06)}
+    .si-cell.is-lagna{border:2px solid #ffc220;background:rgba(255,194,32,.08)}
+    .si-cell.center-cell{background:rgba(0,0,0,.3);border:none}
+    .si-sign{font-size:.6rem;color:#94a3b8;position:absolute;top:3px;left:4px;font-family:'Noto Sans Telugu',sans-serif}
+    .si-planets{display:flex;flex-wrap:wrap;gap:2px;margin-top:16px}
+    .si-planet{font-size:.7rem;font-weight:700;padding:1px 4px;border-radius:4px;background:rgba(255,194,32,.15);color:#fcd34d}
+    .si-lagna-mark{position:absolute;top:2px;right:4px;font-size:.65rem;color:#ffc220;font-weight:900}
+    /* Tabs */
+    .tab-btn{padding:8px 16px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;border:none;background:rgba(255,255,255,.05);color:#94a3b8;transition:all .2s}
+    .tab-btn.active{background:rgba(255,194,32,.2);color:#fcd34d;border:1px solid rgba(255,194,32,.4)}
+    .tab-panel{display:none}.tab-panel.active{display:block}
+    /* Planet table */
+    .ptable th{background:rgba(0,83,226,.25);color:#93c5fd;font-size:.78rem;padding:8px 12px;text-align:left}
+    .ptable td{padding:8px 12px;border-bottom:1px solid rgba(255,255,255,.05);font-size:.82rem;vertical-align:top}
+    .ptable tr:hover td{background:rgba(255,255,255,.03)}
+    .state-exalted{color:#86efac;font-weight:700}
+    .state-debilitated{color:#fca5a5;font-weight:700}
+    .state-own-sign{color:#fcd34d;font-weight:700}
+    .state-neutral{color:#94a3b8}
+    /* Dasha timeline */
+    .dasha-bar{height:28px;border-radius:6px;display:flex;align-items:center;padding:0 10px;font-size:.78rem;font-weight:600;margin:2px 0;transition:all .2s}
+    .dasha-active{border:2px solid #ffc220;box-shadow:0 0 12px rgba(255,194,32,.3)}
+    /* Knowledge graph */
+    #kg-canvas{width:100%;height:500px;background:rgba(0,0,0,.3);border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+    /* Input form */
+    input,select{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:10px 14px;color:#e2e8f0;width:100%;font-size:.9rem;outline:none;transition:border .2s}
+    input:focus,select:focus{border-color:#ffc220}
+    label{font-size:.82rem;color:#94a3b8;margin-bottom:4px;display:block}
+    .btn-primary{background:#0053e2;color:#fff;padding:12px 28px;border-radius:10px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;width:100%;transition:background .2s}
+    .btn-primary:hover{background:#0040b0}
+    /* Accordion */
+    .acc-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+    .acc-body.open{max-height:1200px}
+    .acc-btn{width:100%;text-align:left;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px 16px;cursor:pointer;color:#e2e8f0;font-size:.88rem;font-weight:600;transition:all .2s}
+    .acc-btn:hover{background:rgba(255,194,32,.08);border-color:rgba(255,194,32,.3)}
+    section h2{font-size:1.3rem;font-weight:800;color:#fcd34d;margin-bottom:16px;border-bottom:1px solid rgba(255,194,32,.2);padding-bottom:6px}
+  </style>
+  {% block head %}{% endblock %}
+</head>
+<body>
+<nav class="bg-black bg-opacity-70 border-b border-white border-opacity-10 px-4 py-3 sticky top-0 z-50 backdrop-blur">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="/" class="text-yellow-300 font-black text-lg tel">⭐ జ్యోతిష — Vedic Astrology</a>
+    <span class="text-gray-500 text-xs">Jean Meeus + Saravali + BPHS + Phaladeepika</span>
+  </div>
+</nav>
+<main class="max-w-7xl mx-auto px-4 py-8">{% block content %}{% endblock %}</main>
+<script>
+function toggleAcc(id){document.getElementById(id).classList.toggle('open')}
+function switchTab(group,id){
+  document.querySelectorAll('[data-group="'+group+'"]').forEach(el=>{
+    el.classList.toggle('active', el.dataset.tab===id || el.dataset.target===id)
+  })
+}
+</script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

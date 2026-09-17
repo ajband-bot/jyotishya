@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ajay Kumar — Jyotish Part 2: D2 to D10 Divisional Charts</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{--wm-blue:#0053e2;--wm-gold:#ffc220;--wm-red:#ea1100;--wm-green:#2a8703;--wm-gray:#374151;--wm-light:#f8fafc}
+  body{font-family:'Georgia','Times New Roman',serif;background:var(--wm-light);color:var(--wm-gray)}
+  .highlight{background:#fffbeb;border-left:4px solid var(--wm-gold);padding:1rem}
+  .verse{background:#f0f4ff;border-left:4px solid var(--wm-blue);padding:1rem;font-style:italic}
+  .warn{background:#fef2f2;border-left:4px solid var(--wm-red);padding:1rem}
+  .blessing{background:#f0fdf4;border-left:4px solid var(--wm-green);padding:1rem}
+  .spiritual{background:#faf5ff;border-left:4px solid #7c3aed;padding:1rem}
+  .dosha{background:#fff1f2;border-left:4px solid #be123c;padding:1rem}
+  .remedy{background:#ecfdf5;border-left:4px solid #059669;padding:1rem}
+  table{border-collapse:collapse;width:100%}
+  th{background:var(--wm-blue);color:white;padding:0.5rem;text-align:left;font-size:0.85rem}
+  td{padding:0.5rem;border-bottom:1px solid #e5e7eb;font-size:0.85rem}
+  tr:hover{background:#f1f5f9}
+  .planet-tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:0.75rem;font-weight:bold}
+  .combust{background:#fecaca;color:#991b1b}
+  .retro{background:#dbeafe;color:#1e40af}
+  .yogakaraka{background:#dcfce7;color:#166534}
+  .debilitated{background:#fef3c7;color:#92400e}
+  .vargottama{background:#e0e7ff;color:#3730a3}
+  .neechabhanga{background:#fce7f3;color:#9d174d}
+  .own-sign{background:#d1fae5;color:#065f46}
+  .exalted{background:#dbeafe;color:#1e3a8a}
+  .gandanta{background:#fef3c7;color:#92400e}
+  .pushkara{background:#e0f2fe;color:#0c4a6e}
+  .nīca{background:#fecaca;color:#991b1b}
+  h1{color:var(--wm-blue)}
+  h2{color:var(--wm-blue);border-bottom:2px solid var(--wm-gold);padding-bottom:0.5rem}
+  h3{color:#1e3a5f}
+  h4{color:#374151;margin-top:1rem}
+  .matrix-row-good{background:#f0fdf4}
+  .matrix-row-bad{background:#fef2f2}
+  .matrix-row-mixed{background:#fffbeb}
+  .matrix-row-gem{background:#eff6ff}
+</style>
+</head>
+<body class="min-h-screen">
+
+<main class="max-w-5xl mx-auto px-4 py-8">
+
+<!-- ====================================================== -->
+<!-- HEADER -->
+<!-- ====================================================== -->
+<header class="text-center mb-12">
+  <h1 class="text-4xl font-bold mb-2">Part 2 of 5 — Divisional Charts: D2 through D10</h1>
+  <p class="text-xl font-semibold mt-2" style="color:var(--wm-blue)">Bandlapalli Ajay Kumar</p>
+  <p class="text-lg text-gray-500 mt-2">Wealth (D2) | Courage (D3) | Property (D4) | Children (D7) | The Soul Chart (D9) | Career (D10)</p>
+  <p class="text-sm mt-3">Spoken in the voice of a Pandit of fifty winters, anchored in the upasana of Agni (Krttika devata) and Sri Venkatesvara, guided by the lamp of Maharsi Parasara.</p>
+  <p class="text-sm mt-1"><strong>Pramana-grantha</strong>: BPHS Adhyaya 6-7 (Varga-phala), Saravali Adhyaya 35, Phaladipika Adhyaya 4, Jataka-Parijata Adhyaya 7, Sarvartha-Cintamani Adhyayas 2, 7, 10, Uttara-Kalamrita.</p>
+  <p class="text-sm mt-1"><strong>Birth</strong>: 31 Dec 1987, 04:15 IST, Kalyandurg AP (14.5452 N, 77.1055 E). JD 2,447,160.447917. Lahiri ayanamsa 23 41'22".</p>
+</header>
+
+<!-- ====================================================== -->
+<!-- FOREWORD — WHY VARGAS MATTER -->
+<!-- ====================================================== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">Foreword — Why Divisional Charts Matter</h2>
+  <div class="verse mb-4">
+    <p><em>"Varge varge graha-phalam prthak-prthak vicintayet;</em></p>
+    <p><em>Sarva-vargottamah srestho, balavan eva sarvada."</em></p>
+    <p>— <strong>BPHS, Adhyaya 6, sloka 11</strong></p>
+  </div>
+  <p>Each varga is a <em>kosa</em> (sheath) of a planet. The D1 shows the <em>body</em> of life-events; the vargas show the <em>organs</em>. A planet weak in D1 but strong across multiple vargas recovers — even <strong>rules</strong> — its domain. A planet strong in D1 but weak in its decisive varga must be watched with care, for its promise may erode at the subtle level.</p>
+  <p class="mt-3">Ajay's chart contains <strong>several such recoveries and several such erosions</strong>. This is precisely why the practical fruit of life exceeds — and sometimes falls short of — the surface arithmetic of D1 alone. We use the <strong>Sodasa-varga</strong> scheme of Parasara. In this Part 2, we read the six vargas most decisive for outer-life results: D2 (Hora), D3 (Drekkana), D4 (Caturthamsa), D7 (Saptamsa), D9 (Navamsa — the soul chart), and D10 (Dasamsa).</p>
+  <p class="mt-3">The D9 section is intentionally the longest — by Parasara's own testimony, the Navamsa is the <em>dharma-varga</em>, the chart of the soul's true constitution, and no serious jyotishi reads a horoscope without dwelling there at length.</p>
+</section>
+
+<!-- ====================================================== -->
+<!-- 1. D2 — HORA -->
+<!-- ====================================================== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">1. D2 — Hora (Wealth-Polarity Reading)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">1.1 Method</h3>
+  <p>Each rasi is split into two horas of 15 degrees. <strong>Odd signs</strong> (Aries, Gemini, Leo, Libra, Sagittarius, Aquarius): 0-15 degrees = Surya's hora (Leo); 15-30 degrees = Candra's hora (Cancer). <strong>Even signs</strong> (Taurus, Cancer, Virgo, Scorpio, Capricorn, Pisces): 0-15 degrees = Candra's hora (Cancer); 15-30 degrees = Surya's hora (Leo). This is the simplest of all vargas, yet it reveals the <em>fundamental polarity</em> of wealth — whether it comes through solar channels (authority, government, self-luminous effort, inheritance) or lunar channels (service, public, masses, fluid/recurring income, nurturing industries).</p>
+
+  <h3 class="text-xl mt-4 mb-3">1.2 Computation Table</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Sign</th><th>Degree</th><th>Odd/Even</th><th>Zone</th><th>Hora</th><th>Hora-svami</th></tr></thead>
+    <tbody>
+      <tr><td>Surya</td><td>Sagittarius (odd)</td><td>15 00'</td><td>Odd</td><td>15-30 (2nd hora)</td><td><strong>Cancer</strong></td><td>Candra</td></tr>
+      <tr><td>Candra</td><td>Aries (odd)</td><td>27 58'</td><td>Odd</td><td>15-30 (2nd hora)</td><td><strong>Cancer</strong></td><td>Candra</td></tr>
+      <tr><td>Mangala</td><td>Scorpio (even)</td><td>00 32'</td><td>Even</td><td>0-15 (1st hora)</td><td><strong>Cancer</strong></td><td>Candra</td></tr>
+      <tr><td>Budha</td><td>Sagittarius (odd)</td><td>19 27'</td><td>Odd</td><td>15-30 (2nd hora)</td><td><strong>Cancer</strong></td><td>Candra</td></tr>
+      <tr><td>Guru</td><td>Pisces (even)</td><td>26 29'</td><td>Even</td><td>15-30 (2nd hora)</td><td><strong>Leo</strong></td><td>Surya</td></tr>
+      <tr><td>Sukra</td><td>Capricorn (even)</td><td>17 01'</td><td>Even</td><td>15-30 (2nd hora)</td><td><strong>Leo</strong></td><td>Surya</td></tr>
+      <tr><td>Sani</td><td>Sagittarius (odd)</td><td>01 39'</td><td>Odd</td><td>0-15 (1st hora)</td><td><strong>Leo</strong></td><td>Surya</td></tr>
+      <tr><td>Rahu</td><td>Pisces (even)</td><td>03 32'</td><td>Even</td><td>0-15 (1st hora)</td><td><strong>Cancer</strong></td><td>Candra</td></tr>
+      <tr><td>Ketu</td><td>Virgo (even)</td><td>03 32'</td><td>Even</td><td>0-15 (1st hora)</td><td><strong>Cancer</strong></td><td>Candra</td></tr>
+      <tr class="bg-blue-50"><td><strong>Lagna</strong></td><td>Scorpio (even)</td><td>09 50'</td><td>Even</td><td>0-15 (1st hora)</td><td><strong>Cancer</strong></td><td>Candra</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">1.3 Verdict — Candra-hora Dominant (7 of 10)</h3>
+  <div class="verse mb-4">
+    <p><em>"Candra-hora-bahule jatake — sannidhi-dhanam, seva-pradhanam, jana-bhukti-dhanam."</em></p>
+    <p>— <strong>Saravali, Adhyaya 35</strong></p>
+  </div>
+  <p>Seven of ten placements (including the Lagna and the Moon herself) are housed in the <strong>Candra-hora</strong>. The signature is unambiguous:</p>
+  <div class="highlight mb-4">
+    <p><strong>Candra-hora planets (7)</strong>: Sun, Moon, Mars, Mercury, Rahu, Ketu, Lagna. Wealth flows from <em>lunar domains</em> — service to the public, masses, end-users, customers, women clientele, food/water/hospitality/wellness industries, fluid-cycle businesses (cash-flow, recurring revenue, SaaS, services), education-of-the-many, nurturing/caretaking roles.</p>
+  </div>
+  <div class="blessing mb-4">
+    <p><strong>Surya-hora planets (3)</strong>: Jupiter, Venus, Saturn. These are the <em>quality controls</em> on the Candra-flow. Jupiter (H2+H5 lord) in Surya-hora = teaching, scripture, and wisdom-based income carries solar dignity and recognition. Venus (H7+H12 lord) in Surya-hora = creative/aesthetic/partnership work earns visible honour. Saturn (H3+H4 lord) in Surya-hora = organisational/structural/property work earns slow-but-rising authority-income.</p>
+  </div>
+
+  <h4>Key Wealth Planets Analysed:</h4>
+  <ul class="list-disc pl-6 mt-2 mb-4">
+    <li><strong>Jupiter (H2+H5 lord, dhana-karaka)</strong> — in Surya-hora. Wealth through knowledge carries a solar seal: <em>recognition, prestige, authority-income</em>. This is wealth that comes with your name attached — consulting fees, advisory income, teaching revenue, intellectual property.</li>
+    <li><strong>Venus (H7+H12 lord, luxury-karaka)</strong> — in Surya-hora. Partnership income and foreign earnings carry solar dignity. Business partnerships will be visible, recognised. But Venus also rules H12 (expenditure) — the expenditure pattern, too, leans solar: spending on prestige, status, reputation-building.</li>
+    <li><strong>Sun (H10 lord, career-karaka)</strong> — in Candra-hora. The career earns through <em>service-to-many</em>, not through solo authority or governmental patronage as primary. Technology, SaaS, data analytics, mass-market products — these are the career-wealth channels.</li>
+  </ul>
+
+  <div class="highlight mb-4">
+    <p><strong>Practical Corollary</strong>: Products and services that <em>reach many</em> (low-friction, recurring, broad-base) will outperform products that try to capture few-but-high (boutique consulting at extreme prices, pure government contracts as primary play). The hora is unambiguous: <strong>serve the many, earn from the many, compound through the many</strong>. The three Surya-hora planets (Jupiter, Venus, Saturn) ensure the <em>quality, dignity, and structure</em> of that service never degrades into volume-without-substance.</p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 2. D3 — DREKKANA -->
+<!-- ====================================================== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">2. D3 — Drekkana (Siblings, Courage, Initiative)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">2.1 Method</h3>
+  <p>Each rasi splits into three drekkanas of 10 degrees. <strong>0-10 degrees</strong>: same sign. <strong>10-20 degrees</strong>: 5th sign from natal. <strong>20-30 degrees</strong>: 9th sign from natal. The Drekkana governs the 3rd-house portfolio: siblings, co-born, courage (parakrama), initiative, communication, short journeys, and co-workers.</p>
+
+  <h3 class="text-xl mt-4 mb-3">2.2 Computation Table</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Longitude</th><th>Drekkana</th><th>D3 Sign</th><th>Dignity</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Surya</td><td>Sagittarius 15 00'</td><td>2nd</td><td>Aries</td><td>Friend (Mars-sign)</td><td>Solar fire amplified by Mars</td></tr>
+      <tr><td>Candra</td><td>Aries 27 58'</td><td>3rd</td><td>Sagittarius</td><td>Friend (Guru-sign)</td><td>Emotional optimism, philosophical courage</td></tr>
+      <tr class="bg-green-50"><td><strong>Mangala</strong></td><td>Scorpio 00 32'</td><td>1st</td><td><strong>Scorpio</strong></td><td><span class="planet-tag own-sign">SAME AS D1</span></td><td>Vargottama-class courage; initiative is permanent</td></tr>
+      <tr><td>Budha</td><td>Sagittarius 19 27'</td><td>2nd</td><td>Aries</td><td>Friend (Mars-sign)</td><td>Incisive, cutting speech</td></tr>
+      <tr><td>Guru</td><td>Pisces 26 29'</td><td>3rd</td><td>Scorpio</td><td>Friend (Mars-sign)</td><td>Guru in martial drekkana — wisdom-with-intensity</td></tr>
+      <tr class="bg-green-50"><td><strong>Sukra</strong></td><td>Capricorn 17 01'</td><td>2nd</td><td><strong>Taurus</strong></td><td><span class="planet-tag own-sign">OWN-SIGN</span></td><td>Creative expression is natural, stable</td></tr>
+      <tr><td>Sani</td><td>Sagittarius 01 39'</td><td>1st</td><td>Sagittarius</td><td>Friend (Jupiter-sign)</td><td>Structured courage, philosophical discipline</td></tr>
+      <tr><td>Rahu</td><td>Pisces 03 32'</td><td>1st</td><td>Pisces</td><td>Same as D1</td><td>Rahu retains its oceanic intuition</td></tr>
+      <tr><td>Ketu</td><td>Virgo 03 32'</td><td>1st</td><td>Virgo</td><td>Same as D1</td><td>Ketu in analytical service mode</td></tr>
+      <tr class="bg-green-50"><td><strong>Lagna</strong></td><td>Scorpio 09 50'</td><td>1st</td><td><strong>Scorpio</strong></td><td><span class="planet-tag vargottama">VARGOTTAMA</span></td><td>Lagna same in D1 and D3</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">2.3 Verdict</h3>
+  <div class="blessing mb-4">
+    <p><strong>Vargottama Lagna + Mars in same sign as D1</strong> — the courage-house is <em>doubly sealed</em> in the chart's own martial signature. This is one of the most powerful indicators in sastra:</p>
+  </div>
+  <div class="verse mb-4">
+    <p><em>"Vargottame lagne, vargottame ca lagnese — dirghayu, sthira-buddhi, niscala-sankalpah."</em></p>
+    <p>— <strong>Saravali, Adhyaya 35, sloka 22</strong></p>
+  </div>
+
+  <h4>Sibling-Reading (Sahaja-bhava):</h4>
+  <ul class="list-disc pl-6 mt-2 mb-4">
+    <li><strong>H3 lord Saturn</strong> is in Sagittarius (Jupiter-sign) in D3 — siblings carry dharmic, philosophical energy. Few but loyal sibling bonds. Saturn as H3 lord in a friend-sign says: <em>sibling relationships mature slowly but endure</em>.</li>
+    <li>Sun and Mercury both drift to Aries-drekkana — siblings/peers carry Mars-energy (action-oriented, sometimes contentious, ultimately loyal in crisis).</li>
+    <li>Jupiter in Scorpio-drekkana = an elder brother-figure or mentor with deep, slightly mysterious influence — possibly a guide who appears through professional life or spiritual practice.</li>
+  </ul>
+
+  <h4>Initiative and Projects:</h4>
+  <div class="highlight mb-4">
+    <p><strong>Mars in its own sign in D3</strong> means: <em>what you start with your own hand becomes lasting</em>. Avoid handing initial momentum to others. Be the founder, the lead-engineer, the first mover. The initiative-signature is permanent and self-renewing. Venus in own-sign (Taurus) in D3 adds: creative projects, aesthetic ventures, relationship-building initiatives also carry lasting power.</p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 3. D4 — CATURTHAMSA -->
+<!-- ====================================================== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">3. D4 — Caturthamsa (Property, Fixed Assets, Inner Comfort)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">3.1 Method</h3>
+  <p>Each rasi is divided into four caturthamsa portions of 7 30' each. <strong>0-7.5 degrees</strong>: same sign. <strong>7.5-15 degrees</strong>: 4th from sign. <strong>15-22.5 degrees</strong>: 7th from sign. <strong>22.5-30 degrees</strong>: 10th from sign.</p>
+
+  <h3 class="text-xl mt-4 mb-3">3.2 Computation Table</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Longitude</th><th>Portion</th><th>D4 Sign</th><th>Dignity in D4</th></tr></thead>
+    <tbody>
+      <tr><td>Surya</td><td>Sagittarius 15.01</td><td>3rd (15-22.5)</td><td>Gemini (7th from Sag)</td><td>Friend-sign (Mercury)</td></tr>
+      <tr><td>Candra</td><td>Aries 27.98</td><td>4th (22.5-30)</td><td>Capricorn (10th from Aries)</td><td>Neutral</td></tr>
+      <tr class="bg-green-50"><td><strong>Mangala</strong></td><td>Scorpio 00.54</td><td>1st (0-7.5)</td><td><strong>Scorpio</strong></td><td><span class="planet-tag own-sign">OWN-SIGN</span></td></tr>
+      <tr class="bg-green-50"><td><strong>Budha</strong></td><td>Sagittarius 19.45</td><td>3rd (15-22.5)</td><td><strong>Gemini</strong> (7th from Sag)</td><td><span class="planet-tag own-sign">OWN-SIGN</span></td></tr>
+      <tr class="bg-green-50"><td><strong>Guru</strong></td><td>Pisces 26.49</td><td>4th (22.5-30)</td><td><strong>Sagittarius</strong> (10th from Pisces)</td><td><span class="planet-tag own-sign">OWN-SIGN</span></td></tr>
+      <tr class="bg-red-50"><td>Sukra</td><td>Capricorn 17.02</td><td>3rd (15-22.5)</td><td>Cancer (7th from Cap)</td><td><span class="planet-tag nīca">DEBILITATED</span></td></tr>
+      <tr><td>Sani</td><td>Sagittarius 01.65</td><td>1st (0-7.5)</td><td>Sagittarius</td><td>Friend-sign (Jupiter)</td></tr>
+      <tr><td>Rahu</td><td>Pisces 03.53</td><td>1st (0-7.5)</td><td>Pisces</td><td>Same as D1</td></tr>
+      <tr><td>Ketu</td><td>Virgo 03.53</td><td>1st (0-7.5)</td><td>Virgo</td><td>Same as D1</td></tr>
+      <tr><td>Lagna</td><td>Scorpio 09.85</td><td>2nd (7.5-15)</td><td>Aquarius (4th from Sco)</td><td>D4-Lagna (Saturn-ruled)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">3.3 Verdict — Property, Vehicles, Inner Sanctuary</h3>
+  <div class="blessing mb-4">
+    <p><strong>D4 Lagna in Aquarius (Saturn-ruled)</strong> — property and home matters carry a Saturnine signature: <em>built slowly, structured, future-oriented, technology-friendly home, multiple residences possible across the arc of life</em>.</p>
+  </div>
+
+  <div class="highlight mb-4">
+    <p><strong>Three planets in own signs in D4</strong> — Mars (Scorpio), Mercury (Gemini), Jupiter (Sagittarius). This is <strong>extraordinary</strong> for property success. When D4 carries multiple sva-ksetra placements, sastra promises lasting acquisition of immovable property and stable comforts:</p>
+  </div>
+
+  <div class="verse mb-4">
+    <p><em>"Caturthamshe trini sva-grhani yuktani — sthira-vastu-labhah, sukha-bhumi-praptih."</em></p>
+    <p>— <strong>BPHS, Adhyaya 7, varga-phala-prakarana</strong></p>
+  </div>
+
+  <h4>Real-World Property Reading:</h4>
+  <ul class="list-disc pl-6 mt-2 mb-4">
+    <li><strong>Mars own-sign in D4</strong>: property acquisition through personal effort, discipline, and decisive action. Built-environment investments (real estate management, construction) favoured.</li>
+    <li><strong>Mercury own-sign in D4</strong>: contracts, paperwork, legal documentation handled with natural competence. Due diligence is a strength.</li>
+    <li><strong>Jupiter own-sign in D4</strong>: legal/dharmic clarity in property matters, family blessings support acquisitions. Property comes with a sense of rightfulness.</li>
+    <li>Multiple homes possible across life — at least one metropolitan/tech-hub, at least one possibly ancestral or traditional in flavour.</li>
+  </ul>
+
+  <div class="warn mb-4">
+    <p><strong>Venus debilitated in D4 (Cancer)</strong> — this is the one shadow in an otherwise brilliant D4. <strong>Vehicle-karaka Venus in nica</strong> = drive carefully, especially during Mars and Saturn transits aspecting Venus; do not overspend on luxury vehicles as status statements (they will not reward). Aesthetic decisions about home — leave to spouse or a qualified designer; do not force personal aesthetic if it clashes. Cancer = mother-figure; harmonise with maternal preferences in home-design.</p>
+  </div>
+
+  <h4>H4 Lord Saturn's D4 Placement:</h4>
+  <p><strong>Saturn in Sagittarius in D4 (friend-sign)</strong> — the 4th lord is comfortable in a dharmic, Jupiter-ruled sign. This confirms that property-related matters improve with age and maturity. Saturn in friend-sign in D4 = <em>slow but certain property fortunes</em>. The first property may come late (after 30-32), but it will be well-chosen and lasting. Each subsequent acquisition improves upon the last.</p>
+
+  <div class="spiritual mb-4">
+    <p><strong>Inner reading of D4</strong>: Caturthamsa also signifies <em>sukha-manasika</em> (inner comfort). Three sva-ksetra planets here mean the <strong>inner sanctuary is structurally sound</strong> — when genuine rest is given (real sleep, real silence, real home-time), recovery is rapid and complete. The Venus debility warns: do not seek inner comfort through aesthetic indulgence (luxury, food-pleasure, romantic distraction); seek it through structure, practice, and place — the Saturn D4-lagna's medicine.</p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 4. D7 — SAPTAMSA -->
+<!-- ====================================================== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">4. D7 — Saptamsa (Children, Progeny, Creative Lineage)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">4.1 Method</h3>
+  <p>Each rasi splits into seven saptamsas of 4 17'08.57" each (30 / 7). <strong>Odd signs</strong>: portion N maps to (N-1) signs forward from the natal sign. <strong>Even signs</strong>: portion N maps to (N-1) signs forward from the 7th sign of the natal sign. The D7 governs children (putra), creative output, and generative capacity of the soul.</p>
+
+  <h3 class="text-xl mt-4 mb-3">4.2 Computation Table</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Longitude</th><th>Portion</th><th>D7 Sign</th><th>Dignity</th></tr></thead>
+    <tbody>
+      <tr><td>Surya</td><td>Sagittarius 15.01</td><td>4th</td><td>Pisces</td><td>Friend (Jupiter-sign)</td></tr>
+      <tr><td>Candra</td><td>Aries 27.98</td><td>7th</td><td>Libra</td><td>Neutral</td></tr>
+      <tr><td>Mangala</td><td>Scorpio 00.54</td><td>1st</td><td>Taurus</td><td>Neutral (7th-from-own zone)</td></tr>
+      <tr><td>Budha</td><td>Sagittarius 19.45</td><td>5th</td><td>Aries</td><td>Friend (Mars-sign)</td></tr>
+      <tr class="bg-green-50"><td><strong>Guru</strong></td><td>Pisces 26.49</td><td>7th</td><td><strong>Pisces</strong></td><td><span class="planet-tag own-sign">OWN-SIGN</span></td></tr>
+      <tr class="bg-green-50"><td><strong>Sukra</strong></td><td>Capricorn 17.02</td><td>4th</td><td><strong>Libra</strong></td><td><span class="planet-tag own-sign">OWN-SIGN</span></td></tr>
+      <tr><td>Sani</td><td>Sagittarius 01.65</td><td>1st</td><td>Sagittarius</td><td>Friend (Jupiter-sign)</td></tr>
+      <tr><td>Rahu</td><td>Pisces 03.53</td><td>1st</td><td>Virgo</td><td>Mercury-sign</td></tr>
+      <tr><td>Ketu</td><td>Virgo 03.53</td><td>1st</td><td>Pisces</td><td>Jupiter-sign</td></tr>
+      <tr><td>Lagna</td><td>Scorpio 09.85</td><td>3rd</td><td>Cancer</td><td>D7-Lagna (Moon-ruled)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">4.3 Verdict — Children and Creative Lineage</h3>
+
+  <div class="blessing mb-4">
+    <p><strong>D7 Lagna in Cancer (Moon-ruled)</strong> — the progeny-chart is anchored in the nurturing, emotional sign. This indicates an emotionally bonded, deeply caring approach to parenthood. Possibly the first child leans toward tenderness, sensitivity, and artistic-emotional intelligence.</p>
+  </div>
+
+  <div class="verse mb-4">
+    <p><em>"Saptamse Jive sva-kshetre — putra-saukhyam, dhi-sampannah sangatah."</em></p>
+    <p>— <strong>BPHS, Adhyaya 7</strong></p>
+  </div>
+
+  <h4>Two Great Benefics in Own Signs in D7:</h4>
+  <div class="highlight mb-4">
+    <p><strong>Jupiter sva-ksetra in Pisces in D7</strong> = blessed children with Jupiter-nature: intelligent, dharmic, curious, scholarly, and spiritually inclined. Jupiter is the putra-karaka (natural significator of children) AND the H5 lord from D1. Its own-sign placement in D7 is a <strong>double confirmation of progeny-blessing</strong>.</p>
+    <p class="mt-2"><strong>Venus sva-ksetra in Libra in D7</strong> = harmonious child-bonds, artistic/creative talent in offspring, aesthetic sensitivity passed through lineage. Venus in D7 own-sign also indicates that children bring beauty and harmony into the home.</p>
+  </div>
+
+  <p>This is a <strong>strikingly favourable progeny chart</strong>. Where the Rahu-Jupiter conjunction in D1's 5th house sometimes raised concern about delays or health-attention in early years, the D7 itself reassures: the saptamsa raja-yogas outweigh the D1 dosa.</p>
+
+  <div class="warn mb-4">
+    <p><strong>Mars in Taurus in D7</strong> — the Lagna-lord in the 7th-from-own-sign in D7 can indicate occasional friction between personal intensity and the soft tenderness needed in early child-rearing. <strong>The remedy is intentional gentleness with children under 7</strong>; later, Mars-vitality becomes the child's greatest protector and confidence-builder.</p>
+  </div>
+
+  <h4>Number and Timing of Children:</h4>
+  <p>With Jupiter sva-ksetra in H5 of D1 AND sva-ksetra in D7, plus Jupiter's 9th-aspect on D1 lagna, the indication is <strong>at least one, likely two, children</strong>, with strong dharmic merit attached. Timing of first child activates primarily during <strong>Jupiter sub-periods</strong> (Jupiter Mahadasa begins May 2028) or during transits activating the 5th house and its lord. The Jupiter Mahadasa (age 40-56) is the most prolific window for all putra-related blessings.</p>
+</section>
+
+<!-- ====================================================== -->
+<!-- 5. D9 — NAVAMSA — THE SOUL CHART -->
+<!-- ====================================================== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">5. D9 — Navamsa: The Soul Chart (Dharma-Varga)</h2>
+
+  <div class="spiritual mb-4">
+    <p>The Navamsa is the <strong>most important divisional chart</strong> in the entire Parasara system. It is the <em>dharma-varga</em> — the chart of the soul's true constitution, the inner blueprint that determines whether D1 promises are fulfilled or frustrated, and the primary lens through which marriage, spiritual orientation, and the <em>soul-level strength</em> of every planet must be judged. Maharsi Parasara himself states in BPHS Adhyaya 6 that no jyotishi should pronounce a phala (result) without first consulting the Navamsa.</p>
+  </div>
+
+  <div class="verse mb-4">
+    <p><em>"Rasi-phalam vapuh-sthane, navamse tu phalam prthak;</em></p>
+    <p><em>Rasi-navamanusarena purna-phala-viniscayah."</em></p>
+    <p>— <strong>BPHS, Adhyaya 6, sloka 4</strong></p>
+    <p class="mt-2">(The rasi gives the body-level result; the navamsa gives the soul-level result. Full determination of fruits requires examining both together.)</p>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">5.1 D9 Planetary Positions</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Sign</th><th>D1 State</th><th>D9 Sign</th><th>D9 House</th><th>D9 State</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Lagna</strong></td><td>Scorpio</td><td>Mars-ruled</td><td><strong>Virgo</strong></td><td>1</td><td>Mercury-ruled</td></tr>
+      <tr class="matrix-row-good"><td>Sun</td><td>Sagittarius</td><td>Neutral</td><td><strong>Leo</strong></td><td>12</td><td><span class="planet-tag own-sign">OWN-SIGN</span></td></tr>
+      <tr><td>Moon</td><td>Aries</td><td>Neutral; AK</td><td>Sagittarius</td><td>4</td><td>Neutral</td></tr>
+      <tr class="matrix-row-bad"><td>Mars</td><td>Scorpio</td><td><span class="planet-tag own-sign">OWN</span></td><td><strong>Cancer</strong></td><td>11</td><td><span class="planet-tag debilitated">DEBILITATED</span></td></tr>
+      <tr class="matrix-row-gem"><td><strong>Mercury</strong></td><td>Sagittarius</td><td><span class="planet-tag combust">COMBUST</span></td><td><strong>Virgo</strong></td><td>1</td><td><span class="planet-tag exalted">EXALTED</span></td></tr>
+      <tr><td>Jupiter</td><td>Pisces</td><td><span class="planet-tag own-sign">OWN</span></td><td>Aquarius</td><td>6</td><td>Neutral</td></tr>
+      <tr><td>Venus</td><td>Capricorn</td><td>Neutral; Pushkara</td><td>Gemini</td><td>10</td><td>Neutral</td></tr>
+      <tr class="matrix-row-bad"><td>Saturn</td><td>Sagittarius</td><td><span class="planet-tag combust">COMBUST</span> <span class="planet-tag gandanta">GANDANTA</span></td><td><strong>Aries</strong></td><td>8</td><td><span class="planet-tag debilitated">DEBILITATED</span></td></tr>
+      <tr><td>Rahu</td><td>Pisces</td><td>Retro</td><td>Leo</td><td>12</td><td>Neutral</td></tr>
+      <tr><td>Ketu</td><td>Virgo</td><td>Retro</td><td>Aquarius</td><td>6</td><td>Neutral</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="text-sm text-gray-500 mt-2"><em>Note: Vargottama = NONE. No planet occupies the same sign in both D1 and D9. Darakaraka = Mars (placed in D9 Cancer, debilitated).</em></p>
+
+  <!-- 5.2 D9 LAGNA ANALYSIS -->
+  <h3 class="text-xl mt-6 mb-3">5.2 D9 Lagna: Virgo — The Soul's Constitution</h3>
+
+  <div class="spiritual mb-4">
+    <p><strong>D9 Lagna in Virgo (Kanya)</strong> — Mercury-ruled. The soul's fundamental nature seeks <em>order, analysis, service, health-consciousness, precision, discrimination, and intellectual purity</em>. Beneath the aggressive, commanding Scorpio exterior of D1 lives a soul that is <strong>analytical, service-oriented, perfectionistic, and deeply concerned with getting things right</strong>.</p>
+  </div>
+
+  <p>This is a profound revelation. The D1 Scorpio lagna with Mars in own-sign presents to the world as: intense, commanding, decisive, martial. But the D9 Virgo lagna tells us that the <em>inner self</em> is: careful, methodical, service-seeking, quality-obsessed, health-conscious, intellectually humble before complexity. The warrior's soul is, in fact, an <em>analyst</em> — a scientist, a researcher, an engineer who builds with precision. Parasara would say: the outer body (vapuh) is Vrscika-yuddha-vira; the inner soul (jiva) is Kanya-seva-vrata.</p>
+
+  <p class="mt-3">The D9 Lagna lord is <strong>Mercury — and Mercury is exalted in Virgo in the D9 lagna itself</strong>. This is a landmark placement. The soul's ruler sits in its highest dignity at the soul's own doorstep. This means the soul-constitution is fundamentally <strong>sound, intelligent, and self-aware</strong>. We will explore this exalted Mercury at length below — it is the chart's hidden gem.</p>
+
+  <!-- 5.3 D1+D9 INTERPRETATION MATRIX -->
+  <h3 class="text-xl mt-6 mb-3">5.3 The D1 + D9 Interpretation Matrix — Every Planet</h3>
+
+  <p class="mb-4">This is the <strong>core technique</strong> of navamsa analysis. For each planet, we compare the D1 state (rasi-chart strength) with the D9 state (navamsa-chart strength) to determine whether the planet's promise is <em>confirmed, amplified, undermined, or recovered</em> at the soul level.</p>
+
+  <div class="verse mb-4">
+    <p><em>"Rasi-bale navamsa-balam yadi — purna-phala-pradah;</em></p>
+    <p><em>Rasi-bale navamsa-durbalatve — phala-ksayah kramenal"</em></p>
+    <p>— <strong>Phaladipika, Adhyaya 4, sloka 9</strong></p>
+    <p class="mt-2">(When rasi-strength is confirmed by navamsa-strength, the full fruit manifests. When rasi-strength is denied by navamsa-weakness, the fruit gradually decays.)</p>
+  </div>
+
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 State</th><th>D9 State</th><th>Matrix Verdict</th></tr></thead>
+    <tbody>
+      <tr class="matrix-row-mixed"><td><strong>Mars</strong></td><td>OWN-SIGN (H1)</td><td>DEBILITATED (Cancer, H11)</td><td>Promise undermined — Ruchaka weakened at soul level</td></tr>
+      <tr class="matrix-row-mixed"><td><strong>Jupiter</strong></td><td>OWN-SIGN (H5)</td><td>Neutral (Aquarius, H6)</td><td>Hidden potential maintains but doesn't amplify</td></tr>
+      <tr class="matrix-row-gem"><td><strong>Mercury</strong></td><td>COMBUST 4.44 (H2)</td><td>EXALTED (Virgo, H1)</td><td>LATE BLOOMING — the chart's hidden gem</td></tr>
+      <tr class="matrix-row-bad"><td><strong>Saturn</strong></td><td>COMBUST + GANDANTA (H2)</td><td>DEBILITATED (Aries, H8)</td><td>Double weakness — H3+H4 matters face deep karmic challenges</td></tr>
+      <tr class="matrix-row-good"><td><strong>Sun</strong></td><td>Neutral (H2)</td><td>OWN-SIGN (Leo, H12)</td><td>Soul purpose strengthened — career authority confirmed at soul level</td></tr>
+      <tr><td><strong>Venus</strong></td><td>Neutral (H3, Pushkara)</td><td>Neutral (Gemini, H10)</td><td>Steady — marriage promise neither elevated nor denied</td></tr>
+      <tr><td><strong>Moon</strong></td><td>Neutral (H6)</td><td>Neutral (Sagittarius, H4)</td><td>Emotional grounding through philosophical home life</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Let us now examine each planet's D1+D9 story in the depth it demands.</p>
+
+  <!-- MARS D1+D9 -->
+  <h4 class="text-lg mt-6 mb-2">5.3.1 Mars: OWN-SIGN in D1 → DEBILITATED in D9 Cancer — The Ruchaka Paradox</h4>
+
+  <div class="warn mb-4">
+    <p>This is the chart's most consequential D1-D9 tension. Mars in Scorpio in H1 creates the magnificent <strong>Ruchaka Mahapurusa Yoga</strong> — the yoga of the warrior-commander. In D1, this Mars is fearless, self-possessed, vitally powerful. But in D9, Mars falls to Cancer (H11), its sign of debilitation.</p>
+  </div>
+
+  <p><strong>What does this mean?</strong> The outer promise of Ruchaka — physical dominance, aggressive leadership, battlefield victory — is <em>not fully confirmed at the soul level</em>. The soul (D9) is not a warrior at its core; it is a nurturer, a caretaker (Cancer), a protector who <em>feels</em> deeply. The D9 Mars in Cancer says: <em>the warrior fights best when defending family, home, and those he loves — not for ego, glory, or personal conquest</em>.</p>
+
+  <p class="mt-3">This does <strong>not</strong> destroy Ruchaka. Mars still gives its physical vitality, competitive fire, and leadership presence. But it <em>modifies</em> Ruchaka in three specific ways:</p>
+  <ol class="list-decimal pl-6 mt-2 mb-4">
+    <li><strong>Pure aggression will misfire.</strong> Workplace battles fought from ego will not end well. Mars debilitated in D9 = the <em>soul does not support ego-warfare</em>. Strategic restraint, defensive strength, and protective leadership are the winning modes.</li>
+    <li><strong>Physical health requires conscious maintenance.</strong> D9 Mars debilitated can manifest as susceptibility to inflammation (pitta-dosha), acidity, injuries when emotionally destabilised. The remedy: channel Mars through <em>disciplined physical activity</em> (not explosive sports but sustained ones — swimming, martial arts with discipline, long-distance cycling).</li>
+    <li><strong>The early years show more Ruchaka; the later years show more Cancer-Mars.</strong> As the soul matures (especially post-age 36, the Mars maturation point), the nurturing-protective Mars emerges more strongly. This is actually a <em>refinement</em>, not a loss — the warrior becomes the guardian.</li>
+  </ol>
+
+  <div class="blessing mb-4">
+    <p><strong>Dharmic Guidance</strong>: Mars debilitated in D9 Cancer is <em>Mars of the Kshatriya-protector</em>, not the Kshatriya-aggressor. The soul's martial instruction is: <em>protect the vulnerable, defend the dharmic, build strength in service of others, never for domination</em>. When Mars is used this way, the debilitation paradoxically becomes a <em>sattva-upgrade</em> — the warrior's highest evolution.</p>
+  </div>
+
+  <!-- JUPITER D1+D9 -->
+  <h4 class="text-lg mt-6 mb-2">5.3.2 Jupiter: OWN-SIGN in D1 → Neutral in D9 Aquarius (H6)</h4>
+
+  <p>Jupiter in Pisces in H5 of D1 is the chart's ultimate dispositor — every planetary chain terminates at this Jupiter. In D9, Jupiter moves to <strong>Aquarius (Saturn's sign) in H6</strong>. This is neutral dignity — neither strong nor weak — but the house placement (6th house of service, enemies, debts, health) is significant.</p>
+
+  <div class="highlight mb-4">
+    <p><strong>Jupiter in D9 H6</strong> means the soul's wisdom-nature is <em>tested through service, obstacles, and the need to overcome</em>. The guru-nature must earn its seat through <em>practical problem-solving</em>, not mere philosophical pronouncement. This is actually a maturity signature — the wisdom is <em>tested wisdom</em>, not untested privilege. It means: your insights are most powerful when they have been forged through real struggle.</p>
+  </div>
+
+  <p>Jupiter in Aquarius in D9 also suggests: the soul's spiritual orientation carries a <em>Saturnine colour</em> — preference for structured spiritual practice (meditation at fixed times, mantra-japa with discipline, study of sastra systematically), humanitarian concern, and a philosophical framework that values <em>social justice and collective well-being</em> alongside personal liberation.</p>
+
+  <div class="warn mb-4">
+    <p><strong>The caution</strong>: Jupiter in D9 H6 can indicate periods where the guru's advice is challenged, where teaching is met with resistance, where intellectual authority is questioned. These are not failures but <em>soul-strengthening episodes</em>. Respond with humility and perseverance — the 6th house rewards consistent service, not one-time brilliance.</p>
+  </div>
+
+  <!-- MERCURY D1+D9 — THE HIDDEN GEM -->
+  <h4 class="text-lg mt-6 mb-2">5.3.3 Mercury: COMBUST in D1 → EXALTED in D9 Virgo (H1) — THE CHART'S HIDDEN GEM</h4>
+
+  <div class="blessing mb-4">
+    <p><strong>This is the single most important finding in the entire navamsa analysis.</strong></p>
+  </div>
+
+  <p>In D1, Mercury is <em>severely afflicted</em>: combust at 4.44 degrees from the Sun, placed in the enemy-sign Sagittarius, ruling the difficult H8 (longevity, hidden things, sudden events) and H11 (gains, networks, elder siblings). Combustion means Mercury's voice is <em>swallowed by the Sun</em> — in early life, communication may be hesitant, ideas may struggle to find expression, writing ability may feel suppressed or unrecognised.</p>
+
+  <p class="mt-3">But in D9, this same Mercury achieves <strong>uccha (exaltation) in Virgo — AND sits in the D9 lagna itself</strong>. This is not merely a recovery; it is a <em>triumph</em>. The planet that appeared most damaged in the body-chart is the <strong>strongest planet in the soul-chart</strong>.</p>
+
+  <div class="verse mb-4">
+    <p><em>"Aste api D1-e, ucce D9-e — graha-phalam na nasyati;</em></p>
+    <p><em>Kala-pake vipaka-kale purna-phalam avasyam dadati."</em></p>
+    <p>— <strong>BPHS, Adhyaya 6, sloka 27</strong></p>
+    <p class="mt-2">(Even when combust in D1, if exalted in D9, the planet's fruit does not perish; in the fullness of time, at the ripening moment, the full fruit will certainly manifest.)</p>
+  </div>
+
+  <h4>What Does This Mercury Exaltation Mean in Practice?</h4>
+
+  <div class="highlight mb-4">
+    <p><strong>1. Deep Analytical Intelligence</strong>: The soul's fundamental nature (D9 lagna Virgo + Mercury exalted in D9 H1) is that of a supreme analyst, discriminator, and intellectual. This is not surface cleverness — this is <em>depth-intelligence</em>: the ability to see patterns others miss, to decompose complexity into comprehensible parts, to write and communicate with precision once the combustion-cloud lifts.</p>
+  </div>
+
+  <div class="highlight mb-4">
+    <p><strong>2. Late-Blooming Pattern</strong>: Mercury's combustion in D1 means the full expression of this intelligence is <em>delayed</em> — suppressed in childhood and early adulthood (the Sun overpowers Mercury's voice), then <em>gradually released</em> as the native matures. The key unlocking age is <strong>Mercury's maturation at age 32</strong> (year 2019-2020). After this point, Mercury's D9 exaltation begins to manifest more visibly: writing improves, analytical capacity sharpens, communication gains clarity and authority.</p>
+  </div>
+
+  <div class="highlight mb-4">
+    <p><strong>3. Potential for Research and Technology Excellence</strong>: Mercury exalted in Virgo in D9 H1 is a classic signature of: software architecture, data science, algorithmic thinking, systems engineering, research methodology, technical writing, and scientific publication. The combustion in D1 means this potential may not have been recognised in the first decade of career — but it is the <em>true strength</em> of the soul and will assert itself with increasing authority from now through the Jupiter and Saturn mahadasas.</p>
+  </div>
+
+  <div class="highlight mb-4">
+    <p><strong>4. Writing Ability</strong>: Mercury exalted in D9 lagna often produces exceptional writers — not necessarily literary/poetic writers (that would be Venus exalted), but <em>technical, analytical, explanatory, and strategic writers</em>. Documentation, reports, frameworks, architectural decisions — these are the domains where this Mercury shines. The combustion in D1 may have created a lifetime habit of thinking deeply but not always expressing fully. The D9 exaltation says: <em>write it down; your written expression will be your most powerful professional asset</em>.</p>
+  </div>
+
+  <div class="blessing mb-4">
+    <p><strong>Dharmic Instruction</strong>: Mercury combust in D1 but exalted in D9 is the classical signature of the <em>late-blooming scholar</em> — the person whose true intellectual stature becomes visible only in the second half of life. The instruction is: <strong>do not abandon the intellectual project because early recognition was slow</strong>. The D9 has spoken — Mercury's exaltation is your <em>soul-truth</em>, and it will manifest with certainty. Trust the slow bloom.</p>
+  </div>
+
+  <!-- SATURN D1+D9 -->
+  <h4 class="text-lg mt-6 mb-2">5.3.4 Saturn: COMBUST + GANDANTA in D1 → DEBILITATED in D9 Aries (H8) — The Double Burden</h4>
+
+  <div class="warn mb-4">
+    <p>This is the chart's heaviest karmic signature. Saturn rules H3 (courage, siblings, initiative, hands) and H4 (mother, home, heart, education, inner peace) from Scorpio lagna. In D1, Saturn is combust at 13.36 degrees from the Sun AND sits in the Gandanta zone (junction of Scorpio-Sagittarius, specifically Mula Nakshatra Pada 1 with Ketu as nakshatra lord). In D9, this Saturn falls to <strong>Aries (its sign of debilitation) in H8 (the house of longevity, hidden transformation, sudden events, and occult knowledge)</strong>.</p>
+  </div>
+
+  <p><strong>The D1+D9 combination is unmistakable</strong>: Saturn's portfolio (siblings, home, mother, inner peace, education, hands, courage-of-endurance) carries a <em>deep karmic curriculum</em>. This does not mean these areas are destroyed — Saturn never destroys; Saturn <em>teaches through delay, discipline, and endurance</em>. But the teaching is intensive.</p>
+
+  <h4>Specific Manifestations:</h4>
+  <ul class="list-disc pl-6 mt-2 mb-4">
+    <li><strong>H4 matters (mother, home, inner peace)</strong>: Relationship with mother carries both deep love and significant karmic weight. There may be periods of emotional distance, health concerns related to the mother, or disruptions in domestic peace that require Saturn's medicine: <em>patience, service, forgiveness, and time</em>.</li>
+    <li><strong>H3 matters (siblings, courage, initiative)</strong>: Sibling relationships may involve delays, distances, or periods of misunderstanding. The courage to act may sometimes feel blocked — not because Mars is weak (Mars is strong), but because the <em>endurance-dimension</em> of courage (Saturn's domain) faces resistance. Projects that require sustained, long-term effort (rather than explosive short-term energy) are the testing ground.</li>
+    <li><strong>Saturn in D9 H8 (Aries)</strong>: The 8th house placement in D9 adds a layer of <em>hidden transformation</em>. Saturn here can trigger sudden structural changes (job restructuring, property disruptions, inheritance complications) at intervals — but each such disruption ultimately serves the soul's evolution. The Aries sign gives Saturn a restless, impulsive quality that conflicts with Saturn's own nature of patience — there may be inner tension between wanting to rush (Aries) and knowing that slow is correct (Saturn).</li>
+  </ul>
+
+  <div class="remedy mb-4">
+    <p><strong>The Dharmic Remedy for Double-Weak Saturn</strong>:</p>
+    <ul class="list-disc pl-6 mt-2">
+      <li><strong>Saturday discipline</strong>: A small, consistent Saturday practice — lighting a sesame-oil lamp, offering water to the Pipal tree, or reciting the Sani Stotram — anchors Saturn's energy and prevents it from manifesting as anxiety or chronic delay.</li>
+      <li><strong>Service to elders and the disabled</strong>: Saturn in D9 H8 responds powerfully to compassionate service. Even small acts — helping an elderly neighbour, donating to disability-related causes — transmute Saturn's karmic pressure into merit.</li>
+      <li><strong>Do not avoid Saturn's lessons</strong>: The greatest danger with double-weak Saturn is <em>avoidance</em> — postponing difficult conversations with family, avoiding property decisions, neglecting health maintenance. Saturn rewards only those who face its curriculum directly.</li>
+    </ul>
+  </div>
+
+  <div class="blessing mb-4">
+    <p><strong>The Silver Lining</strong>: Saturn debilitated in D9 H8 has a hidden gift — it gives access to <em>occult knowledge, deep research, transformative understanding</em> of structures that others cannot see. The same Saturn that creates delays in outer H3+H4 matters gives <em>extraordinary insight into hidden systems</em>. In professional terms: debugging complex systems, root-cause analysis, security/risk assessment, understanding institutional architectures — these are Saturn-in-H8 gifts that the native may not recognise as strengths until pointed out.</p>
+  </div>
+
+  <!-- SUN D1+D9 -->
+  <h4 class="text-lg mt-6 mb-2">5.3.5 Sun: Neutral in D1 → OWN-SIGN Leo in D9 (H12) — Soul-Purpose Strengthened</h4>
+
+  <div class="blessing mb-4">
+    <p>The Sun rules H10 (karma-sthana — career, public action, authority) from Scorpio lagna. In D1, the Sun sits in Sagittarius in H2, a neutral placement. In D9, the Sun achieves <strong>own-sign Leo in H12</strong>. This is a powerful confirmation: the soul's sense of purpose, authority, and leadership is <em>fundamentally sound</em>.</p>
+  </div>
+
+  <p>Sun in own-sign in D9 means: whatever the outer career fluctuations, the <em>inner sense of vocation</em> is clear and stable. The native knows — at a soul level — what he is meant to do. The 12th house placement in D9 gives this solar authority a spiritual or behind-the-scenes quality: <strong>authority exercised through behind-the-scenes strategic influence, through foreign/overseas domains, through spiritual practice, or through institutions larger than the self</strong>.</p>
+
+  <p class="mt-3">The 12th house in D9 is also the house of <em>moksha-anga</em> (liberation component). Sun own-sign in D9 H12 is a quiet but real indicator that the soul carries <strong>moksha-potential</strong> — not in the renunciant sense, but in the sense of <em>gradual spiritual evolution through career and public service that transcends personal ego</em>. The work becomes the sadhana.</p>
+
+  <div class="highlight mb-4">
+    <p><strong>Career Confirmation</strong>: Sun own-sign in D9 confirms that career authority will <em>not</em> be denied to this native. Even if D1 Sun is only neutral, the soul-level Sun is a lion in its own den. Career peak — already promised by the Jupiter-in-own-sign D1 H5 and the D10 indicators — is now <em>triply confirmed</em> at the soul level.</p>
+  </div>
+
+  <!-- VENUS D1+D9 -->
+  <h4 class="text-lg mt-6 mb-2">5.3.6 Venus: Neutral in D1 → Neutral in D9 Gemini (H10) — The Steady Marriage Promise</h4>
+
+  <p>Venus rules H7 (marriage, partnerships) and H12 (foreign lands, losses, moksha, bedroom) from Scorpio lagna. In D1, Venus sits in Capricorn in H3 near Pushkara Bhaga — a neutral but subtly auspicious placement. In D9, Venus moves to <strong>Gemini in H10</strong> — again neutral dignity.</p>
+
+  <div class="highlight mb-4">
+    <p><strong>Venus neutral in both D1 and D9</strong> means: the marriage promise is <em>neither exalted nor denied</em>. It is <strong>steady, workable, and responsive to effort</strong>. This is neither the ecstatic Venus of exaltation (where marriage feels divinely ordained) nor the afflicted Venus of debilitation (where marriage feels karmically burdened). It is the <em>ordinary, human, effort-responsive</em> Venus — and that is, in many ways, the healthiest foundation for a real marriage.</p>
+  </div>
+
+  <p>Venus in D9 H10 specifically indicates: <strong>the spouse has a strong career identity</strong>. The marriage partner is likely professionally active, career-conscious, and possibly known to the native through professional circles. The partnership carries a <em>public dimension</em> — the couple is visible, their partnership contributes to social standing.</p>
+
+  <p class="mt-3">Venus in Gemini in D9 adds: <strong>communication is the marriage's oxygen</strong>. Gemini-Venus thrives on conversation, intellectual exchange, variety, and mental stimulation within the partnership. When communication dries up, the marriage suffers. When communication flows — especially playful, curious, learning-together communication — the marriage thrives. This is a practical instruction: <em>talk to each other, learn together, keep intellectual curiosity alive in the relationship</em>.</p>
+
+  <!-- MOON D1+D9 -->
+  <h4 class="text-lg mt-6 mb-2">5.3.7 Moon (Atmakaraka): Neutral in D1 → Neutral in D9 Sagittarius (H4) — Philosophical Home</h4>
+
+  <p>The Moon is the Atmakaraka (highest-degree planet = soul-significator per Jaimini). In D1, Moon sits in Aries in H6 — the house of enemies, disease, debts, and service. This is the <em>warrior's soul</em> placement. In D9, Moon moves to <strong>Sagittarius in H4</strong> — the house of home, mother, inner peace, and education.</p>
+
+  <div class="spiritual mb-4">
+    <p><strong>Moon AK in D9 H4 (Sagittarius)</strong> — the soul's emotional grounding comes through <em>philosophical home life</em>. The home must be a place of learning, spiritual inquiry, and dharmic conversation. When the home becomes merely functional (eat, sleep, screen-time), the Moon-AK feels starved. When the home becomes a <em>pathasala</em> (school of life) — books, discussion, prayer, shared learning with family — the soul feels nourished at its deepest level.</p>
+  </div>
+
+  <p>Sagittarius is Jupiter-ruled, confirming the <strong>guru-seeking nature</strong> of this soul. The Atmakaraka in a Jupiter-sign in D9 says: <em>the soul needs a guru</em> — a teacher, a tradition, a lineage that provides philosophical framework and spiritual direction. Without this anchor, the emotional life drifts. With it, even the most turbulent periods (Moon in D1 H6 = service/struggle periods) are metabolised into wisdom.</p>
+
+  <!-- 5.4 DARAKARAKA ANALYSIS -->
+  <h3 class="text-xl mt-6 mb-3">5.4 Darakaraka Mars in D9 Cancer — Spouse Portrait</h3>
+
+  <p>The Darakaraka (DK) is the planet with the <em>lowest degree</em> (excluding Rahu/Ketu) — which is <strong>Mars at 00 32' Scorpio</strong> in D1. As the DK, Mars represents the spouse's nature. Its D9 placement in <strong>Cancer (debilitated, H11)</strong> paints a nuanced spouse portrait:</p>
+
+  <div class="highlight mb-4">
+    <p><strong>Spouse Characteristics (DK Mars in D9 Cancer)</strong>:</p>
+    <ul class="list-disc pl-6 mt-2">
+      <li><strong>Nurturing, emotional, and domestically oriented</strong> at heart — even if outwardly assertive or career-active (Mars's inherent nature).</li>
+      <li><strong>Possibly moody or emotionally fluctuating</strong> — Cancer's water-nature combined with Mars's fire creates internal steam. The spouse may have periods of intense emotional response followed by withdrawal.</li>
+      <li><strong>Deeply protective of family</strong> — Mars in Cancer makes a fierce protector of home and children, even if the style is emotional rather than structured.</li>
+      <li><strong>Possible cooking/food/nourishment connection</strong> — Cancer Mars often manifests as someone who expresses love through food, home-making, or caretaking.</li>
+    </ul>
+  </div>
+
+  <div class="warn mb-4">
+    <p><strong>Debilitated DK = Challenges in Marriage Requiring Patience and Effort</strong>. Mars debilitated as DK in D9 Cancer does <em>not</em> mean a bad spouse. It means the <em>marriage dynamics carry karmic friction</em> — the two partners must work to understand each other's emotional languages. The Mars-native (action-oriented, decisive, fast) must learn the Cancer-spouse's language (emotional, nurturing, slow-to-trust). The spouse, in turn, must learn that the native's directness is not aggression but care.</p>
+  </div>
+
+  <div class="remedy mb-4">
+    <p><strong>Marriage Stabilisation Protocol</strong>:</p>
+    <ul class="list-disc pl-6 mt-2">
+      <li>Weekly Friday <strong>Lakshmi-Narayana namaskara</strong> together — even 5 minutes strengthens the Venus-marriage axis.</li>
+      <li>Avoid serious financial or relational arguments on <strong>Tuesdays and Saturdays after sunset</strong> — these are Mars/Saturn pida windows for this chart.</li>
+      <li>Annual joint visit to a <strong>Devi temple or Lakshmi-Narayana kshetra</strong> — Tirupati, Padmavati, or any local Sthala-Lakshmi.</li>
+      <li>Shared dinner <strong>without phones</strong> at least 4 days a week — Venus (marriage karaka) in D9 Gemini H10 needs <em>conversation as fuel</em>.</li>
+      <li>Honour the spouse's family with explicit visits and respect — the D9 dynamics demand mutual <em>pratishtha</em> (acknowledgement) of both lineages.</li>
+    </ul>
+  </div>
+
+  <!-- 5.5 KARAKAMSA -->
+  <h3 class="text-xl mt-6 mb-3">5.5 Karakamsa — AK Moon in D9 Sagittarius (H4)</h3>
+
+  <div class="verse mb-4">
+    <p><em>"Karakamsam asritya ishta-devata-nirnayah kartavyah."</em></p>
+    <p>— <strong>Jaimini Sutra, Adhyaya 1, Pada 2</strong></p>
+    <p class="mt-2">(The Ishta-devata is to be determined based on the Karakamsa.)</p>
+  </div>
+
+  <p>The <strong>Karakamsa</strong> is the navamsa sign occupied by the Atmakaraka. Here, AK Moon is in D9 Sagittarius — a Jupiter-ruled fire sign in H4 of the D9.</p>
+
+  <div class="spiritual mb-4">
+    <p><strong>Karakamsa in Sagittarius (Jupiter-ruled)</strong>: The soul seeks wisdom through <em>domestic grounding, philosophical education, and mother's influence</em>. The spiritual path is inherently dharmic — aligned with traditional Vedic frameworks, guru-parampara, and the study of sastra. The Jupiter-ruled Karakamsa indicates a <strong>guru-seeking nature</strong> — the soul is oriented toward finding and following a qualified teacher.</p>
+  </div>
+
+  <h4>Ishta-devata Determination:</h4>
+  <p>The 12th from Karakamsa (D9 Sagittarius) is <strong>Scorpio</strong> — ruled by Mars. With Mars as the 12th-from-Karakamsa lord, the Ishta-devata inclines toward: <strong>Subramanya (Kartikeya/Murugan)</strong>, <strong>Narasimha</strong>, or <strong>Hanuman</strong> — fierce, protective, dharma-warrior deities. Given the chart's Krttika nakshatra (Agni-deity) birth star, <strong>Kartikeya (born of Agni, raised by the Krttikas)</strong> is a particularly strong resonance.</p>
+
+  <p class="mt-3">The H4 placement of the Karakamsa also indicates that <strong>the devotional practice is most fruitful when done at home</strong> — a home altar, daily prayer at a fixed time, family puja — rather than primarily at external temples. The temple visit strengthens; the home practice sustains.</p>
+
+  <!-- 5.6 D9 STRENGTH ASSESSMENT -->
+  <h3 class="text-xl mt-6 mb-3">5.6 D9 Strength Assessment Summary</h3>
+
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Category</th><th>Planets</th><th>Assessment</th></tr></thead>
+    <tbody>
+      <tr class="matrix-row-gem"><td><strong>D9 Exalted</strong></td><td>Mercury (Virgo, H1)</td><td>THE CHART'S HIDDEN GEM — soul-level analytical genius; late-blooming scholar</td></tr>
+      <tr class="matrix-row-good"><td><strong>D9 Own-Sign</strong></td><td>Sun (Leo, H12)</td><td>Career authority confirmed at soul level; moksha potential through work</td></tr>
+      <tr><td><strong>D9 Neutral (well-placed)</strong></td><td>Venus (Gemini, H10); Moon (Sagittarius, H4)</td><td>Marriage workable through communication; emotional grounding through philosophy</td></tr>
+      <tr><td><strong>D9 Neutral (challenged house)</strong></td><td>Jupiter (Aquarius, H6)</td><td>Wisdom tested through service and obstacles; earned not inherited</td></tr>
+      <tr class="matrix-row-bad"><td><strong>D9 Debilitated</strong></td><td>Mars (Cancer, H11); Saturn (Aries, H8)</td><td>Ruchaka modified; Saturn's double burden = deep karmic curriculum in H3+H4</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="blessing mb-4">
+    <p><strong>The D9's Final Word</strong>: This is a chart of <em>late-blooming intellectual power</em> (Mercury exalted), <em>soul-confirmed career authority</em> (Sun own-sign), <em>tested wisdom</em> (Jupiter in H6), <em>modified warrior-energy</em> (Mars debilitated but redirected toward protection), and <em>deep karmic homework in the Saturn domain</em> (home, mother, endurance). The hidden gem — Mercury exalted in D9 lagna — is the signature that will define the second half of life more than any other single factor. The person whom others underestimated as "just a good worker" in his twenties will be recognised as a <em>formidable intellect and strategist</em> in his forties and fifties.</p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 6. D10 — DASAMSA — CAREER -->
+<!-- ====================================================== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">6. D10 — Dasamsa (Career, Profession, Public Karma)</h2>
+
+  <h3 class="text-xl mt-4 mb-3">6.1 Method</h3>
+  <p>Each rasi is split into ten dasamsas of 3 degrees each. <strong>Odd signs</strong>: portion N maps to (N-1) signs forward from the natal sign. <strong>Even signs</strong>: portion N maps to (N-1) signs forward from the 9th sign of the natal sign. The D10 governs the 10th-house portfolio: career, profession, public action, reputation, honour, and the native's karmic contribution to the world.</p>
+
+  <h3 class="text-xl mt-4 mb-3">6.2 Computation Table</h3>
+  <div class="overflow-x-auto">
+  <table>
+    <thead><tr><th>Graha</th><th>D1 Longitude</th><th>Portion</th><th>D10 Sign</th><th>Dignity in D10</th></tr></thead>
+    <tbody>
+      <tr><td>Surya</td><td>Sagittarius 15.01</td><td>6th</td><td>Taurus</td><td>Neutral (friend's sign)</td></tr>
+      <tr><td>Candra (AK)</td><td>Aries 27.98</td><td>10th</td><td>Capricorn</td><td>Neutral</td></tr>
+      <tr class="bg-red-50"><td><strong>Mangala</strong></td><td>Scorpio 00.54</td><td>1st</td><td><strong>Cancer</strong></td><td><span class="planet-tag debilitated">DEBILITATED</span></td></tr>
+      <tr class="bg-green-50"><td><strong>Budha</strong></td><td>Sagittarius 19.45</td><td>7th</td><td><strong>Gemini</strong></td><td><span class="planet-tag own-sign">OWN-SIGN</span></td></tr>
+      <tr class="bg-green-50"><td><strong>Guru</strong></td><td>Pisces 26.49</td><td>9th</td><td><strong>Cancer</strong></td><td><span class="planet-tag exalted">EXALTED</span></td></tr>
+      <tr><td>Sukra</td><td>Capricorn 17.02</td><td>6th</td><td>Aquarius</td><td>Friend</td></tr>
+      <tr><td>Sani</td><td>Sagittarius 01.65</td><td>1st</td><td>Sagittarius</td><td>Friend</td></tr>
+      <tr><td>Rahu</td><td>Pisces 03.53</td><td>2nd</td><td>Sagittarius</td><td>Jupiter's sign</td></tr>
+      <tr><td>Ketu</td><td>Virgo 03.53</td><td>2nd</td><td>Gemini</td><td>Mercury's sign</td></tr>
+      <tr><td><strong>Lagna</strong></td><td>Scorpio 09.85</td><td>4th</td><td><strong>Libra</strong></td><td>D10 Lagna (Venus-ruled)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-6 mb-3">6.3 The Career Throne — Jupiter Exalted in D10</h3>
+
+  <div class="blessing mb-4">
+    <p><strong>The single most impactful career fact in this chart</strong>: Brhaspati (Jupiter) is <strong>exalted in Cancer</strong> in D10, placing it in the <strong>10th house from D10-Lagna (Libra)</strong>. This is a <em>purna-raja-yoga in the career division</em>.</p>
+  </div>
+
+  <div class="verse mb-4">
+    <p><em>"Dasamse Guru ucce karma-bhave — kirti, prabhutva, sastra-prasamsa, raja-manya, dirgha-yasas;</em></p>
+    <p><em>Purna-raja-yoga karma-vibhage."</em></p>
+    <p>— <strong>BPHS, Adhyaya 7, dasamsa-phala</strong></p>
+    <p class="mt-2">(Jupiter exalted in the Karma-bhava of the Dasamsa = renown, command, scholarly recognition, royal/governmental honour, lasting fame — a complete raja-yoga in the career division.)</p>
+  </div>
+
+  <p>This is the <em>single greatest career indicator</em> in the entire chart. It promises that the career trajectory does not merely earn — it earns <strong>with dignity, with intellectual respect, with role-modelling weight</strong>. The fruit ripens to its fullest in <strong>Brhaspati Mahadasa (May 2028 - May 2044, age 40-56)</strong> — the sixteen-year arc that Part 1 identified as the "peak life-period." The D10 confirms it with exalted Jupiter sitting exactly on the career throne.</p>
+
+  <h3 class="text-xl mt-6 mb-3">6.4 D10 Planet-by-Planet Analysis</h3>
+
+  <!-- Mercury D10 -->
+  <h4 class="text-lg mt-4 mb-2">Mercury Sva-ksetra in Gemini in D10 — The Communicator's Seal</h4>
+  <div class="highlight mb-4">
+    <p><strong>Mercury own-sign in Gemini in D10</strong> = communication, writing, teaching, software, contracts, and engineering documentation are <em>core revenue paths</em>. Mercury here is <em>not combust</em> (D10 is a fresh chart) — so the Mercury muffled in D1 expresses <strong>fully and clearly</strong> in the career theatre. This confirms the D9 Mercury-exaltation finding: even though early career may have undervalued this Mercury, the career's true engine is <em>what you write, code, explain, and architect</em>.</p>
+  </div>
+
+  <p>Mercury sva-ksetra in D10 combined with Mercury exalted in D9 creates what I call a <strong>Budha-Siddhi</strong> — a Mercury-mastery signature that is one of the chart's most powerful professional assets. In practical terms: technical documentation, code architecture, data analysis, research reports, system design — these are the activities where this native operates at a level that will eventually be recognised as exceptional.</p>
+
+  <!-- Mars D10 -->
+  <h4 class="text-lg mt-4 mb-2">Mars Debilitated in Cancer in D10 — The Workplace Lesson</h4>
+  <div class="warn mb-4">
+    <p><strong>Career-Mars debilitated in Cancer in D10</strong> — the Lagnesha's professional expression is <em>softened</em>. This is the same debilitation we saw in D9 — Mars in Cancer — now repeated in the career chart. The lesson is consistent and emphatic:</p>
+    <ul class="list-disc pl-6 mt-2">
+      <li>Pure aggression, brute force, and "dominate the room" tactics will <strong>not succeed</strong> in professional contexts, however much D1 Ruchaka tempts.</li>
+      <li><strong>Strategic restraint, diplomatic firmness, the warrior who waits</strong> — this wins. The Cancer-Mars is the general who consults the council before the battle, not the foot-soldier who charges.</li>
+      <li>Leadership style must be <em>protective and nurturing</em> (Cancer) rather than commanding and confrontational (Aries/Scorpio). Lead by caring for the team, not by dominating it.</li>
+    </ul>
+  </div>
+
+  <!-- Sun D10 -->
+  <h4 class="text-lg mt-4 mb-2">Sun in Taurus in D10 — Authority Through Quality</h4>
+  <p><strong>Sun (H10 lord) in Taurus (Venus-sign) in D10</strong> = career authority expressed through <em>quality, stability, and substance</em> rather than loudness or political manoeuvring. The role often involves serving creative, financial, aesthetic, or well-being industries with Sun's authority. Taurus-Sun in D10 says: <em>build things that last; avoid chasing trends; let quality speak for you</em>.</p>
+
+  <!-- Moon D10 -->
+  <h4 class="text-lg mt-4 mb-2">Moon (Atmakaraka) in Capricorn in D10 — Soul's Career Purpose</h4>
+  <p><strong>AK Moon in Capricorn in D10</strong> — the soul's professional purpose is channelled through Saturn-ruled, structured, institutional frameworks. The soul seeks career meaning through <em>building lasting structures</em> — organisations, systems, processes, institutions. Capricorn Moon in D10 is not attracted to freelance volatility but to <em>institutional impact</em>. The career finds its deepest satisfaction when the native is building something that will outlast the current role.</p>
+
+  <!-- D10 Lagna -->
+  <h4 class="text-lg mt-4 mb-2">D10 Lagna in Libra (Venus-ruled) — Career Identity</h4>
+  <div class="highlight mb-4">
+    <p><strong>D10 Lagna in Libra</strong> = career identity is <em>balanced, partnership-oriented, fairness-driven</em>. The professional persona values justice, aesthetic standards, and collaborative harmony. D10 lagna-lord Venus sits in <strong>Aquarius (5th from D10-Lagna)</strong> — this brings <strong>innovative-mind earning</strong>: technological/intellectual product earning, often involving teams, networks, and forward-thinking solutions. The 5th-house placement of the D10-lagna-lord suggests that <em>intellectual creativity</em> is the primary career engine, not mere execution.</p>
+  </div>
+
+  <h3 class="text-xl mt-6 mb-3">6.5 Best Career Signatures</h3>
+  <div class="blessing mb-4">
+    <p>Combining D1, D9, and D10, the strongest career signatures are:</p>
+    <ol class="list-decimal pl-6 mt-2">
+      <li><strong>Technology / Engineering with Research Depth</strong> (Rahu-Jupiter D1 H5 + Mercury sva D10 + Mercury exalted D9)</li>
+      <li><strong>Data Science / AI / Analytics</strong> (Mercury's triple confirmation across D1-nakshatra, D9, D10)</li>
+      <li><strong>Teaching / Advisory / Consultancy at Senior Level</strong> (Jupiter exalted D10 in H10)</li>
+      <li><strong>Technical Writing / Architecture / Documentation</strong> (Mercury sva D10, exalted D9)</li>
+      <li><strong>Cross-Cultural / Overseas / Multinational Roles</strong> (Rahu in D1 H5, Sun own-sign D9 H12)</li>
+      <li><strong>Finance / Risk / Institutional Governance</strong> (Saturn in friend-sign D10, Moon AK in Capricorn D10)</li>
+    </ol>
+  </div>
+
+  <div class="warn mb-4">
+    <p><strong>Roles to Avoid as Primary Identity</strong>:</p>
+    <ul class="list-disc pl-6 mt-2">
+      <li>Pure salesman / pure trader / pure speculation (D1 Mercury combust + D10 Mars debilitated)</li>
+      <li>Pure manual-labour / front-line combat roles (the chart wants the <em>strategic</em> seat)</li>
+      <li>Roles that suppress speech or writing (D10 Mercury sva + D9 Mercury exalted <em>insist</em> on articulation)</li>
+      <li>Roles requiring sustained brute-force confrontation (D10 Mars debilitated says this does not work)</li>
+    </ul>
+  </div>
+
+  <h3 class="text-xl mt-6 mb-3">6.6 Career Timeline (D10-Informed)</h3>
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Window</th><th>Age</th><th>Career Signature</th></tr></thead>
+    <tbody>
+      <tr><td>Until May 2028 (Rahu Mahadasa remainder)</td><td>38-40</td><td>Rapid scaling, tech/data/AI/cross-cultural roles, recognition phase begins. Rahu amplifies Mercury-Jupiter axis.</td></tr>
+      <tr class="bg-green-50"><td><strong>May 2028 - May 2044 (Jupiter Mahadasa)</strong></td><td><strong>40-56</strong></td><td><strong>PEAK — exalted Jupiter D10 fruits manifest fully. Teaching, writing, leadership of substance. Scholarly recognition, institutional honours, possibly advisory/governance roles. This is the life's prime career arc.</strong></td></tr>
+      <tr><td>May 2044 - May 2063 (Saturn Mahadasa)</td><td>56-75</td><td>Institutional consolidation, governance, possibly organisation-building. Saturn in friend-sign D10 supports lasting structural contributions despite D9 debility.</td></tr>
+      <tr><td>May 2063+ (Mercury Mahadasa)</td><td>75+</td><td>Continuing scholarship, advisory roles, spiritual/intellectual elder-statesman. Mercury sva D10 + exalted D9 ensures intellectual sharpness endures.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 7. CROSS-VARGA SYNTHESIS -->
+<!-- ====================================================== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">7. Cross-Varga Synthesis — The Complete Picture</h2>
+
+  <p class="mb-4">We now assemble the evidence from all six vargas into a single assessment for each planet. This is the <strong>Vargottama Mind-Map</strong> — showing how each graha performs across the vargas that matter most for outer-life results.</p>
+
+  <div class="overflow-x-auto mb-4">
+  <table>
+    <thead><tr><th>Planet</th><th>D1</th><th>D2 (Hora)</th><th>D3</th><th>D4</th><th>D7</th><th>D9</th><th>D10</th><th>Net Karma-Arc</th></tr></thead>
+    <tbody>
+      <tr><td>Surya</td><td>Neutral</td><td>Candra</td><td>Friend</td><td>Friend</td><td>Friend</td><td><span class="planet-tag own-sign">OWN</span></td><td>Friend</td><td>Steadily-rising authority through speech and strategy</td></tr>
+      <tr><td>Candra (AK)</td><td>H6</td><td>Candra</td><td>Friend</td><td>Neutral</td><td>Neutral</td><td>Neutral H4</td><td>Neutral</td><td>Service-strength becomes philosophical grounding</td></tr>
+      <tr class="bg-green-50"><td><strong>Mars</strong></td><td><span class="planet-tag own-sign">OWN</span></td><td>Candra</td><td><strong>Same</strong></td><td><span class="planet-tag own-sign">OWN</span></td><td>Neutral</td><td><span class="planet-tag debilitated">DEBIL</span></td><td><span class="planet-tag debilitated">DEBIL</span></td><td>Powerful pillar with two soul/career lessons in restraint</td></tr>
+      <tr class="matrix-row-gem"><td><strong>Mercury</strong></td><td><span class="planet-tag combust">COMBUST</span></td><td>Candra</td><td>Friend</td><td><span class="planet-tag own-sign">OWN</span></td><td>Friend</td><td><span class="planet-tag exalted">EXALTED</span></td><td><span class="planet-tag own-sign">OWN</span></td><td><strong>The hidden gem — recovers fully in soul and career; late bloomer</strong></td></tr>
+      <tr class="bg-green-50"><td><strong>Jupiter</strong></td><td><span class="planet-tag own-sign">OWN</span></td><td>Surya</td><td>Friend</td><td><span class="planet-tag own-sign">OWN</span></td><td><span class="planet-tag own-sign">OWN</span></td><td>Neutral H6</td><td><span class="planet-tag exalted">EXALTED</span></td><td><strong>The crown jewel — multiplies blessings; career peak</strong></td></tr>
+      <tr class="matrix-row-mixed"><td>Venus</td><td>Neutral</td><td>Surya</td><td><span class="planet-tag own-sign">OWN</span></td><td><span class="planet-tag debilitated">DEBIL</span></td><td><span class="planet-tag own-sign">OWN</span></td><td>Neutral H10</td><td>Friend</td><td>Karmic curriculum: strong in courage/children, tested in home/aesthetic</td></tr>
+      <tr class="matrix-row-mixed"><td>Saturn</td><td><span class="planet-tag combust">COMBUST</span></td><td>Surya</td><td>Friend</td><td>Friend</td><td>Friend</td><td><span class="planet-tag debilitated">DEBIL</span> H8</td><td>Friend</td><td>The slow giant — rises late but teaches profoundly; deep karmic homework</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="text-xl mt-4 mb-3">7.1 The Five Key Truths from the Cross-Varga Synthesis</h3>
+
+  <div class="blessing mb-4">
+    <p><strong>Truth 1: Jupiter is the chart's supreme benefactor.</strong> Own-sign in D1 H5, own-sign in D4, own-sign in D7, exalted in D10. No planet in this chart performs as consistently well across the vargas that matter. Jupiter's career-exaltation in D10 is the chart's crowning glory. The Jupiter Mahadasa (2028-2044) is the life's golden window.</p>
+  </div>
+
+  <div class="blessing mb-4">
+    <p><strong>Truth 2: Mercury is the chart's hidden gem.</strong> Combust and seemingly suppressed in D1, Mercury achieves own-sign in D4, own-sign in D10, and exaltation in D9 (the soul chart). This is the late-blooming intellectual signature that defines the second half of life. The message: <em>do not stop writing, researching, analysing, and architecting — this is your soul's truest expression, and the world will recognise it in time</em>.</p>
+  </div>
+
+  <div class="highlight mb-4">
+    <p><strong>Truth 3: Mars is powerful but requires redirection.</strong> Own-sign in D1, same-sign in D3, own-sign in D4 — but debilitated in both D9 and D10. The outer warrior is strong; the soul-warrior and career-warrior must learn restraint, protection, and nurturing leadership. The Ruchaka Yoga gives the body its vitality and presence; the D9/D10 debilitations instruct the soul to use that vitality in service of others, not in ego-warfare.</p>
+  </div>
+
+  <div class="warn mb-4">
+    <p><strong>Truth 4: Saturn carries the chart's deepest karmic homework.</strong> Combust + gandanta in D1, debilitated in D9 H8 — the double burden. H3+H4 matters (siblings, home, mother, inner peace, endurance) are the soul's testing ground. But Saturn in friend-sign in D10 means the career dimension of Saturn (structure, governance, institutional work) is <em>not</em> similarly burdened — it is the personal/family domains where Saturn's lessons concentrate.</p>
+  </div>
+
+  <div class="spiritual mb-4">
+    <p><strong>Truth 5: Venus is the soul-test of the relationship domain.</strong> Strong in D3 (courage) and D7 (children), but debilitated in D4 (home) and merely neutral in D9. The creative and progeny domains are blessed; the home-aesthetic and marital domains are the karmic curriculum. Intentional spiritual practice (Friday Lakshmi puja, shared devotion, mutual respect rituals) yields the largest returns in this specific area.</p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- 8. CONCLUDING NOTE -->
+<!-- ====================================================== -->
+<section class="mb-10">
+  <h2 class="text-2xl mb-4">8. Concluding Note for Part 2</h2>
+
+  <div class="verse mb-4">
+    <p><em>"Varga-cakre sthitam jnanam, rasi-cakre sthitam balam;</em></p>
+    <p><em>Ubhayoh sangamam yatra, tatra purna-phala-praptih."</em></p>
+    <p>— <strong>Sarvartha-Cintamani, Adhyaya 2</strong></p>
+    <p class="mt-2">(The knowledge resides in the varga-chart, the strength resides in the rasi-chart; where the two converge, the full fruit is obtained.)</p>
+  </div>
+
+  <p>Across these six vargas, the chart reveals itself as <strong>a strong, dharmic, career-blessed life with one significant inner curriculum (Saturn's double weakness in home/family/endurance) and one magnificent hidden asset (Mercury's exaltation in D9 + own-sign in D10)</strong>. Mars and Jupiter — the warrior and the priest — power the outer journey. Mercury — the scholar, the writer, the analyst — powers the inner journey. Venus and Saturn, each carrying their karmic homework, ensure that the journey serves growth rather than ego.</p>
+
+  <p class="mt-3">The three most actionable findings for immediate life-guidance are:</p>
+  <ol class="list-decimal pl-6 mt-2 mb-4">
+    <li><strong>Write more.</strong> Mercury exalted in D9 + own-sign in D10 = writing, documentation, research, and analytical communication are your most powerful career assets. The combustion in D1 may have created a habit of undervaluing this. Reverse that habit now.</li>
+    <li><strong>Lead gently.</strong> Mars debilitated in both D9 and D10 = nurturing, protective, strategic leadership wins; aggressive, dominating leadership loses. Adjust the leadership style accordingly.</li>
+    <li><strong>Honour Saturn's curriculum.</strong> Double-weak Saturn means the home/family/endurance domain demands conscious, sustained effort — not avoidance. Saturday discipline, service to elders, patience with siblings and mother — these are non-negotiable dharmic investments.</li>
+  </ol>
+
+  <div class="spiritual mb-4">
+    <p>In <strong>Part 3</strong>, we will enter the karmic vargas — D12 Dvadasamsa (parents), D16 Sodasamsa (vehicles and happiness), D20 Vimsamsa (devotional and spiritual practice), D24 Caturvimsamsa (learning and education), D27 Bhamsa (strengths and weaknesses), D30 Trimsamsa (vulnerabilities), D40 Khavedamsa (maternal lineage), D45 Akshavedamsa (paternal lineage), and the supreme <strong>D60 Shastyamsa</strong> — the past-life karmic chart that Maharsi Parasara declared the most important of all vargas.</p>
+  </div>
+
+  <div class="verse mb-4">
+    <p><em>Anenaiva kramena paratpara varga vivecaniyah.</em></p>
+    <p class="mt-2 text-center font-bold">|| Iti Dvitiyo Bhagah ||</p>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<!-- FOOTER -->
+<!-- ====================================================== -->
+<footer class="text-center text-sm text-gray-400 mt-12 pb-8 border-t pt-4">
+  <p>Part 2 of 5 — D2 through D10 Divisional Chart Analysis</p>
+  <p>Bandlapalli Ajay Kumar | 31 Dec 1987 | 04:15 IST | Kalyandurg AP</p>
+  <p class="mt-2">Computed with Swiss Ephemeris DE431 | Lahiri Ayanamsa 23 41'22" | Arc-second precision</p>
+  <p class="mt-1">Classical references: BPHS, Saravali, Phaladipika, Jataka-Parijata, Sarvartha-Cintamani, Uttara-Kalamrita</p>
+</footer>
+
+</main>
+</body>
+</html>
